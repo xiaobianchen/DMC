@@ -1,0 +1,85 @@
+body,div,p{ margin: 0; padding: 0;}
+a{text-decoration: none}
+.login-module{ position: absolute; width: 100%; height: 100%;}
+.login-module .inner{ position: relative; width: 100%; height: 100%;}
+.login-bg{ position: absolute; width: 100%; height: 100%; background-color: rgba(17,106,196,.8); z-index: 1;}
+.blur { -webkit-filter: blur(100px); -moz-filter: blur(100px); -ms-filter: blur(100px); filter: blur(100px);}
+.login-form{ position: absolute; top: 50%; left: 50%; width: 300px; height: 325px; margin-top: -150px; margin-left: -150px; font-size: 12px; font-weight: bold; box-shadow: 0px 0px 26px #666; color:#606060; background: #fff; z-index: 2;}
+.login-form form{ padding: 30px 40px 0; position: relative;}
+.login-form .icon-close{ position: absolute; top: 5px; right: 5px; background-image: url(img/icon-login-close.png); width: 11px; height: 11px;}
+.input-box{ margin-bottom: 10px;}
+.input-box input{ display: block; width: 100%; padding: 0 5px; height: 30px; line-height: 30px; border:1px solid #bfbfbf; margin-top: 5px; box-sizing: border-box; font-family: "微软雅黑";}
+.check-box{ font-weight: normal;}
+.check-box input{ vertical-align: middle;}
+.btn-box{ margin-top: 25px;}
+.clearfix:after {content: " ";display: block;clear: both;height: 0;}
+.clearfix {zoom: 1;}
+.floatR{ float:right;}
+.icon{ display: inline-block; vertical-align: middle; background-repeat: no-repeat; background-position: center center;}
+.icon-skin{ background-image: url(img/icon-skin.png); width: 11px; height: 10px;}
+.icon-message{ background-image: url(img/icon-message.png); width: 13px; height: 11px;}
+.icon-down{ background-image: url(img/icon-down.png); width: 11px; height: 10px;}
+.icon-minus{ background-image: url(img/icon-minus.png); width: 11px; height: 12px;}
+.icon-close{ background-image: url(img/icon-close.png); width: 11px; height: 11px;}
+.icon-btn{ background-image: url(img/btn-ljfx.png); width: 284px; height: 94px;}
+.icon-ll{ background-image: url(img/icon-ll.png); width: 126px; height: 126px;}
+.icon-zhl{ background-image: url(img/icon-zhl.png); width: 126px; height: 126px;}
+.icon-kdj{ background-image: url(img/icon-kdj.png); width: 126px; height: 126px;}
+.icon-btyh{ background-image: url(img/icon-btyh.png); width: 37px; height: 36px;}
+.icon-files{ background-image: url(img/icon-files.png); width: 36px; height: 37px;}
+.icon-location{ background-image: url(img/icon-location.png); width: 36px; height: 37px;}
+.icon-share{ background-image: url(img/icon-share.png); width: 37px; height: 35px;}
+.icon-user{ background-image: url(img/icon-user.png); width: 40px; height: 40px;}
+.module{ width: 100%; margin: 0 auto; } 
+.module-bg{ position: absolute; width:100%; height: 440px; top: -1;}
+.content{ position: relative; width:900px; height: 440px; left: 50%; margin-left: -450px; font-family: "微软雅黑"; color: #fff;} 
+.logo{ position: absolute; top: 10px; left: 10px;}
+.logo img{ display: inline-block; width: 60px; height: 60px; vertical-align: middle; margin-left: 10px;}
+.operate{ position: absolute; top: 10px; right:10px; text-align: right;}
+.operate .icon{ margin-left: 10px; vertical-align: middle;}
+.focus-title{ padding-top: 150px; width: 670px; margin: 0 auto;}
+.focus-title h2{ font-size: 38px; margin-bottom: 5px;}
+.account{ margin-top: 10px; font-family: "宋体"; font-size: 12px;} 
+.account .icon{ margin-left: 5px;}
+.tijian-box{ display: inline-block; float: left; width: 160px; height:160px; line-height: 160px; text-align: center; font-size: 60px; margin-right: 15px; background-image: url(img/icon-tijian.png);}
+.text-dw{ font-size: 14px;}
+.btn{ text-align: center; margin-top: 45px;}
+.font12{ font-family: "宋体"; font-size: 12px;}
+.foot{ padding-bottom: 20px; width:900px; margin: 0 auto;}
+.foot ul,
+.foot li{ margin: 0; padding: 0; list-style: none; font-size: 12px;}
+.foot li .icon{ display: block;}
+.foot li{ text-align: center; display: inline-block;}
+.foot .operate-left{ float: left; padding-top: 20px; padding-left: 20px;}
+.foot .operate-right{ float: right; padding-top: 96px; padding-right: 20px;}
+.foot .operate-right li{ padding: 0 5px;}
+.foot .operate-right .icon{ margin-bottom: 10px;}
+
+    
+   
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   
+   
+   
+    
+    
+    
+    
+    
+    
+   
+    
+    
+    

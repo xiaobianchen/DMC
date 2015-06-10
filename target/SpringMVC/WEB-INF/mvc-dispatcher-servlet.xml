@@ -13,8 +13,7 @@
 
 	<mvc:annotation-driven />
 
-	<bean
-		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix">
 			<value>/WEB-INF/pages/</value>
 		</property>
@@ -22,6 +21,12 @@
 			<value>.jsp</value>
 		</property>
 	</bean>
+	
+	<!-- 配置静态资源 -->
+	<mvc:resources location="/WEB-INF/pages/" mapping="/pages/**"/>
+	<mvc:resources location="/WEB-INF/resources/js/" mapping="/js/**"/>
+	<mvc:resources location="/WEB-INF/resources/css/" mapping="/css/**"/>
+	<mvc:resources location="/WEB-INF/resources/img/" mapping="/img/**"/>
 
 </beans>
 
