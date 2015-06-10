@@ -21,23 +21,21 @@
 					<span>DMC商城卫士旗舰版</span>
 				</div>
 				<div class="operate">
-					<i class="icon icon-skin"></i> 
-					<i class="icon icon-message"></i> 
-					<i class="icon icon-down"></i> 
-					<i class="icon icon-minus"></i> 
-					<i class="icon icon-close"></i>  
+					<img src="img/icon-skin.png">
+					<img src="img/icon-message.png">
+					<img src="img/icon-minus.png">
+					<img src="img/icon-close.png">
 					<div class="account">
 						登录商家账号
-						<i class="icon icon-user" onclick="location.href='login.html'"></i>
+						<img src="img/icon-user.png" onclick="location.href='/DMC_Web/login'">
 					</div>
 				</div>
 				<div class="focus-title clearfix">
-				<div class="tijian-box">88<span class="text-dw" onclick="fs();">分</span></div>
+				<div class="tijian-box" style="background-image: url(img/icon-tijian.png);">88<span class="text-dw" onclick="fs();">分</span></div>
 					<h2>首次体验需确保数据完整性</h2>
 					<span class="font12"><strong>首次体验,该项将检测数据项是否完整,请立即检查</strong></span>
 				</div>
 				<div class="btn">
-					<!-- <i class="icon icon-btn"></i> --> 
 					<img class="icon icon-btn" src="img/btn-ljfx.png" id="fxbtn">
 				</div>
 			</div>
@@ -58,19 +56,19 @@
 				</ul>
 				<ul class="operate-right">
 					<li>
-						<i class="icon icon-btyh"></i>  
+						<img alt="标题优化" src="img/icon-btyh.png" onclick="alert('标题优化功能程序员哥哥正在倾力研发中,亲不要着急哦')">
 						标题优化
 					</li>
 					<li>
-						<i class="icon icon-files"></i>  
+						<img alt="热词榜" src="img/icon-files.png" onclick="alert('热词榜功能程序员哥哥正在倾力研发中,亲不要着急哦')">
 						热词榜
 					</li>
 					<li>
-						<i class="icon icon-location"></i>  
+						<img alt="关键词" src="img/icon-location.png" onclick="alert('关键词功能目前处于内测中,敬请期待!')">
 						关键词
 					</li>
 					<li>
-						<i class="icon icon-share"></i>  
+						<img alt="更多" src="img/icon-share.png" onclick="alert('该功能目前尚未开发,感谢您的关注')">
 						更多
 					</li>
 				</ul>
