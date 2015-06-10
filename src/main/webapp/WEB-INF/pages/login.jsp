@@ -22,12 +22,14 @@
 							<label>
 								登录名
 								<input type="text" name="username"/>
+								<span id="checkUser">用户名不能为空 </span>
 							</label>
 						</div>
 						<div class="input-box">
 							<label>
 								登陆密码
 								<input type="password" name="password"/>
+								<span id="checkPwd">密码不能为空 </span>
 							</label>
 						</div>
 						<div class="check-box clearfix">
@@ -35,7 +37,7 @@
 								<input type="checkbox" />记住密码
 							</label>
 							<label class="floatR">
-								<a href="register.jsp">注册用户</a>
+								<a onclick="location.href='/DMC_Web/register'">注册用户</a>
 							</label>
 						</div>
 						<div class="btn-box">

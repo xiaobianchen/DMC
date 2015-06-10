@@ -21,24 +21,29 @@
 							<label>
 								用户名
 								<input type="text" name="username"/>
+								<span id="checkUser">用户名不能为空</span>
 							</label>
 						</div>
 						<div class="input-box">
                             <label>
                                                                                                  邮箱
                                 <input type="text" name="email"/>
+                                <span id="checkEmail">请输入正确的邮箱格式</span>
                             </label>
 						</div>
 						<div class="input-box">
 							<label>
 								密码
 								<input type="password" name="password1"/>
+								<span id="checkPwd">密码不能为空</span>
 							</label>
 						</div>
                         <div class="input-box">
                             <label>
                                                                                                  确认密码
                                 <input type="password" name="repassword">
+                                <span id="checkConfirmPwd">确认密码不能为空</span>
+                                <span id="checkPwdAndConfirmPwd">确认密码与密码不一致,请确认</span>
                             </label>
                         </div>
 						

@@ -3,15 +3,31 @@ function validate_loginForm(){
   	var username = $("input[name='username']").val();
   	var password = $("input[name='password']").val();
 
-  	if(username == 'admin' && password=='123456'){
-  		location.href="index.jsp";
-  	}else{
-  		alert("用户名密码不正确，请重新确认！");
-  		$("input[name='password']").val("");
-      $("input[name='password']").focus();
-  		return false;
-  	}
-  }
+    if(username==''){
+    	$("#checkUser").css('display','block');
+    	$("input[name='username']").focus();
+    	return false;
+    }else if(password==''){
+    	$("#checkPwd").css('display','block');
+    	$("input[name='password']").focus();
+    	return false;
+    }else{
+    	location.href="/DMC_Web/index";
+    	return true;
+    }
+}
+
+/*check user and password*/
+$(document).ready(function(){
+	  $("input").blur(function(){
+		  $("#checkUser").css('display','none');
+		  $("#checkPwd").css('display','none');
+		  $("#checkEmail").css('display','none');
+		  $("#checkPwd").css('display','none');
+		  $("#checkConfirmPwd").css('display','none');
+		  $("#checkPwdAndConfirmPwd").css('display','none');
+	  });
+});
 
 /*validate register form*/
 function validate_regForm(){
@@ -19,36 +35,31 @@ function validate_regForm(){
      var email = $("input[name='email']").val();
      var password = $("input[name='password1']").val();
      var repassword = $("input[name='repassword']").val();
-     if(username == ''||username.length<6){
-         alert('用户名不能为空且长度不能小于6');
+     
+     if(username == ''){
+    	 $("#checkUser").css('display','block');
          $("input[name='username']").focus();
          return false;
-     }
-
-     if(email == '' || !/.+@.+\.[a-zA-Z]{2,4}$/.test(email)){
-          alert('请输入正确的邮箱地址');
+     }else if(email == '' || !/.+@.+\.[a-zA-Z]{2,4}$/.test(email)){
+          $("#checkEmail").css('display','block');
           $("input[name='email']").focus();
           return false;
-     }
-
-     if(password == ''|| password.length==6){
-          alert('密码不能为空且长度等于6');
+     }else if(password == ''|| password.length==6){
+          $("#checkPwd").css('display','block');
           $("input[name='password1']").focus();
           return false;
+     }else if(repassword==''||repassword.length==6){
+          $("#checkConfirmPwd").css('display','block');
+          $("input[name='repassword']").focus();
+          return false;
+     }else if(password != repassword){
+    	 $("#checkPwdAndConfirmPwd").css('display','block');
+         $("input[name='repassword']").focus();
+         return false;
+     }else{
+    	 location.href="/DMC_Web/login";
+     	return true;
      }
-
-     // if(repassword==''||repassword.length==6){
-     //      alert('确认密码不能为空且长度不能小于6');
-     //      $("input[name='repassword']").focus();
-     //      return false;
-     // }
-
-     // if(password != repassword){
-     //      alert('密码与确认密码不一致, 请确认！');
-     //      $("input[name='repassword']").focus();
-     //      return false;
-     // }
-
 }
 
 //ajax request
@@ -58,6 +69,7 @@ function validate_regForm(){
 //		type:"GET",
 //	});
 //}
+
 
 $(document).ready(function(){
     $("#fxbtn").click(function(){
