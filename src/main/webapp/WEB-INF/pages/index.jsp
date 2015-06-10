@@ -22,10 +22,10 @@
 				</div>
 				<div class="operate">
 					<img class="icon icon-skin" src="img/icon-skin.png">
-					<img class="icon icon-message" src="img/icon-message.png">
+					<img class="icon icon-message" src="img/icon-message.png" onclick="messageDialog();">
 					<img class="icon icon-down" src="img/icon-down.png">
 					<img class="icon icon-minus" src="img/icon-minus.png">
-					<img class="icon icon-close" src="img/icon-close.png">
+					<img class="icon icon-close" src="img/icon-close.png" onclick='window.opener=null;window.close()'>
 					<div class="account">
 						登录商家账号
 						<img src="img/icon-user.png" onclick="location.href='/DMC_Web/login'">
@@ -37,7 +37,7 @@
 					<span class="font12"><strong>首次体验,该项将检测数据项是否完整,请立即检查</strong></span>
 				</div>
 				<div class="btn">
-					<img class="icon icon-btn" src="img/btn-ljfx.png" id="fxbtn">
+					<img class="icon icon-btn" src="img/btn-ljfx.png" id="fxbtn" onclick="alert('立即分析!');">
 				</div>
 			</div>
 			<div class="foot clearfix">

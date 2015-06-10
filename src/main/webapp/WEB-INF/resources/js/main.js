@@ -62,6 +62,9 @@ function validate_regForm(){
      }
 }
 
+function messageDialog(){
+	alert('2323');
+}
 //ajax request
 //function registerForm(){
 //	$.ajax({
@@ -69,17 +72,3 @@ function validate_regForm(){
 //		type:"GET",
 //	});
 //}
-
-
-$(document).ready(function(){
-    $("#fxbtn").click(function(){
-      var score = getRandom(100);
-      $(".tijian-box").html(score);
-    })
-});
-
-/* get random number*/
-function getRandom(n){
-  return Math.floor(Math.random()*n+1);
-}
-
