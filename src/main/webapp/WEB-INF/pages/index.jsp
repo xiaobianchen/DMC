@@ -21,10 +21,11 @@
 					<span>DMC商城卫士旗舰版</span>
 				</div>
 				<div class="operate">
-					<img src="img/icon-skin.png">
-					<img src="img/icon-message.png">
-					<img src="img/icon-minus.png">
-					<img src="img/icon-close.png">
+					<img class="icon icon-skin" src="img/icon-skin.png">
+					<img class="icon icon-message" src="img/icon-message.png">
+					<img class="icon icon-down" src="img/icon-down.png">
+					<img class="icon icon-minus" src="img/icon-minus.png">
+					<img class="icon icon-close" src="img/icon-close.png">
 					<div class="account">
 						登录商家账号
 						<img src="img/icon-user.png" onclick="location.href='/DMC_Web/login'">
