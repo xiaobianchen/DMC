@@ -5,10 +5,11 @@
 	<head>
 		<title>登录</title>
 		<link rel="stylesheet" href="css/style.css" />
-		<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
-        <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+		<link rel="shortcut icon" href="img/favicon.ico">
+		<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
         <script type="text/javascript" src="js/jquery-ui.js"></script>
         <script type="text/javascript" src="js/main.js" charset="gb2312"></script>
+        <script type="text/javascript" src="js/wintrue.js"></script>
 	</head>
 	<body>
 		<!-- 登陆窗口 begin -->
@@ -21,14 +22,14 @@
 						<div class="input-box">
 							<label>
 								登录名
-								<input type="text" name="username"/>
+								<input type="text" name="username" id="username"/>
 								<span id="checkUser">用户名不能为空 </span>
 							</label>
 						</div>
 						<div class="input-box">
 							<label>
 								登陆密码
-								<input type="password" name="password"/>
+								<input type="password" name="password" id="password"/>
 								<span id="checkPwd">密码不能为空 </span>
 							</label>
 						</div>

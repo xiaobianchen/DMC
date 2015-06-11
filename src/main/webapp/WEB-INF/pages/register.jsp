@@ -5,8 +5,8 @@
 <head>
    <title>注册用户</title>
    <link rel="stylesheet" type="text/css" href="css/style.css">
-   <script type="text/javascript" src="js/jquery-1.7.2.js"></script>
-   <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+   <link rel="shortcut icon" href="img/favicon.ico">
+   <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
    <script type="text/javascript" src="js/main.js"></script>
 </head>
 
@@ -14,7 +14,7 @@
 	<div class="login-module">
 			<div class="inner">
 				<div class="login-bg blur"></div>
-				<div class="login-form">
+				<div class="register-form">
 					<form method="post">
 						<i class="icon icon-close"></i>
 						<div class="input-box">

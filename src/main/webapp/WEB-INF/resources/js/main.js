@@ -4,12 +4,12 @@ function validate_loginForm(){
   	var password = $("input[name='password']").val();
 
     if(username==''){
-    	$("#checkUser").css('display','block');
     	$("input[name='username']").focus();
+    	$("#checkUser").css('display','block');
     	return false;
     }else if(password==''){
-    	$("#checkPwd").css('display','block');
     	$("input[name='password']").focus();
+    	$("#checkPwd").css('display','block');
     	return false;
     }else{
     	location.href="/DMC_Web/index";
@@ -62,6 +62,22 @@ function validate_regForm(){
      }
 }
 
-function messageDialog(){
-	alert('2323');
-}
+$(function() {
+    $( "#dialog-confirm" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind",
+        duration: 1000
+      },
+      hide: {
+        effect: "explode",
+        duration: 1000
+      }
+    });
+ 
+    $( "#icon-message" ).click(function() {
+      $( "#dialog-confirm" ).dialog( "open" );
+    });
+});
+	
+	
