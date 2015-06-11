@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="css/style.css" />
 		<link type="text/css" rel="Stylesheet" href="css/jquery-ui.css"/>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="shortcut icon" href="img/favicon.ico">
 		<script type="text/javascript" src="js/jquery-ui.js"></script>
 		<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
         <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
