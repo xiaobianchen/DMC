@@ -65,10 +65,3 @@ function validate_regForm(){
 function messageDialog(){
 	alert('2323');
 }
-//ajax request
-//function registerForm(){
-//	$.ajax({
-//		url:"/DMC_Web/register/",
-//		type:"GET",
-//	});
-//}

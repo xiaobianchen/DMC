@@ -6,26 +6,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * 
- * @author jchen19
-   2015年6月10日
+ * Created by Xiaobian Chen on 2015年6月11日
+ * Login Page
  *
  */
 @Controller
 public class LoginController {
 	
-	@RequestMapping(value="/index", method=RequestMethod.GET)
-	public String index(){
-		return "index";
-	}
-	
 	@RequestMapping(value="/login",method=RequestMethod.GET)
 	public String login(){
 		return "login";
 	}
-	
-	@RequestMapping(value="/register",method=RequestMethod.GET)
-	public String register(){
-		return "register";
-	}
-
 }

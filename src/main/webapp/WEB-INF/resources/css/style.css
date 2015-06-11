@@ -16,11 +16,11 @@ a{text-decoration: none}
 .clearfix {zoom: 1;}
 .floatR{ float:right;}
 .icon{ display: inline-block; vertical-align: middle; background-repeat: no-repeat; background-position: center center;}
-.icon-skin{ background-image: url(img/icon-skin.png); width: 11px; height: 10px;}
-.icon-message{ background-image: url(img/icon-message.png); width: 13px; height: 11px;}
-.icon-down{ background-image: url(img/icon-down.png); width: 11px; height: 10px;}
-.icon-minus{ background-image: url(img/icon-minus.png); width: 11px; height: 12px;}
-.icon-close{ background-image: url(img/icon-close.png); width: 11px; height: 11px;}
+.icon-skin{width: 11px; height: 10px;}
+.icon-message{width: 13px; height: 11px;}
+.icon-down{width: 11px; height: 10px;}
+.icon-minus{width: 11px; height: 12px;}
+.icon-close{width: 11px; height: 11px;}
 .icon-btn{ background-image: url(img/btn-ljfx.png); width: 284px; height: 94px;}
 .icon-ll{ background-image: url(img/icon-ll.png); width: 126px; height: 126px;}
 .icon-zhl{ background-image: url(img/icon-zhl.png); width: 126px; height: 126px;}

@@ -1,8 +1,8 @@
 package com.dmc.domain;
 /**
  * 
- * @author jchen19
-   2015年6月10日
+ * Created by Xiaobian Chen on 2015年6月11日
+ * User Information
  *
  */
 public class User {
