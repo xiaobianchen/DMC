@@ -43,7 +43,7 @@
 					
 					<div class="account">
 						登录商家账号
-						<img src="img/icon-user.png" onclick="location.href='/DMC_Web/login'">
+						<img src="img/icon-user.png" onclick="location.href='/DMC/login'">
 					</div>
 				</div>
 				<div class="focus-title clearfix">

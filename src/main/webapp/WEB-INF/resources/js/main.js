@@ -12,7 +12,7 @@ function validate_loginForm(){
     	$("#checkPwd").css('display','block');
     	return false;
     }else{
-    	location.href="/DMC_Web/index";
+    	location.href="/DMC/index";
     	return true;
     }
 }
@@ -57,7 +57,7 @@ function validate_regForm(){
          $("input[name='repassword']").focus();
          return false;
      }else{
-    	 location.href="/DMC_Web/login";
+    	 location.href="/DMC/login";
      	return true;
      }
 }

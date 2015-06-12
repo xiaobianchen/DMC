@@ -38,7 +38,7 @@
 								<input type="checkbox" />记住密码
 							</label>
 							<label class="floatR">
-								<a onclick="location.href='/DMC_Web/register'">注册用户</a>
+								<a onclick="location.href='/DMC/register'">注册用户</a>
 							</label>
 						</div>
 						<div class="btn-box">
