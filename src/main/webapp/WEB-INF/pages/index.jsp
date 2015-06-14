@@ -15,6 +15,19 @@
         <script type="text/javascript" src="js/jquery.ui.dialog.js"></script>
 	</head>
 	<body>
+		<div class="pop-box">
+			<form>
+				<textarea>66666</textarea>
+				<button type="button" onclick='this.parentElement.parentElement.style.display = "none"; return false;'>提交</button><button type="button" onclick='this.parentElement.parentElement.style.display = "none"; return false;'>关闭</button>
+			</form>
+		</div>
+		<div class="min-window">
+			<i class="icon icon-skin"></i> 
+			<i onclick="popCover()" class="icon icon-message"></i> 
+			<i class="icon icon-down"></i> 
+			<i onclick="maxwin()" class="icon icon-minus"></i> 
+			<i onclick="closewin()" class="icon icon-close"></i>  
+		</div>
 		<div class="module"> 
 			<img class="module-bg" src="img/bg1.png" />
 			<div class="content"> 
@@ -23,23 +36,11 @@
 					<span>DMC商城卫士旗舰版</span>
 				</div>
 				<div class="operate">
-				<!-- <img class="icon icon-skin" src="img/icon-skin.png">
-					<img class="icon icon-message" src="img/icon-message.png" onclick="messageDialog();">
-					<img class="icon icon-down" src="img/icon-down.png">
-					<img class="icon icon-minus" src="img/icon-minus.png">
-					<img class="icon icon-close" src="img/icon-close.png" onclick='window.opener=null;window.close()'>  -->
-					
-					<i class="icon icon-skin"    style="background-image: url(img/icon-skin.png);"></i> 
-					<i class="icon icon-message" style="background-image: url(img/icon-message.png);" id="icon-message"></i> 
-					<i class="icon icon-down"    style="background-image: url(img/icon-down.png);"></i> 
-					<i class="icon icon-minus"   style="background-image: url(img/icon-minus.png);"></i> 
-					<i class="icon icon-close"   style="background-image: url(img/icon-close.png); " onclick='window.close()'></i> 
-					
-					 <div id="dialog-confirm" title="Empty the recycle bin?" style="display: none">
-					     <p>
-					         <span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>
-					         These items will be permanently deleted and cannot be recovered. Are you sure?</p>
-					 </div>
+				        <i class="icon icon-skin"></i> 
+					<i onclick="popCover()" class="icon icon-message"></i> 
+					<i class="icon icon-down"></i> 
+					<i onclick="minwin()" class="icon icon-minus"></i> 
+					<i onclick="closewin()" class="icon icon-close"></i>  
 					
 					<div class="account">
 						登录商家账号
