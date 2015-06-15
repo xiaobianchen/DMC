@@ -109,9 +109,23 @@ function maxwin(){
 };
     
 /*message window*/
-function popCover(){
-      document.getElementsByClassName('pop-box')[0].style.display = "block";
-}
+$(function(){
+	$("#dialog" ).dialog({
+	      autoOpen: false,
+	      show: {
+	        effect: "blind",
+	        duration: 1000
+	      },
+	      hide: {
+	        effect: "explode",
+	        duration: 1000
+	      }
+	  });
+	
+	$("#opener").click(function(){
+		$( "#dialog" ).dialog( "open" );
+	});
+});
 
 /*datapicker*/
 $(function(){
