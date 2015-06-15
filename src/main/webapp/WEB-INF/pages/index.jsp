@@ -54,7 +54,7 @@
 			<div class="foot clearfix">
 				<ul class="operate-left">
 					<li>
-						<img class="icon icon-ll" src="img/icon-ll.png" onclick="alert('流量功能目前处于内测中,敬请期待!')">
+						<img class="icon icon-ll" src="img/icon-ll.png" onclick="location.href='/DMC/flow'">
 						流量
 					</li>
 					<li>
