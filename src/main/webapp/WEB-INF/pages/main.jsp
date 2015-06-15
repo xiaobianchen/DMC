@@ -11,6 +11,7 @@
 <link rel="stylesheet" type="css/ui-dialog.css">
 <link rel="shortcut icon" href="img/favicon.ico">
 <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
 <script type="text/javascript" src="js/jquery-ui.js"></script>
 <script type="text/javascript" src="js/wintrue.js"></script>
 <script type="text/javascript" src="js/main.js"></script>

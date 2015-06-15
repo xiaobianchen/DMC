@@ -30,7 +30,7 @@
 						</div>
 						<div class="check-box clearfix">
 							<label>
-								<input type="checkbox" />记住密码
+								<input type="checkbox" id="ck_rmbUser"/>记住密码
 							</label>
 							<label class="floatR">
 								<a onclick="location.href='/DMC/register'">注册用户</a>

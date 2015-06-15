@@ -37,8 +37,6 @@
 					<i onclick="minwin()" class="icon icon-minus" style="background-image: url(img/icon-minus.png);"></i> 
 					<i onclick="closewin()" class="icon icon-close" style="background-image: url(img/icon-close.png);"></i> 
 
-
-					
 					<div class="account">
 						登录商家账号
 						<img src="img/icon-user.png" onclick="location.href='/DMC/login'">

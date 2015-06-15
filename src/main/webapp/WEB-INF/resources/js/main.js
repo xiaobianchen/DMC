@@ -2,19 +2,32 @@
 function validate_loginForm(){
   	var username = $("input[name='username']").val();
   	var password = $("input[name='password']").val();
+  	validate_user(username,password);
+  	if($("#ck_rmbUser").is(":checked")){
+  		$.cookie("rmbUser", "true", { expires: 7 }); //store 7 days cookies
+        $.cookie("username", username, { expires: 7 });  
+        $.cookie("password", password, { expires: 7 });  
+  	}else{
+  		$.cookie("rmbUser", "false", { expire: -1 });  
+        $.cookie("username", "", { expires: -1 });  
+        $.cookie("password", "", { expires: -1 });  
+  	}
+}
 
-    if(username==''){
-    	$("input[name='username']").focus();
-    	$("#checkUser").css('display','block');
-    	return false;
-    }else if(password==''){
-    	$("input[name='password']").focus();
-    	$("#checkPwd").css('display','block');
-    	return false;
-    }else{
-    	location.href="/DMC/index";
-    	return true;
-    }
+/*validate username and password*/
+function validate_user(username,password){
+	if(username==''){
+	    	$("input[name='username']").focus();
+	    	$("#checkUser").css('display','block');
+	    	return false;
+	}else if(password==''){
+	    	$("input[name='password']").focus();
+	    	$("#checkPwd").css('display','block');
+	    	return false;
+	}else {
+	    	location.href="/DMC/index";
+	    	return true;
+	}
 }
 
 /*check user and password*/
@@ -27,6 +40,16 @@ $(document).ready(function(){
 		  $("#checkConfirmPwd").css('display','none');
 		  $("#checkPwdAndConfirmPwd").css('display','none');
 	  });
+});
+
+
+/*remember password*/
+$(document).ready(function(){
+	if($.cookie("rmbUser") == "true"){
+		$("#ck_rmbUser").attr("checked",true);
+		$("#username").val($.cookie("username"));
+		$("#password").val($.cookie("password"));
+	}
 });
 
 /*validate register form*/
