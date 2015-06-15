@@ -1,13 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<jsp:include page="main.jsp"/>
 <html>
 <head>
    <title>注册用户</title>
-   <link rel="stylesheet" type="text/css" href="css/style.css">
-   <link rel="shortcut icon" href="img/favicon.ico">
-   <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
-   <script type="text/javascript" src="js/main.js"></script>
 </head>
 
 <body>
@@ -29,6 +26,12 @@
                                                                                                  邮箱
                                 <input type="text" name="email"/>
                                 <span id="checkEmail">请输入正确的邮箱格式</span>
+                            </label>
+						</div>
+						<div class="input-box">
+                            <label>
+                                                                                                出生日期
+                                <input type="text" id="datapicker"/>
                             </label>
 						</div>
 						<div class="input-box">

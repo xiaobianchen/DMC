@@ -62,22 +62,39 @@ function validate_regForm(){
      }
 }
 
-$(function() {
-    $( "#dialog-confirm" ).dialog({
-      autoOpen: false,
-      show: {
-        effect: "blind",
-        duration: 1000
-      },
-      hide: {
-        effect: "explode",
-        duration: 1000
-      }
-    });
- 
-    $( "#icon-message" ).click(function() {
-      $( "#dialog-confirm" ).dialog( "open" );
-    });
+/*min window*/
+function minwin(){ 
+      document.getElementsByClassName("module")[0].style.display = "none";
+      document.getElementsByClassName("min-window")[0].style.display = "block";
+};
+
+/*close window*/
+function closewin(){  
+      var browserName=navigator.appName;    
+        if (browserName=="Netscape") {    
+            window.open('','_self','');    
+            window.close();     
+        } else {    
+            window.close();    
+        }  
+};
+   
+/*max window*/
+function maxwin(){ 
+      document.getElementsByClassName("min-window")[0].style.display = "none";
+      document.getElementsByClassName("module")[0].style.display = "block";
+};
+    
+/*message window*/
+function popCover(){
+      document.getElementsByClassName('pop-box')[0].style.display = "block";
+}
+
+/*datapicker*/
+$(function(){
+	$("#datapicker").datepicker();
 });
+
+
 	
 	

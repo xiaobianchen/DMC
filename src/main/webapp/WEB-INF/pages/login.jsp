@@ -1,15 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<jsp:include page="main.jsp"/>
 <html>
 	<head>
 		<title>登录</title>
-		<link rel="stylesheet" href="css/style.css" />
-		<link rel="shortcut icon" href="img/favicon.ico">
-		<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
-        <script type="text/javascript" src="js/jquery-ui.js"></script>
-        <script type="text/javascript" src="js/main.js" charset="gb2312"></script>
-        <script type="text/javascript" src="js/wintrue.js"></script>
 	</head>
 	<body>
 		<!-- 登陆窗口 begin -->

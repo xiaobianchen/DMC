@@ -1,18 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<jsp:include page="main.jsp"/>
 <html>
 	<head>
 		<title></title>
-		<link rel="stylesheet" href="css/style.css" />
-		<link type="text/css" rel="Stylesheet" href="css/jquery-ui.css"/>
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link rel="stylesheet" type="css/ui-dialog.css">
-		<link rel="shortcut icon" href="img/favicon.ico">
-		<script type="text/javascript" src="js/jquery-ui.js"></script>
-        <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
-        <script type="text/javascript" src="js/jquery.ui.dialog.js"></script>
 	</head>
 	<body>
 		<div class="pop-box">
@@ -22,11 +14,13 @@
 			</form>
 		</div>
 		<div class="min-window">
-			<i class="icon icon-skin"></i> 
-			<i onclick="popCover()" class="icon icon-message"></i> 
-			<i class="icon icon-down"></i> 
-			<i onclick="maxwin()" class="icon icon-minus"></i> 
-			<i onclick="closewin()" class="icon icon-close"></i>  
+
+			<i class="icon icon-skin" style="background-image: url(img/icon-skin.png);"></i>
+			<i onclick="popCover()" class="icon icon-message" style="background-image: url(img/icon-message.png);"></i>
+			<i class="icon icon-down" style="background-image: url(img/icon-down.png);"></i>
+			<i onclick="maxwin()" class="icon icon-minus" style="background-image: url(img/icon-minus.png);"></i>
+			<i onclick="closewin()" class="icon icon-close" style="background-image: url(img/icon-close.png);"></i>
+
 		</div>
 		<div class="module"> 
 			<img class="module-bg" src="img/bg1.png" />
@@ -36,11 +30,14 @@
 					<span>DMC商城卫士旗舰版</span>
 				</div>
 				<div class="operate">
-				        <i class="icon icon-skin"></i> 
-					<i onclick="popCover()" class="icon icon-message"></i> 
-					<i class="icon icon-down"></i> 
-					<i onclick="minwin()" class="icon icon-minus"></i> 
-					<i onclick="closewin()" class="icon icon-close"></i>  
+
+				    <i class="icon icon-skin" style="background-image: url(img/icon-skin.png);"></i> 
+					<i onclick="popCover()" class="icon icon-message" style="background-image: url(img/icon-message.png);"></i> 
+					<i class="icon icon-down" style="background-image: url(img/icon-down.png);"></i> 
+					<i onclick="minwin()" class="icon icon-minus" style="background-image: url(img/icon-minus.png);"></i> 
+					<i onclick="closewin()" class="icon icon-close" style="background-image: url(img/icon-close.png);"></i> 
+
+
 					
 					<div class="account">
 						登录商家账号
