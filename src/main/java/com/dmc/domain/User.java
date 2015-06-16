@@ -1,4 +1,7 @@
 package com.dmc.domain;
+
+import java.util.Date;
+
 /**
  * 
  * Created by Xiaobian Chen on 2015Äê6ÔÂ11ÈÕ
@@ -8,6 +11,7 @@ package com.dmc.domain;
 public class User {
 	private String username;
 	private String email;
+	private Date birthday;
 	private String password;
 	private String repassword;
 	
@@ -22,6 +26,12 @@ public class User {
 	}
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	public Date getBirthday() {
+		return birthday;
+	}
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
 	}
 	public String getPassword() {
 		return password;
