@@ -80,8 +80,10 @@ function validate_regForm(){
          $("input[name='repassword']").focus();
          return false;
      }else{
-    	 location.href="/DMC/login";
-     	return true;
+    	 $.ajax({
+    		 type:"POST",
+    		 url:"/DMC/register",
+    	 });
      }
 }
 
