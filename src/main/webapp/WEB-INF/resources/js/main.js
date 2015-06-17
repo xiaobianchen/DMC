@@ -56,6 +56,7 @@ $(document).ready(function(){
 function validate_regForm(){
      var username = $("input[name='username']").val();
      var email = $("input[name='email']").val();
+     var birthday = $("#datapicker").val();
      var password = $("input[name='password1']").val();
      var repassword = $("input[name='repassword']").val();
      
@@ -83,6 +84,13 @@ function validate_regForm(){
     	 $.ajax({
     		 type:"POST",
     		 url:"/DMC/register",
+    		 data:"birthday=" + birthday + "&password=" + password + "&repassword=" + repassword + "&username=" + username + "&email=" + email,
+    		 success:function(message){
+    	    	 alert("success");
+    	     },
+    	     error:function(message){
+    	    	 alert(data);
+    	     }
     	 });
      }
 }

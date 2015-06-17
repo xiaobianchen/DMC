@@ -7,44 +7,14 @@
 		<title></title>
 	</head>
 	<body>
-		<!-- <div class="pop-box">
-			<form>
-				<textarea>66666</textarea>
-				<button type="button" onclick='this.parentElement.parentElement.style.display = "none"; return false;'>提交</button><button type="button" onclick='this.parentElement.parentElement.style.display = "none"; return false;'>关闭</button>
-			</form>
-		</div> -->
 		<div id="dialog" title="我要吐槽" style="display:none;">
-					<form method="post">
-						<i class="icon icon-close"></i>
-						<div class="input-box">
-							<label>
-								登录名
-								<input type="text" name="username" id="username"/>
-								<span id="checkUser">用户名不能为空 </span>
-							</label>
-						</div>
-						<div class="input-box">
-							<label>
-								登陆密码
-								<input type="password" name="password" id="password"/>
-								<span id="checkPwd">密码不能为空 </span>
-							</label>
-						</div>
-						<div class="check-box clearfix">
-							<label>
-								<input type="checkbox" id="ck_rmbUser"/>记住密码
-							</label>
-							<label class="floatR">
-								<a onclick="location.href='/DMC/register'">注册用户</a>
-							</label>
-						</div>
-						<div class="btn-box">
-							<img src="img/btn-login.png" style="width: 100%;" onclick="return validate_loginForm();"/>
-						</div>
-					</form>
+			<form action="">
+			    <textarea rows="10" cols="10"></textarea>
+			    <input type="submit" value="提交">
+			
+			</form>
 		</div>
 		<div class="min-window">
-
 			<i class="icon icon-skin" style="background-image: url(img/icon-skin.png);"></i>
 			<i onclick="popCover()" class="icon icon-message" style="background-image: url(img/icon-message.png);"></i>
 			<i class="icon icon-down" style="background-image: url(img/icon-down.png);"></i>

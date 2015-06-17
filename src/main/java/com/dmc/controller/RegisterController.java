@@ -6,8 +6,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
-
 import com.dmc.domain.User;
 import com.dmc.services.UserService;
 
@@ -32,7 +32,7 @@ public class RegisterController {
 	}
 	
 	@RequestMapping(value="/register", method=RequestMethod.POST)
-	public String signup(@ModelAttribute("user") User user,Model model){
+	public @ResponseBody  String signup(@ModelAttribute("user") User user,Model model){
 		userService.insert(user);
 		return "index";
 	}
