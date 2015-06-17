@@ -32,9 +32,20 @@ public class RegisterController {
 	}
 	
 	@RequestMapping(value="/register", method=RequestMethod.POST)
-	public @ResponseBody  String signup(@ModelAttribute("user") User user,Model model){
-		userService.insert(user);
-		return "index";
+	public @ResponseBody  String signup(@ModelAttribute("user") User user){
+		boolean isUserNameExist = userService.getUserByUserName(user.getUsername());
+		boolean isEmailExist = userService.getUserByEmail(user.getEmail());
+		
+		if(isUserNameExist || isEmailExist){
+			return "error";
+		}else{
+			userService.insert(user);
+			return "success";
+		}
 	}
-
+	
+	@RequestMapping(value="/checkUser", method=RequestMethod.GET)
+	public String checkUser(@ModelAttribute("user") User user){
+		return "";
+	}
 }

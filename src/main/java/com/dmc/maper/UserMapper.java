@@ -2,6 +2,7 @@ package com.dmc.maper;
 
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Options;
+import org.apache.ibatis.annotations.Select;
 
 import com.dmc.domain.User;
 
@@ -12,14 +13,25 @@ import com.dmc.domain.User;
  *
  */
 public interface UserMapper {
-	@Insert("INSERT INTO user(username, email, birthday,"
-			+ "password, repassword) VALUES"
-			+ "(#{username},#{email}, #{birthday}, #{password},"
-			+ "#{repassword})")
+	 @Insert("INSERT INTO user(username, password, repassword,"
+			+ "email, phone) VALUES"
+			+ "(#{username},#{password}, #{repassword}, #{email},"
+			+ "#{phone})")
 	 @Options(useGeneratedKeys=true, keyProperty="id", flushCache=true, keyColumn="id")
      public void insertUser(User user);
 	
 	
+	@Select("SELECT username as username, password as password, "
+			+ "repassword as repassword, email as email, "
+			+ "phone as phone "
+			+ "FROM user WHERE username = #{username}")
+	 public User getUserByUserName(String username);
+	
+	@Select("SELECT username as username, password as password, "
+			+ "repassword as repassword, email as email, "
+			+ "phone as phone "
+			+ "FROM user WHERE email = #{email}")
+	 public User getUserByEmail(String email);
 	
 	
 }

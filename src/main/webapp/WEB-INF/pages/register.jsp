@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <jsp:include page="main.jsp"/>
 <html>
@@ -17,22 +18,10 @@
 						<div class="input-box">
 							<label>
 								用户名
-								<input type="text" name="username"/>
+								<input type="text" name="username" onblur="checkUser();"/>
 								<span id="checkUser">用户名不能为空</span>
+								<span id="existUser">该用户名已经被注册</span>
 							</label>
-						</div>
-						<div class="input-box">
-                            <label>
-                                                                                                 邮箱
-                                <input type="text" name="email"/>
-                                <span id="checkEmail">请输入正确的邮箱格式</span>
-                            </label>
-						</div>
-						<div class="input-box">
-                            <label>
-                                                                                                出生日期
-                                <input type="text" id="datapicker"/>
-                            </label>
 						</div>
 						<div class="input-box">
 							<label>
@@ -49,7 +38,22 @@
                                 <span id="checkPwdAndConfirmPwd">确认密码与密码不一致,请确认</span>
                             </label>
                         </div>
-						
+						<div class="input-box">
+                            <label>
+                                                                                                 邮箱
+                                <input type="text" name="email"/>
+                                <span id="checkEmail">请输入正确的邮箱格式</span>
+                                <span id="existEmail">该邮箱已经被注册</span>
+                            </label>
+						</div>
+						<div class="input-box">
+                            <label>
+                                                                                                 手机号码
+                                <input type="text" name="phone"/>
+                                <span id="checkPhone">请输入正确的手机号码</span>
+                                <span id="existPhone">该手机号码已经被注册</span>
+                            </label>
+						</div>
 						<div class="btn-box">
 							<img src="img/btn-reg.png" style="width: 50%;" onclick="return validate_regForm();"/>
 						</div>

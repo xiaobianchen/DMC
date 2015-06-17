@@ -62,13 +62,13 @@ a{text-decoration: none}
 .foot .operate-right{ float: right; padding-top: 96px; padding-right: 20px;}
 .foot .operate-right li{ padding: 0 5px;}
 .foot .operate-right .icon{ margin-bottom: 10px;}
+.green {font-weight: bold;color: green;}
+.message {margin-bottom: 10px;}
 
-#checkUser{display:none;color:#dd6f75;margin_bottom:5px;}
-#checkPwd{display:none;color:#dd6f75;margin_bottom:5px;}
-#checkEmail{display:none;color:#dd6f75;margin_bottom:5px;}
-#checkPwd{display:none;color:#dd6f75;margin_bottom:5px;}
-#checkConfirmPwd{display:none;color:#dd6f75;margin_bottom:5px;}	
-#checkPwdAndConfirmPwd{display:none;color:#dd6f75;margin_bottom:5px;}
+#checkUser,#existUser,#checkPwd,#checkEmail,#existEmail,#checkConfirmPwd,#checkPwdAndConfirmPwd,#checkPhone,#existPhone{display:none;color:#dd6f75;margin_bottom:5px;}
+	
+
+
 	
   
 

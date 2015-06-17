@@ -13,7 +13,6 @@
 bin
 build
 lib/
-target/
 test-output
 .springBeans
 interpolated*.xml
@@ -34,7 +33,6 @@ overridedb.*
 .DS_Store
 .factorypath
 *.class
-target/
 .settings/
 .project
 .classpath

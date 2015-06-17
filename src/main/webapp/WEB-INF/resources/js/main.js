@@ -39,7 +39,8 @@ $(document).ready(function(){
 		  $("#checkPwd").css('display','none');
 		  $("#checkConfirmPwd").css('display','none');
 		  $("#checkPwdAndConfirmPwd").css('display','none');
-	  });
+		  $("#checkPhone").css('display','none');
+	});
 });
 
 
@@ -55,24 +56,20 @@ $(document).ready(function(){
 /*validate register form*/
 function validate_regForm(){
      var username = $("input[name='username']").val();
-     var email = $("input[name='email']").val();
-     var birthday = $("#datapicker").val();
      var password = $("input[name='password1']").val();
      var repassword = $("input[name='repassword']").val();
+     var email = $("input[name='email']").val();
+     var phone = $("input[name='phone']").val();
      
      if(username == ''){
     	 $("#checkUser").css('display','block');
          $("input[name='username']").focus();
          return false;
-     }else if(email == '' || !/.+@.+\.[a-zA-Z]{2,4}$/.test(email)){
-          $("#checkEmail").css('display','block');
-          $("input[name='email']").focus();
-          return false;
-     }else if(password == ''|| password.length==6){
+     }else if(password == ''){
           $("#checkPwd").css('display','block');
           $("input[name='password1']").focus();
           return false;
-     }else if(repassword==''||repassword.length==6){
+     }else if(repassword==''){
           $("#checkConfirmPwd").css('display','block');
           $("input[name='repassword']").focus();
           return false;
@@ -80,17 +77,29 @@ function validate_regForm(){
     	 $("#checkPwdAndConfirmPwd").css('display','block');
          $("input[name='repassword']").focus();
          return false;
-     }else{
+     }else if(email == '' || !/.+@.+\.[a-zA-Z]{2,4}$/.test(email)){
+         $("#checkEmail").css('display','block');
+         $("input[name='email']").focus();
+         return false;
+    }else if(phone == '' || !/^1[3|4|5|8][0-9]\d{4,8}$/.test(phone)){
+    	 $("#checkPhone").css('display','block');
+    	 $("input[name='phone']").focus();
+    	 return false;
+    }else{
     	 $.ajax({
     		 type:"POST",
     		 url:"/DMC/register",
-    		 data:"birthday=" + birthday + "&password=" + password + "&repassword=" + repassword + "&username=" + username + "&email=" + email,
-    		 success:function(message){
-    	    	 alert("success");
-    	     },
-    	     error:function(message){
-    	    	 alert(data);
-    	     }
+    		 data:"username=" + username + "&password=" + password + "&repassword=" + repassword + "&email=" + email + "&phone=" + phone,
+    		 success:function(data){
+    			if(data == 'success'){
+    				alert("用户注册成功!");
+    				location.href='/DMC/login';
+    			}else{
+    				$("#existUser").css('display','block');
+    				$("input[name='username']").focus();
+    				return false;
+    			}
+    		 }
     	 });
      }
 }
@@ -141,6 +150,21 @@ $(function(){
 $(function(){
 	$("#datapicker").datepicker();
 });
+
+/*check user*/
+function checkUser(){
+	 $.ajax({
+		 type:"GET",
+		 url:"/DMC/checkUser",
+		 data:"username=" + user,
+		 success:function(message){
+	    	 alert("user is new user!");
+	     },
+	     error:function(message){
+	    	 alert('user is exist!');
+	     }
+	 });
+}
 
 
 	

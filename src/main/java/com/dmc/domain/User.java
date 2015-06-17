@@ -7,29 +7,16 @@ package com.dmc.domain;
  */
 public class User {
 	private String username;
-	private String email;
-	private String birthday;
 	private String password;
 	private String repassword;
+	private String email;
+	private String phone;
 	
 	public String getUsername() {
 		return username;
 	}
 	public void setUsername(String username) {
 		this.username = username;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getBirthday() {
-		return birthday;
-	}
-	public void setBirthday(String birthday) {
-		this.birthday = birthday;
 	}
 	public String getPassword() {
 		return password;
@@ -43,11 +30,23 @@ public class User {
 	public void setRepassword(String repassword) {
 		this.repassword = repassword;
 	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
 	
 	@Override
 	public String toString() {
-		return "User [username=" + username + ", email=" + email
-				+ ", birthday=" + birthday + ", password=" + password
-				+ ", repassword=" + repassword + "]";
+		return "User [username=" + username + ", password=" + password
+				+ ", repassword=" + repassword + ", email=" + email
+				+ ", phone=" + phone + "]";
 	}
 }
