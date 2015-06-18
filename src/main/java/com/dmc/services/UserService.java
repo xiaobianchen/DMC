@@ -9,4 +9,6 @@ public interface UserService {
     void insert(User user);
     boolean getUserByUserName(String username);
     boolean getUserByEmail(String email);
+    boolean getUserByPhone(String phone);
+    boolean getUserByLogin(String username,String password);
 }

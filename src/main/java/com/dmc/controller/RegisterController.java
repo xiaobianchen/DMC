@@ -24,6 +24,11 @@ public class RegisterController {
 	@Autowired
 	private UserService userService;
 	
+	/**
+	 * register 
+	 * @param model
+	 * @return
+	 */
 	@RequestMapping(value="/register",method=RequestMethod.GET)
 	public String register(Model model){
 		User user = new User();
@@ -31,21 +36,74 @@ public class RegisterController {
 		return "register";
 	}
 	
+	/**
+	 * sign up
+	 * @param user
+	 * @return
+	 */
 	@RequestMapping(value="/register", method=RequestMethod.POST)
 	public @ResponseBody  String signup(@ModelAttribute("user") User user){
-		boolean isUserNameExist = userService.getUserByUserName(user.getUsername());
-		boolean isEmailExist = userService.getUserByEmail(user.getEmail());
-		
-		if(isUserNameExist || isEmailExist){
+		boolean isExist = userService.getUserByUserName(user.getUsername());
+		return isExistUser(user, isExist);
+	}
+
+	/**
+	 * check user from database
+	 * @param user
+	 * @return
+	 */
+	@RequestMapping(value="/checkUser", method=RequestMethod.POST)
+	public @ResponseBody String checkUser(@ModelAttribute("user") User user){
+		boolean isExist = userService.getUserByUserName(user.getUsername());
+		if(isExist){
+			return "error";
+		}else{
+			return "success";
+		}
+	}
+	
+	/**
+	 * check email from database
+	 * @param user
+	 * @return
+	 */
+	@RequestMapping(value="/checkEmail", method=RequestMethod.POST)
+	public String checkEmail(@ModelAttribute("user") User user){
+		boolean isExist = userService.getUserByEmail(user.getEmail());
+		if(isExist){
+			return "error";
+		}else{
+			return "success";
+		}
+	}
+	
+	/**
+	 * check phone from database
+	 * @param user
+	 * @return
+	 */
+	@RequestMapping(value="/checkPhone", method=RequestMethod.POST)
+	public String checkPhone(@ModelAttribute("user") User user){
+		boolean isExist = userService.getUserByPhone(user.getPhone());
+		if(isExist){
+			return "error";
+		}else{
+			return "success";
+		}
+	}
+	
+	/**
+	 * check user
+	 * @param user
+	 * @param isExist
+	 * @return
+	 */
+	public String isExistUser(User user, boolean isExist) {
+		if(isExist){
 			return "error";
 		}else{
 			userService.insert(user);
 			return "success";
 		}
-	}
-	
-	@RequestMapping(value="/checkUser", method=RequestMethod.GET)
-	public String checkUser(@ModelAttribute("user") User user){
-		return "";
 	}
 }

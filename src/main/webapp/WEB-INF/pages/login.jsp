@@ -26,6 +26,7 @@
 								登陆密码
 								<input type="password" name="password" id="password"/>
 								<span id="checkPwd">密码不能为空 </span>
+								<span id="existPwd">密码不正确, 请确认</span>
 							</label>
 						</div>
 						<div class="check-box clearfix">

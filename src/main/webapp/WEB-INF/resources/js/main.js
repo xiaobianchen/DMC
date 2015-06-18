@@ -25,8 +25,11 @@ function validate_user(username,password){
 	    	$("#checkPwd").css('display','block');
 	    	return false;
 	}else {
-	    	location.href="/DMC/index";
-	    	return true;
+	    	$.ajax({
+	    		type:"POST",
+	    		url:"/DMC/login",
+	    		data:"username=" + username + "&password=" + password
+	    	});
 	}
 }
 
@@ -40,6 +43,7 @@ $(document).ready(function(){
 		  $("#checkConfirmPwd").css('display','none');
 		  $("#checkPwdAndConfirmPwd").css('display','none');
 		  $("#checkPhone").css('display','none');
+		  $("#existUser").css('display','none');
 	});
 });
 
@@ -151,21 +155,60 @@ $(function(){
 	$("#datapicker").datepicker();
 });
 
+
+/*$(document).ready(function(){
+	
+	
+});*/
+
+
 /*check user*/
 function checkUser(){
-	 $.ajax({
-		 type:"GET",
-		 url:"/DMC/checkUser",
-		 data:"username=" + user,
-		 success:function(message){
-	    	 alert("user is new user!");
-	     },
-	     error:function(message){
-	    	 alert('user is exist!');
-	     }
-	 });
+	 var username = $("input[name='username']").val();
+	  $.ajax({
+			 type:"POST",
+			 url:"/DMC/checkUser",
+			 data:"username=" + username,
+			 success:function(data){
+	 			if(data == 'error'){
+	 				$("#existUser").css('display','block');
+	 				$("#username").focus();
+	 				return false;
+	 			}
+	 		 }
+		 });
 }
 
+/*check email*/
+function checkEmail(){
+	 var email = $("input[name='email']").val();
+		$.ajax({
+			type:"POST",
+			url:"/DMC/checkEmail",
+			data:"email=" + email,
+			success:function(data){
+				if(data == 'error'){
+					$("#existEmail").css('display','block');
+	 				$("#email").focus();
+	 				return false;
+	 			}
+			}
+		});
+}
 
-	
-	
+/*check phone*/
+function checkPhone(){
+	var phone = $("input[name='phone']").val();
+	$.ajax({
+		type:"POST",
+		url:"/DMC/checkPhone",
+		data:"phone=" + phone,
+		success:function(data){
+			if(data == 'error'){
+				$("#existPhone").css('display','block');
+ 				$("input[name='phone']").focus();
+ 				return false;
+ 			}
+		}
+	});
+}

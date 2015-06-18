@@ -1,8 +1,15 @@
 package com.dmc.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.dmc.domain.Login;
+import com.dmc.services.UserService;
 
 /**
  * 
@@ -12,9 +19,25 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller
 public class LoginController {
+
+	@Autowired
+	private UserService userService;
 	
 	@RequestMapping(value="/login",method=RequestMethod.GET)
-	public String login(){
+	public String login(Model model){
+		Login login = new Login();
+		model.addAttribute("login", login);
 		return "login";
+	}
+	
+	@ResponseBody
+	@RequestMapping(value="/login",method=RequestMethod.POST)
+	public String login(@ModelAttribute("login") Login login){
+		boolean isExist = userService.getUserByLogin(login.getUsername(), login.getPassword());
+		if(isExist){
+			return "success";
+		}else{
+			return "error";
+		}
 	}
 }

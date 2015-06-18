@@ -34,4 +34,10 @@ public interface UserMapper {
 	 public User getUserByEmail(String email);
 	
 	
+	@Select("SELECT username as username, password as password, "
+			+ "repassword as repassword, email as email, "
+			+ "phone as phone "
+			+ "FROM user WHERE phone = #{phone}")
+	 public User getUserByPhone(String phone);
+	
 }

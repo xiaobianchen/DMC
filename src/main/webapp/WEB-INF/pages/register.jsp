@@ -18,7 +18,7 @@
 						<div class="input-box">
 							<label>
 								用户名
-								<input type="text" name="username" onblur="checkUser();"/>
+								<input type="text" name="username" id="username" onblur="checkUser();"/>
 								<span id="checkUser">用户名不能为空</span>
 								<span id="existUser">该用户名已经被注册</span>
 							</label>
@@ -41,7 +41,7 @@
 						<div class="input-box">
                             <label>
                                                                                                  邮箱
-                                <input type="text" name="email"/>
+                                <input type="text" name="email" id="email" onblur="checkEmail();"/>
                                 <span id="checkEmail">请输入正确的邮箱格式</span>
                                 <span id="existEmail">该邮箱已经被注册</span>
                             </label>
@@ -49,7 +49,7 @@
 						<div class="input-box">
                             <label>
                                                                                                  手机号码
-                                <input type="text" name="phone"/>
+                                <input type="text" name="phone" maxlength="11" onblur="checkPhone();"/>
                                 <span id="checkPhone">请输入正确的手机号码</span>
                                 <span id="existPhone">该手机号码已经被注册</span>
                             </label>

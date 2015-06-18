@@ -34,8 +34,24 @@ public class UserServiceImpl implements UserService {
 		if(user != null){
 			return true;
 		}
-		
 		return false;
 	}
 
+	@Override
+	public boolean getUserByPhone(String phone) {
+		User user = userMapper.getUserByPhone(phone);
+		if(user != null){
+			return true;
+		}
+		return false;
+	}
+
+	@Override
+	public boolean getUserByLogin(String username, String password) {
+		User user = userMapper.getUserByUserName(username);
+		if(user!=null && user.getPassword().equals(password)){
+			return true;
+		}
+		return false;
+	}
 }
