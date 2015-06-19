@@ -131,36 +131,10 @@ function maxwin(){
       document.getElementsByClassName("module")[0].style.display = "block";
 };
     
-/*message window*/
-$(function(){
-	$("#dialog" ).dialog({
-	      autoOpen: false,
-	      show: {
-	        effect: "blind",
-	        duration: 1000
-	      },
-	      hide: {
-	        effect: "explode",
-	        duration: 1000
-	      }
-	  });
-	
-	$("#opener").click(function(){
-		$( "#dialog" ).dialog( "open" );
-	});
-});
-
 /*datapicker*/
 $(function(){
 	$("#datapicker").datepicker();
 });
-
-
-/*$(document).ready(function(){
-	
-	
-});*/
-
 
 /*check user*/
 function checkUser(){
@@ -212,3 +186,35 @@ function checkPhone(){
 		}
 	});
 }
+
+/*convertRate*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

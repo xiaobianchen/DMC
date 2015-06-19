@@ -17,4 +17,9 @@ public class IndexController {
 	public String index(){
 		return "index";
 	}
+	
+	@RequestMapping(value="/comments", method=RequestMethod.GET)
+	public String comment(){
+		return "comments";
+	}
 }

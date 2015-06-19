@@ -7,16 +7,9 @@
 		<title></title>
 	</head>
 	<body>
-		<div id="dialog" title="我要吐槽" style="display:none;">
-			<form action="">
-			    <textarea rows="10" cols="10"></textarea>
-			    <input type="submit" value="提交">
-			
-			</form>
-		</div>
 		<div class="min-window">
 			<i class="icon icon-skin" style="background-image: url(img/icon-skin.png);"></i>
-			<i onclick="popCover()" class="icon icon-message" style="background-image: url(img/icon-message.png);"></i>
+			<i onclick="location.href='/DMC/flow'" class="icon icon-message" style="background-image: url(img/icon-message.png);"></i>
 			<i class="icon icon-down" style="background-image: url(img/icon-down.png);"></i>
 			<i onclick="maxwin()" class="icon icon-minus" style="background-image: url(img/icon-minus.png);"></i>
 			<i onclick="closewin()" class="icon icon-close" style="background-image: url(img/icon-close.png);"></i>
@@ -30,7 +23,6 @@
 					<span>DMC商城卫士旗舰版</span>
 				</div>
 				<div class="operate">
-
 				    <i class="icon icon-skin" style="background-image: url(img/icon-skin.png);"></i> 
 					<i id="opener" class="icon icon-message" style="background-image: url(img/icon-message.png);"></i> 
 					<i class="icon icon-down" style="background-image: url(img/icon-down.png);"></i> 
@@ -58,7 +50,7 @@
 						流量
 					</li>
 					<li>
-						<img class="icon icon-zhl" src="img/icon-zhl.png" onclick="alert('转化率功能目前处于内测中，敬请期待!')" >
+						<img class="icon icon-zhl" src="img/icon-zhl.png"  id="zhl">
 						转化率
 					</li>
 					<li>

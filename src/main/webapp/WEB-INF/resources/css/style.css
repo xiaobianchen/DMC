@@ -64,6 +64,11 @@ a{text-decoration: none}
 .foot .operate-right .icon{ margin-bottom: 10px;}
 .green {font-weight: bold;color: green;}
 .message {margin-bottom: 10px;}
+.ui-dialog-osx{ 
+	-moz-border-radius: 0 0 8px 8px; 
+	-webkit-border-radius: 0 0 8px 8px;
+    border-radius: 0 0 8px 8px;
+    border-width: 0 8px 8px 8px;}
 
 #checkUser,#existUser,#checkPwd,#checkEmail,#existEmail,#checkConfirmPwd,#checkPwdAndConfirmPwd,#checkPhone,#existPhone,#existPwd{display:none;color:#dd6f75;margin_bottom:5px;}
 	
