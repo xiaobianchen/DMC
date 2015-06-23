@@ -3,6 +3,8 @@ function validate_loginForm(){
   	var username = $("input[name='username']").val();
   	var password = $("input[name='password']").val();
   	validate_user(username,password);
+  	
+  	/*remember password*/
   	if($("#ck_rmbUser").is(":checked")){
   		$.cookie("rmbUser", "true", { expires: 7 }); //store 7 days cookies
         $.cookie("username", username, { expires: 7 });  
@@ -28,7 +30,16 @@ function validate_user(username,password){
 	    	$.ajax({
 	    		type:"POST",
 	    		url:"/DMC/login",
-	    		data:"username=" + username + "&password=" + password
+	    		data:"username=" + username + "&password=" + password,
+	    		success:function(data){
+	    			if(data=='success'){
+	    				location.href="/DMC/index";
+	    			}else{
+	    				$("#existPwd").css('display','block');
+	    				$("#password").focus();
+	    				return false;
+	    			}
+	    		}
 	    	});
 	}
 }
@@ -44,6 +55,8 @@ $(document).ready(function(){
 		  $("#checkPwdAndConfirmPwd").css('display','none');
 		  $("#checkPhone").css('display','none');
 		  $("#existUser").css('display','none');
+		  $("#existEmail").css('display','none');
+		  $("#existPhone").css('display','none');
 	});
 });
 
@@ -99,8 +112,6 @@ function validate_regForm(){
     				alert("用户注册成功!");
     				location.href='/DMC/login';
     			}else{
-    				$("#existUser").css('display','block');
-    				$("input[name='username']").focus();
     				return false;
     			}
     		 }
@@ -144,7 +155,7 @@ function checkUser(){
 			 url:"/DMC/checkUser",
 			 data:"username=" + username,
 			 success:function(data){
-	 			if(data == 'error'){
+	 			if(data == 'success'){
 	 				$("#existUser").css('display','block');
 	 				$("#username").focus();
 	 				return false;
@@ -161,10 +172,10 @@ function checkEmail(){
 			url:"/DMC/checkEmail",
 			data:"email=" + email,
 			success:function(data){
-				if(data == 'error'){
+				if(data == 'success'){
 					$("#existEmail").css('display','block');
-	 				$("#email").focus();
-	 				return false;
+					$("#email").focus();
+					return false;
 	 			}
 			}
 		});
@@ -178,7 +189,7 @@ function checkPhone(){
 		url:"/DMC/checkPhone",
 		data:"phone=" + phone,
 		success:function(data){
-			if(data == 'error'){
+			if(data == 'success'){
 				$("#existPhone").css('display','block');
  				$("input[name='phone']").focus();
  				return false;

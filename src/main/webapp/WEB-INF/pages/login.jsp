@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <jsp:include page="main.jsp"/>
 <html>
@@ -12,12 +13,12 @@
 			<div class="inner">
 				<div class="login-bg blur"></div>
 				<div class="login-form">
-					<form method="post">
+					<form:form method="post" id="form" modelAttribute="login">
 						<i class="icon icon-close"></i>
 						<div class="input-box">
 							<label>
 								登录名
-								<input type="text" name="username" id="username"/>
+								<input type="text" name="username" id="username" onblur="checkUserIsExist();"/>
 								<span id="checkUser">用户名不能为空 </span>
 							</label>
 						</div>
@@ -40,7 +41,7 @@
 						<div class="btn-box">
 							<img src="img/btn-login.png" style="width: 100%;" onclick="return validate_loginForm();"/>
 						</div>
-					</form>
+					</form:form>
 				</div> 
 			</div>
 		</div>

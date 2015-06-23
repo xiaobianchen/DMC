@@ -30,9 +30,8 @@ public class LoginController {
 		return "login";
 	}
 	
-	@ResponseBody
 	@RequestMapping(value="/login",method=RequestMethod.POST)
-	public String login(@ModelAttribute("login") Login login){
+	public @ResponseBody String login(@ModelAttribute("login") Login login){
 		boolean isExist = userService.getUserByLogin(login.getUsername(), login.getPassword());
 		if(isExist){
 			return "success";

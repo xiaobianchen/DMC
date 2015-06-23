@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
+
 import com.dmc.domain.User;
 import com.dmc.services.UserService;
 
@@ -43,8 +44,17 @@ public class RegisterController {
 	 */
 	@RequestMapping(value="/register", method=RequestMethod.POST)
 	public @ResponseBody  String signup(@ModelAttribute("user") User user){
-		boolean isExist = userService.getUserByUserName(user.getUsername());
-		return isExistUser(user, isExist);
+		boolean isUser = userService.getUserByUserName(user.getUsername());
+		boolean isEmail = userService.getUserByEmail(user.getEmail());
+		boolean isPhone = userService.getUserByPhone(user.getPhone());
+		boolean isFlag = isUser||isEmail||isPhone;
+		
+		if(isFlag){
+			return "error";
+		}else{
+			userService.insert(user);
+			return "success";
+		}
 	}
 
 	/**
@@ -56,9 +66,9 @@ public class RegisterController {
 	public @ResponseBody String checkUser(@ModelAttribute("user") User user){
 		boolean isExist = userService.getUserByUserName(user.getUsername());
 		if(isExist){
-			return "error";
-		}else{
 			return "success";
+		}else{
+			return "error";
 		}
 	}
 	
@@ -68,12 +78,12 @@ public class RegisterController {
 	 * @return
 	 */
 	@RequestMapping(value="/checkEmail", method=RequestMethod.POST)
-	public String checkEmail(@ModelAttribute("user") User user){
+	public @ResponseBody String checkEmail(@ModelAttribute("user") User user){
 		boolean isExist = userService.getUserByEmail(user.getEmail());
 		if(isExist){
-			return "error";
-		}else{
 			return "success";
+		}else{
+			return "error";
 		}
 	}
 	
@@ -83,27 +93,12 @@ public class RegisterController {
 	 * @return
 	 */
 	@RequestMapping(value="/checkPhone", method=RequestMethod.POST)
-	public String checkPhone(@ModelAttribute("user") User user){
+	public @ResponseBody String checkPhone(@ModelAttribute("user") User user){
 		boolean isExist = userService.getUserByPhone(user.getPhone());
 		if(isExist){
-			return "error";
-		}else{
 			return "success";
-		}
-	}
-	
-	/**
-	 * check user
-	 * @param user
-	 * @param isExist
-	 * @return
-	 */
-	public String isExistUser(User user, boolean isExist) {
-		if(isExist){
-			return "error";
 		}else{
-			userService.insert(user);
-			return "success";
+			return "error";
 		}
 	}
 }
