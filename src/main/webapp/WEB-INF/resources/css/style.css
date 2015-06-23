@@ -63,12 +63,17 @@ a{text-decoration: none}
 .foot .operate-right li{ padding: 0 5px;}
 .foot .operate-right .icon{ margin-bottom: 10px;}
 .green {font-weight: bold;color: green;}
-.message {margin-bottom: 10px;}
+.message {margin-bottom: 10px;display:none;}
 .ui-dialog-osx{ 
 	-moz-border-radius: 0 0 8px 8px; 
 	-webkit-border-radius: 0 0 8px 8px;
     border-radius: 0 0 8px 8px;
     border-width: 0 8px 8px 8px;}
+
+.comment-form{ position: absolute; top: 50%; left: 50%; width: 300px; height: 350px; margin-top: -150px; margin-left: -150px; font-size: 12px; font-weight: bold; box-shadow: 0px 0px 26px #666; color:#606060; background: #fff; z-index: 2;}
+.comment-form form{ padding: 30px 40px 0; position: relative;}
+.btnComment{width:100%;height:30px;background:#fff;}
+
 
 #checkUser,#existUser,#checkPwd,#checkEmail,#existEmail,#checkConfirmPwd,#checkPwdAndConfirmPwd,#checkPhone,#existPhone,#existPwd{display:none;color:#dd6f75;margin_bottom:5px;}
 	

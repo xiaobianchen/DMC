@@ -5,15 +5,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Data Management Center</title>
-<link rel="stylesheet" type="css/datepicker.css">
+<!-- loaded  all css files -->
+<link rel="stylesheet" href="css/jquery-ui.css"/>
+<link rel="stylesheet" href="css/msgBoxLight.css">
 <link rel="stylesheet" href="css/style.css" />
-<link type="text/css" rel="Stylesheet" href="css/jquery-ui.css"/>
-<link rel="stylesheet" type="css/ui-dialog.css">
 <link rel="shortcut icon" href="img/favicon.ico">
+
+<!-- loaded all js files -->
 <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
 <script type="text/javascript" src="js/jquery.cookie.js"></script>
 <script type="text/javascript" src="js/jquery-ui.js"></script>
-<script type="text/javascript" src="js/wintrue.js"></script>
+<script type="text/javascript" src="js/jquery.msgBox.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 
 </head>
