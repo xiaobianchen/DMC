@@ -199,29 +199,7 @@ function checkPhone(){
 }
 
 /*comment*/
-$("#btnComment").click(function(){
-	alert(232);
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function submitComment(){
+	alert(23232);
+}
 

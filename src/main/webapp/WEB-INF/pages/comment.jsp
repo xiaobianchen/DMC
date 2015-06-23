@@ -32,7 +32,7 @@
 							</label>
 						</div>
 						<div class="btn-box">
-							<input type="submit" class="btnComment" value="提交" id="btnComment">
+							<input type="submit" class="btnComment" value="提交" onclick="submitComment();">
 						</div>
 					</form>
 				</div> 
