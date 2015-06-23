@@ -200,6 +200,18 @@ function checkPhone(){
 
 /*comment*/
 function submitComment(){
-	alert(23232);
+	var comments = $("#comments").val();
+	var type = $("#contact option:selected").text();
+	var contact = $("#contactInfo").val();
+	
+	$.ajax({
+		type:'POST',
+		url:"/DMC/comment",
+		data:"comments=" + comments + "&type=" + type + "&contact=" + contact,
+		success:function(data){
+			alert("您的问题已提交成功,我们会尽快分析处理!");
+			location.href="/DMC/index";
+		}
+	});
 }
 

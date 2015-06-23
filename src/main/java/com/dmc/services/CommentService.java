@@ -11,4 +11,5 @@ import com.dmc.domain.Comment;
 public interface CommentService {
    
 	void insert(Comment comment);
+	boolean getCommentByComments(String comments);
 }

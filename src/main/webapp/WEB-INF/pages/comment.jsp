@@ -16,7 +16,7 @@
 						<i class="icon icon-close"></i>
 						<div class="input-box">
 							<label>
-								我要提意见
+								您有什么问题或建议想对我们说?
 								<textarea rows="10" cols="28" id="comments"></textarea>
 							</label>
 						</div>
@@ -28,11 +28,11 @@
 								    <option>邮箱</option>
 								    <option>qq号码</option>
 								</select>
-								<input type="text" id="contactInfo">
+								<input type="text" id="contactInfo"/>
 							</label>
 						</div>
 						<div class="btn-box">
-							<input type="submit" class="btnComment" value="提交" onclick="submitComment();">
+							<input type="submit" class="btnComment" value="提交" onclick="submitComment();"/>
 						</div>
 					</form>
 				</div> 

@@ -13,10 +13,10 @@ CREATE TABLE `user` (
   `email` varchar(50) NOT NULL,
   `phone` varchar(20) NOT NULL,
   PRIMARY KEY (`username`,`email`,`phone`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf-8;
+) ENGINE=MyISAM;
 
 /*Create Table Comment*/
 CREATE TABLE `comment` (
   `comments` varchar(255) NOT NULL,
   `contact` varchar(50) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf-8;
+) ENGINE=MyISAM;

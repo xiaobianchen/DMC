@@ -7,6 +7,7 @@ package com.dmc.domain;
  */
 public class Comment {
 	private String comments;
+	private String type;
 	private String contact;
 	
 	public String getComments() {
@@ -14,6 +15,12 @@ public class Comment {
 	}
 	public void setComments(String comments) {
 		this.comments = comments;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
 	}
 	public String getContact() {
 		return contact;
@@ -24,6 +31,7 @@ public class Comment {
 	
 	@Override
 	public String toString() {
-		return "Comment [comments=" + comments + ", contact=" + contact + "]";
+		return "Comment [comments=" + comments + ", type=" + type
+				+ ", contact=" + contact + "]";
 	}
 }

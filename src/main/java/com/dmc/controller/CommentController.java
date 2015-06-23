@@ -1,12 +1,16 @@
 package com.dmc.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.dmc.domain.Comment;
+import com.dmc.services.CommentService;
 
 /**
  * 
@@ -15,7 +19,11 @@ import com.dmc.domain.Comment;
  *
  */
 @Controller
+@SessionAttributes("comment")
 public class CommentController {
+	
+	@Autowired
+	private CommentService commentService;
 	
 	@RequestMapping(value="/comment", method=RequestMethod.GET)
 	public String comment(Model model){
@@ -25,11 +33,14 @@ public class CommentController {
 	}
 	
 	@RequestMapping(value="/comment", method=RequestMethod.POST)
-	public String submitComment(@ModelAttribute("comment") Comment comment){
-		
-		
-		return "";
+	public @ResponseBody void submitComment(@ModelAttribute("comment") Comment comment){
+//		if(" ÷ª˙∫≈¬Î".equals(comment.getType())){
+//			comment.setType("1");
+//		}else if("” œ‰".equals(comment.getType())){
+//			comment.setType("2");
+//		}else{
+//			comment.setType("3");
+//		}
+		commentService.insert(comment);
 	}
-	
-	
 }
