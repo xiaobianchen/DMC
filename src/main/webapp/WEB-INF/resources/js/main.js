@@ -206,11 +206,12 @@ function submitComment(){
 	
 	$.ajax({
 		type:'POST',
-		url:"/DMC/comment",
+		url:"/DMC/feedback",
 		data:"comments=" + comments + "&type=" + type + "&contact=" + contact,
 		success:function(data){
-			alert("您的问题已提交成功,我们会尽快分析处理!");
-			location.href="/DMC/index";
+			alert(data);
+//			alert("您的问题已提交成功,我们会尽快分析处理!");
+//			location.href="/DMC/index";
 		}
 	});
 }

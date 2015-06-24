@@ -32,15 +32,16 @@ public class CommentController {
 		return "comment";
 	}
 	
-	@RequestMapping(value="/comment", method=RequestMethod.POST)
-	public @ResponseBody void submitComment(@ModelAttribute("comment") Comment comment){
-//		if(" ÷ª˙∫≈¬Î".equals(comment.getType())){
-//			comment.setType("1");
-//		}else if("” œ‰".equals(comment.getType())){
-//			comment.setType("2");
-//		}else{
-//			comment.setType("3");
-//		}
+	@RequestMapping(value="/feedback", method=RequestMethod.POST)
+	public @ResponseBody String submitComment(@ModelAttribute("comment") Comment comment){
+		if(" ÷ª˙∫≈¬Î".equals(comment.getType())){
+			comment.setType("1");
+		}else if("” œ‰".equals(comment.getType())){
+			comment.setType("2");
+		}else{
+			comment.setType("3");
+		}
 		commentService.insert(comment);
+		return "success";
 	}
 }
