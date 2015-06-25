@@ -18,6 +18,7 @@
 							<label>
 								您有什么问题或建议想对我们说?
 								<textarea rows="10" cols="28" id="comments"></textarea>
+								<span id="comment">评论内容不可以为空哈,您的建议将是我们最大的动力!</span>
 							</label>
 						</div>
 						<div class="input-box">

@@ -57,6 +57,7 @@ $(document).ready(function(){
 		  $("#existUser").css('display','none');
 		  $("#existEmail").css('display','none');
 		  $("#existPhone").css('display','none');
+		  $("#comment").css('display','none');
 	});
 });
 
@@ -200,19 +201,32 @@ function checkPhone(){
 
 /*comment*/
 function submitComment(){
+	/*validate phone and email*/
 	var comments = $("#comments").val();
 	var type = $("#contact option:selected").text();
 	var contact = $("#contactInfo").val();
 	
-	$.ajax({
-		type:'POST',
-		url:"/DMC/feedback",
-		data:"comments=" + comments + "&type=" + type + "&contact=" + contact,
-		success:function(data){
-			alert(data);
-//			alert("您的问题已提交成功,我们会尽快分析处理!");
-//			location.href="/DMC/index";
+	validate_info(comments,type,contact);
+	
+}
+/*validate information*/
+function validate_info(comments,type,contact){
+	if(comments==''){
+		$("#comment").css('display','block');
+		$("#comments").focus();
+		return false;
+	}else if(type=='手机号码'){
+		if(!/^1[3|4|5|8][0-9]\d{4,8}$/.test(contact)){
+			$("#checkPhone").css('display','block');
+			$("#contactInfo").focus();
+			return false;
 		}
-	});
+	}else if(type=='邮箱'){
+		if(!/.+@.+\.[a-zA-Z]{2,4}$/.test(contact)){
+			$("#checkEmail").css('display','block');
+			$("#contactInfo").focus();
+			return false;
+		}
+	}
 }
 

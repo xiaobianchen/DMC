@@ -14,7 +14,7 @@ import com.dmc.services.CommentService;
 
 /**
  * 
- * Created by Xiaobian Chen on 2015Äê6ÔÂ23ÈÕ
+ * Created by Xiaobian Chen on 2015ï¿½ï¿½6ï¿½ï¿½23ï¿½ï¿½
  *
  *
  */
@@ -30,18 +30,5 @@ public class CommentController {
 		Comment comment = new Comment();
 		model.addAttribute("comment", comment);
 		return "comment";
-	}
-	
-	@RequestMapping(value="/feedback", method=RequestMethod.POST)
-	public @ResponseBody String submitComment(@ModelAttribute("comment") Comment comment){
-		if("ÊÖ»úºÅÂë".equals(comment.getType())){
-			comment.setType("1");
-		}else if("ÓÊÏä".equals(comment.getType())){
-			comment.setType("2");
-		}else{
-			comment.setType("3");
-		}
-		commentService.insert(comment);
-		return "success";
 	}
 }

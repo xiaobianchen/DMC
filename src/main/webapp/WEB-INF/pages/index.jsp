@@ -50,7 +50,7 @@
 						流量
 					</li>
 					<li>
-						<img class="icon icon-zhl" src="img/icon-zhl.png"  id="zhl">
+						<img class="icon icon-zhl" src="img/icon-zhl.png"  onclick="alert('转化率功能尚未开放,敬请期待!')">
 						转化率
 					</li>
 					<li>

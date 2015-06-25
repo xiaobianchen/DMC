@@ -124,7 +124,7 @@ a{text-decoration: none}
 .popup .text-box span{ display: block;}
 .popup .text-box .strong{ display: inline;}
 
-#checkUser,#existUser,#checkPwd,#checkEmail,#existEmail,#checkConfirmPwd,#checkPwdAndConfirmPwd,#checkPhone,#existPhone,#existPwd{display:none;color:#dd6f75;margin_bottom:5px;}
+#checkUser,#existUser,#checkPwd,#checkEmail,#existEmail,#checkConfirmPwd,#checkPwdAndConfirmPwd,#checkPhone,#existPhone,#existPwd,#comment{display:none;color:#dd6f75;margin_bottom:5px;}
 	
 
 
