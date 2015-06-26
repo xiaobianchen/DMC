@@ -13,7 +13,7 @@ import com.dmc.services.CommentService;
 
 /**
  * 
- * Created by Xiaobian Chen on 2015月23日
+ * Created by Xiaobian Chen on 2015年月23日
  *
  *
  */
@@ -23,6 +23,11 @@ public class CommentController {
 	@Autowired
 	private CommentService commentService;
 	
+	/**
+	 * 
+	 * @param model
+	 * @return
+	 */
 	@RequestMapping(value="/feedback", method=RequestMethod.GET)
 	public String comment(Model model){
 		Comment comment = new Comment();
@@ -30,6 +35,11 @@ public class CommentController {
 		return "comment";
 	}
 	
+	/**
+	 * 
+	 * @param comment
+	 * @return
+	 */
 	@RequestMapping(value="/feedback", method=RequestMethod.POST)
 	public @ResponseBody String getFeedBack(@ModelAttribute("comment") Comment comment){
 		commentService.insert(comment);

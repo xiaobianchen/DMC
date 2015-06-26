@@ -14,6 +14,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/flow")
 public class FlowController {
 	
+	/**
+	 * 
+	 * @return
+	 */
 	@RequestMapping(method=RequestMethod.GET)
 	public String flow(){
 		return "flow";

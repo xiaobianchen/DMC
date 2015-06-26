@@ -23,6 +23,11 @@ public class LoginController {
 	@Autowired
 	private UserService userService;
 	
+	/**
+	 * 
+	 * @param model
+	 * @return
+	 */
 	@RequestMapping(value="/login",method=RequestMethod.GET)
 	public String login(Model model){
 		Login login = new Login();
@@ -30,6 +35,11 @@ public class LoginController {
 		return "login";
 	}
 	
+	/**
+	 * Verify UserName And Password
+	 * @param login
+	 * @return
+	 */
 	@RequestMapping(value="/login",method=RequestMethod.POST)
 	public @ResponseBody String login(@ModelAttribute("login") Login login){
 		boolean isExist = userService.getUserByLogin(login.getUsername(), login.getPassword());

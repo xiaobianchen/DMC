@@ -16,6 +16,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/home")
 public class HomeController {
 	
+	/**
+	 * Home Page to DMC
+	 * @param model
+	 * @return
+	 */
 	@RequestMapping(method=RequestMethod.GET)
 	public String home(ModelMap model){
 		model.addAttribute("message", "Welcome to DMC");

@@ -199,6 +199,7 @@ function checkPhone(){
 	});
 }
 
+/*comments*/
 function submitComment(){
 	var comments = $("#comments").val();
 	var type = $("#contact option:selected").text();

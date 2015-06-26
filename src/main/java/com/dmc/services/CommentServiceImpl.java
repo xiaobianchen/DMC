@@ -5,6 +5,12 @@ import org.springframework.stereotype.Service;
 
 import com.dmc.domain.Comment;
 import com.dmc.maper.CommentMapper;
+/**
+ * 
+ * Created by Xiaobian Chen on 2015Äê6ÔÂ26ÈÕ
+ *
+ *
+ */
 
 @Service("commentService")
 public class CommentServiceImpl implements CommentService {

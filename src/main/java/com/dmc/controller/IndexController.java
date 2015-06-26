@@ -13,13 +13,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class IndexController {
 	
+	
 	@RequestMapping(value="/index", method=RequestMethod.GET)
 	public String index(){
 		return "index";
-	}
-	
-	@RequestMapping(value="/comments", method=RequestMethod.GET)
-	public String comment(){
-		return "comments";
 	}
 }
