@@ -13,12 +13,11 @@
 				<div class="login-bg blur"></div>
 				<div class="comment-form">
 					<form method="post">
-						<i class="icon icon-close"></i>
 						<div class="input-box">
 							<label>
 								您有什么问题或建议想对我们说?
 								<textarea rows="10" cols="28" id="comments"></textarea>
-								<span id="comment">评论内容不可以为空哈,您的建议将是我们最大的动力!</span>
+								<span id="details">您的建议是我们工作最大的动力</span>
 							</label>
 						</div>
 						<div class="input-box">
@@ -30,10 +29,11 @@
 								    <option>qq号码</option>
 								</select>
 								<input type="text" id="contactInfo"/>
+								<span id="info">请填写您的联系方式,以方便我们能尽快联系您</span>
 							</label>
 						</div>
 						<div class="btn-box">
-							<input type="submit" class="btnComment" value="提交" onclick="submitComment();"/>
+							<input type="submit" class="btnComment" value="提交" onclick="return submitComment();"/>
 						</div>
 					</form>
 				</div> 

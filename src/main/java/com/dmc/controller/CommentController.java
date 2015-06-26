@@ -7,28 +7,32 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.dmc.domain.Comment;
 import com.dmc.services.CommentService;
 
 /**
  * 
- * Created by Xiaobian Chen on 2015ï¿½ï¿½6ï¿½ï¿½23ï¿½ï¿½
+ * Created by Xiaobian Chen on 2015ÔÂ23ÈÕ
  *
  *
  */
 @Controller
-@SessionAttributes("comment")
 public class CommentController {
 	
 	@Autowired
 	private CommentService commentService;
 	
-	@RequestMapping(value="/comment", method=RequestMethod.GET)
+	@RequestMapping(value="/feedback", method=RequestMethod.GET)
 	public String comment(Model model){
 		Comment comment = new Comment();
 		model.addAttribute("comment", comment);
 		return "comment";
+	}
+	
+	@RequestMapping(value="/feedback", method=RequestMethod.POST)
+	public @ResponseBody String getFeedBack(@ModelAttribute("comment") Comment comment){
+		commentService.insert(comment);
+		return "success";
 	}
 }

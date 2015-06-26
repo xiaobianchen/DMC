@@ -13,7 +13,7 @@
 			<div class="inner">
 				<div class="login-bg blur"></div>
 				<div class="login-form">
-					<form:form method="post" id="form" modelAttribute="login">
+					<form method="post" id="form">
 						<i class="icon icon-close"></i>
 						<div class="input-box">
 							<label>
@@ -44,7 +44,7 @@
 						<div class="btn-box">
 							<img src="img/btn-login.png" style="width: 100%;" onclick="return validate_loginForm();"/>
 						</div>
-					</form:form>
+					</form>
 				</div> 
 			</div>
 		</div>

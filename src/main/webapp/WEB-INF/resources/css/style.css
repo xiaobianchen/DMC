@@ -23,7 +23,7 @@ a{text-decoration: none}
 .register-form form{ padding: 30px 40px 0; position: relative;}
 
 /*评论窗口*/
-.comment-form{ position: absolute; top: 50%; left: 50%; width: 300px; height: 350px; margin-top: -150px; margin-left: -150px; font-size: 12px; font-weight: bold; box-shadow: 0px 0px 26px #666; color:#606060; background: #fff; z-index: 2;}
+.comment-form{ position: absolute; top: 50%; left: 50%; width: 350px; height: 400px; margin-top: -150px; margin-left: -150px; font-size: 12px; font-weight: bold; box-shadow: 0px 0px 26px #666; color:#606060; background: #fff; z-index: 2;}
 .comment-form form{ padding: 30px 40px 0; position: relative;}
 .btnComment{width:100%;height:30px;background:#fff;}
 
@@ -124,7 +124,7 @@ a{text-decoration: none}
 .popup .text-box span{ display: block;}
 .popup .text-box .strong{ display: inline;}
 
-#checkUser,#existUser,#checkPwd,#checkEmail,#existEmail,#checkConfirmPwd,#checkPwdAndConfirmPwd,#checkPhone,#existPhone,#existPwd,#comment{display:none;color:#dd6f75;margin_bottom:5px;}
+#checkUser,#existUser,#checkPwd,#checkEmail,#existEmail,#checkConfirmPwd,#checkPwdAndConfirmPwd,#checkPhone,#existPhone,#existPwd,#comment,#contacts,#info,#details{display:none;color:#dd6f75;margin_bottom:5px;}
 	
 
 
