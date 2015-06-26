@@ -222,15 +222,20 @@ function submitComment(){
 	    success:function(data){
 	    	alert('您的建议我们已经收到,我们会尽快分析处理!');
 	    	location.href='/DMC/index';
-	    },
-	    error:function(data){
-	    	alert("程序出现错误,请尽快联系管理员 dmc@163.com");
-	    	return false;
 	    }
 	});
-	
 }
 
+/*popup*/
+$(document).ready(function(){
+	$("#imgsel").mouseover(function(){
+		$(".popup").css('display','block');
+	});
+	
+	$("#imgsel").mouseout(function(){
+		$(".popup").css('display','none');
+	});
+});
 
 
 

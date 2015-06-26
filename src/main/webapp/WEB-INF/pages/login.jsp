@@ -34,9 +34,9 @@
 							<label>
 								<input type="checkbox" id="ck_rmbUser"/>记住密码
 							</label>
-							<!-- <label class="floatL">
+							<label class="floatL">
 								<a onclick="location.href='/DMC/forgetPwd'">忘记密码</a>
-							</label> -->
+							</label>
 							<label class="floatR">
 								<a onclick="location.href='/DMC/register'">注册用户</a>
 							</label>

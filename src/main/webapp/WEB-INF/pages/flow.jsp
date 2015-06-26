@@ -43,11 +43,11 @@
 			<div class="application-list">
 				<ul>
 					<li>
-						<img src="img/img01.png" />
+						<img src="img/img01.png" id="imgsel"/>
 						<p class="title">PC淘宝搜索</p>
 						<i class="icon icon-btn-download" style="background-image: url(img/icon-btn-download.png);"></i>
 						<!-- popup -->
-						<div class="popup">
+						<div class="popup" style="display:none;">
 							<div class="inner">
 								<i class="icon icon-arrow-left" style="background-image: url(img/icon-arrow-left.png);"></i>
 								<p class="text-box">

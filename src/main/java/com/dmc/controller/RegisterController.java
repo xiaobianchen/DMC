@@ -101,4 +101,16 @@ public class RegisterController {
 			return "error";
 		}
 	}
+	
+	@RequestMapping(value="/forgetPwd", method=RequestMethod.GET)
+	public @ResponseBody String getPassword(){
+		return "forgetPwd";
+	}
+	
+	
+	
+	
+	
+	
+	
 }

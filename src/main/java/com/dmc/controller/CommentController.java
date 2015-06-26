@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.dmc.domain.Comment;
 import com.dmc.services.CommentService;
@@ -18,6 +19,7 @@ import com.dmc.services.CommentService;
  *
  */
 @Controller
+@SessionAttributes("comment")
 public class CommentController {
 	
 	@Autowired
@@ -42,7 +44,11 @@ public class CommentController {
 	 */
 	@RequestMapping(value="/feedback", method=RequestMethod.POST)
 	public @ResponseBody String getFeedBack(@ModelAttribute("comment") Comment comment){
-		commentService.insert(comment);
-		return "success";
+		if(comment!=null){
+			commentService.insert(comment);
+			return "success";
+		}else{
+			return "error";
+		}
 	}
 }
