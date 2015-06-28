@@ -30,14 +30,6 @@
 								<span id="checkPwd">密码不能为空</span>
 							</label>
 						</div>
-                        <div class="input-box">
-                            <label>
-                                                                                                 确认密码
-                                <input type="password" name="repassword">
-                                <span id="checkConfirmPwd">确认密码不能为空</span>
-                                <span id="checkPwdAndConfirmPwd">确认密码与密码不一致,请确认</span>
-                            </label>
-                        </div>
 						<div class="input-box">
                             <label>
                                                                                                  邮箱

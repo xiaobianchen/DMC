@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.dmc.domain.Login;
 import com.dmc.domain.ResetPassword;
-import com.dmc.domain.User;
 import com.dmc.services.UserService;
 
 /**
@@ -72,8 +71,7 @@ public class LoginController {
 	public String getUserByPassword(@ModelAttribute("resetpwd") ResetPassword reset){
 		boolean isFound = userService.getUserByLogin(reset.getUsername(), reset.getOldPassword());
 		if(isFound){
-			User user = userService.getUser(reset.getUsername());
-			userService.resetPassword(user.getUsername(), reset.getPassword());
+			userService.updateUser(reset);
 			return "success";
 		}else{
 			return "error";

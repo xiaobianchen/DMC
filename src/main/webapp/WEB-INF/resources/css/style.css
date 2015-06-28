@@ -20,7 +20,7 @@ a:hover{text-decoration: underline;}
 .login-form .icon-close{ position: absolute; top: 5px; right: 5px; background-image: url(img/icon-login-close.png); width: 11px; height: 11px;}
 
 /*注册窗口*/
-.register-form{ position: absolute; top: 50%; left: 50%; width: 300px; height: 415px; margin-top: -150px; margin-left: -150px; font-size: 12px; font-weight: bold; box-shadow: 0px 0px 26px #666; color:#606060; background: #fff; z-index: 2;}
+.register-form{ position: absolute; top: 50%; left: 50%; width: 300px; height: 350px; margin-top: -150px; margin-left: -150px; font-size: 12px; font-weight: bold; box-shadow: 0px 0px 26px #666; color:#606060; background: #fff; z-index: 2;}
 .register-form form{ padding: 30px 40px 0; position: relative;}
 .btnReset{background:#69b3f2;width:100%;}
 

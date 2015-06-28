@@ -3,6 +3,7 @@ package com.dmc.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.dmc.domain.ResetPassword;
 import com.dmc.domain.User;
 import com.dmc.maper.UserMapper;
 /**
@@ -55,18 +56,16 @@ public class UserServiceImpl implements UserService {
 		return false;
 	}
 
-	@Override
-	public boolean resetPassword(String username,String password) {
-		User usr = userMapper.resetPassword(username, password);
-		if(usr != null){
-			return true;
-		}
-		return false;
-	}
 
 	@Override
 	public User getUser(String username) {
 		User user = userMapper.getUserByUserName(username);
 		return user;
 	}
+
+	@Override
+	public User updateUser(ResetPassword reset) {
+		return userMapper.updateUser(reset);
+	}
+
 }

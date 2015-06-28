@@ -81,7 +81,6 @@ $(document).ready(function(){
 function validate_regForm(){
      var username = $("input[name='username']").val();
      var password = $("input[name='password1']").val();
-     var repassword = $("input[name='repassword']").val();
      var email = $("input[name='email']").val();
      var phone = $("input[name='phone']").val();
      
@@ -93,14 +92,6 @@ function validate_regForm(){
           $("#checkPwd").css('display','block');
           $("input[name='password1']").focus();
           return false;
-     }else if(repassword==''){
-          $("#checkConfirmPwd").css('display','block');
-          $("input[name='repassword']").focus();
-          return false;
-     }else if(password != repassword){
-    	 $("#checkPwdAndConfirmPwd").css('display','block');
-         $("input[name='repassword']").focus();
-         return false;
      }else if(email == '' || !/.+@.+\.[a-zA-Z]{2,4}$/.test(email)){
          $("#checkEmail").css('display','block');
          $("input[name='email']").focus();
@@ -113,7 +104,7 @@ function validate_regForm(){
     	 $.ajax({
     		 type:"POST",
     		 url:"/DMC/register",
-    		 data:"username=" + username + "&password=" + password + "&repassword=" + repassword + "&email=" + email + "&phone=" + phone,
+    		 data:"username=" + username + "&password=" + password  + "&email=" + email + "&phone=" + phone,
     		 success:function(data){
     			if(data == 'success'){
     				alert("用户注册成功!");
@@ -276,7 +267,8 @@ function resetPwd(){
 			url:'/DMC/resetPwd',
 			data:"username=" + username + "&oldPassword=" + oldPassword +　"&password=" + password + "&confirmPassword=" + confirmPassword,
 			success:function(data){
-				alert(data);
+				alert('密码更新成功');
+				location.href="/DMC/login";
 			},
 			error:function(data){
 				$("#checkoldPassword").css('display','block');
