@@ -1,5 +1,7 @@
 package com.dmc.services;
 
+import java.util.List;
+
 import com.dmc.domain.Comment;
 
 /**
@@ -12,4 +14,5 @@ public interface CommentService {
    
 	void insert(Comment comment);
 	boolean getCommentByComments(String comments);
+	List<Comment> list();
 }

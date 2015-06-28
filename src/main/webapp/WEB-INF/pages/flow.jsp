@@ -17,7 +17,7 @@
 				</div>
 				<div class="operate">
 				    <i class="icon icon-skin" style="background-image: url(img/icon-skin.png);"></i> 
-					<i onclick="location.href='/DMC/comment'" class="icon icon-message" style="background-image: url(img/icon-message.png);"></i> 
+					<i onclick="location.href='/DMC/feedback'" class="icon icon-message" style="background-image: url(img/icon-message.png);"></i> 
 					<i class="icon icon-down" style="background-image: url(img/icon-down.png);"></i> 
 					<i onclick="minwin()" class="icon icon-minus" style="background-image: url(img/icon-minus.png);"></i> 
 					<i onclick="closewin()" class="icon icon-close" style="background-image: url(img/icon-close.png);"></i> 

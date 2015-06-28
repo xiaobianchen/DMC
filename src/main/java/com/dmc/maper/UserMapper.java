@@ -3,6 +3,7 @@ package com.dmc.maper;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import com.dmc.domain.User;
 
@@ -39,5 +40,9 @@ public interface UserMapper {
 			+ "phone as phone "
 			+ "FROM user WHERE phone = #{phone}")
 	 public User getUserByPhone(String phone);
+	
+	
+	 @Update("UPDATE user SET password = #{password} where username = #{username}")
+	 public User resetPassword(String username,String password);
 	
 }

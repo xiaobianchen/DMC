@@ -1,5 +1,7 @@
 package com.dmc.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,4 +34,8 @@ public class CommentServiceImpl implements CommentService {
 		return false;
 	}
 
+	@Override
+	public List<Comment> list() {
+		return commentMapper.list();
+	}
 }

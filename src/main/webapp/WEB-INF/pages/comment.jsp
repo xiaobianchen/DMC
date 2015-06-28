@@ -15,6 +15,7 @@
 					<form method="post">
 						<div class="input-box">
 							<label>
+							    <a style="float:right;" id="listComments" href="/DMC/list">查看所有评论</a>
 								您有什么问题或建议想对我们说?
 								<textarea rows="10" cols="28" id="comments"></textarea>
 								<span id="details">您的建议是我们工作最大的动力</span>
@@ -24,16 +25,17 @@
 							<label>
 								联系方式
 								<select id="contact">
-								    <option>手机号码</option>
-								    <option>邮箱</option>
-								    <option>qq号码</option>
+								    <option>Phone</option>
+								    <option>Email</option>
+								    <option>QQ</option>
 								</select>
 								<input type="text" id="contactInfo"/>
 								<span id="info">请填写您的联系方式,以方便我们能尽快联系您</span>
 							</label>
 						</div>
 						<div class="btn-box">
-							<input type="submit" class="btnComment" value="提交" onclick="return submitComment();"/>
+							<!-- <input type="button" value="提交问题" class="button red" onclick="return submitComment();"> -->
+							<img alt="提交问题" src="img/btnsubmit.png" onclick="return submitComment();">
 						</div>
 					</form>
 				</div> 

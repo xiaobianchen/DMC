@@ -6,10 +6,17 @@ package com.dmc.domain;
  *
  */
 public class Comment {
+	private int id;
 	private String comments;
 	private String type;
 	private String contact;
 	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getComments() {
 		return comments;
 	}
@@ -31,7 +38,7 @@ public class Comment {
 	
 	@Override
 	public String toString() {
-		return "Comment [comments=" + comments + ", type=" + type
-				+ ", contact=" + contact + "]";
+		return "Comment [id=" + id + ", comments=" + comments + ", type="
+				+ type + ", contact=" + contact + "]";
 	}
 }

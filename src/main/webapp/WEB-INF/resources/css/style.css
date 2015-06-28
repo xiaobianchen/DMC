@@ -1,7 +1,8 @@
 body,div,p{ margin: 0; padding: 0;}
 ul{list-style: none; margin: 0; padding: 0;}
 body {font-family: "Trebuchet MS", "Helvetica", "Arial",  "Verdana", "sans-serif";font-size: 62.5%;}
-a{text-decoration: none}
+a{text-decoration:none;}
+a:hover{text-decoration: underline;}
 
 .pop-box {display: none; position: absolute; top:30%; left: 50%; padding: 10px; margin-left: -150px; z-index: 100; width: 300px; background-color: #fff; border: 1px solid #bbb; box-shadow: 0 0 5px #666;}
 .pop-box textarea{ width: 100%; margin: 0; box-sizing: border-box; resize: none;}
@@ -21,11 +22,16 @@ a{text-decoration: none}
 /*注册窗口*/
 .register-form{ position: absolute; top: 50%; left: 50%; width: 300px; height: 415px; margin-top: -150px; margin-left: -150px; font-size: 12px; font-weight: bold; box-shadow: 0px 0px 26px #666; color:#606060; background: #fff; z-index: 2;}
 .register-form form{ padding: 30px 40px 0; position: relative;}
+.btnReset{background:#69b3f2;width:100%;}
 
 /*评论窗口*/
 .comment-form{ position: absolute; top: 50%; left: 50%; width: 350px; height: 400px; margin-top: -150px; margin-left: -150px; font-size: 12px; font-weight: bold; box-shadow: 0px 0px 26px #666; color:#606060; background: #fff; z-index: 2;}
 .comment-form form{ padding: 30px 40px 0; position: relative;}
 .btnComment{width:100%;height:30px;background:#fff;}
+
+/*重置密码*/
+.reset-form{position: absolute; top: 50%; left: 50%; width: 260px; height: 360px; margin-top: -150px; margin-left: -150px; font-size: 12px; font-weight: bold; box-shadow: 0px 0px 26px #666; color:#606060; background: #fff; z-index: 2;}
+.reset-form form{ padding: 30px 40px 0; position: relative;}
 
 /*input*/
 .input-box{ margin-bottom: 10px;}
@@ -35,8 +41,8 @@ a{text-decoration: none}
 .btn-box{ margin-top: 25px;}
 .clearfix:after {content: " ";display: block;clear: both;height: 0;}
 .clearfix {zoom: 1;}
-.floatR{ float:right;}
-.floatL{margin-left:45px;}
+.floatR{ float:right;margin-top:5px;}
+.floatL{margin-left:20px;float:right;}
 
 /*icon*/
 .icon{ display: inline-block; vertical-align: middle; background-repeat: no-repeat; background-position: center center;}
@@ -125,15 +131,66 @@ a{text-decoration: none}
 .popup .text-box span{ display: block;}
 .popup .text-box .strong{ display: inline;}
 
-#checkUser,#existUser,#checkPwd,#checkEmail,#existEmail,#checkConfirmPwd,#checkPwdAndConfirmPwd,#checkPhone,#existPhone,#existPwd,#comment,#contacts,#info,#details{display:none;color:#dd6f75;margin_bottom:5px;}
-	
+/*button*/
+.button { 
+display: inline-block; 
+zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */ 
+*display: inline; 
+vertical-align: baseline; 
+margin: 0 2px; 
+outline: none; 
+cursor: pointer; 
+text-align: center; 
+text-decoration: none; 
+font: 18px/100% Arial, Helvetica, sans-serif; 
+padding: .5em 2em .55em; 
+text-shadow: 0 1px 1px rgba(0,0,0,.3); 
+-webkit-border-radius: .5em; 
+-moz-border-radius: .5em; 
+border-radius: .5em; 
+-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2); 
+-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2); 
+box-shadow: 0 1px 2px rgba(0,0,0,.2); 
+} 
 
+.button:hover { 
+text-decoration: none; 
+}
 
-	
-  
+.button:active { 
+position: relative; 
+top: 1px; 
+} 
 
+/*red*/
+.red { 
+color: #faddde; 
+border: solid 1px #980c10; 
+background: #d81b21; 
+background: -webkit-gradient(linear, left top, left bottom, from(#ed1c24), to(#aa1317)); 
+background: -moz-linear-gradient(top, #ed1c24, #aa1317); 
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ed1c24', endColorstr='#aa1317'); 
+} 
 
-    
+.red:hover { 
+background: #b61318; 
+background: -webkit-gradient(linear, left top, left bottom, from(#c9151b), to(#a11115)); 
+background: -moz-linear-gradient(top, #c9151b, #a11115); 
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c9151b', endColorstr='#a11115'); 
+} 
+
+.red:active { 
+color: #de898c; 
+background: -webkit-gradient(linear, left top, left bottom, from(#aa1317), to(#ed1c24)); 
+background: -moz-linear-gradient(top, #aa1317, #ed1c24); 
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aa1317', endColorstr='#ed1c24'); 
+}
+
+/*提示*/
+#checkUser,#existUser,#checkPwd,#checkEmail,#existEmail,
+#checkConfirmPwd,#checkPwdAndConfirmPwd,#checkPhone,#existPhone,
+#existPwd,#comment,#contacts,#info,#details,#checkoldPwd,
+#checknewPwd,#checkNewConfirmPwd,#checkconfirmNewPwd,#checkUserName,#checkoldPassword{display:none;color:#dd6f75;margin_bottom:5px;}
    
     
     

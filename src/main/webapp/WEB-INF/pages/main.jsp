@@ -4,10 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Data Management Center</title>
+<title>登录-DMC,就购了</title>
 <!-- loaded  all css files -->
 <link rel="stylesheet" href="css/jquery-ui.css"/>
 <link rel="stylesheet" href="css/msgBoxLight.css">
+<link rel="stylesheet" href="css/jquery.dataTables.css">
 <link rel="stylesheet" href="css/style.css" />
 <link rel="shortcut icon" href="img/favicon.ico">
 
@@ -16,6 +17,7 @@
 <script type="text/javascript" src="js/jquery.cookie.js"></script>
 <script type="text/javascript" src="js/jquery-ui.js"></script>
 <script type="text/javascript" src="js/jquery.msgBox.js"></script>
+<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 
 </head>

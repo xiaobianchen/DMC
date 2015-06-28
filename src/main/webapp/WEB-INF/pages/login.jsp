@@ -25,24 +25,23 @@
 						<div class="input-box">
 							<label>
 								登陆密码
+								<a id="resetPwd" href="/DMC/resetPwd" class="floatR">修改登录密码</a>
 								<input type="password" name="password" id="password"/>
 								<span id="checkPwd">密码不能为空 </span>
 								<span id="existPwd">密码不正确, 请确认</span>
 							</label>
+							
 						</div>
 						<div class="check-box clearfix">
 							<label>
 								<input type="checkbox" id="ck_rmbUser"/>记住密码
 							</label>
-							<label class="floatL">
-								<a onclick="location.href='/DMC/forgetPwd'">忘记密码</a>
-							</label>
-							<label class="floatR">
-								<a onclick="location.href='/DMC/register'">注册用户</a>
-							</label>
 						</div>
 						<div class="btn-box">
 							<img src="img/btn-login.png" style="width: 100%;" onclick="return validate_loginForm();"/>
+					        <label class="floatR">
+								<a id="register" href="/DMC/register">免费注册</a>
+							</label>
 						</div>
 					</form>
 				</div> 

@@ -44,7 +44,7 @@ function validate_user(username,password){
 	}
 }
 
-/*check user and password*/
+/*remove prompt*/
 $(document).ready(function(){
 	  $("input").blur(function(){
 		  $("#checkUser").css('display','none');
@@ -57,7 +57,13 @@ $(document).ready(function(){
 		  $("#existUser").css('display','none');
 		  $("#existEmail").css('display','none');
 		  $("#existPhone").css('display','none');
-		  $("#comment").css('display','none');
+		  $("#checkUserName").css('display','none');
+		  $("#checkoldPwd").css('display','none');
+		  $("#checknewPwd").css('display','none');
+		  $("#checkconfirmNewPwd").css('display','none');
+		  $("#checkNewConfirmPwd").css('display','none');
+		  $("#details").css('display','none');
+		  $("#info").css('display','none');
 	});
 });
 
@@ -70,7 +76,7 @@ $(document).ready(function(){
 		$("#password").val($.cookie("password"));
 	}
 });
-
+ 
 /*validate register form*/
 function validate_regForm(){
      var username = $("input[name='username']").val();
@@ -237,8 +243,49 @@ $(document).ready(function(){
 	});
 });
 
-
-
+/*reset password*/
+function resetPwd(){
+	var username = $("#username").val();
+	var oldPassword = $("#oldpwd").val();
+	var password = $("#newpwd").val();
+	var confirmPassword = $("#confirmNewPwd").val();
+	
+	if(username==''){
+		$("#checkUserName").css('display','block');
+		$("#username").focus();
+		return false;
+	}else if(oldPassword==''){
+		$("#checkoldPwd").css('display','block');
+		$("#oldpwd").focus();
+		return false;
+	}else if(password==''){
+		$("#checknewPwd").css('display','block');
+		$("#newpwd").focus();
+		return false;
+	}else if(confirmPassword==''){
+		$("#checkconfirmNewPwd").css('display','block');
+		$("#confirmNewPwd").focus();
+		return false;
+	}else if(password!=confirmPassword){
+		$("#checkNewConfirmPwd").css('display','block');
+		$("#confirmNewPwd").focus();
+		return false;
+	}else{
+		$.ajax({
+			type:'POST',
+			url:'/DMC/resetPwd',
+			data:"username=" + username + "&oldPassword=" + oldPassword +　"&password=" + password + "&confirmPassword=" + confirmPassword,
+			success:function(data){
+				alert(data);
+			},
+			error:function(data){
+				$("#checkoldPassword").css('display','block');
+				$("#oldpwd").focus();
+				return false;
+			}
+		});
+	}
+}
 
 
 

@@ -1,5 +1,7 @@
 package com.dmc.maper;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Select;
@@ -22,4 +24,9 @@ public interface CommentMapper {
 	@Select("SELECT comments as comments, type as type,contact as contact "
 			+ "FROM comment WHERE comments = #{comments}")
 	Comment getCommentByComments(String comments);
+	
+	@Select("SELECT id as id, comments as comments, type as type,contact as contact "
+			+ "FROM comment")
+	List<Comment> list();
+	
 }

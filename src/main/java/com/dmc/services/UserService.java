@@ -11,4 +11,6 @@ public interface UserService {
     boolean getUserByEmail(String email);
     boolean getUserByPhone(String phone);
     boolean getUserByLogin(String username,String password);
+    boolean resetPassword(String username,String password);
+    User getUser(String username);
 }
