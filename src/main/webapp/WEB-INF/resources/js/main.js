@@ -286,9 +286,10 @@ function resetPwd(){
 		});
 	}
 }
-
-
-
+/*DataTable*/
+$(document).ready(function(){
+	$("#listComments").DataTable();
+});
 
 
 

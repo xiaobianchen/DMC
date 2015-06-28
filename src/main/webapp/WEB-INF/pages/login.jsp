@@ -39,8 +39,8 @@
 						</div>
 						<div class="btn-box">
 							<img src="img/btn-login.png" style="width: 100%;" onclick="return validate_loginForm();"/>
-					        <label class="floatR">
-								<a id="register" href="/DMC/register">免费注册</a>
+					        <label>
+								<a id="register" href="/DMC/register" style="float:right;margin-top:5px;">免费注册</a>
 							</label>
 						</div>
 					</form>
