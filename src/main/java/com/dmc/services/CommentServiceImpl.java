@@ -20,18 +20,12 @@ public class CommentServiceImpl implements CommentService {
 	@Autowired
 	private CommentMapper commentMapper;
 
+	/**
+	 * insert comment
+	 */
 	@Override
 	public void insert(Comment comment) {
 		commentMapper.insert(comment);
-	}
-
-	@Override
-	public boolean getCommentByComments(String comments) {
-	    Comment comment = commentMapper.getCommentByComments(comments);
-	    if(comment != null){
-	    	return true;
-	    }
-		return false;
 	}
 
 	@Override

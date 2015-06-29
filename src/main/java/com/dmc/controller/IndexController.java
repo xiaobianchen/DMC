@@ -13,7 +13,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class IndexController {
 	
-	
+	/**
+	 * This is index page in DMC
+	 * @return index page
+	 */
 	@RequestMapping(value="/index", method=RequestMethod.GET)
 	public String index(){
 		return "index";

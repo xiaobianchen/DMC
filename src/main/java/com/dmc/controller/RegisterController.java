@@ -26,7 +26,7 @@ public class RegisterController {
 	private UserService userService;
 	
 	/**
-	 * register 
+	 * get register 
 	 * @param model
 	 * @return
 	 */

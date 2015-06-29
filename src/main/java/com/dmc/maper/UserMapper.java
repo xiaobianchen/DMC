@@ -11,7 +11,7 @@ import com.dmc.domain.User;
 /**
  * 
  * Created by Xiaobian Chen on 2015Äê6ÔÂ16ÈÕ
- *
+ * User Mapper: SQL with User
  *
  */
 public interface UserMapper {

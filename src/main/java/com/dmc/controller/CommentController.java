@@ -18,7 +18,7 @@ import com.dmc.services.CommentService;
 /**
  * 
  * Created by Xiaobian Chen on 2015ÄêÔÂ23ÈÕ
- *
+ * This class is used to handle feedback from customer and list comments
  *
  */
 @Controller
@@ -29,7 +29,7 @@ public class CommentController {
 	private CommentService commentService;
 	
 	/**
-	 * 
+	 * get feedback from customer
 	 * @param model
 	 * @return
 	 */
@@ -41,7 +41,7 @@ public class CommentController {
 	}
 	
 	/**
-	 * 
+	 * submit feedback
 	 * @param comment
 	 * @return
 	 */
@@ -55,6 +55,13 @@ public class CommentController {
 		}
 	}
 	
+	/**
+	 * list all comments
+	 * passed list to jsp page:
+	 * 1.invoke addObject() to add list to the ModelAndView
+	 * 2.invoke setViewName(jsp page) to set jsp
+	 * @return
+	 */
 	@RequestMapping(value="/list", method=RequestMethod.GET)
 	public ModelAndView list(){
 		List<Comment> commentList = commentService.list();

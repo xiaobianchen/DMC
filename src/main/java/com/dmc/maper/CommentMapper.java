@@ -11,7 +11,7 @@ import com.dmc.domain.Comment;
 /**
  * 
  * Created by Xiaobian Chen on 2015Äê6ÔÂ23ÈÕ
- *
+ * Comment Mapper: SQL with Comment
  *
  */
 public interface CommentMapper {
@@ -20,10 +20,6 @@ public interface CommentMapper {
 				+ "(#{comments},#{type}, #{contact})")
 	@Options(useGeneratedKeys=true, keyProperty="id", flushCache=true, keyColumn="id")
 	void insert(Comment comment);
-	
-	@Select("SELECT comments as comments, type as type,contact as contact "
-			+ "FROM comment WHERE comments = #{comments}")
-	Comment getCommentByComments(String comments);
 	
 	@Select("SELECT id as id, comments as comments, type as type,contact as contact "
 			+ "FROM comment")

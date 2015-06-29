@@ -2,6 +2,7 @@ package com.dmc.domain;
 /**
  * 
  *  Created by Xiaobian Chen on 2015Äê6ÔÂ27ÈÕ
+ *  Reset Password Page
  */
 public class ResetPassword {
 	

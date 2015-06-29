@@ -25,7 +25,7 @@ public class LoginController {
 	private UserService userService;
 	
 	/**
-	 * 
+	 * get login page
 	 * @param model
 	 * @return
 	 */
@@ -71,6 +71,7 @@ public class LoginController {
 	public @ResponseBody String getUserByPassword(@ModelAttribute("resetpwd") ResetPassword reset){
 		boolean isFound = userService.getUserByLogin(reset.getUsername(), reset.getOldPassword());
 		if(isFound){
+			//the user is exist and username/password is correct, then can reset password
 			userService.updateUser(reset);
 			return "success";
 		}else{

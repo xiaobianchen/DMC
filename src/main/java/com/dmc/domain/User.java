@@ -8,7 +8,6 @@ package com.dmc.domain;
 public class User {
 	private String username;
 	private String password;
-	private String repassword;
 	private String email;
 	private String phone;
 	
@@ -23,12 +22,6 @@ public class User {
 	}
 	public void setPassword(String password) {
 		this.password = password;
-	}
-	public String getRepassword() {
-		return repassword;
-	}
-	public void setRepassword(String repassword) {
-		this.repassword = repassword;
 	}
 	public String getEmail() {
 		return email;
@@ -46,7 +39,6 @@ public class User {
 	@Override
 	public String toString() {
 		return "User [username=" + username + ", password=" + password
-				+ ", repassword=" + repassword + ", email=" + email
-				+ ", phone=" + phone + "]";
+				+ ", email=" + email + ", phone=" + phone + "]";
 	}
 }

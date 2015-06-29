@@ -44,6 +44,15 @@ function validate_user(username,password){
 	}
 }
 
+/*remember password*/
+$(document).ready(function(){
+	if($.cookie("rmbUser") == "true"){
+		$("#ck_rmbUser").attr("checked",true);
+		$("#username").val($.cookie("username"));
+		$("#password").val($.cookie("password"));
+	}
+});
+
 /*remove prompt*/
 $(document).ready(function(){
 	  $("input").blur(function(){
@@ -64,17 +73,8 @@ $(document).ready(function(){
 		  $("#checkNewConfirmPwd").css('display','none');
 		  $("#details").css('display','none');
 		  $("#info").css('display','none');
+		  $("#checkoldPassword").css('display','none');
 	});
-});
-
-
-/*remember password*/
-$(document).ready(function(){
-	if($.cookie("rmbUser") == "true"){
-		$("#ck_rmbUser").attr("checked",true);
-		$("#username").val($.cookie("username"));
-		$("#password").val($.cookie("password"));
-	}
 });
  
 /*validate register form*/
@@ -140,11 +140,6 @@ function maxwin(){
       document.getElementsByClassName("module")[0].style.display = "block";
 };
     
-/*datapicker*/
-$(function(){
-	$("#datapicker").datepicker();
-});
-
 /*check user*/
 function checkUser(){
 	 var username = $("input[name='username']").val();
@@ -283,25 +278,5 @@ function resetPwd(){
 $(document).ready(function(){
 	$("#listComments").DataTable();
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

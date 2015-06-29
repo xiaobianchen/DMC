@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class FlowController {
 	
 	/**
-	 * 
+	 * get flow page
 	 * @return
 	 */
 	@RequestMapping(method=RequestMethod.GET)
