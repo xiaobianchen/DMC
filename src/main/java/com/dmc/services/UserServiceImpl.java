@@ -64,8 +64,8 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public User updateUser(ResetPassword reset) {
-		return userMapper.updateUser(reset);
+	public void updateUser(ResetPassword reset) {
+		 userMapper.updateUser(reset);
 	}
 
 }

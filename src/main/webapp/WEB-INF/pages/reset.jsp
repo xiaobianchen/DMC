@@ -45,7 +45,7 @@
 						</div>
 						<div class="btn-box">
 						    <img src="img/reset.png" style="width: 75%;" onclick="return resetPwd();"/>
-							<!-- <input type="button" value="下一步" class="button red" onclick="return resetPwd();"> -->
+						    <!--  <input type="button" value="更改密码" class="button red" onclick="return resetPwd();">  -->
 						</div>
 					</form>
 				</div> 

@@ -10,7 +10,7 @@
 </head>
 <body>
     <h1 align="center">用户评论</h1>
-    <table id="listComments" class="display" cellspacing="0" width="100%" >
+    <table id="listComments" class="display" border="1" cellspacing="0" width="100%" >
          <thead>
 	           <tr>
 		            <th>id</th>
@@ -19,23 +19,14 @@
 		            <th>Contact</th>
 	           </tr>
           </thead>
-          
-          <tfoot>
-               <tr>
-		            <th>id</th>
-		            <th>Comments</th>
-		            <th>Type</th>
-		            <th>Contact</th>
-	           </tr>
-          </tfoot>
            
            <c:forEach items="${commentList}" var="comment">
              <tbody>
                <tr>
-                  <td>${comment.id}</td>
-                  <td>${comment.comments }</td>
-                  <td>${comment.type }</td>
-                  <td>${comment.contact }</td>
+                  <td align="center">${comment.id}</td>
+                  <td align="center">${comment.comments }</td>
+                  <td align="center">${comment.type }</td>
+                  <td align="center">${comment.contact }</td>
                </tr>
               </tbody>
            </c:forEach>

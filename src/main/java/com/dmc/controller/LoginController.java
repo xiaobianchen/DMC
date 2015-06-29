@@ -68,7 +68,7 @@ public class LoginController {
 	 * @return
 	 */
 	@RequestMapping(value="/resetPwd", method=RequestMethod.POST)
-	public String getUserByPassword(@ModelAttribute("resetpwd") ResetPassword reset){
+	public @ResponseBody String getUserByPassword(@ModelAttribute("resetpwd") ResetPassword reset){
 		boolean isFound = userService.getUserByLogin(reset.getUsername(), reset.getOldPassword());
 		if(isFound){
 			userService.updateUser(reset);

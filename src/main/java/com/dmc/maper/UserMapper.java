@@ -44,6 +44,6 @@ public interface UserMapper {
 	
 	 
 	 @Update("UPDATE user SET password = #{password} where username = #{username}")
-	 public User updateUser(ResetPassword reset);
+	 public void updateUser(ResetPassword reset);
 	
 }

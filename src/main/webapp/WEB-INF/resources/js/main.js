@@ -267,13 +267,14 @@ function resetPwd(){
 			url:'/DMC/resetPwd',
 			data:"username=" + username + "&oldPassword=" + oldPassword +　"&password=" + password + "&confirmPassword=" + confirmPassword,
 			success:function(data){
-				alert('密码更新成功');
-				location.href="/DMC/login";
-			},
-			error:function(data){
-				$("#checkoldPassword").css('display','block');
-				$("#oldpwd").focus();
-				return false;
+				if(data=='success'){
+					alert('密码更新成功');
+					location.href="/DMC/login";
+				}else{
+					$("#checkoldPassword").css('display','block');
+					$("#oldpwd").focus();
+					return false;
+				}
 			}
 		});
 	}
