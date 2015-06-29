@@ -17,7 +17,7 @@
 							<label>
 							    <a style="float:right;" id="listComments" href="/DMC/list">查看所有评论</a>
 								您有什么问题或建议想对我们说?
-								<textarea rows="10" cols="28" id="comments"></textarea>
+								<textarea rows="10" cols="34" id="comments"></textarea>
 								<span id="details">您的建议是我们工作最大的动力</span>
 							</label>
 						</div>
