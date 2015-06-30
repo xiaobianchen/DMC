@@ -1,4 +1,5 @@
 package com.dmc.domain;
+
 /**
  * 
  * Created by Xiaobian Chen on 2015Äê6ÔÂ11ÈÕ
@@ -10,6 +11,7 @@ public class User {
 	private String password;
 	private String email;
 	private String phone;
+	private String registerDate;
 	
 	public String getUsername() {
 		return username;
@@ -35,10 +37,17 @@ public class User {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+	public String getRegisterDate() {
+		return registerDate;
+	}
+	public void setRegisterDate(String registerDate) {
+		this.registerDate = registerDate;
+	}
 	
 	@Override
 	public String toString() {
 		return "User [username=" + username + ", password=" + password
-				+ ", email=" + email + ", phone=" + phone + "]";
+				+ ", email=" + email + ", phone=" + phone + ", registerDate="
+				+ registerDate + "]";
 	}
 }

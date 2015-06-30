@@ -1,5 +1,7 @@
 package com.dmc.controller;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,12 +49,12 @@ public class CommentController {
 	 */
 	@RequestMapping(value="/feedback", method=RequestMethod.POST)
 	public @ResponseBody String getFeedBack(@ModelAttribute("comment") Comment comment){
-		if(comment!=null){
-			commentService.insert(comment);
-			return "success";
-		}else{
-			return "error";
-		}
+		SimpleDateFormat  sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+		String reportTime = sdf.format(new Date());
+		comment.setReportTime(reportTime);
+		
+		commentService.insert(comment);
+		return "success";
 	}
 	
 	/**

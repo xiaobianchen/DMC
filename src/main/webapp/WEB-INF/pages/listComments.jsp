@@ -13,10 +13,11 @@
     <table id="listComments" class="display" border="1" cellspacing="0" width="100%" >
          <thead>
 	           <tr>
-		            <th>id</th>
-		            <th>Comments</th>
-		            <th>Type</th>
-		            <th>Contact</th>
+		            <th>评论编号</th>
+		            <th>评论内容</th>
+		            <th>联系类型</th>
+		            <th>联系方式</th>
+		            <th>评论时间</th>
 	           </tr>
           </thead>
            
@@ -27,6 +28,7 @@
                   <td align="center">${comment.comments }</td>
                   <td align="center">${comment.type }</td>
                   <td align="center">${comment.contact }</td>
+                  <td align="center">${comment.reportTime }</td>
                </tr>
               </tbody>
            </c:forEach>

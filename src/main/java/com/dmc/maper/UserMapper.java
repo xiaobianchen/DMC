@@ -16,29 +16,29 @@ import com.dmc.domain.User;
  */
 public interface UserMapper {
 	 @Insert("INSERT INTO user(username, password,"
-			+ "email, phone) VALUES"
+			+ "email, phone,registerDate) VALUES"
 			+ "(#{username},#{password}, #{email},"
-			+ "#{phone})")
+			+ "#{phone},#{registerDate})")
 	 @Options(useGeneratedKeys=true, keyProperty="id", flushCache=true, keyColumn="id")
      public void insertUser(User user);
 	
 	
 	@Select("SELECT username as username, password as password, "
 			+ "email as email, "
-			+ "phone as phone "
+			+ "phone as phone, registerDate as registerDate "
 			+ "FROM user WHERE username = #{username}")
 	 public User getUserByUserName(String username);
 	
 	@Select("SELECT username as username, password as password, "
 			+ "email as email, "
-			+ "phone as phone "
+			+ "phone as phone, registerDate as registerDate "
 			+ "FROM user WHERE email = #{email}")
 	 public User getUserByEmail(String email);
 	
 	
 	@Select("SELECT username as username, password as password, "
 			+ "email as email, "
-			+ "phone as phone "
+			+ "phone as phone, registerDate as registerDate "
 			+ "FROM user WHERE phone = #{phone}")
 	 public User getUserByPhone(String phone);
 	

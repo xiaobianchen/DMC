@@ -10,6 +10,7 @@ public class Comment {
 	private String comments;
 	private String type;
 	private String contact;
+	private String reportTime;
 	
 	public int getId() {
 		return id;
@@ -35,10 +36,17 @@ public class Comment {
 	public void setContact(String contact) {
 		this.contact = contact;
 	}
+	public String getReportTime() {
+		return reportTime;
+	}
+	public void setReportTime(String reportTime) {
+		this.reportTime = reportTime;
+	}
 	
 	@Override
 	public String toString() {
 		return "Comment [id=" + id + ", comments=" + comments + ", type="
-				+ type + ", contact=" + contact + "]";
+				+ type + ", contact=" + contact + ", reportTime=" + reportTime
+				+ "]";
 	}
 }

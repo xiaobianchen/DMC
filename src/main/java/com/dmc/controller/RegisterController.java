@@ -1,5 +1,8 @@
 package com.dmc.controller;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -48,6 +51,9 @@ public class RegisterController {
 		boolean isEmail = userService.getUserByEmail(user.getEmail());
 		boolean isPhone = userService.getUserByPhone(user.getPhone());
 		boolean isFlag = isUser||isEmail||isPhone;
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+		String registerTime = sdf.format(new Date());
+		user.setRegisterDate(registerTime);
 		
 		if(isFlag){
 			return "error";
