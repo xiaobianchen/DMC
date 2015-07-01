@@ -10,6 +10,7 @@ public class Comment {
 	private String comments;
 	private String type;
 	private String contact;
+	private String data;
 	private String reportTime;
 	
 	public int getId() {
@@ -35,6 +36,12 @@ public class Comment {
 	}
 	public void setContact(String contact) {
 		this.contact = contact;
+	}
+	public String getData() {
+		return data;
+	}
+	public void setData(String data) {
+		this.data = data;
 	}
 	public String getReportTime() {
 		return reportTime;

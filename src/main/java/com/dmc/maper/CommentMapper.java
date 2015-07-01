@@ -16,8 +16,8 @@ import com.dmc.domain.Comment;
  */
 public interface CommentMapper {
     
-	@Insert("INSERT INTO comment(comments, type, contact,reportTime) VALUES"
-				+ "(#{comments},#{type}, #{contact},#{reportTime})")
+	@Insert("INSERT INTO comment(comments, type, contact, data, reportTime) VALUES"
+				+ "(#{comments},#{type}, #{contact},#{data}, #{reportTime})")
 	@Options(useGeneratedKeys=true, keyProperty="id", flushCache=true, keyColumn="id")
 	void insert(Comment comment);
 	
