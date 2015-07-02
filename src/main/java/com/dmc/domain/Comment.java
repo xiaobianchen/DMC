@@ -1,7 +1,12 @@
 package com.dmc.domain;
+
+import java.util.Arrays;
+
+import org.springframework.web.multipart.MultipartFile;
+
 /**
  * 
- * Created by Xiaobian Chen on 2015Äê6ÔÂ23ÈÕ
+ * Created by Xiaobian Chen on 2015ï¿½ï¿½6ï¿½ï¿½23ï¿½ï¿½
  *
  *
  */
@@ -10,8 +15,9 @@ public class Comment {
 	private String comments;
 	private String type;
 	private String contact;
-	private String data;
+	private byte[] picture;
 	private String reportTime;
+	private MultipartFile pictureFile;
 	
 	public int getId() {
 		return id;
@@ -37,11 +43,11 @@ public class Comment {
 	public void setContact(String contact) {
 		this.contact = contact;
 	}
-	public String getData() {
-		return data;
+	public byte[] getPicture() {
+		return picture;
 	}
-	public void setData(String data) {
-		this.data = data;
+	public void setPicture(byte[] picture) {
+		this.picture = picture;
 	}
 	public String getReportTime() {
 		return reportTime;
@@ -49,11 +55,18 @@ public class Comment {
 	public void setReportTime(String reportTime) {
 		this.reportTime = reportTime;
 	}
+	public MultipartFile getPictureFile() {
+		return pictureFile;
+	}
+	public void setPictureFile(MultipartFile pictureFile) {
+		this.pictureFile = pictureFile;
+	}
 	
 	@Override
 	public String toString() {
 		return "Comment [id=" + id + ", comments=" + comments + ", type="
-				+ type + ", contact=" + contact + ", reportTime=" + reportTime
-				+ "]";
+				+ type + ", contact=" + contact + ", picture="
+				+ Arrays.toString(picture) + ", reportTime=" + reportTime
+				+ ", pictureFile=" + pictureFile + "]";
 	}
 }

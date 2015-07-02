@@ -40,8 +40,9 @@
 					<span class="font12"><strong>首次体验,该项将检测数据项是否完整,请立即检查</strong></span>
 				</div>
 				<div class="btn">
-					<img class="icon icon-btn" src="img/btn-ljfx.png" id="fxbtn" onclick="alert('立即分析!');">
+					<img class="icon icon-btn" src="img/btn-ljfx.png" id="fxbtn" onclick="analysis();">
 				</div>
+				<div id="p" class="easyui-progressbar" style="text-align:center;"></div>
 			</div>
 			<div class="foot clearfix">
 				<ul class="operate-left">

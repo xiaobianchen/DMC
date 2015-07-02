@@ -21,7 +21,7 @@ import com.dmc.services.CommentService;
 
 /**
  * 
- * Created by Xiaobian Chen on 2015ÄêÔÂ23ÈÕ
+ * Created by Xiaobian Chen on 2015å¹´6æœˆ23æ—¥
  * This class is used to handle feedback from customer and list comments
  *
  */
@@ -49,7 +49,7 @@ public class CommentController {
 	 * @param comment
 	 * @return
 	 */
-	@RequestMapping(value="/feedback", method=RequestMethod.POST)
+	@RequestMapping(value="/feedback",headers="content-type=multipart/*", method=RequestMethod.POST)
 	public @ResponseBody String getFeedBack(@ModelAttribute("comment") Comment comment,@RequestParam("file") MultipartFile file){
 		//reportTime
 		SimpleDateFormat  sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
@@ -75,5 +75,15 @@ public class CommentController {
 		model.setViewName("listComments");
 		return model;
 	}
+	
+	/**
+	 * upload file
+	 * @return
+	 */
+	@RequestMapping(value="/upload", method=RequestMethod.POST)
+	public String uploadFile(@RequestParam(value="file") final MultipartFile file){
+		return "";
+	}
+	
 	
 }

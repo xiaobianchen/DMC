@@ -280,4 +280,22 @@ $(document).ready(function(){
 	$("#listComments").DataTable();
 });
 
+/*Progressbar*/
+function analysis(){
+	 var value = $('#p').progressbar('getValue');
+	 if (value < 100){
+         value += Math.floor(Math.random() * 10);
+         $('#p').progressbar('setValue', value);
+         setTimeout(arguments.callee, 200);
+     }
+};
+
+/*upload image*/
+
+
+
+
+
+
+
 

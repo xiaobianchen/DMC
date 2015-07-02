@@ -7,23 +7,26 @@ USE 'dmc';
 
 /*Create Table User*/
 CREATE TABLE `user` (
-  `username` varchar(50) NOT NULL COMMENT 'ÓÃ»§Ãû',
-  `password` varchar(50) NOT NULL COMMENT 'ÃÜÂë',
-  `email` varchar(50) NOT NULL COMMENT 'ÓÊÏä',
-  `phone` varchar(20) NOT NULL COMMENT 'ÁªÏµµç»°',
-  `registerDate` datetime NOT NULL COMMENT '×¢²áÊ±¼ä',
+  `username` varchar(50) NOT NULL COMMENT 'ç”¨æˆ·å',
+  `password` varchar(50) NOT NULL COMMENT 'å¯†ç ',
+  `email` varchar(50) NOT NULL COMMENT 'é‚®ç®±',
+  `phone` varchar(20) NOT NULL COMMENT 'è”ç³»ç”µè¯',
+  `registerDate` datetime NOT NULL COMMENT 'æ³¨å†Œæ—¶é—´',
   PRIMARY KEY (`username`,`email`,`phone`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
 /*Create Table Comment*/
 CREATE TABLE `comment` (
-  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ÆÀÂÛ±àºÅ',
-  `comments` varchar(255) DEFAULT NULL COMMENT 'ÆÀÂÛÄÚÈİ',
-  `type` varchar(50) DEFAULT NULL COMMENT 'ÁªÏµÀàĞÍ',
-  `contact` varchar(20) DEFAULT NULL COMMENT 'ÁªÏµ·½Ê½',
-  `reportTime` datetime DEFAULT NULL COMMENT 'ÆÀÂÛÊ±¼ä',
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'è¯„è®ºç¼–å·',
+  `comments` varchar(255) DEFAULT NULL COMMENT 'è¯„è®ºå†…å®¹',
+  `type` varchar(50) DEFAULT NULL COMMENT 'è”ç³»ç±»å‹',
+  `contact` varchar(20) DEFAULT NULL COMMENT 'è”ç³»æ–¹å¼',
+  `picture` longblob COMMENT 'å­˜å‚¨å›¾ç‰‡',
+  `reportTime` datetime DEFAULT NULL COMMENT 'è¯„è®ºæ—¶é—´',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
 
 

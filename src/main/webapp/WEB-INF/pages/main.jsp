@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="css/jquery-ui.css"/>
 <link rel="stylesheet" href="css/msgBoxLight.css">
 <link rel="stylesheet" href="css/jquery.dataTables.css">
+<link rel="stylesheet" href="css/easyui.css">
+<link rel="stylesheet" href="css/icon.css">
 <link rel="stylesheet" href="css/style.css" />
 <link rel="shortcut icon" href="img/favicon.ico">
 
@@ -18,6 +20,7 @@
 <script type="text/javascript" src="js/jquery-ui.js"></script>
 <script type="text/javascript" src="js/jquery.msgBox.js"></script>
 <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 
 </head>
