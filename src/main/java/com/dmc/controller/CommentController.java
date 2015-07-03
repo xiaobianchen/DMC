@@ -1,13 +1,8 @@
 package com.dmc.controller;
-
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-import java.util.Properties;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -34,16 +29,6 @@ import com.dmc.services.CommentService;
 @SessionAttributes("comment")
 public class CommentController {
 	
-//	public static final Properties prop = new Properties();
-//	
-//	static{
-//		try {
-//			prop.load(ClassLoader.getSystemResourceAsStream("dmc.properties"));
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//	}
-	
 	@Autowired
 	private CommentService commentService;
 	
@@ -63,13 +48,16 @@ public class CommentController {
 	 * submit feedback
 	 * @param comment
 	 * @return
+	 * @throws IOException 
 	 */
-	@RequestMapping(value="/feedback",headers="content-type=multipart/*", method=RequestMethod.POST)
-	public @ResponseBody String getFeedBack(@ModelAttribute("comment") Comment comment,@RequestParam("file") MultipartFile file){
+	@RequestMapping(value="/feedback", method=RequestMethod.POST)
+	public @ResponseBody String getFeedBack(@ModelAttribute("comment") Comment comment,@RequestParam("file") final MultipartFile file) throws IOException{
 		//reportTime
 		SimpleDateFormat  sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 		String reportTime = sdf.format(new Date());
 		comment.setReportTime(reportTime);
+		comment.setFileName(file.getOriginalFilename());
+		comment.setFileStream(file.getBytes());
 		
 		commentService.insert(comment);
 		return "success";
@@ -90,36 +78,4 @@ public class CommentController {
 		model.setViewName("listComments");
 		return model;
 	}
-	
-	/**
-	 * upload file
-	 * @return
-	 */
-	@RequestMapping(value="/singleSave", method=RequestMethod.POST)
-	public @ResponseBody String uploadFile(@RequestParam(value="file") final MultipartFile file){
-		String fileName = null;
-		if(!file.isEmpty()){
-			try{
-				fileName = file.getOriginalFilename();
-				byte[] bytes = file.getBytes();
-				String filePath = "C:/Users/jchen19/Desktop/personal/git/DMC/src/main/webapp/WEB-INF/resources/upload/";
-				String path = filePath + fileName;
-				BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(new File(path)));
-				bos.write(bytes);
-				bos.close();
-				return "You have successfully uploaded " + fileName;
-			}catch(Exception e){
-				return "You failed to upload " + fileName + ":" + e.getMessage();
-			}
-		}else{
-			return "Unable to upload. File is empty.";
-		}
-	}
-	
-	@RequestMapping(value="/upload", method=RequestMethod.GET)
-	public String upload(){
-		return "upload";
-	}
-	
-	
 }

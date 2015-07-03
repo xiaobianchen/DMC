@@ -1,7 +1,6 @@
 package com.dmc.maper;
 
 import java.util.List;
-
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Select;
@@ -10,14 +9,14 @@ import com.dmc.domain.Comment;
 
 /**
  * 
- * Created by Xiaobian Chen on 2015Äê6ÔÂ23ÈÕ
+ * Created by Xiaobian Chen on 2015ï¿½ï¿½6ï¿½ï¿½23ï¿½ï¿½
  * Comment Mapper: SQL with Comment
  *
  */
 public interface CommentMapper {
     
-	@Insert("INSERT INTO comment(comments, type, contact, data, reportTime) VALUES"
-				+ "(#{comments},#{type}, #{contact},#{data}, #{reportTime})")
+	@Insert("INSERT INTO comment(comments, type, contact, fileName,fileStream, reportTime) VALUES"
+				+ "(#{comments},#{type}, #{contact},#{fileName},#{fileStream},#{reportTime})")
 	@Options(useGeneratedKeys=true, keyProperty="id", flushCache=true, keyColumn="id")
 	void insert(Comment comment);
 	

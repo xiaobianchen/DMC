@@ -1,12 +1,11 @@
 package com.dmc.services;
 
 import java.util.List;
-
 import com.dmc.domain.Comment;
 
 /**
  * 
- * Created by Xiaobian Chen on 2015Äê6ÔÂ23ÈÕ
+ * Created by Xiaobian Chen on 2015ï¿½ï¿½6ï¿½ï¿½23ï¿½ï¿½
  *
  *
  */

@@ -12,7 +12,7 @@
 			<div class="inner">
 				<div class="login-bg blur"></div>
 				<div class="comment-form">
-					<form method="post" enctype="multipart/form-data">
+					<form method="post" enctype="multipart/form-data" id="form1">
 						<div class="input-box">
 							<label>
 							    <a style="float:right;" id="listComments" href="/DMC/list">查看所有评论</a>
@@ -36,14 +36,16 @@
 						<div class="input-box">
 							<label>
 							            上传图片
-								<input type="file" name="file" id="file">
+								<input type="file" name="file">
 							</label>
 						</div>
 						<div class="btn-box">
+						    <input type="submit" value="提交问题" class="button red" onclick="return submitComment();"> 
 							<!-- <input type="button" value="提交问题" class="button red" onclick="return submitComment();"> -->
-							<img alt="提交问题" src="img/btnsubmit.png" onclick="return submitComment();">
+							<!-- <img src="img/btnsubmit.png" onclick="return submitComment();">  -->
 						</div>
 					</form>
+				
 				</div> 
 			</div>
 		</div>

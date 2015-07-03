@@ -1,9 +1,6 @@
 package com.dmc.domain;
 
 import java.util.Arrays;
-
-import org.springframework.web.multipart.MultipartFile;
-
 /**
  * 
  * Created by Xiaobian Chen on 2015��6��23��
@@ -15,9 +12,9 @@ public class Comment {
 	private String comments;
 	private String type;
 	private String contact;
-	private byte[] picture;
+	private String fileName;
+	private byte[] fileStream;
 	private String reportTime;
-	private MultipartFile pictureFile;
 	
 	public int getId() {
 		return id;
@@ -43,11 +40,17 @@ public class Comment {
 	public void setContact(String contact) {
 		this.contact = contact;
 	}
-	public byte[] getPicture() {
-		return picture;
+	public String getFileName() {
+		return fileName;
 	}
-	public void setPicture(byte[] picture) {
-		this.picture = picture;
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
+	public byte[] getFileStream() {
+		return fileStream;
+	}
+	public void setFileStream(byte[] fileStream) {
+		this.fileStream = fileStream;
 	}
 	public String getReportTime() {
 		return reportTime;
@@ -55,18 +58,12 @@ public class Comment {
 	public void setReportTime(String reportTime) {
 		this.reportTime = reportTime;
 	}
-	public MultipartFile getPictureFile() {
-		return pictureFile;
-	}
-	public void setPictureFile(MultipartFile pictureFile) {
-		this.pictureFile = pictureFile;
-	}
 	
 	@Override
 	public String toString() {
 		return "Comment [id=" + id + ", comments=" + comments + ", type="
-				+ type + ", contact=" + contact + ", picture="
-				+ Arrays.toString(picture) + ", reportTime=" + reportTime
-				+ ", pictureFile=" + pictureFile + "]";
+				+ type + ", contact=" + contact + ", fileName=" + fileName
+				+ ", fileStream=" + Arrays.toString(fileStream)
+				+ ", reportTime=" + reportTime + "]";
 	}
 }
