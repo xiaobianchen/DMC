@@ -33,16 +33,16 @@
 								<span id="info">请填写您的联系方式,以方便我们能尽快联系您</span>
 							</label>
 						</div>
-						<div class="input-box">
+					<!--<div class="input-box">
 							<label>
 							            上传图片
 								<input type="file" name="file">
 							</label>
-						</div>
+						</div> -->
 						<div class="btn-box">
-						    <input type="submit" value="提交问题" class="button red" onclick="return submitComment();"> 
+						    <input type="submit" value="提交问题" class="button red" onclick="return submitComment();">
 							<!-- <input type="button" value="提交问题" class="button red" onclick="return submitComment();"> -->
-							<!-- <img src="img/btnsubmit.png" onclick="return submitComment();">  -->
+							<!-- <img src="img/btnsubmit.png" onclick="return submitComment();"> -->
 						</div>
 					</form>
 				

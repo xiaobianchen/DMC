@@ -20,7 +20,7 @@
 		            <th>评论时间</th>
 	           </tr>
           </thead>
-           
+          
            <c:forEach items="${commentList}" var="comment">
              <tbody>
                <tr>
