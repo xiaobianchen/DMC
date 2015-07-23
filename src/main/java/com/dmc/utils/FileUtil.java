@@ -2,7 +2,6 @@ package com.dmc.utils;
 
 import java.io.File;
 import java.io.IOException;
-
 import org.apache.commons.io.FileUtils;
 
 /**
@@ -13,7 +12,7 @@ import org.apache.commons.io.FileUtils;
  *
  */
 public class FileUtil {
-
+	
 	private static final String path = "C:/Users/jchen19/Desktop/personal/git/CoreJava/src/main/java/com/ebay/java";
 	public static int count = 0;
 	public static int folderCount = 0;
