@@ -104,9 +104,13 @@ public class ExtractService {
 			throw new RuleException("url 不能为空");
 		}
 		
-		if(!url.startsWith("http://")){
-			throw new RuleException("url 格式不正确");
-		}
+//		if(!url.startsWith("http://")){
+//			throw new RuleException("url 格式不正确");
+//		}
+//		
+//		if(!url.startsWith("https://")){
+//			throw new RuleException("url 格式不正确");
+//		}
 		
 		if(rule.getParams().length != rule.getValues().length){
 			throw new RuleException("参数的键值对个数不匹配");
