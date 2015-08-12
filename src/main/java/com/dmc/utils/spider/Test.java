@@ -12,10 +12,10 @@ public class Test {
 	
 	public static void main(String[] args) {
 		System.out.println("后台正在抓取数据中.......................................");
-		//getDatas();
-		//getDatasByBaiduNews();
+		getDatas();
+//		getDatasByBaiduNews();
 		//getDataFromTmall();
-		getIphone6DataFromTmall();
+//		getIphone6DataFromTmall();
 	}
 	
 	/**
@@ -23,7 +23,7 @@ public class Test {
 	 */
 	public static void getDatas(){
 		 Rule rule = new Rule("http://www1.sxcredit.gov.cn/public/infocomquery.do?method=publicIndexQuery",    
-	        new String[] { "query.enterprisename","query.registationnumber" }, new String[] { "华县何军西户食府","" },  
+	        new String[] { "query.enterprisename","query.registationnumber" }, new String[] { "","" },  
 	                "cont_right", Rule.CLASS, Rule.POST);  
 		  
 		  List<LinkTypeData> datas = ExtractService.extract(rule);
