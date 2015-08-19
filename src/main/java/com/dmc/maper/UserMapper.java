@@ -10,7 +10,7 @@ import com.dmc.domain.User;
 
 /**
  * 
- * Created by Xiaobian Chen on 2015Äê6ÔÂ16ÈÕ
+ * Created by Xiaobian Chen on 2015å¹´6æœˆ16æ—¥
  * User Mapper: SQL with User
  *
  */

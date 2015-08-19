@@ -9,7 +9,7 @@ import com.dmc.domain.Comment;
 
 /**
  * 
- * Created by Xiaobian Chen on 2015��6��23��
+ * Created by Xiaobian Chen on 2015年6月23日
  * Comment Mapper: SQL with Comment
  *
  */

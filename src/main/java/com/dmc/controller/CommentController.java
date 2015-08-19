@@ -23,7 +23,6 @@ import com.dmc.services.CommentService;
  * 
  * Created by Xiaobian Chen on 2015年6月23日
  * This class is used to handle feedback from customer and list comments
- *webx
  */
 @Controller
 @SessionAttributes("comment")

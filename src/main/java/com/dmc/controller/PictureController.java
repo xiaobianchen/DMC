@@ -25,7 +25,7 @@ import com.dmc.services.PictureService;
 /**
  * 
  * Created by Xiaobian Chen on 2015年7月3日
- *
+ * Upload and Download Picture Page
  *
  */
 @Controller

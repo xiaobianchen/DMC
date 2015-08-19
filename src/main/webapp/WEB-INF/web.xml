@@ -9,9 +9,9 @@
 		<servlet-name>mvc-dispatcher</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
-		    <description>SpringContext</description>
-		    <param-name>contextConfigLocation</param-name>
-		    <param-value>/WEB-INF/mvc-dispatcher-servlet.xml</param-value>
+			<description>SpringContext</description>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/mvc-dispatcher-servlet.xml</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
@@ -20,21 +20,21 @@
 		<servlet-name>mvc-dispatcher</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
-	
+
 	<!-- config applicationContext.xml -->
 	<context-param>
-	    <param-name>contextConfigLocation</param-name>
-	    <param-value>/WEB-INF/applicationContext.xml</param-value>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/applicationContext.xml</param-value>
 	</context-param>
 
-    <!-- config ContextLoaderListener -->
+	<!-- config ContextLoaderListener -->
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
-	
+
 	<!-- config home page -->
 	<welcome-file-list>
-	    <welcome-file>/WEB-INF/pages/login.jsp</welcome-file>
+		<welcome-file>/WEB-INF/pages/login.jsp</welcome-file>
 	</welcome-file-list>
 
 </web-app>

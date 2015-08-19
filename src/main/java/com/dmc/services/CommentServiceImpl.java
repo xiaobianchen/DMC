@@ -7,7 +7,7 @@ import com.dmc.domain.Comment;
 import com.dmc.maper.CommentMapper;
 /**
  * 
- * Created by Xiaobian Chen on 2015��6��26��
+ * Created by Xiaobian Chen on 2015年6月26日
  *
  *
  */

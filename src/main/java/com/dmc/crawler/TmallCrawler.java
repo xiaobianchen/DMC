@@ -3,7 +3,12 @@ package com.dmc.crawler;
 import java.util.regex.Pattern;
 import com.dmc.model.Links;
 import com.dmc.model.Page;
-
+/**
+ * 
+ * Created by Xiaobian Chen on 2015年8月20日
+ *
+ *
+ */
 public class TmallCrawler extends BreadthCrawler{
 
 	public TmallCrawler(String crawlPath, boolean autoParse) {

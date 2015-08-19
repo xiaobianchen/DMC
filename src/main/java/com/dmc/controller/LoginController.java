@@ -14,7 +14,7 @@ import com.dmc.services.UserService;
 
 /**
  * 
- * Created by Xiaobian Chen on 2015Äê6ÔÂ11ÈÕ
+ * Created by Xiaobian Chen on 2015å¹´6æœˆ11æ—¥
  * Login Page
  *
  */

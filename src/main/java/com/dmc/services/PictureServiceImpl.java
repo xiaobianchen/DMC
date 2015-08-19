@@ -7,7 +7,12 @@ import org.springframework.stereotype.Service;
 
 import com.dmc.domain.Picture;
 import com.dmc.maper.PictureMapper;
-
+/**
+ * 
+ * Created by Xiaobian Chen on 2015年6月20日
+ *
+ *
+ */
 @Service("pictureService")
 public class PictureServiceImpl implements PictureService {
 	

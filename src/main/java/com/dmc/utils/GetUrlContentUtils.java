@@ -20,7 +20,7 @@ import org.apache.commons.httpclient.methods.PostMethod;
 
 /**
  * 
- * Created by Xiaobian Chen on 2015Äê6ÔÂ16ÈÕ
+ * Created by Xiaobian Chen on 2015å¹´6æœˆ16æ—¥
  * This class is used to read site data from the specify url
  *
  */
@@ -203,7 +203,7 @@ public class GetUrlContentUtils {
 	    client.executeMethod(post);     
 	    
 	    String responseString = new String(post.getResponseBodyAsString().getBytes("gbk"));        
-	    System.out.println("=========================µÇÂ¼Ò³Ãæ===========================");          
+	    System.out.println("=========================ï¿½ï¿½Â¼Ò³ï¿½ï¿½===========================");          
 	    System.out.println(responseString);  
 	    
 	    /**

@@ -14,7 +14,7 @@ import com.dmc.utils.JDBCHelper;
 /**
  * 
  * Created by Xiaobian Chen on 2015年8月5日
- *
+ * crawl example
  *
  */
 public class GovernmentCrawler extends BreadthCrawler {
@@ -53,7 +53,6 @@ public class GovernmentCrawler extends BreadthCrawler {
 			for(Element e: elements){
 				System.out.println(e.text());
 			}
-			
 		}
 	}
 	

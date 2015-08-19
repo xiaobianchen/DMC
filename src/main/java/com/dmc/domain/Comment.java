@@ -3,7 +3,7 @@ package com.dmc.domain;
 import java.util.Arrays;
 /**
  * 
- * Created by Xiaobian Chen on 2015��6��23��
+ * Created by Xiaobian Chen on 2015年6月23日
  *
  *
  */

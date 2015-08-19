@@ -46,10 +46,10 @@ public class YahooCrawler extends BreadthCrawler {
 		}
 	}
 	
-	public static void main(String[] args) throws Exception {
-		YahooCrawler crawler = new YahooCrawler("crawl", true);
-		crawler.setThreads(50);
-		crawler.setTopN(100);
-		crawler.start(4);
-	}
+//	public static void main(String[] args) throws Exception {
+//		YahooCrawler crawler = new YahooCrawler("crawl", true);
+//		crawler.setThreads(50);
+//		crawler.setTopN(100);
+//		crawler.start(4);
+//	}
 }

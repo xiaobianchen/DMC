@@ -8,8 +8,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 /**
  * 
  * Created by Xiaobian Chen on 2015年7月30日
- *
- *
+ * JDBC Utils
+ *  
  */
 public class JDBCHelper {
 

@@ -2,9 +2,10 @@ package com.dmc.utils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
-/*
+/**
  * 
  * Created by Xiaobian Chen on 2015年7月8日
+ *
  *
  */
 public class JsoupExample {

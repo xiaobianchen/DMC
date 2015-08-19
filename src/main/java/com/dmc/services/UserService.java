@@ -3,7 +3,7 @@ import com.dmc.domain.ResetPassword;
 import com.dmc.domain.User;
 /**
  * 
- *  Created by Xiaobian Chen on 2015Äê6ÔÂ17ÈÕ
+ *  Created by Xiaobian Chen on 2015å¹´6æœˆ17æ—¥
  */
 public interface UserService {
     void insert(User user);

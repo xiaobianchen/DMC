@@ -8,7 +8,7 @@ import com.dmc.domain.User;
 import com.dmc.maper.UserMapper;
 /**
  * 
- *  Created by Xiaobian Chen on 2015Äê6ÔÂ17ÈÕ
+ *  Created by Xiaobian Chen on 2015å¹´6æœˆ17æ—¥
  */
 @Service("userService")
 public class UserServiceImpl implements UserService {
