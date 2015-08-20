@@ -213,10 +213,9 @@ function submitComment(){
 	    url:"/DMC/feedback",
 	    data:"comments=" + comments + "&type=" + type + "&contact=" + contact,
 	    success:function(data){
-	    	if(data == 'success'){
-	    		alert('您的建议我们已经收到,我们会尽快分析处理!');
-		    	location.href='/DMC/index';
-	    	}
+	    	alert(data);
+    		alert('您的建议我们已经收到,我们会尽快分析处理!');
+	    	location.href='/DMC/index';
 	    }
 	});
 }

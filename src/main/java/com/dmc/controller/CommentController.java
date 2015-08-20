@@ -78,7 +78,6 @@ public class CommentController {
 		String reportTime = sdf.format(new Date());
 		comment.setReportTime(reportTime);
 	
-		
 		commentService.insert(comment);
 		return "success";
 	}
