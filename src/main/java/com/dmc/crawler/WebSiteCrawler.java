@@ -86,8 +86,8 @@ public class WebSiteCrawler extends BreadthCrawler{
 		}
 	}
 	
-	public static void main(String[] args) throws Exception {
-		WebSiteCrawler crawler = new WebSiteCrawler("crawl", false);
-		crawler.start(1);
-	}
+//	public static void main(String[] args) throws Exception {
+//		WebSiteCrawler crawler = new WebSiteCrawler("crawl", false);
+//		crawler.start(1);
+//	}
 }

@@ -1,6 +1,5 @@
 package com.dmc.domain;
 
-import java.util.Arrays;
 /**
  * 
  * Created by Xiaobian Chen on 2015年6月23日
@@ -12,9 +11,6 @@ public class Comment {
 	private String comments;
 	private String type;
 	private String contact;
-	private String fileName;
-	private byte[] fileStream;
->>>>>>> 8670870b25acb85f942d4834ffd5877274ff3095
 	private String reportTime;
 	
 	public int getId() {
@@ -41,21 +37,6 @@ public class Comment {
 	public void setContact(String contact) {
 		this.contact = contact;
 	}
-<<<<<<< HEAD
-=======
-	public String getFileName() {
-		return fileName;
-	}
-	public void setFileName(String fileName) {
-		this.fileName = fileName;
-	}
-	public byte[] getFileStream() {
-		return fileStream;
-	}
-	public void setFileStream(byte[] fileStream) {
-		this.fileStream = fileStream;
-	}
->>>>>>> 8670870b25acb85f942d4834ffd5877274ff3095
 	public String getReportTime() {
 		return reportTime;
 	}
@@ -66,8 +47,7 @@ public class Comment {
 	@Override
 	public String toString() {
 		return "Comment [id=" + id + ", comments=" + comments + ", type="
-				+ type + ", contact=" + contact + ", fileName=" + fileName
-				+ ", fileStream=" + Arrays.toString(fileStream)
-				+ ", reportTime=" + reportTime + "]";
+				+ type + ", contact=" + contact + ", reportTime=" + reportTime
+				+ "]";
 	}
 }

@@ -12,11 +12,8 @@
 			<div class="inner">
 				<div class="login-bg blur"></div>
 				<div class="comment-form">
-<<<<<<< HEAD
 					<form method="post">
-=======
-					<form method="post" enctype="multipart/form-data" id="form1">
->>>>>>> 8670870b25acb85f942d4834ffd5877274ff3095
+
 						<div class="input-box">
 							<label>
 							    <a style="float:right;" id="listComments" href="/DMC/list">查看所有评论</a>
@@ -37,15 +34,14 @@
 								<span id="info">请填写您的联系方式,以方便我们能尽快联系您</span>
 							</label>
 						</div>
-<<<<<<< HEAD
-=======
+
 					<!--<div class="input-box">
 							<label>
 							            上传图片
 								<input type="file" name="file">
 							</label>
 						</div> -->
->>>>>>> 8670870b25acb85f942d4834ffd5877274ff3095
+
 						<div class="btn-box">
 						    <input type="submit" value="提交问题" class="button red" onclick="return submitComment();">
 							<!-- <input type="button" value="提交问题" class="button red" onclick="return submitComment();"> -->

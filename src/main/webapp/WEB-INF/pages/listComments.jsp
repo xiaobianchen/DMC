@@ -20,14 +20,10 @@
 		            <th>评论时间</th>
 	           </tr>
           </thead>
-<<<<<<< HEAD
+
            
-          <%--  <c:forEach items="${commentList}" var="comment">
-=======
-          
-           <c:forEach items="${commentList}" var="comment">
->>>>>>> 8670870b25acb85f942d4834ffd5877274ff3095
-             <tbody>
+          <%--  <c:forEach items="${commentList}" var="comment">            
+	   <tbody>
                <tr>
                   <td align="center">${comment.id}</td>
                   <td align="center">${comment.comments }</td>

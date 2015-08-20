@@ -212,32 +212,32 @@ public class TutorialExtractor {
 
 	}
 
-	public static void main(String[] args) throws Exception {
-		MultiExtractorCrawler crawler = new MultiExtractorCrawler("crawl", true);
-		crawler.addSeed("http://www.zhihu.com/collection/19928423");
-		crawler.addRegex("http://www.zhihu.com/people/[^/]*");
-		crawler.addRegex("http://www.zhihu.com/question/.*");
-
-		// 不希望爬取包含#?的链接，同时不希望爬取jpg或者png文件
-		crawler.addRegex("-.*#.*");
-		crawler.addRegex("-.*\\?.*");
-		crawler.addRegex("-.*\\.jpg.*");
-		crawler.addRegex("-.*\\.png.*");
-
-		/* 加载抽取器时需要给出适用的url正则，在遇到满足url正则的网页时，抽取器就会在网页上执行 */
-		crawler.addExtractor("http://www.zhihu.com/people/[^/]*",
-				PeopleExtractor.class);
-		crawler.addExtractor("http://www.zhihu.com/question/[0-9]+",
-				QuestionExtractor.class);
-
-		/* 同一个url可以执行多个Extractor，HtmlExtractor会在所有页面上执行 */
-		/* HtmlExtractor这个抽取器需要额外的参数指定存放html文件的路径 */
-		/* ExtractorParams继承自HashMap，可以使用put方法添加参数 */
-		crawler.addExtractor(".*", HtmlExtractor.class, new ExtractorParams(
-				"path", "download/html"));
-
-		crawler.setThreads(100);
-		crawler.start(10);
-	}
+//	public static void main(String[] args) throws Exception {
+//		MultiExtractorCrawler crawler = new MultiExtractorCrawler("crawl", true);
+//		crawler.addSeed("http://www.zhihu.com/collection/19928423");
+//		crawler.addRegex("http://www.zhihu.com/people/[^/]*");
+//		crawler.addRegex("http://www.zhihu.com/question/.*");
+//
+//		// 不希望爬取包含#?的链接，同时不希望爬取jpg或者png文件
+//		crawler.addRegex("-.*#.*");
+//		crawler.addRegex("-.*\\?.*");
+//		crawler.addRegex("-.*\\.jpg.*");
+//		crawler.addRegex("-.*\\.png.*");
+//
+//		/* 加载抽取器时需要给出适用的url正则，在遇到满足url正则的网页时，抽取器就会在网页上执行 */
+//		crawler.addExtractor("http://www.zhihu.com/people/[^/]*",
+//				PeopleExtractor.class);
+//		crawler.addExtractor("http://www.zhihu.com/question/[0-9]+",
+//				QuestionExtractor.class);
+//
+//		/* 同一个url可以执行多个Extractor，HtmlExtractor会在所有页面上执行 */
+//		/* HtmlExtractor这个抽取器需要额外的参数指定存放html文件的路径 */
+//		/* ExtractorParams继承自HashMap，可以使用put方法添加参数 */
+//		crawler.addExtractor(".*", HtmlExtractor.class, new ExtractorParams(
+//				"path", "download/html"));
+//
+//		crawler.setThreads(100);
+//		crawler.start(10);
+//	}
 
 }
