@@ -1,5 +1,5 @@
 package com.dmc.controller;
-
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -27,7 +27,6 @@ import com.google.gson.GsonBuilder;
  * 
  * Created by Xiaobian Chen on 2015年6月23日
  * This class is used to handle feedback from customer and list comments
- *
  */
 @Controller
 @SessionAttributes("comment")
@@ -45,20 +44,45 @@ public class CommentController {
 	public String comment(Model model){
 		Comment comment = new Comment();
 		model.addAttribute("comment", comment);
-		return "comment";
+		return "comment"; 
 	}
 	
 	/**
 	 * submit feedback
 	 * @param comment
 	 * @return
+	 * @throws IOException 
 	 */
 	@RequestMapping(value="/feedback", method=RequestMethod.POST)
+<<<<<<< HEAD
 	public @ResponseBody String getFeedBack(@ModelAttribute("comment") Comment comment){
+=======
+	public @ResponseBody String getFeedBack(@ModelAttribute("comment") Comment comment) throws IOException{
+>>>>>>> 8670870b25acb85f942d4834ffd5877274ff3095
 		//reportTime
 		SimpleDateFormat  sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 		String reportTime = sdf.format(new Date());
 		comment.setReportTime(reportTime);
+		
+		commentService.insert(comment);
+		return "success";
+	}
+	
+	/**
+	 * file upload
+	 * @param comment
+	 * @param file
+	 * @return
+	 * @throws IOException
+	 */
+	@RequestMapping(value="/upload", method=RequestMethod.POST)
+	public @ResponseBody String fileUpload(@ModelAttribute("comment") Comment comment,@RequestParam("file") final MultipartFile file) throws IOException{
+		//reportTime
+		SimpleDateFormat  sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+		String reportTime = sdf.format(new Date());
+		comment.setReportTime(reportTime);
+		comment.setFileName(file.getOriginalFilename());
+		comment.setFileStream(file.getBytes());
 		
 		commentService.insert(comment);
 		return "success";
@@ -79,6 +103,7 @@ public class CommentController {
 		model.setViewName("listComments");
 		return model;
 	}
+<<<<<<< HEAD
 	
 	@RequestMapping(value="/pagination", method=RequestMethod.GET)
 	public @ResponseBody String getPaginationDataTable(HttpServletRequest request){
@@ -148,4 +173,6 @@ public class CommentController {
 		
 		return commentList;
 	}
+=======
+>>>>>>> 8670870b25acb85f942d4834ffd5877274ff3095
 }

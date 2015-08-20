@@ -1,7 +1,7 @@
 package com.dmc.domain;
 /**
  * 
- * Created by Xiaobian Chen on 2015Äê6ÔÂ18ÈÕ
+ * Created by Xiaobian Chen on 2015å¹´6æœˆ18æ—¥
  * Login Page
  *
  */
