@@ -196,7 +196,6 @@ function submitComment(){
 	var comments = $("#comments").val();
 	var type = $("#contact option:selected").text();
 	var contact = $("#contactInfo").val();
-	var file = $("#file").val();
 	
 	if(comments == ''){
 		$("#details").css('display','block');
@@ -211,7 +210,7 @@ function submitComment(){
 	$.ajax({
 	    type:"POST",
 	    url:"/DMC/feedback",
-	    data:"comments=" + comments + "&type=" + type + "&contact=" + contact + "&file=" + file,
+	    data:"comments=" + comments + "&type=" + type + "&contact=" + contact,
 	    success:function(data){
 	    	alert('您的建议我们已经收到,我们会尽快分析处理!');
 	    	location.href='/DMC/index';
@@ -277,7 +276,24 @@ function resetPwd(){
 }
 /*DataTable*/
 $(document).ready(function(){
-	$("#listComments").DataTable();
+	$("#listComments").DataTable({
+		    "bProcessing": true,
+	        "bServerSide": true,
+	        "sort": "position",
+	        "bStateSave": false,
+	        "iDisplayLength": 10,
+	        "iDisplayStart": 0,
+	        "fnDrawCallback": function () {
+	        },         
+	        "sAjaxSource": "/DMC/pagination",
+	        "aoColumns": [
+	            { "mData": "id" },
+	            { "mData": "comments" },
+	            { "mData": "type" },
+	            { "mData": "contact" },
+	            { "mData": "reportTime" },
+	        ]
+	});
 });
 
 

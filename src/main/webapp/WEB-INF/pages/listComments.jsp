@@ -21,7 +21,7 @@
 	           </tr>
           </thead>
            
-           <c:forEach items="${commentList}" var="comment">
+          <%--  <c:forEach items="${commentList}" var="comment">
              <tbody>
                <tr>
                   <td align="center">${comment.id}</td>
@@ -31,7 +31,7 @@
                   <td align="center">${comment.reportTime }</td>
                </tr>
               </tbody>
-           </c:forEach>
+           </c:forEach> --%>
     </table>
   
 </body>

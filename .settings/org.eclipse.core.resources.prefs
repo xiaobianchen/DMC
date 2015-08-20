@@ -1,5 +1,6 @@
 eclipse.preferences.version=1
 encoding//src/main/java/com/dmc/controller/RegisterController.java=gbk
+encoding//src/main/resources/db.sql=gbk
 encoding//src/main/webapp/WEB-INF/pages=UTF-8
 encoding//src/main/webapp/WEB-INF/pages/index.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/pages/login.jsp=UTF-8

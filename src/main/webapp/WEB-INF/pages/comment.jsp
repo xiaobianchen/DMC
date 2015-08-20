@@ -12,7 +12,7 @@
 			<div class="inner">
 				<div class="login-bg blur"></div>
 				<div class="comment-form">
-					<form method="post" enctype="multipart/form-data">
+					<form method="post">
 						<div class="input-box">
 							<label>
 							    <a style="float:right;" id="listComments" href="/DMC/list">查看所有评论</a>
@@ -31,12 +31,6 @@
 								</select>
 								<input type="text" id="contactInfo"/>
 								<span id="info">请填写您的联系方式,以方便我们能尽快联系您</span>
-							</label>
-						</div>
-						<div class="input-box">
-							<label>
-							            上传图片
-								<input type="file" name="file" id="file">
 							</label>
 						</div>
 						<div class="btn-box">
