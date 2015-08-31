@@ -4,12 +4,12 @@ import java.io.File;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.regex.Pattern;
 
-import com.dmc.crawler.MultiExtractorCrawler;
-import com.dmc.extract.Extractor;
-import com.dmc.extract.ExtractorParams;
-import com.dmc.model.Page;
-import com.dmc.utils.FileSystemOutput;
-import com.dmc.utils.FileUtils;
+import cn.edu.hfut.dmic.webcollector.extract.Extractor;
+import cn.edu.hfut.dmic.webcollector.extract.ExtractorParams;
+import cn.edu.hfut.dmic.webcollector.model.Page;
+import cn.edu.hfut.dmic.webcollector.util.FileSystemOutput;
+import cn.edu.hfut.dmic.webcollector.util.FileUtils;
+
 import com.dmc.utils.JsoupUtils;
 
 /**

@@ -4,9 +4,10 @@ import java.io.IOException;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.regex.Pattern;
 
-import com.dmc.model.Links;
-import com.dmc.model.Page;
-import com.dmc.utils.FileUtils;
+import cn.edu.hfut.dmic.webcollector.crawler.BreadthCrawler;
+import cn.edu.hfut.dmic.webcollector.model.Links;
+import cn.edu.hfut.dmic.webcollector.model.Page;
+import cn.edu.hfut.dmic.webcollector.util.FileUtils;
 
 /**
  * 

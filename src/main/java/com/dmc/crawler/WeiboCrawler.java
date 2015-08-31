@@ -3,9 +3,11 @@ package com.dmc.crawler;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import com.dmc.model.Links;
-import com.dmc.model.Page;
-import com.dmc.net.HttpRequesterImpl;
+import cn.edu.hfut.dmic.webcollector.crawler.DeepCrawler;
+import cn.edu.hfut.dmic.webcollector.model.Links;
+import cn.edu.hfut.dmic.webcollector.model.Page;
+import cn.edu.hfut.dmic.webcollector.net.HttpRequesterImpl;
+
 
 /**
  * 

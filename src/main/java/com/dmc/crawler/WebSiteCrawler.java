@@ -9,9 +9,10 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-import com.dmc.crawler.BreadthCrawler;
-import com.dmc.model.Links;
-import com.dmc.model.Page;
+import cn.edu.hfut.dmic.webcollector.crawler.BreadthCrawler;
+import cn.edu.hfut.dmic.webcollector.model.Links;
+import cn.edu.hfut.dmic.webcollector.model.Page;
+
 import com.dmc.utils.JDBCHelper;
 
 /**

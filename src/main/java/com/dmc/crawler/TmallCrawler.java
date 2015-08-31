@@ -1,8 +1,10 @@
 package com.dmc.crawler;
 
 import java.util.regex.Pattern;
-import com.dmc.model.Links;
-import com.dmc.model.Page;
+
+import cn.edu.hfut.dmic.webcollector.crawler.BreadthCrawler;
+import cn.edu.hfut.dmic.webcollector.model.Links;
+import cn.edu.hfut.dmic.webcollector.model.Page;
 /**
  * 
  * Created by Xiaobian Chen on 2015年8月20日
