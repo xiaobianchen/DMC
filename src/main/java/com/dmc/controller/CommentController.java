@@ -98,7 +98,11 @@ public class CommentController {
 		return model;
 	}
 
-	
+	/**
+	 * pagination
+	 * @param request
+	 * @return
+	 */
 	@RequestMapping(value="/pagination", method=RequestMethod.GET)
 	public @ResponseBody String getPaginationDataTable(HttpServletRequest request){
 		//fetch the page number from client

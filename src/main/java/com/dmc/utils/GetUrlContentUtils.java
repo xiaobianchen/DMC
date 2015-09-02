@@ -15,6 +15,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.commons.httpclient.HttpClient;
+import org.apache.commons.httpclient.HttpException;
 import org.apache.commons.httpclient.NameValuePair;
 import org.apache.commons.httpclient.methods.PostMethod;
 
@@ -190,8 +191,8 @@ public class GetUrlContentUtils {
 		return cssList;
 	}
 	
-      public static void main(String[] args) throws Exception{
-		
+	public static void test() throws IOException, HttpException,
+			UnsupportedEncodingException {
 		/**
 		 * step 1. get data from url by log in username and password
 		 */

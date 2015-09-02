@@ -8,7 +8,7 @@ import java.util.List;
  *
  *
  */
-public class Test {
+public class SpiderTest {
 	
 	public static void main(String[] args) {
 		System.out.println("后台正在抓取数据中.......................................");
