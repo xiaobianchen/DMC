@@ -191,20 +191,20 @@ public class GetUrlContentUtils {
 		return cssList;
 	}
 	
-	public static void test() throws IOException, HttpException,
+	public static void signIn() throws IOException, HttpException,
 			UnsupportedEncodingException {
 		/**
 		 * step 1. get data from url by log in username and password
 		 */
 	    HttpClient client = new HttpClient(); 
-	    PostMethod post = new PostMethod("https://login.taobao.com/member/login.jhtml");         
-	    NameValuePair username = new NameValuePair("username", "test@email.com");     
-	    NameValuePair password = new NameValuePair("password", "testpassword");     
+	    PostMethod post = new PostMethod("http://localhost:8080/DMC/");         
+	    NameValuePair username = new NameValuePair("username", "奥派阿西官方旗舰店:数据");     
+	    NameValuePair password = new NameValuePair("password", "hua18826824918");     
 	    post.setRequestBody(new NameValuePair[] { username, password });     
 	    client.executeMethod(post);     
 	    
 	    String responseString = new String(post.getResponseBodyAsString().getBytes("gbk"));        
-	    System.out.println("=========================��¼ҳ��===========================");          
+	    System.out.println("=========================log in successfully===========================");          
 	    System.out.println(responseString);  
 	    
 	    /**
