@@ -16,13 +16,14 @@ CREATE TABLE 'user' (
 
 /*Create Table Comment*/
 CREATE TABLE 'comment' (
-  'id' int(11) NOT NULL,
+  'id' int(11) NOT NULL AUTO_INCREMENT,
   'comments' varchar(255) NOT NULL,
   'type' varchar(45) DEFAULT NULL,
   'contact' varchar(45) DEFAULT NULL,
   'reportTime' datetime DEFAULT NULL,
-  PRIMARY KEY ('comments','id')
+  PRIMARY KEY ('id','comments')
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
 /*Create Table App*/
 CREATE TABLE 'app' (
@@ -101,6 +102,13 @@ CREATE TABLE 'pc' (
   '支付买家数变化' varchar(255) DEFAULT NULL,
   '支付转化率' varchar(255) DEFAULT NULL,
   '支付转化率变化' varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Create Table mapping*/
+CREATE TABLE 'mapping' (
+  'KEY' varchar(255) NOT NULL,
+  'VALUE' varchar(255) DEFAULT NULL,
+  PRIMARY KEY ('KEY')
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
