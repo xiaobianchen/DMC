@@ -1,15 +1,14 @@
 package com.dmc.utils;
 
 import java.util.HashMap;
+
 import org.apache.commons.dbcp.BasicDataSource;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 
 /**
- * 
  * Created by Xiaobian Chen on 2015年7月30日
  * JDBC Utils
- *  
  */
 public class JDBCHelper {
 
@@ -28,7 +27,7 @@ public class JDBCHelper {
         return template;
     }
 
-    public static JdbcTemplate getJdbcTemplate(String templateName){
+    public static JdbcTemplate getJdbcTemplate(String templateName) {
         return templateMap.get(templateName);
     }
 
