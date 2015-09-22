@@ -111,12 +111,3 @@ CREATE TABLE 'mapping' (
   PRIMARY KEY ('KEY')
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-
-
-
-
-
-
-
-
-
