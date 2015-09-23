@@ -15,6 +15,17 @@
 </head>
 <body>
 	<h1 align="center">DMC数据查询工具</h1>
+	<div>
+	    　　选择条件：
+		<select>
+		   <option>app</option>
+		   <option>flow</option>
+		   <option>pc</option>
+		</select>
+		日期：<input type="text" id="datepicker">
+		<input type="button" value="search" class="blue" onclick="searchCondition();">
+	</div><br/><br/>
+	
 	<table id="queryAll" class="display" border="1" cellspacing="0" width="100%" >
 	    <thead>
 		    <tr>

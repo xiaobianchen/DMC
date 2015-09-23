@@ -366,4 +366,18 @@ function download(){
 	});
 }
 
+/*datepicker*/
+$(function(){
+	$("#datepicker").datepicker();
+});
+
+/*csTools Search*/
+function searchCondition(){
+	alert(3333);
+}
+
+
+
+
+
 

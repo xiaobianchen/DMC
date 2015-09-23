@@ -164,9 +164,8 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ed1c24', endC
 #existPwd,#comment,#contacts,#info,#details,#checkoldPwd,
 #checknewPwd,#checkNewConfirmPwd,#checkconfirmNewPwd,#checkUserName,#checkoldPassword{display:none;color:#dd6f75;margin_bottom:5px;}
 
-    
-    
-    
+/*cstools*/    
+.blue {border: solid 1px #980c10; background: #2290da};  
   
     
     
