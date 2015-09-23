@@ -152,6 +152,10 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		    <artifactId>selenium-java</artifactId>
 		    <version>2.47.1</version>
         </dependency>
+        <dependency>
+        	<groupId>org.springframework.boot</groupId>
+        	<artifactId>spring-boot-starter-batch</artifactId>
+        </dependency>
 	</dependencies>
 
 	<build>

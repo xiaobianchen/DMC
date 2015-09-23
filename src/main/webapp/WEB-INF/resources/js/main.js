@@ -288,13 +288,59 @@ $(document).ready(function(){
 	        },         
 	        "sAjaxSource": "/DMC/pagination",
 	        "aoColumns": [
-	            { "mData": "id" },
-	            { "mData": "comments" },
-	            { "mData": "type" },
-	            { "mData": "contact" },
-	            { "mData": "reportTime" },
+				{ "mData": "id" },
+				{ "mData": "comments" },
+				{ "mData": "type" },
+				{ "mData": "contact" },
+				{ "mData": "reportTime" },       
 	        ]
 	});
+});
+
+/*csTools*/
+$(document).ready(function(){
+   $("#queryAll").DataTable({
+	    "bProcessing": true,
+        "bServerSide": true,
+        "sort": false,
+        "bStateSave": false,
+        "iDisplayLength": 20,
+        "iDisplayStart": 0,
+        "fnDrawCallback": function () {
+        },         
+        "sAjaxSource": "/DMC/csTools/pagination",
+       /* "oLanguage": {
+            "sLengthMenu": "每页显示 _MENU_ 条记录",
+            "sZeroRecords": "对不起，查询不到任何相关数据",
+            "sInfo": "当前显示 _START_ 到 _END_ 条，共 _TOTAL_ 条记录",
+            "sInfoEmtpy": "找不到相关数据",
+            //"sInfoFiltered": "数据表中共为 _MAX_ 条记录",  
+            "sProcessing": "正在加载中...",
+            "sSearch": "搜索",
+            "sInfoEmpty": "显示 0 至 0 共 0 项",
+            "oPaginate": { "sFirst": "第一页", "sPrevious": "上一页 ", "sNext": "下一页 ", "sLast": "末页 " }
+        },*/
+        "aoColumns": [
+            { "mData": "MerchantName" },
+            { "mData": "Date" },
+            { "mData": "Source" },
+            { "mData": "SourceDetails" },
+            { "mData": "AccessNum" },
+            { "mData": "AccessChange" },
+            { "mData": "BuyerNum" },
+            { "mData": "BuyerChange" },
+            { "mData": "OrderAmount" },
+            { "mData": "OrderChange" },
+            { "mData": "OrderTransferRate" },
+            { "mData": "OrderTransferChange" },
+            { "mData": "PayNum" },
+            { "mData": "PayBuyerNumChange" },
+            { "mData": "PayAmount" },
+            { "mData": "PayAmountChange" },
+            { "mData": "PayTransferRate" },
+            { "mData": "PayTransferRateChange" },
+        ]
+     });
 });
 
 /*Progressbar*/

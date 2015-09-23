@@ -14,7 +14,7 @@ public class TableColumn {
 	private int iTotalDisplayRecords;
 	private String sEcho;
 	private String sColumns;
-	private List<Comment> aaData;
+	private List<?> aaData;
 	
 	public int getiTotalRecords() {
 		return iTotalRecords;
@@ -40,10 +40,10 @@ public class TableColumn {
 	public void setsColumns(String sColumns) {
 		this.sColumns = sColumns;
 	}
-	public List<Comment> getAaData() {
+	public List<?> getAaData() {
 		return aaData;
 	}
-	public void setAaData(List<Comment> aaData) {
+	public void setAaData(List<?> aaData) {
 		this.aaData = aaData;
 	}
 }

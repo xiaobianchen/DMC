@@ -21,8 +21,6 @@ import com.dmc.domain.Comment;
 import com.dmc.domain.TableColumn;
 import com.dmc.services.CommentService;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
 /**
  * 
  * Created by Xiaobian Chen on 2015年6月23日
@@ -126,7 +124,7 @@ public class CommentController {
     	tableColumn.setiTotalRecords(100);
     	tableColumn.setAaData(commentList);
 		
-    	Gson gson = new GsonBuilder().setPrettyPrinting().create();
+    	Gson gson = new Gson();
     	String json = gson.toJson(tableColumn);
 		
 		return json;
