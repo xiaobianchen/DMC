@@ -104,9 +104,9 @@ public class CommentController {
 	@RequestMapping(value="/pagination", method=RequestMethod.GET)
 	public @ResponseBody String getPaginationDataTable(HttpServletRequest request){
 		//fetch the page number from client
-//		Integer pageNumber = 0;
-//		if(null!=request.getParameter("iDisplayStart"))
-//			pageNumber = (Integer.valueOf(request.getParameter("iDisplayStart"))/10)+1;
+		Integer pageNumber = 0;
+		if(null!=request.getParameter("iDisplayStart"))
+			pageNumber = (Integer.valueOf(request.getParameter("iDisplayStart"))/10)+1;
 		
 		//fetch search parameter
 	    String searchParameter = request.getParameter("sSearch");
@@ -114,14 +114,15 @@ public class CommentController {
 		//Fetch Page display length
     	Integer pageDisplayLength = Integer.valueOf(request.getParameter("iDisplayLength"));
 		
-    	List<Comment> commentList = createPaginationData(pageDisplayLength);
+    	List<Comment> commentList = createPaginationData(pageDisplayLength,pageNumber);
     	commentList = getListBasedSearchParameter(searchParameter,commentList);
 		
     	TableColumn tableColumn = new TableColumn();
+    	int size = commentService.list().size();
     	//set total display record
-    	tableColumn.setiTotalDisplayRecords(100);
+		tableColumn.setiTotalDisplayRecords(size);
     	//set total record
-    	tableColumn.setiTotalRecords(100);
+    	tableColumn.setiTotalRecords(size);
     	tableColumn.setAaData(commentList);
 		
     	Gson gson = new Gson();
@@ -135,12 +136,19 @@ public class CommentController {
 	 * @param pageDisplayLength
 	 * @return
 	 */
-	public List<Comment> createPaginationData(Integer pageDisplayLength) {
+	public List<Comment> createPaginationData(Integer pageDisplayLength,Integer pageNumber) {
 		List<Comment> commentList = commentService.list();
-		if(pageDisplayLength > commentList.size()){
-			commentList = commentList.subList(0, commentList.size());
-		}else{
-			commentList = commentList.subList(0, pageDisplayLength);
+		
+		if(pageDisplayLength < commentList.size()){
+			if(pageNumber == 1){
+				commentList = commentList.subList(0, pageNumber*pageDisplayLength);
+			}else{
+				if(pageNumber*pageDisplayLength <= commentList.size()){
+					commentList = commentList.subList((pageNumber-1)*10, pageNumber*pageDisplayLength);
+				}else{
+					commentList = commentList.subList((pageNumber-1)*10,commentList.size());
+				}
+			}
 		}
 		return commentList;
 	}

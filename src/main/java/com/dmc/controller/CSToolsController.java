@@ -41,16 +41,21 @@ public class CSToolsController {
     
     @RequestMapping(value="/pagination", method=RequestMethod.GET)
     public @ResponseBody String getPaginationDataTable(HttpServletRequest request) throws Exception{
-    	request.setCharacterEncoding("UTF-8");
+    	//Fetch the page number from client
+    	Integer pageNumber = 0;
+    	if (null != request.getParameter("iDisplayStart"))
+    		pageNumber = (Integer.valueOf(request.getParameter("iDisplayStart"))/10)+1;	
+    	
     	String searchParameter = request.getParameter("sSearch");
     	Integer pageDisplayLength = Integer.valueOf(request.getParameter("iDisplayLength"));
     	
-    	List<Flow> flowList = createPaginationData(pageDisplayLength);
+    	List<Flow> flowList = createPaginationData(pageDisplayLength,pageNumber);
     	flowList = getListBasedSearchParameter(searchParameter,flowList);
     	
+    	int size = flowService.listAll().size();
     	TableColumn tableColumn = new TableColumn();
-    	tableColumn.setiTotalDisplayRecords(100000);
-    	tableColumn.setiTotalRecords(10000);
+    	tableColumn.setiTotalDisplayRecords(size);
+    	tableColumn.setiTotalRecords(size);
     	tableColumn.setAaData(flowList);
     	
     	Gson gson = new Gson();
@@ -62,9 +67,10 @@ public class CSToolsController {
     	List<Flow> searchList = new ArrayList<Flow>();
     	if(null != searchParameter && !searchParameter.equals("")){
     		searchList = new ArrayList<Flow>();
-			searchParameter = searchParameter.toUpperCase();
 			for(Flow flow:flowList){
-				if(String.valueOf(flow.getMerchantName()).toUpperCase().indexOf(searchParameter)!=-1 ||flow.getSource().toUpperCase().indexOf(searchParameter)!=-1 || flow.getSourceDetails().toUpperCase().indexOf(searchParameter)!=-1){
+				if(flow.getMerchantName().equalsIgnoreCase(searchParameter)||flow.getDate().equalsIgnoreCase(searchParameter)
+						||flow.getSource().equalsIgnoreCase(searchParameter) || flow.getSourceDetails().equalsIgnoreCase(searchParameter) || String.valueOf(flow.getAccessNum()).indexOf(searchParameter)!=-1){
+					
 					searchList.add(flow);
 				}
 			}
@@ -81,12 +87,18 @@ public class CSToolsController {
      * @param pageDisplayLength
      * @return
      */
-	public List<Flow> createPaginationData(Integer pageDisplayLength) {
+	public List<Flow> createPaginationData(Integer pageDisplayLength,Integer pageNumber) {
 		List<Flow> flowList = flowService.listAll();
-		if(pageDisplayLength > flowList.size()){
-			flowList = flowList.subList(0, flowList.size());
-		}else{
-			flowList = flowList.subList(0, pageDisplayLength);
+		if (pageDisplayLength < flowList.size()) {
+			if(pageNumber==1){
+				flowList = flowList.subList(0, pageNumber*pageDisplayLength);
+			}else{
+				if(pageNumber*pageDisplayLength <= flowList.size()){
+					flowList = flowList.subList((pageNumber-1)*10, pageNumber*pageDisplayLength);
+				}else{
+					flowList = flowList.subList((pageNumber-1)*10, flowList.size());
+				}
+			}
 		}
 		return flowList;
 	}

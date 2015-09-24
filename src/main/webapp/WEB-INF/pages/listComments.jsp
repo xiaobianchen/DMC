@@ -10,29 +10,22 @@
 </head>
 <body>
     <h1 align="center">用户评论</h1>
-    <table id="listComments" class="display" border="1" cellspacing="0" width="100%" >
-         <thead>
-	           <tr>
-		            <th>评论编号</th>
-		            <th>评论内容</th>
-		            <th>联系类型</th>
-		            <th>联系方式</th>
-		            <th>评论时间</th>
-	           </tr>
-          </thead>
-
-           
-          <%--  <c:forEach items="${commentList}" var="comment">
-	   <tbody>
-               <tr>
-                  <td align="center">${comment.id}</td>
-                  <td align="center">${comment.comments }</td>
-                  <td align="center">${comment.type }</td>
-                  <td align="center">${comment.contact }</td>
-                  <td align="center">${comment.reportTime }</td>
-               </tr>
-              </tbody>
-           </c:forEach> --%>
+    <table width="100%" style="border: 3px;background: rgb(243, 244, 248);">
+    <tr>
+      <td>
+		    <table id="listComments" class="display" cellspacing="0" width="100%" >
+		         <thead>
+			           <tr>
+				            <th>评论编号</th>
+				            <th>评论内容</th>
+				            <th>联系类型</th>
+				            <th>联系方式</th>
+				            <th>评论时间</th>
+			           </tr>
+		          </thead>
+		    </table>
+	  </td>
+    </tr>
     </table>
   
 </body>

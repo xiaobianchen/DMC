@@ -304,7 +304,7 @@ $(document).ready(function(){
         "bServerSide": true,
         "sort": false,
         "bStateSave": false,
-        "iDisplayLength": 20,
+        "iDisplayLength": 10,
         "iDisplayStart": 0,
         "fnDrawCallback": function () {
         },         
