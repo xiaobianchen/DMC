@@ -344,27 +344,16 @@ $(document).ready(function(){
 });
 
 /*Progressbar*/
-function analysis(){
-	 var value = $('#p').progressbar('getValue');
-	 if (value < 100){
-         value += Math.floor(Math.random() * 10);
-         $('#p').progressbar('setValue', value);
-         setTimeout(arguments.callee, 200);
-     }
-};
-
-/*download*/
-function download(){
-	var fileId = $("#fileId").val();
-	$.ajax({
-		type:"GET",
-		url:"/DMC/fileDownload",
-		data:"fileId=" + fileId,
-		success:function(data){
-			
-		}
+function progress(){
+	var win = $.messager.progress({
+		title:'小D正在努力加载中.....',
+		msg:'正在调用后台抓取数据中.....',
 	});
-}
+	
+	setTimeout(function(){
+		$.messager.progress('close');
+	},5000)
+};
 
 /*datepicker*/
 $(function(){

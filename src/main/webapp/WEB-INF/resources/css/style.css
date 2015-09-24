@@ -166,6 +166,13 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ed1c24', endC
 
 /*cstools*/    
 .blue {border: solid 1px #980c10; background: #2290da};  
+
+/*下载*/
+#progressbar {margin-top: 20px;}
+.progress-label{ font-weight: bold; text-shadow: 1px 1px 0 #fff;}
+.ui-dialog-titlebar-close {display: none;  }
+ 
+
   
     
     
