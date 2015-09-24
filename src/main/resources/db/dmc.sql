@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50626
 File Encoding         : 65001
 
-Date: 2015-09-22 10:03:14
+Date: 2015-09-24 13:37:52
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -3427,13 +3427,13 @@ CREATE TABLE `comment` (
   `contact` varchar(45) DEFAULT NULL,
   `reportTime` datetime DEFAULT NULL,
   PRIMARY KEY (`id`,`comments`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of comment
 -- ----------------------------
-INSERT INTO `comment` VALUES ('1', '希望能够提供数据库查询UI工具', 'Email', 'xiaobian@dmc.com', '2015-09-16 11:14:39');
-INSERT INTO `comment` VALUES ('2', '希望能够提供数据库查询UI工具', 'Email', 'xiaobian@dmc.com', '2015-09-16 11:14:39');
+INSERT INTO `comment` VALUES ('1', '11', 'Email', 'xiaobian@dmc.com', '2015-09-16 11:14:39');
+INSERT INTO `comment` VALUES ('2', '22', 'Email', 'xiaobian@dmc.com', '2015-09-16 11:14:39');
 INSERT INTO `comment` VALUES ('3', 'test', 'Phone', '18601705642', '2015-09-16 13:31:54');
 INSERT INTO `comment` VALUES ('4', 'test', 'Phone', '18601705642', '2015-09-16 13:31:54');
 INSERT INTO `comment` VALUES ('5', 'added new function', 'Phone', '18601705642', '2015-09-16 13:44:43');
@@ -3441,6 +3441,9 @@ INSERT INTO `comment` VALUES ('6', 'added new function', 'Phone', '18601705642',
 INSERT INTO `comment` VALUES ('7', 'tt', 'Phone', '18601705642', '2015-09-16 13:49:01');
 INSERT INTO `comment` VALUES ('8', 'xiaobian', 'QQ', '751652064', '2015-09-16 13:53:29');
 INSERT INTO `comment` VALUES ('9', 'xiaobian', 'QQ', '751652064', '2015-09-16 13:53:29');
+INSERT INTO `comment` VALUES ('10', 'added new function', 'Phone', '18523223211', '2015-09-17 14:23:12');
+INSERT INTO `comment` VALUES ('11', 'new features', 'Email', 'chenxiaobian89@163.com', '2015-09-28 14:23:12');
+INSERT INTO `comment` VALUES ('12', 'report', 'Email', 'jchen19@163.com', '2015-09-17 14:23:12');
 
 -- ----------------------------
 -- Table structure for flow
