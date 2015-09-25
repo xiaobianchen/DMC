@@ -25,7 +25,7 @@
 				<div class="focus-title clearfix">
 					<div class="tijian-box" style="background-image: url(img/icon-tijian.png);">88<span class="text-dw">分</span></div>
 					<h2>商家存在潜力,建议立即查看</h2>
-					<span class="font12"><i class="icon icon-btn-down" style="background-image: url(img/btn-yjxz.png);" onclick="alert('一键下载')"></i> 重新体验</span>
+					<span class="font12"><i class="icon icon-btn-down" style="background-image: url(img/btn-yjxz.png);" onclick="progress()"></i> 重新体验</span>
 				</div> 
 			</div>
 			<div class="border-colorful"></div>
