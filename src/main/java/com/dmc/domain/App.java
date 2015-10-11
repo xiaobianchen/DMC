@@ -1,16 +1,15 @@
 package com.dmc.domain;
 
 /**
- * Created by xiaobianchen on 15/9/21.
+ * Created by xiaobianchen on 15/10/11.
  */
-public class Flow {
-
+public class App {
     private String MerchantName;
     private String Date;
     private String Source;
     private String SourceDetails;
     private int AccessNum;
-    private String AccessChange;
+    private String  AccessChange;
     private int BuyerNum;
     private String BuyerChange;
     private String OrderAmount;
@@ -170,16 +169,25 @@ public class Flow {
 
     @Override
     public String toString() {
-        return "Flow [MerchantName=" + MerchantName + ", Date=" + Date
-                + ", Source=" + Source + ", SourceDetails=" + SourceDetails
-                + ", AccessNum=" + AccessNum + ", AccessChange=" + AccessChange
-                + ", BuyerNum=" + BuyerNum + ", BuyerChange=" + BuyerChange
-                + ", OrderAmount=" + OrderAmount + ", OrderChange="
-                + OrderChange + ", OrderTransferRate=" + OrderTransferRate
-                + ", OrderTransferChange=" + OrderTransferChange + ", PayNum="
-                + PayNum + ", PayBuyerNumChange=" + PayBuyerNumChange
-                + ", PayAmount=" + PayAmount + ", PayAmountChange="
-                + PayAmountChange + ", PayTransferRate=" + PayTransferRate
-                + ", PayTransferRateChange=" + PayTransferRateChange + "]";
+        return "App{" +
+                "MerchantName='" + MerchantName + '\'' +
+                ", Date='" + Date + '\'' +
+                ", Source='" + Source + '\'' +
+                ", SourceDetails='" + SourceDetails + '\'' +
+                ", AccessNum=" + AccessNum +
+                ", AccessChange='" + AccessChange + '\'' +
+                ", BuyerNum=" + BuyerNum +
+                ", BuyerChange='" + BuyerChange + '\'' +
+                ", OrderAmount='" + OrderAmount + '\'' +
+                ", OrderChange='" + OrderChange + '\'' +
+                ", OrderTransferRate='" + OrderTransferRate + '\'' +
+                ", OrderTransferChange='" + OrderTransferChange + '\'' +
+                ", PayNum=" + PayNum +
+                ", PayBuyerNumChange='" + PayBuyerNumChange + '\'' +
+                ", PayAmount=" + PayAmount +
+                ", PayAmountChange='" + PayAmountChange + '\'' +
+                ", PayTransferRate='" + PayTransferRate + '\'' +
+                ", PayTransferRateChange='" + PayTransferRateChange + '\'' +
+                '}';
     }
 }

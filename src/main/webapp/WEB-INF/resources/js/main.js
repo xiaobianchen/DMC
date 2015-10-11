@@ -373,7 +373,14 @@ $(function(){
 
 /*csTools Search*/
 function searchCondition(){
-	alert(3333);
+	var selectedValue = $('input:radio[name=condition]:checked').val();
+	var time = $('#datepicker').val();
+
+	$.ajax({
+		type:'GET',
+		url:'/DMC/csTools/getCondition',
+		data:"selectedValue=" + selectedValue + "&time=" + time
+	});
 }
 
 
