@@ -1,10 +1,14 @@
 package com.dmc.controller;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.dmc.services.AppService;
+import com.dmc.services.PCService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,6 +34,12 @@ public class CSToolsController {
     @Autowired
     private FlowService flowService;
 
+	@Autowired
+	private AppService  appService;
+
+	@Autowired
+	private PCService   pcService;
+
     @RequestMapping(method = RequestMethod.GET)
     public ModelAndView list(){
         List<Flow> flowList = flowService.listAll();
@@ -49,7 +59,7 @@ public class CSToolsController {
     	String searchParameter = request.getParameter("sSearch");
     	Integer pageDisplayLength = Integer.valueOf(request.getParameter("iDisplayLength"));
     	
-    	List<Flow> flowList = createPaginationData(pageDisplayLength,pageNumber);
+    	List<Flow> flowList = createPaginationData(pageDisplayLength, pageNumber);
     	flowList = getListBasedSearchParameter(searchParameter,flowList);
     	
     	int size = flowService.listAll().size();
@@ -63,6 +73,49 @@ public class CSToolsController {
     	return json;
     }
 
+    @RequestMapping(value="/getCondition", method = RequestMethod.GET)
+	public List<?> getConditionValue(HttpServletRequest request) throws Exception {
+		String selectedValue = request.getParameter("selectedValue");
+		String dateTime = request.getParameter("time");
+		String date = "";
+		if (dateTime != null || dateTime.length() != 0) {
+			int lastIndex = dateTime.lastIndexOf("/");
+			int firstIndex = dateTime.indexOf("/");
+			String month = dateTime.substring(0, firstIndex);
+			String day = dateTime.substring(firstIndex + 1, lastIndex);
+			String year = dateTime.substring(lastIndex + 1);
+			date = year + "-" + month + "-" + day;
+		}
+
+		List<?> queryDataList = queryData(selectedValue, date);
+		return queryDataList;
+
+	}
+
+	/**
+	 * query data by selectedValue and date
+	 * @param selectedValue
+	 * @param date
+	 */
+	private List<?> queryData(String selectedValue, String date) {
+		List<?> dataList = new ArrayList();
+		if ("app".equals(selectedValue)) {
+			dataList = appService.listAll();
+		} else if ("flow".equals(selectedValue)) {
+			dataList = flowService.listAll();
+		} else {
+            dataList = pcService.listAll();
+		}
+
+		return dataList;
+	}
+
+	/**
+	 *
+	 * @param searchParameter
+	 * @param flowList
+	 * @return
+	 */
     public List<Flow> getListBasedSearchParameter(String searchParameter,List<Flow> flowList) {
     	List<Flow> searchList = new ArrayList<Flow>();
     	if(null != searchParameter && !searchParameter.equals("")){
