@@ -17,9 +17,9 @@
 	<h1 align="center">DMC数据查询工具</h1>
 	<div>
 	    查询条件：
-		<input type="radio" id="flow" checked> flow
-		<input type="radio" id="app">  app
-		<input type="radio" id="pc">   pc
+		<input type="radio" name="conditions" id="flow" checked> flow
+		<input type="radio" name="conditions" id="app">  app
+		<input type="radio" name="conditions" id="pc">   pc
 
 		日期：<input type="text" id="datepicker">
 		<input type="button" value="search" class="blue" onclick="searchCondition();">
