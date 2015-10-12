@@ -1,7 +1,6 @@
 package com.dmc.maper;
 
 import com.dmc.domain.App;
-import com.dmc.domain.Flow;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;

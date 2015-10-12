@@ -19,6 +19,7 @@ import com.dmc.services.UserService;
  * 
  * Created by Xiaobian Chen on 2015/06/11
  * Register Page
+ * This class is used to handle register operations
  *
  */
 @Controller

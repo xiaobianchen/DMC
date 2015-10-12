@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * 
  * Created by Xiaobian Chen on 2015年6月15日
  * Flow Page
- *
+ * This class is used to handle flow data
  */
 @Controller
 @RequestMapping("/flow")

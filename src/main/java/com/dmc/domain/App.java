@@ -2,6 +2,7 @@ package com.dmc.domain;
 
 /**
  * Created by xiaobianchen on 15/10/11.
+ * This class is an object for the App
  */
 public class App {
     private String MerchantName;
@@ -9,7 +10,7 @@ public class App {
     private String Source;
     private String SourceDetails;
     private int AccessNum;
-    private String  AccessChange;
+    private String AccessChange;
     private int BuyerNum;
     private String BuyerChange;
     private String OrderAmount;

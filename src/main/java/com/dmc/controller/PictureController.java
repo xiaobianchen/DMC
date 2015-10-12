@@ -73,7 +73,14 @@ public class PictureController {
 	public String upload(){
 		return "fileUpload";
 	}
-	
+
+	/**
+	 * returns donwload files
+	 * @param request
+	 * @param response
+	 * @return
+	 * @throws IOException
+	 */
 	@RequestMapping(value="/fileDownload", method=RequestMethod.GET)
 	public @ResponseBody String download(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		String fileId = request.getParameter("fileId");

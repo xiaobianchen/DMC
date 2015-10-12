@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * 
  * Created by Xiaobian Chen on 2015年6月11日
  * Home Page
- *
+ * This class is used to handle home page
  *
  */
 @Controller

@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * 
  * Created by Xiaobian Chen on 2015年8月20日
- *
+ * This class is used to stored tabletable response
  *
  */
 public class TableColumn {

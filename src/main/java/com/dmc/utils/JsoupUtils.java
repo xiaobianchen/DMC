@@ -44,7 +44,11 @@ public class JsoupUtils {
             }
         });
     }
-	
+
+	/**
+	 * read file
+	 * @param path
+	 */
 	public static void read(String path){
 		Document document = Jsoup.parse(path);
 		Elements elements = document.select("div[style]");

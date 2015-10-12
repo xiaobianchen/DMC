@@ -20,6 +20,11 @@ public class UserServiceImpl implements UserService {
 		userMapper.insertUser(user);
 	}
 
+	/**
+	 * get username from database
+	 * @param username
+	 * @return
+	 */
 	@Override
 	public boolean getUserByUserName(String username) {
 		User user = userMapper.getUserByUserName(username);
@@ -29,6 +34,11 @@ public class UserServiceImpl implements UserService {
 		return false;
 	}
 
+	/**
+	 * get email from database
+	 * @param email
+	 * @return
+	 */
 	@Override
 	public boolean getUserByEmail(String email) {
 		User user = userMapper.getUserByEmail(email);
@@ -38,6 +48,11 @@ public class UserServiceImpl implements UserService {
 		return false;
 	}
 
+	/**
+	 * get phone from database
+	 * @param phone
+	 * @return
+	 */
 	@Override
 	public boolean getUserByPhone(String phone) {
 		User user = userMapper.getUserByPhone(phone);
@@ -47,6 +62,12 @@ public class UserServiceImpl implements UserService {
 		return false;
 	}
 
+	/**
+	 * verify user via username and password
+	 * @param username
+	 * @param password
+	 * @return
+	 */
 	@Override
 	public boolean getUserByLogin(String username, String password) {
 		User user = userMapper.getUserByUserName(username);
@@ -56,8 +77,12 @@ public class UserServiceImpl implements UserService {
 		return false;
 	}
 
+	/**
+	 * reset password
+	 * @param reset
+	 */
 	@Override
 	public void updateUser(ResetPassword reset) {
-		 userMapper.updateUser(reset);
+		userMapper.updateUser(reset);
 	}
 }

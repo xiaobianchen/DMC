@@ -1,12 +1,8 @@
 package com.dmc.controller;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
-
 import com.dmc.services.AppService;
 import com.dmc.services.PCService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
-
 import com.dmc.domain.Flow;
 import com.dmc.domain.TableColumn;
 import com.dmc.services.FlowService;
@@ -40,6 +35,10 @@ public class CSToolsController {
 	@Autowired
 	private PCService   pcService;
 
+	/**
+	 * returns csTools page
+	 * @return
+	 */
     @RequestMapping(method = RequestMethod.GET)
     public ModelAndView list(){
         List<Flow> flowList = flowService.listAll();
@@ -48,7 +47,13 @@ public class CSToolsController {
         model.setViewName("queryAll");
         return model;
     }
-    
+
+	/**
+	 * returns the pagination of the specified data from database
+	 * @param request
+	 * @return
+	 * @throws Exception
+	 */
     @RequestMapping(value="/pagination", method=RequestMethod.GET)
     public @ResponseBody String getPaginationDataTable(HttpServletRequest request) throws Exception{
     	//Fetch the page number from client
@@ -73,6 +78,12 @@ public class CSToolsController {
     	return json;
     }
 
+	/**
+	 * returns the results from the search conditions
+	 * @param request
+	 * @return
+	 * @throws Exception
+	 */
     @RequestMapping(value="/getCondition", method = RequestMethod.GET)
 	public List<?> getConditionValue(HttpServletRequest request) throws Exception {
 		String selectedValue = request.getParameter("selectedValue");
@@ -111,7 +122,7 @@ public class CSToolsController {
 	}
 
 	/**
-	 *
+	 * returns the list
 	 * @param searchParameter
 	 * @param flowList
 	 * @return
@@ -136,7 +147,7 @@ public class CSToolsController {
 	}
 
 	/**
-     * 
+     * create the pagination data
      * @param pageDisplayLength
      * @return
      */
