@@ -109,7 +109,9 @@ function validate_regForm(){
     			if(data == 'success'){
     				alert("用户注册成功!");
     				location.href='/DMC/login';
-    			}else{
+    			}else if(data == 'error'){
+    				alert("该用户已经存在,请确认!");
+    				$("#username").focus();
     				return false;
     			}
     		 }

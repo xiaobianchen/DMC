@@ -14,12 +14,13 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.dmc.domain.Comment;
 import com.dmc.domain.TableColumn;
 import com.dmc.services.CommentService;
+import com.dmc.utils.RandomUtils;
 import com.google.gson.Gson;
 /**
  * 
@@ -27,7 +28,6 @@ import com.google.gson.Gson;
  * This class is used to handle feedback from customer and list comments
  */
 @Controller
-@SessionAttributes("comment")
 public class CommentController {
 	
 	@Autowired
@@ -39,10 +39,21 @@ public class CommentController {
 	 * @return
 	 */
 	@RequestMapping(value="/feedback", method=RequestMethod.GET)
-	public String comment(Model model){
+	public String comment(Model model,RedirectAttributes redirectAttributes){
 		Comment comment = new Comment();
 		model.addAttribute("comment", comment);
-		return "comment"; 
+		redirectAttributes.addAttribute("url", RandomUtils.generateString(RandomUtils.stoken, 2));
+		redirectAttributes.addAttribute("unitname", "feedback");
+		return "redirect:/feedbackPage"; 
+	}
+	
+	/**
+	 * returns feedback page
+	 * @return
+	 */
+	@RequestMapping(value="/feedbackPage", method=RequestMethod.GET)
+	public String index(){
+		return "comment";
 	}
 	
 	/**
@@ -52,7 +63,16 @@ public class CommentController {
 	 * @throws IOException 
 	 */
 	@RequestMapping(value="/feedback", method=RequestMethod.POST)
-	public @ResponseBody String getFeedBack(@ModelAttribute("comment") Comment comment) throws IOException{
+	public @ResponseBody String getFeedBack(HttpServletRequest request) throws IOException{
+		Comment comment = new Comment();
+		String comments = request.getParameter("comments");
+		String type = request.getParameter("type");
+		String contact = request.getParameter("contact");
+		
+		comment.setComments(comments);
+		comment.setType(type);
+		comment.setContact(contact);
+		
 		//reportTime
 		SimpleDateFormat  sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 		String reportTime = sdf.format(new Date());
@@ -88,7 +108,18 @@ public class CommentController {
 	 * @return
 	 */
 	@RequestMapping(value="/list", method=RequestMethod.GET)
-	public ModelAndView list(){
+	public String list(RedirectAttributes redirectAttributes){
+		redirectAttributes.addAttribute("url", RandomUtils.generateString(RandomUtils.stoken, 2));
+		redirectAttributes.addAttribute("unitname", "comments");
+		return "redirect:/listPage";
+	}
+	
+	/**
+	 * list comments
+	 * @return
+	 */
+	@RequestMapping(value="/listPage",method=RequestMethod.GET)
+	public ModelAndView getList(){
 		List<Comment> commentList = commentService.list();
 		ModelAndView model = new ModelAndView();
 		model.addObject(commentList);

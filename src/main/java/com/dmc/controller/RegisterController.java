@@ -3,6 +3,8 @@ package com.dmc.controller;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,9 +13,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.dmc.domain.User;
 import com.dmc.services.UserService;
+import com.dmc.utils.RandomUtils;
 
 /**
  * 
@@ -35,9 +39,16 @@ public class RegisterController {
 	 * @return
 	 */
 	@RequestMapping(value="/register",method=RequestMethod.GET)
-	public String register(Model model){
+	public String register(Model model,RedirectAttributes redirectAttributes){
 		User user = new User();
 		model.addAttribute("user", user);
+		redirectAttributes.addAttribute("url", RandomUtils.generateString(RandomUtils.stoken, 2));
+		redirectAttributes.addAttribute("unitname", "register");
+		return "redirect:/registerPage";
+	}
+	
+	@RequestMapping(value="/registerPage", method=RequestMethod.GET)
+	public String getRegister(){
 		return "register";
 	}
 	
@@ -47,11 +58,16 @@ public class RegisterController {
 	 * @return
 	 */
 	@RequestMapping(value="/register", method=RequestMethod.POST)
-	public @ResponseBody  String signup(@ModelAttribute("user") User user){
-		boolean isUser = userService.getUserByUserName(user.getUsername());
-		boolean isEmail = userService.getUserByEmail(user.getEmail());
-		boolean isPhone = userService.getUserByPhone(user.getPhone());
+	public @ResponseBody  String signup(HttpServletRequest request){
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		String email = request.getParameter("email");
+		String phone = request.getParameter("phone");
+		boolean isUser = userService.getUserByUserName(username);
+		boolean isEmail = userService.getUserByEmail(email);
+		boolean isPhone = userService.getUserByPhone(phone);
 		boolean isFlag = isUser||isEmail||isPhone;
+		User user = new User();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 		String registerTime = sdf.format(new Date());
 		user.setRegisterDate(registerTime);
@@ -59,6 +75,10 @@ public class RegisterController {
 		if(isFlag){
 			return "error";
 		}else{
+			user.setUsername(username);
+			user.setPassword(password);
+			user.setEmail(email);
+			user.setPhone(phone);
 			userService.insert(user);
 			return "success";
 		}

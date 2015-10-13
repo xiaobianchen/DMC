@@ -43,9 +43,9 @@
 						</div> -->
 
 						<div class="btn-box">
-						    <input type="submit" value="提交问题" class="button red" onclick="return submitComment();">
+						    <!-- <input type="submit" value="提交问题" class="button red" onclick="return submitComment();"> -->
 							<!-- <input type="button" value="提交问题" class="button red" onclick="return submitComment();"> -->
-							<!-- <img src="img/btnsubmit.png" onclick="return submitComment();"> -->
+							<img src="img/btnsubmit.png" onclick="return submitComment();"> 
 						</div>
 					</form>
 				

@@ -34,7 +34,7 @@
 
 	<!-- config home page -->
 	<welcome-file-list>
-		<welcome-file>/WEB-INF/pages/login.jsp</welcome-file>
+		<welcome-file>/WEB-INF/pages/welcome.jsp</welcome-file>
 	</welcome-file-list>
 
 </web-app>

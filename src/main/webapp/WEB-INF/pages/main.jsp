@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>登录-DMC,就购了</title>
 <!-- loaded  all css files -->
-<link rel="stylesheet" href="css/jquery-ui.css"/>
+<link rel="stylesheet" href="css/jquery-ui.css">
 <link rel="stylesheet" href="css/msgBoxLight.css">
 <link rel="stylesheet" href="css/jquery.dataTables.css">
 <link rel="stylesheet" href="css/easyui.css">
 <link rel="stylesheet" href="css/icon.css">
-<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/style.css">
 <link rel="shortcut icon" href="img/favicon.ico">
 
 <!-- loaded all js files -->

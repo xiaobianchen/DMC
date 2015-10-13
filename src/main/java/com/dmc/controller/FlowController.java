@@ -3,6 +3,9 @@ package com.dmc.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import com.dmc.utils.RandomUtils;
 
 /**
  * 
@@ -11,15 +14,21 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * This class is used to handle flow data
  */
 @Controller
-@RequestMapping("/flow")
 public class FlowController {
 	
 	/**
 	 * get flow page
 	 * @return
 	 */
-	@RequestMapping(method=RequestMethod.GET)
-	public String flow(){
+	@RequestMapping(value="/flow",method=RequestMethod.GET)
+	public String flow(RedirectAttributes redirectAttributes){
+		redirectAttributes.addAttribute("url", RandomUtils.generateString(RandomUtils.stoken, 2));
+		redirectAttributes.addAttribute("unitname", "flow");
+		return "redirect:/flowPage";
+	}
+	
+	@RequestMapping(value="/flowPage", method=RequestMethod.GET)
+	public String index(){
 		return "flow";
 	}
 

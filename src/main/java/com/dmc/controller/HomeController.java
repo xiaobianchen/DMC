@@ -4,6 +4,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import com.dmc.utils.RandomUtils;
 
 /**
  * 
@@ -22,9 +25,11 @@ public class HomeController {
 	 * @return
 	 */
 	@RequestMapping(method=RequestMethod.GET)
-	public String home(ModelMap model){
+	public String home(ModelMap model,RedirectAttributes redirectAttributes){
 		model.addAttribute("message", "Welcome to DMC");
-		return "home";
+		redirectAttributes.addAttribute("url", RandomUtils.generateString(RandomUtils.stoken, 2));
+		redirectAttributes.addAttribute("unitname","index");
+		return "redirect:/index";
 	}
 
 }

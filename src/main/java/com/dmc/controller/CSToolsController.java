@@ -2,9 +2,12 @@ package com.dmc.controller;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
+
 import com.dmc.services.AppService;
 import com.dmc.services.PCService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
+
 import com.dmc.domain.Flow;
 import com.dmc.domain.TableColumn;
 import com.dmc.services.FlowService;
@@ -89,7 +93,7 @@ public class CSToolsController {
 		String selectedValue = request.getParameter("selectedValue");
 		String dateTime = request.getParameter("time");
 		String date = "";
-		if (dateTime != null || dateTime.length() != 0) {
+		if (dateTime != null && dateTime.length() != 0) {
 			int lastIndex = dateTime.lastIndexOf("/");
 			int firstIndex = dateTime.indexOf("/");
 			String month = dateTime.substring(0, firstIndex);
@@ -109,6 +113,7 @@ public class CSToolsController {
 	 * @param date
 	 */
 	private List<?> queryData(String selectedValue, String date) {
+		@SuppressWarnings("rawtypes")
 		List<?> dataList = new ArrayList();
 		if ("app".equals(selectedValue)) {
 			dataList = appService.listAll();

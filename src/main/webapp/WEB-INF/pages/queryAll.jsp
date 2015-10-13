@@ -12,6 +12,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title></title>
+<link rel="stylesheet" href="css/bootstrap.css">
+<script type="text/javascript" src="js/bootstrap.js"></script>
 </head>
 <body>
 	<h1 align="center">DMC数据查询工具</h1>
@@ -22,7 +24,8 @@
 		<input type="radio" name="condition" value="pc">   pc
 
 		日期：<input type="text" id="datepicker">
-		<input type="button" value="search" class="blue" onclick="searchCondition();">
+		<!-- <input type="button" value="search" class="blue" onclick="searchCondition();"> -->
+		<button type="button" class="btn btn-primary" onclick="searchCondition();">Search</button>
 	</div><br/><br/>
 	
 	<table width="100%" style="border: 3px;background: rgb(243, 244, 248);">

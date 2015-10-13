@@ -7,10 +7,12 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.dmc.domain.Login;
 import com.dmc.domain.ResetPassword;
 import com.dmc.services.UserService;
+import com.dmc.utils.RandomUtils;
 
 /**
  * 
@@ -30,9 +32,20 @@ public class LoginController {
 	 * @return
 	 */
 	@RequestMapping(value="/login",method=RequestMethod.GET)
-	public String login(Model model){
+	public String login(Model model,RedirectAttributes redirectAttributes){
 		Login login = new Login();
 		model.addAttribute("login", login);
+		redirectAttributes.addAttribute("url", RandomUtils.generateString(RandomUtils.stoken, 2));
+		redirectAttributes.addAttribute("unitname", "login");
+		return "redirect:/loginPage";
+	}
+	
+	/**
+	 * redirect to login page
+	 * @return
+	 */
+	@RequestMapping(value="/loginPage", method=RequestMethod.GET)
+	public String signIn(){
 		return "login";
 	}
 	
