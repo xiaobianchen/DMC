@@ -1,7 +1,9 @@
 package com.dmc.services;
 
 import com.dmc.domain.Flow;
+import com.dmc.domain.ProcessData;
 import com.dmc.maper.FlowMapper;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,4 +22,9 @@ public class FlowServiceImpl implements FlowService {
     public List<Flow> listAll() {
         return flowMapper.listAll();
     }
+
+	@Override
+	public List<ProcessData> queryProcessData() {
+		return flowMapper.queryProcessData();
+	}
 }

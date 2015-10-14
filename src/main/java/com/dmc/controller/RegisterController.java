@@ -42,7 +42,7 @@ public class RegisterController {
 	public String register(Model model,RedirectAttributes redirectAttributes){
 		User user = new User();
 		model.addAttribute("user", user);
-		redirectAttributes.addAttribute("url", RandomUtils.generateString(RandomUtils.stoken, 2));
+		redirectAttributes.addAttribute("redirectURL", RandomUtils.generateString(RandomUtils.stoken, 2));
 		redirectAttributes.addAttribute("unitname", "register");
 		return "redirect:/registerPage";
 	}

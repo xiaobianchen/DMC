@@ -1,6 +1,7 @@
 package com.dmc.services;
 
 import com.dmc.domain.Flow;
+import com.dmc.domain.ProcessData;
 
 import java.util.List;
 
@@ -10,4 +11,6 @@ import java.util.List;
 public interface FlowService {
 
     List<Flow> listAll();
+    List<ProcessData> queryProcessData();
+    
 }

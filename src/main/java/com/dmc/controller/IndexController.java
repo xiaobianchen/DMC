@@ -22,7 +22,7 @@ public class IndexController {
 	 */
 	@RequestMapping(value="/index", method=RequestMethod.GET)
 	public String index(RedirectAttributes redirectAttributes){
-		redirectAttributes.addAttribute("url", RandomUtils.generateString(RandomUtils.stoken, 2));
+		redirectAttributes.addAttribute("redirectURL", RandomUtils.generateString(RandomUtils.stoken, 2));
 		redirectAttributes.addAttribute("unitname", "index");
 		return "redirect:/indexPage";
 	}

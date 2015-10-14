@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <jsp:include page="main.jsp"/>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -41,59 +42,40 @@
 				</div>
 			</div>
 			<div class="application-list">
-				<ul>
-					<li>
-						<img src="img/img01.png" id="imgsel"/>
-						<p class="title">PC淘宝搜索</p>
-						<i class="icon icon-btn-download" style="background-image: url(img/icon-btn-download.png);"></i>
-						<!-- popup -->
-						<div class="popup" style="display:none;">
-							<div class="inner">
-								<i class="icon icon-arrow-left" style="background-image: url(img/icon-arrow-left.png);"></i>
-								<p class="text-box">
-									<span class="title">最近三天数据 </span>
-									<span>4894 </span>
-									<span>4894 </span>
-									<span>4894 </span>
-									<span class="title">最近三天数据 </span>
-									<span>同比上升 <span class="text-green strong">5%</span></span>
-									<span>环比下降 <span class="text-yellow strong">5%</span></span> 
-								</p>
+				 <ul>
+					    <li>
+							<img src="img/img01.png" id="imgsel"/>
+							<p class="title"></p>
+							<i class="icon icon-btn-download" style="background-image: url(img/icon-btn-download.png);"></i>
+							<!-- popup -->
+							<div class="popup" style="display:none;">
+								<div class="inner">
+									<i class="icon icon-arrow-left" style="background-image: url(img/icon-arrow-left.png);"></i>
+									<p class="text-box">
+										<span class="title">最近三天数据 </span>
+										<span>12 </span>
+										<span>14 </span>
+										<span>15</span>
+										<span class="title">最近三天数据 </span>
+										<span>同比上升 <span class="text-green strong">12</span></span>
+										<span>环比下降 <span class="text-yellow strong">12</span></span> 
+									</p>
+								</div>
 							</div>
-						</div>
-					</li>
-					
-					<li>
-						<img src="img/img02.png" />
-						<p class="title">41002</p>
-						<i class="icon icon-btn-download" style="background-image: url(img/icon-btn-download.png);"></i>
-					</li>
-					<li>
-						<img src="img/img02.png" />
-						<p class="title">T恤男</p>
-						<i class="icon icon-btn-download" style="background-image: url(img/icon-btn-download.png);"></i>
-					</li>
-					<li>
-						<img src="img/img01.png" />
-						<p class="title">PC淘宝搜索</p>
-						<i class="icon icon-btn-download" style="background-image: url(img/icon-btn-download.png);"></i>
-					</li>
-					<li>
-						<img src="img/img01.png" />
-						<p class="title">T恤</p>
-						<i class="icon icon-btn-download" style="background-image: url(img/icon-btn-download.png);"></i>
-					</li>
-					<li>
-						<img src="img/img02.png" />
-						<p class="title">41002</p>
-						<i class="icon icon-btn-download" style="background-image: url(img/icon-btn-download.png);"></i>
-					</li>
-					<li>
-						<img src="img/img02.png" />
-						<p class="title">T恤男</p>
-						<i class="icon icon-btn-download" style="background-image: url(img/icon-btn-download.png);"></i>
-					</li>
-				</ul>
+							
+						</li>
+						<li>
+							<img src="img/img02.png" />
+							<p class="title"></p>
+							<i class="icon icon-btn-download" style="background-image: url(img/icon-btn-download.png);"></i>
+						</li>
+						<li>
+							<img src="img/img02.png" />
+							<p class="title"></p>
+							<i class="icon icon-btn-download" style="background-image: url(img/icon-btn-download.png);"></i>
+						</li>
+				</ul> 
+				
 			</div>
 		</div>
 	</body>

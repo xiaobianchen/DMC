@@ -35,7 +35,7 @@ public class LoginController {
 	public String login(Model model,RedirectAttributes redirectAttributes){
 		Login login = new Login();
 		model.addAttribute("login", login);
-		redirectAttributes.addAttribute("url", RandomUtils.generateString(RandomUtils.stoken, 2));
+		redirectAttributes.addAttribute("redirectURL", RandomUtils.generateString(RandomUtils.stoken, 2));
 		redirectAttributes.addAttribute("unitname", "login");
 		return "redirect:/loginPage";
 	}

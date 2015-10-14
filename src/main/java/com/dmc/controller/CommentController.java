@@ -42,7 +42,7 @@ public class CommentController {
 	public String comment(Model model,RedirectAttributes redirectAttributes){
 		Comment comment = new Comment();
 		model.addAttribute("comment", comment);
-		redirectAttributes.addAttribute("url", RandomUtils.generateString(RandomUtils.stoken, 2));
+		redirectAttributes.addAttribute("redirectURL", RandomUtils.generateString(RandomUtils.stoken, 2));
 		redirectAttributes.addAttribute("unitname", "feedback");
 		return "redirect:/feedbackPage"; 
 	}
@@ -109,7 +109,7 @@ public class CommentController {
 	 */
 	@RequestMapping(value="/list", method=RequestMethod.GET)
 	public String list(RedirectAttributes redirectAttributes){
-		redirectAttributes.addAttribute("url", RandomUtils.generateString(RandomUtils.stoken, 2));
+		redirectAttributes.addAttribute("redirectURL", RandomUtils.generateString(RandomUtils.stoken, 2));
 		redirectAttributes.addAttribute("unitname", "comments");
 		return "redirect:/listPage";
 	}

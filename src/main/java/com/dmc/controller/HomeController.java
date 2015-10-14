@@ -27,7 +27,7 @@ public class HomeController {
 	@RequestMapping(method=RequestMethod.GET)
 	public String home(ModelMap model,RedirectAttributes redirectAttributes){
 		model.addAttribute("message", "Welcome to DMC");
-		redirectAttributes.addAttribute("url", RandomUtils.generateString(RandomUtils.stoken, 2));
+		redirectAttributes.addAttribute("redirectURL", RandomUtils.generateString(RandomUtils.stoken, 2));
 		redirectAttributes.addAttribute("unitname","index");
 		return "redirect:/index";
 	}
