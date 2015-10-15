@@ -223,12 +223,34 @@ function submitComment(){
 
 /*popup*/
 $(document).ready(function(){
-	$("#imgsel").mouseover(function(){
-		$(".popup").css('display','block');
+	$("#imgsel0").mouseover(function(){
+		$("#popup0").css('display','block');
 	});
 	
-	$("#imgsel").mouseout(function(){
-		$(".popup").css('display','none');
+	$("#imgsel0").mouseout(function(){
+		$("#popup0").css('display','none');
+	});
+});
+
+/*popup*/
+$(document).ready(function(){
+	$("#imgsel1").mouseover(function(){
+		$("#popup1").css('display','block');
+	});
+	
+	$("#imgsel1").mouseout(function(){
+		$("#popup1").css('display','none');
+	});
+});
+
+/*popup*/
+$(document).ready(function(){
+	$("#imgsel2").mouseover(function(){
+		$("#popup2").css('display','block');
+	});
+	
+	$("#imgsel2").mouseout(function(){
+		$("#popup2").css('display','none');
 	});
 });
 

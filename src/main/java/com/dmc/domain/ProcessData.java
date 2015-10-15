@@ -7,86 +7,86 @@ package com.dmc.domain;
  */
 public class ProcessData {
 	
-	private String Source;
-	private String SourceDetail;
-	private int AccessNumChange;
-	private int CurrentAccessNumChange;
-	private int PreviousOneDayAccessNum;
-	private int PreviousTwoDayAccessNum;
-	private int PreviousWeekAccessNum;
-	private String TB;
-	private String HB;
-	private String Date;
+	private String source;
+	private String sourceDetail;
+	private int accessNumChange;
+	private int currentAccessNumChange;
+	private int previousOneDayAccessNum;
+	private int previousTwoDayAccessNum;
+	private int previousWeekAccessNum;
+	private String tb;
+	private String hb;
+	private String date;
 	
 	public String getSource() {
-		return Source;
+		return source;
 	}
 	public void setSource(String source) {
-		Source = source;
+		this.source = source;
 	}
 	public String getSourceDetail() {
-		return SourceDetail;
+		return sourceDetail;
 	}
 	public void setSourceDetail(String sourceDetail) {
-		SourceDetail = sourceDetail;
+		this.sourceDetail = sourceDetail;
 	}
 	public int getAccessNumChange() {
-		return AccessNumChange;
+		return accessNumChange;
 	}
 	public void setAccessNumChange(int accessNumChange) {
-		AccessNumChange = accessNumChange;
+		this.accessNumChange = accessNumChange;
 	}
 	public int getCurrentAccessNumChange() {
-		return CurrentAccessNumChange;
+		return currentAccessNumChange;
 	}
 	public void setCurrentAccessNumChange(int currentAccessNumChange) {
-		CurrentAccessNumChange = currentAccessNumChange;
+		this.currentAccessNumChange = currentAccessNumChange;
 	}
 	public int getPreviousOneDayAccessNum() {
-		return PreviousOneDayAccessNum;
+		return previousOneDayAccessNum;
 	}
 	public void setPreviousOneDayAccessNum(int previousOneDayAccessNum) {
-		PreviousOneDayAccessNum = previousOneDayAccessNum;
+		this.previousOneDayAccessNum = previousOneDayAccessNum;
 	}
 	public int getPreviousTwoDayAccessNum() {
-		return PreviousTwoDayAccessNum;
+		return previousTwoDayAccessNum;
 	}
 	public void setPreviousTwoDayAccessNum(int previousTwoDayAccessNum) {
-		PreviousTwoDayAccessNum = previousTwoDayAccessNum;
+		this.previousTwoDayAccessNum = previousTwoDayAccessNum;
 	}
 	public int getPreviousWeekAccessNum() {
-		return PreviousWeekAccessNum;
+		return previousWeekAccessNum;
 	}
 	public void setPreviousWeekAccessNum(int previousWeekAccessNum) {
-		PreviousWeekAccessNum = previousWeekAccessNum;
+		this.previousWeekAccessNum = previousWeekAccessNum;
 	}
-	public String getTB() {
-		return TB;
+	public String getTb() {
+		return tb;
 	}
-	public void setTB(String tB) {
-		TB = tB;
+	public void setTb(String tb) {
+		this.tb = tb;
 	}
-	public String getHB() {
-		return HB;
+	public String getHb() {
+		return hb;
 	}
-	public void setHB(String hB) {
-		HB = hB;
+	public void setHB(String hb) {
+		this.hb = hb;
 	}
 	public String getDate() {
-		return Date;
+		return date;
 	}
 	public void setDate(String date) {
-		Date = date;
+		this.date = date;
 	}
 	
 	@Override
 	public String toString() {
-		return "ProcessData [Source=" + Source + ", SourceDetail="
-				+ SourceDetail + ", AccessNumChange=" + AccessNumChange
-				+ ", CurrentAccessNumChange=" + CurrentAccessNumChange
-				+ ", PreviousOneDayAccessNum=" + PreviousOneDayAccessNum
-				+ ", PreviousTwoDayAccessNum=" + PreviousTwoDayAccessNum
-				+ ", PreviousWeekAccessNum=" + PreviousWeekAccessNum + ", TB="
-				+ TB + ", HB=" + HB + ", Date=" + Date + "]";
+		return "ProcessData [Source=" + source + ", SourceDetail="
+				+ sourceDetail + ", AccessNumChange=" + accessNumChange
+				+ ", CurrentAccessNumChange=" + currentAccessNumChange
+				+ ", PreviousOneDayAccessNum=" + previousOneDayAccessNum
+				+ ", PreviousTwoDayAccessNum=" + previousTwoDayAccessNum
+				+ ", PreviousWeekAccessNum=" + previousWeekAccessNum + ", TB="
+				+ tb + ", HB=" + hb + ", Date=" + date + "]";
 	}
 }

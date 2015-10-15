@@ -2,6 +2,7 @@
     pageEncoding="utf-8"%>
 <jsp:include page="main.jsp"/>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions"  prefix="fn" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -43,28 +44,38 @@
 			</div>
 			<div class="application-list">
 				 <ul>
-					    <li>
-							<img src="img/img01.png" id="imgsel"/>
-							<p class="title"></p>
+					   <c:forEach items= "${dataList }" var = "processData" varStatus="loop">
+						<li>
+						<c:choose>
+							<c:when test="${fn:startsWith(processData, '-')}">
+								<img src="img/img01.png"  id="imgsel${loop.index }"/>
+							</c:when>
+							
+							<c:otherwise>
+								<img src="img/img02.png"  id="imgsel${loop.index }"/>
+							</c:otherwise>
+						</c:choose>
+							<%-- <img src="img/img01.png"  id="imgsel${loop.index }"/> --%>
+							<p class="title">${processData.sourceDetail }</p>
 							<i class="icon icon-btn-download" style="background-image: url(img/icon-btn-download.png);"></i>
 							<!-- popup -->
-							<div class="popup" style="display:none;">
+							<div class ="popup", id="popup${loop.index }" style="display:none;">
 								<div class="inner">
 									<i class="icon icon-arrow-left" style="background-image: url(img/icon-arrow-left.png);"></i>
 									<p class="text-box">
 										<span class="title">最近三天数据 </span>
-										<span>12 </span>
-										<span>14 </span>
-										<span>15</span>
+										<span>${processData.currentAccessNumChange } </span>
+										<span>${processData.previousOneDayAccessNum } </span>
+										<span>${processData.previousTwoDayAccessNum } </span>
 										<span class="title">最近三天数据 </span>
-										<span>同比上升 <span class="text-green strong">12</span></span>
-										<span>环比下降 <span class="text-yellow strong">12</span></span> 
+										<span>同比上升 <span class="text-green strong">${processData.tb }</span></span>
+										<span>环比下降 <span class="text-yellow strong">${processData.hb }</span></span> 
 									</p>
 								</div>
 							</div>
-							
 						</li>
-						<li>
+					</c:forEach>
+			<!-- 			<li>
 							<img src="img/img02.png" />
 							<p class="title"></p>
 							<i class="icon icon-btn-download" style="background-image: url(img/icon-btn-download.png);"></i>
@@ -73,7 +84,7 @@
 							<img src="img/img02.png" />
 							<p class="title"></p>
 							<i class="icon icon-btn-download" style="background-image: url(img/icon-btn-download.png);"></i>
-						</li>
+						</li> -->
 				</ul> 
 				
 			</div>
