@@ -35,7 +35,7 @@
 
 <input type="hidden" id="data-faq" value='<!--TMS:1396463-->
 { "faq": [ 
-  {"title": "生意参谋平台是什么？","url": "//bbs.taobao.com/catalog/thread/17097510-314918813.htm?spm=a210m.7475144.1998166562.23.MEVH8e"}, 
+  {"title": "生意参谋平台是什么？","url": "https://bbs.taobao.com/catalog/thread/17097510-314918813.htm?spm=a210m.7475144.1998166562.23.MEVH8e"}, 
   {"title": "生意参谋指标怎么看？","url": "//bbs.taobao.com/catalog/thread/17097510-277751735.htm?spm=0.0.0.0.jBOoWM"}, 
   {"title": "流量来源怎么划分？","url": "//bbs.taobao.com/catalog/thread/17097510-277706917.htm?spm=0.0.0.0.jBOoWM"} 
 ] }'>
