@@ -1,18 +1,48 @@
 <%@ page language="java" contentType="text/html; charset=utf8"
     pageEncoding="utf8"%>
-    
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!doctype html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf8">
-
-<link rel="stylesheet" href="css/jquery-ui.css"/>
-<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
-<script type="text/javascript" src="js/jquery-ui.js"></script>
-
-<title>Home Page</title>
+    <title>登录-DMC,就购了</title>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/jquery.sectionmenu.css" />
+    <script src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.fragmentscroll.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.sectionmenu.min.js"></script>
+    <script type="text/javascript">
+        $(window).load(function() {
+            $('body').sectionMenu().fragmentScroll();
+        });
+    </script>
 </head>
 <body>
-    ${message}
+<div id="nav">
+    <div class="container">
+        <ul>
+            <li><a href="/DMC/login">登陆</a></li>
+            <li><a href="/DMC/register">注册</a></li>
+            <li> <a href="#">联系客服</a></li>
+            <li><a href="#">诚征英才</a></li>
+            <li><a href="/DMC/feedback">意见反馈</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+    </div>
+</div>
+<div id="page">
+    <section id="home" class="container" data-section-menu="">
+    </section>
+
+    <section id="section1" class="container" data-section-menu="">
+    </section>
+
+    <section id="section2" class="container" data-section-menu="">
+    </section>
+
+    <section id="section3" class="container" data-section-menu="">
+    </section>
+</div>
 </body>
 </html>
