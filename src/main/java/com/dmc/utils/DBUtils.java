@@ -1,8 +1,7 @@
 package com.dmc.utils;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.logging.Logger;
 
 /**
  * @author xiaobian.chen
@@ -13,33 +12,56 @@ public class DBUtils {
     private static final String DRIVER_NAME = "com.mysql.jdbc.Driver";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "root";
-    private static final String URL = "jdbc:mysql://localhost:3307/dmc?autoReconnect=true";
+    private static final String URL = "jdbc:mysql://localhost:3306/dmc?autoReconnect=true";
+    private static final Logger logger = Logger.getLogger(DBUtils.class.getName());
+    private static Connection connection = null;
+    private static CallableStatement cstmt = null;
 
     /**
-     * @param url
-     * @param username
-     * @param password
+     * returns connection
      * @return
      */
-    public static Connection openConenection(String url, String username, String password) {
-
-        Connection connection = null;
+    public static Connection openConenection() {
         try {
             Class.forName(DRIVER_NAME);
             connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-            connection = DriverManager.getConnection(url, username, password);
-            System.out.println("mysql connection successfully!");
+            logger.info("connection successfully!");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        System.out.println("connection successfully!");
         return connection;
-
     }
+
+    /**
+     * call procedure
+     */
+    public static void callProcedure() {
+        try {
+            connection = openConenection();
+            cstmt = connection.prepareCall("{call sp_processData()}");
+            cstmt.execute();
+            logger.info("call procedure successfully!");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                if (cstmt != null) {
+                    cstmt.close();
+                }
+
+                if (connection != null) {
+                    connection.close();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
     public static void main(String[] args) {
-        DBUtils.openConenection(URL, USERNAME, PASSWORD);
+        callProcedure();
     }
 }

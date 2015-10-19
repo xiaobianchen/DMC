@@ -1,0 +1,40 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	
+	<bean id="dbUtils" class="com.dmc.utils.DBUtils"/>
+	
+	<!-- spring quartz -->
+	<bean name="callProcedureJob" class="org.springframework.scheduling.quartz.JobDetailBean">
+	     <property name="jobClass" value="com.dmc.quartz.CallProcedureJob"/>
+	
+	     <property name="jobDataAsMap">
+	         <map>
+	            <entry key="dbUtils" value-ref="dbUtils"/>
+	         </map>
+	     </property>
+	</bean>
+	
+	<!-- cron trigger, run every 30 minus -->
+	<bean id="cronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+	     <property name="jobDetail" ref="callProcedureJob"/>
+	     <property name="cronExpression" value="0 */30 * * * ?" />
+	</bean>
+	
+	<!-- scheduler factory -->
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+	     <property name="jobDetails">
+	        <list>
+	            <ref bean="callProcedureJob"/>
+	        </list>
+	     </property>
+	
+	     <property name="triggers">
+	        <list>
+	            <ref bean="cronTrigger"/>
+	        </list>
+	     </property>
+	</bean>
+	
+</beans>

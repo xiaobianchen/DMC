@@ -23,6 +23,9 @@
 		<input type="radio" name="condition" value="app">  app
 		<input type="radio" name="condition" value="pc">   pc
 
+        <select>
+          <option></option>
+        </select>
 		日期：<input type="text" id="datepicker">
 		<!-- <input type="button" value="search" class="blue" onclick="searchCondition();"> -->
 		<button type="button" class="btn btn-primary" onclick="searchCondition();">Search</button>

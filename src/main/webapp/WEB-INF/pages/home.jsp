@@ -22,12 +22,12 @@
 <div id="nav">
     <div class="container">
         <ul>
-            <li><a href="/DMC/login">登陆</a></li>
-            <li><a href="/DMC/register">注册</a></li>
-            <li> <a href="#">联系客服</a></li>
-            <li><a href="#">诚征英才</a></li>
-            <li><a href="/DMC/feedback">意见反馈</a></li>
-            <li><a href="#">联系我们</a></li>
+            <li><h3><a href="/DMC/login">登陆</a></h3></li>
+            <li><h3><a href="/DMC/register">注册</a></h3></li>
+            <li><h3> <a href="#">联系客服</a></h3></li>
+            <li><h3><a href="#">诚征英才</a></h3></li>
+            <li><h3><a href="/DMC/feedback">意见反馈</a></h3></li>
+            <li><h3><a href="#">联系我们</a></h3></li>
         </ul>
     </div>
 </div>

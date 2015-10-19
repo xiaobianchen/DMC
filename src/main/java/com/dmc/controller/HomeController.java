@@ -1,5 +1,6 @@
 package com.dmc.controller;
 
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +19,10 @@ import com.dmc.utils.RandomUtils;
 @Controller
 @RequestMapping("/home")
 public class HomeController {
+
+	static{
+		new ClassPathXmlApplicationContext("spring_quartz.xml");
+	}
 	
 	/**
 	 * Home Page to DMC
