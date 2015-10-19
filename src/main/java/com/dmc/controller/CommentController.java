@@ -38,7 +38,7 @@ public class CommentController {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping(value="/feedback", method=RequestMethod.GET)
+	@RequestMapping(value="/feedback", method=RequestMethod.GET, produces="application/json;charset=utf-8")
 	public String comment(Model model,RedirectAttributes redirectAttributes){
 		Comment comment = new Comment();
 		model.addAttribute("comment", comment);
@@ -51,7 +51,7 @@ public class CommentController {
 	 * returns feedback page
 	 * @return
 	 */
-	@RequestMapping(value="/feedbackPage", method=RequestMethod.GET)
+	@RequestMapping(value="/feedbackPage", method=RequestMethod.GET, produces="application/json;charset=utf-8")
 	public String index(){
 		return "comment";
 	}
@@ -62,7 +62,7 @@ public class CommentController {
 	 * @return
 	 * @throws IOException 
 	 */
-	@RequestMapping(value="/feedback", method=RequestMethod.POST)
+	@RequestMapping(value="/feedback", method=RequestMethod.POST, produces="application/json;charset=utf-8")
 	public @ResponseBody String getFeedBack(HttpServletRequest request) throws IOException{
 		Comment comment = new Comment();
 		String comments = request.getParameter("comments");
@@ -89,7 +89,7 @@ public class CommentController {
 	 * @return
 	 * @throws IOException
 	 */
-	@RequestMapping(value="/upload", method=RequestMethod.POST)
+	@RequestMapping(value="/upload", method=RequestMethod.POST, produces="application/json;charset=utf-8")
 	public @ResponseBody String fileUpload(@ModelAttribute("comment") Comment comment) throws IOException{
 		//reportTime
 		SimpleDateFormat  sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
@@ -107,7 +107,7 @@ public class CommentController {
 	 * 2.invoke setViewName(jsp page) to set jsp
 	 * @return
 	 */
-	@RequestMapping(value="/list", method=RequestMethod.GET)
+	@RequestMapping(value="/list", method=RequestMethod.GET, produces="application/json;charset=utf-8")
 	public String list(RedirectAttributes redirectAttributes){
 		redirectAttributes.addAttribute("redirectURL", RandomUtils.generateString(RandomUtils.stoken, 2));
 		redirectAttributes.addAttribute("unitname", "comments");
@@ -118,7 +118,7 @@ public class CommentController {
 	 * list comments
 	 * @return
 	 */
-	@RequestMapping(value="/listPage",method=RequestMethod.GET)
+	@RequestMapping(value="/listPage",method=RequestMethod.GET, produces="application/json;charset=utf-8")
 	public ModelAndView getList(){
 		List<Comment> commentList = commentService.list();
 		ModelAndView model = new ModelAndView();
@@ -132,7 +132,7 @@ public class CommentController {
 	 * @param request
 	 * @return
 	 */
-	@RequestMapping(value="/pagination", method=RequestMethod.GET)
+	@RequestMapping(value="/pagination", method=RequestMethod.GET, produces="application/json;charset=utf-8")
 	public @ResponseBody String getPaginationDataTable(HttpServletRequest request){
 		//fetch the page number from client
 		Integer pageNumber = 0;

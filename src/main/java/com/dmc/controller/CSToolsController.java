@@ -43,7 +43,7 @@ public class CSToolsController {
 	 * returns csTools page
 	 * @return
 	 */
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET, produces="application/json;charset=utf-8")
     public ModelAndView list(){
         List<Flow> flowList = flowService.listAll();
         ModelAndView model = new ModelAndView();
@@ -58,7 +58,7 @@ public class CSToolsController {
 	 * @return
 	 * @throws Exception
 	 */
-    @RequestMapping(value="/pagination", method=RequestMethod.GET)
+    @RequestMapping(value="/pagination", method=RequestMethod.GET, produces="application/json;charset=utf-8")
     public @ResponseBody String getPaginationDataTable(HttpServletRequest request) throws Exception{
     	//Fetch the page number from client
     	Integer pageNumber = 0;
@@ -88,7 +88,7 @@ public class CSToolsController {
 	 * @return
 	 * @throws Exception
 	 */
-    @RequestMapping(value="/getCondition", method = RequestMethod.GET)
+    @RequestMapping(value="/getCondition", method = RequestMethod.GET, produces="application/json;charset=utf-8")
 	public List<?> getConditionValue(HttpServletRequest request) throws Exception {
 		String selectedValue = request.getParameter("selectedValue");
 		String dateTime = request.getParameter("time");
