@@ -16,10 +16,10 @@
 	     </property>
 	</bean>
 	
-	<!-- cron trigger, run every 30 minus -->
+	<!-- cron trigger, run every 50 minus -->
 	<bean id="cronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
 	     <property name="jobDetail" ref="callProcedureJob"/>
-	     <property name="cronExpression" value="0 */30 * * * ?" />
+	     <property name="cronExpression" value="0 */50 * * * ?" />
 	</bean>
 	
 	<!-- scheduler factory -->

@@ -117,3 +117,8 @@ ul
 {
 	line-height: 30px;
 }
+
+.channel-a {
+    padding: 0 1px;
+    font-size: 18px;
+}
