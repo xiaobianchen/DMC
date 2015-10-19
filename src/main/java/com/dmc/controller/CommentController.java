@@ -63,7 +63,7 @@ public class CommentController {
 	 * @throws IOException 
 	 */
 	@RequestMapping(value="/feedback", method=RequestMethod.POST, produces="application/json;charset=utf-8")
-	public @ResponseBody String getFeedBack(HttpServletRequest request) throws IOException{
+	public String getFeedBack(HttpServletRequest request) throws IOException{
 		Comment comment = new Comment();
 		String comments = request.getParameter("comments");
 		String type = request.getParameter("type");
@@ -79,7 +79,7 @@ public class CommentController {
 		comment.setReportTime(reportTime);
 		
 		commentService.insert(comment);
-		return "success";
+		return "redirect:/indexPage";
 	}
 	
 	/**
