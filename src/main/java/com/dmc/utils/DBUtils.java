@@ -12,8 +12,7 @@ public class DBUtils {
     private static final String DRIVER_NAME = "com.mysql.jdbc.Driver";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "root";
-    private static final String URL = "jdbc:mysql://localhost:3306/dmc?autoReconnect=true";
-    private static final Logger logger = Logger.getLogger(DBUtils.class.getName());
+    private static final String URL = "jdbc:mysql://localhost:3307/dmc?autoReconnect=true";
     private static Connection connection = null;
     private static CallableStatement cstmt = null;
 
@@ -25,7 +24,6 @@ public class DBUtils {
         try {
             Class.forName(DRIVER_NAME);
             connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-            logger.info("connection successfully!");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {
@@ -43,7 +41,6 @@ public class DBUtils {
             connection = openConenection();
             cstmt = connection.prepareCall("{call sp_processData()}");
             cstmt.execute();
-            logger.info("call procedure successfully!");
         } catch (SQLException e) {
             e.printStackTrace();
         }finally {
