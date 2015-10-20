@@ -111,3 +111,8 @@ CREATE TABLE 'mapping' (
   PRIMARY KEY ('KEY')
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+/*Create Table source*/
+CREATE TABLE 'source' (
+  'sourceDetails' varchar(45) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
