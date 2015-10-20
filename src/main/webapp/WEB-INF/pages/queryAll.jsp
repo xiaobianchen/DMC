@@ -7,6 +7,7 @@
 --%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <jsp:include page="main.jsp"/>
 <html>
 <head>
@@ -22,10 +23,15 @@
 		<input type="radio" name="condition" value="flow" checked> flow
 		<input type="radio" name="condition" value="app">  app
 		<input type="radio" name="condition" value="pc">   pc
+        &nbsp;&nbsp;
 
-        <select>
-          <option></option>
+		来源明细：
+        <select name="sourceDetails" id="sourceDetails">
+			<c:forEach items="${sourceList}" var="data">
+				<option value="${data}">${data}</option>
+			</c:forEach>
         </select>
+
 		日期：<input type="text" id="datepicker">
 		<!-- <input type="button" value="search" class="blue" onclick="searchCondition();"> -->
 		<button type="button" class="btn btn-primary" onclick="searchCondition();">Search</button>

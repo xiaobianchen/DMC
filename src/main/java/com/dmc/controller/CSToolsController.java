@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.dmc.domain.Source;
 import com.dmc.services.AppService;
 import com.dmc.services.PCService;
 
@@ -45,9 +46,9 @@ public class CSToolsController {
 	 */
     @RequestMapping(method = RequestMethod.GET, produces="application/json;charset=utf-8")
     public ModelAndView list(){
-        List<Flow> flowList = flowService.listAll();
+        List<Source> sourceList = flowService.queryList();
         ModelAndView model = new ModelAndView();
-        model.addObject(flowList);
+        model.addObject("sourceList",sourceList);
         model.setViewName("queryAll");
         return model;
     }
