@@ -17,7 +17,7 @@
 <script type="text/javascript" src="js/bootstrap.js"></script>
 </head>
 <body>
-	<h1 align="center">DMC数据查询工具</h1>
+	<h1 align="center"><span style="color:dodgerblue">DMC数据查询工具</span></h1>
 	<div>
 	    查询条件：
 		<input type="radio" name="condition" value="flow" checked> flow

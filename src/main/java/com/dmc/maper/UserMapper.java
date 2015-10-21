@@ -8,6 +8,8 @@ import org.apache.ibatis.annotations.Update;
 import com.dmc.domain.ResetPassword;
 import com.dmc.domain.User;
 
+import java.util.List;
+
 /**
  * 
  * Created by Xiaobian Chen on 2015年6月16日
@@ -45,5 +47,15 @@ public interface UserMapper {
 	 
 	 @Update("UPDATE user SET password = #{password} where username = #{username}")
 	 public void updateUser(ResetPassword reset);
+
+     @Select("SELECT username,password,email,phone FROM user")
+	 public List<User> listUsers();
+
+
+	 @Update("DELETE FROM user WHERE username = #{username}")
+	 public void deleteUser(String username);
+
+	@Update("UPDATE user SET username = #{username},password = #{password},email=#{email},phone=#{phone} where username = #{username}")
+	public void updateUsers(User user);
 	
 }

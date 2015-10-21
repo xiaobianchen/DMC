@@ -1,6 +1,9 @@
 package com.dmc.services;
 import com.dmc.domain.ResetPassword;
 import com.dmc.domain.User;
+
+import java.util.List;
+
 /**
  * 
  *  Created by Xiaobian Chen on 2015年6月17日
@@ -12,4 +15,9 @@ public interface UserService {
     boolean getUserByPhone(String phone);
     boolean getUserByLogin(String username,String password);
     void updateUser(ResetPassword reset);
+    List<User> listUsers();
+    void deleteUser(String username);
+    void updateUsers(User user);
+
+
 }
