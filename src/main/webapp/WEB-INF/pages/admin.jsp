@@ -122,7 +122,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		}
 		function doSearch(){
 			$('#dg').datagrid('load',{
-			queryUserId: $('#username').val()
+			searchConditions: $('#search').val()
 		});
 }
 		
@@ -153,9 +153,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<a href="javascript:void(0);" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editUser()">编辑用户</a>
 		<a href="javascript:void(0);" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="removeUser()">删除用户</a>
 		<div>
-			<span>用户名:</span>
-			<input id="username" style="line-height:26px;border:1px solid #ccc">
-			<a href="javascript:void(0);" class="easyui-linkbutton" plain="true" onclick="doSearch()">Search</a>
+			<span>搜索:</span>
+			<input id="search" style="line-height:26px;border:1px solid #ccc">
+			<a href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-search'" style="width:80px" onclick="doSearch()">Search</a>
 		</div>
 	</div>
 	
