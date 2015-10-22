@@ -19,8 +19,8 @@
 </head>
 <body>
   <h1 align="center"><span style="color:dodgerblue">DMC数据查询工具</span></h1>
-  <table id="tt" class="easyui-datagrid" style="width:100%;height:400px"
-         url="datagrid24_getdata.php" toolbar="#tb"
+  <table id="tt" class="easyui-datagrid" style="width:100%;height:600px"
+         url="cstools/list" toolbar="#tb"
          title="DMC数据查询" iconCls="icon-save"
          rownumbers="true" pagination="true">
     <thead>
@@ -48,11 +48,11 @@
   <div id="tb" style="padding:3px">
     <span>查询条件:</span>
     <span>Flow</span>
-    <input id="flow" type="radio" name="searchCondition">
+    <input id="flow" type="radio" name="searchCondition" value="flow" checked>
     <span>PC</span>
-    <input id="pc" type="radio" name="searchCondition">
+    <input id="pc" type="radio" name="searchCondition" value="pc">
     <span>APP</span>
-    <input id="app" type="radio" name="searchCondition">
+    <input id="app" type="radio" name="searchCondition" value="app">
 
     <span>日期:</span>
     <input class="easyui-datebox"/>
