@@ -6,6 +6,9 @@ import org.springframework.stereotype.Service;
 import com.dmc.domain.ResetPassword;
 import com.dmc.domain.User;
 import com.dmc.maper.UserMapper;
+
+import java.util.List;
+
 /**
  * 
  *  Created by Xiaobian Chen on 2015年6月17日
@@ -84,5 +87,20 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public void updateUser(ResetPassword reset) {
 		userMapper.updateUser(reset);
+	}
+
+	@Override
+	public void deleteUser(String username) {
+         userMapper.deleteUser(username);
+	}
+
+	@Override
+	public List<User> listUsers() {
+		return userMapper.listUsers();
+	}
+
+	@Override
+	public void updateUsers(User user) {
+        userMapper.updateUsers(user);
 	}
 }

@@ -47,12 +47,12 @@
 					   <c:forEach items= "${dataList }" var = "processData" varStatus="loop">
 						<li>
 						<c:choose>
-							<c:when test="${fn:startsWith(processData, '-')}">
-								<img src="img/img01.png"  id="imgsel${loop.index }"/>
+							<c:when test="${fn:startsWith(processData.tb, '-')}">
+								<img src="img/img02.png"  id="imgsel${loop.index }"/>
 							</c:when>
 							
 							<c:otherwise>
-								<img src="img/img02.png"  id="imgsel${loop.index }"/>
+								<img src="img/img01.png"  id="imgsel${loop.index }"/>
 							</c:otherwise>
 						</c:choose>
 							<%-- <img src="img/img01.png"  id="imgsel${loop.index }"/> --%>
@@ -68,24 +68,29 @@
 										<span>${processData.previousOneDayAccessNum } </span>
 										<span>${processData.previousTwoDayAccessNum } </span>
 										<span class="title">最近三天数据 </span>
-										<span>同比上升 <span class="text-green strong">${processData.tb }</span></span>
-										<span>环比下降 <span class="text-yellow strong">${processData.hb }</span></span> 
+										<c:choose>
+											<c:when test="${fn:startsWith(processData.tb,'-')}">
+												<span>同比下降 <span class="text-yellow strong">${processData.tb }</span></span>
+											</c:when>
+											<c:otherwise>
+												<span>同比上升 <span class="text-green strong">${processData.tb }</span></span>
+											</c:otherwise>
+										</c:choose>
+										
+										<c:choose>
+										     <c:when test="${fn:startsWith(processData.hb,'-')}">
+												<span>环比下降 <span class="text-yellow strong">${processData.hb }</span></span>
+											</c:when>
+											<c:otherwise>
+												<span>环比上升 <span class="text-green strong">${processData.hb }</span></span>
+											</c:otherwise>
+										</c:choose>
 									</p>
 								</div>
 							</div>
 						</li>
 					</c:forEach>
-			<!-- 			<li>
-							<img src="img/img02.png" />
-							<p class="title"></p>
-							<i class="icon icon-btn-download" style="background-image: url(img/icon-btn-download.png);"></i>
-						</li>
-						<li>
-							<img src="img/img02.png" />
-							<p class="title"></p>
-							<i class="icon icon-btn-download" style="background-image: url(img/icon-btn-download.png);"></i>
-						</li> -->
-				</ul> 
+				</ul>
 				
 			</div>
 		</div>
