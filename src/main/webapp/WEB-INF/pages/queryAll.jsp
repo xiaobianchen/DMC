@@ -37,7 +37,6 @@
         </select>
 
 		日期：<input class="easyui-datebox"/>
-		<!-- <input type="button" value="search" class="blue" onclick="searchCondition();"> -->
 		<a href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-search'" style="width:80px" onclick="searchCondition()">Search</a>
 	</div><br/><br/>
 	
