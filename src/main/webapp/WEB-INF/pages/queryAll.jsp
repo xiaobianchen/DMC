@@ -14,7 +14,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title></title>
 <link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
 <script type="text/javascript" src="js/bootstrap.js"></script>
+
+
 </head>
 <body>
 	<h1 align="center"><span style="color:dodgerblue">DMC数据查询工具</span></h1>
@@ -32,9 +36,9 @@
 			</c:forEach>
         </select>
 
-		日期：<input type="text" id="datepicker">
+		日期：<input class="easyui-datebox"/>
 		<!-- <input type="button" value="search" class="blue" onclick="searchCondition();"> -->
-		<button type="button" class="btn btn-primary" onclick="searchCondition();">Search</button>
+		<a href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-search'" style="width:80px" onclick="searchCondition()">Search</a>
 	</div><br/><br/>
 	
 	<table width="100%" style="border: 3px;background: rgb(243, 244, 248);">
