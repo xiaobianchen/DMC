@@ -104,7 +104,10 @@ public class AdminController {
     @RequestMapping(value="/updateUser")
     public void updateUser(User user,HttpServletResponse response) {
         Result result = new Result();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        String registerTime = sdf.format(new Date());
         try {
+        	user.setRegisterDate(registerTime);
             userService.updateUsers(user);
             result.setMessage("update user successfully!");
             result.setSuccess(true);

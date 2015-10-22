@@ -49,6 +49,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 		/*edit user*/
 		function editUser(){
+			$.messager.show({
+				title: '提示信息',
+				msg: 'DMC系统由于权限原因只能编辑用户密码,如有疑问请联系管理员!'
+			});
 			var row = $('#dg').datagrid('getSelected');
 			if (row){
 				$('#dlg').dialog('open').dialog('setTitle','编辑用户');
@@ -69,7 +73,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					if (result.success){
 						$.messager.show({
 						title:'Info',
-						msg:result.message,
+						msg:'更新用户成功!',
 						showType:'fade',
 						style:{
 							right:'',
@@ -81,7 +85,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					} else {
 						$.messager.show({
 							title: '错误信息',
-							msg: result.message
+							msg: '更新用户信息失败,请联系管理员!'
 						});
 					}
 				}
@@ -97,7 +101,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							if (result.success){
 								$.messager.show({
 						title:'Info',
-						msg:result.message,
+						msg:'删除用户成功!',
 						showType:'fade',
 						style:{
 							right:'',
@@ -108,7 +112,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							} else {
 								$.messager.show({	// show error message
 									title: '错误信息',
-									msg: result.message
+									msg: '删除用户失败,请联系管理员!'
 								});
 							}
 						},'json');

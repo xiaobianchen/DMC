@@ -55,7 +55,7 @@ public interface UserMapper {
 	 @Update("DELETE FROM user WHERE username = #{username}")
 	 public void deleteUser(String username);
 
-	@Update("UPDATE user SET username = #{username},password = #{password},email=#{email},phone=#{phone} where username = #{username}")
+	@Update("UPDATE user SET password = #{password} where username = #{username}")
 	public void updateUsers(User user);
 	
 }
