@@ -1,6 +1,8 @@
 package com.dmc.services;
 
 import com.dmc.domain.App;
+import com.dmc.domain.PC;
+import com.dmc.domain.SearchCondition;
 
 import java.util.List;
 
@@ -9,4 +11,7 @@ import java.util.List;
  */
 public interface AppService {
     List<App> listAll();
+    List<App> getDataByCondition(SearchCondition searchCondition);
+    List<App> getDataByDate(SearchCondition searchCondition);
+    List<App> getDataBySourceDetails(SearchCondition searchCondition);
 }

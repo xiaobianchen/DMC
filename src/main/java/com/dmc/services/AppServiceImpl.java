@@ -1,6 +1,7 @@
 package com.dmc.services;
 
 import com.dmc.domain.App;
+import com.dmc.domain.SearchCondition;
 import com.dmc.maper.AppMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,7 +17,22 @@ public class AppServiceImpl implements AppService {
     private AppMapper appMapper;
 
     @Override
+    public List<App> getDataByCondition(SearchCondition searchCondition) {
+        return appMapper.getDataByCondition(searchCondition);
+    }
+
+    @Override
     public List<App> listAll() {
         return appMapper.listAll();
+    }
+
+    @Override
+    public List<App> getDataByDate(SearchCondition searchCondition) {
+        return appMapper.getDataByDate(searchCondition);
+    }
+
+    @Override
+    public List<App> getDataBySourceDetails(SearchCondition searchCondition) {
+        return appMapper.getDataBySourceDetails(searchCondition);
     }
 }

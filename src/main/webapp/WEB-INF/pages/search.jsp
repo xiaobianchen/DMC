@@ -16,18 +16,30 @@
   <link rel="shortcut icon" href="img/favicon.ico">
   <script type="text/javascript" src="easyui/jquery.min.js"></script>
   <script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
+
+  <script type="text/javascript">
+      /*search data*/
+      function doSearch() {
+        $('#tt').datagrid('load', {
+          type: $('input:radio[name=condition]:checked').val(),
+          date: $('#datePicker').datebox('getValue'),
+          sourceDetails: $('#sourceDetails option:selected').text(),
+        });
+      }
+  </script>
+
 </head>
 <body>
   <h1 align="center"><span style="color:dodgerblue">DMC数据查询工具</span></h1>
-  <table id="tt" class="easyui-datagrid" style="width:100%;height:600px"
+  <table id="tt" class="easyui-datagrid" style="width:100%;height:800px"
          url="cstools/list" toolbar="#tb"
          title="DMC数据查询" iconCls="icon-save"
          rownumbers="true" pagination="true">
     <thead>
     <tr>
-      <th field="merchantName" width="100">商家名称</th>
+      <th field="merchantName" width="180">商家名称</th>
       <th field="date" width="100">日期</th>
-      <th field="source" width="100">来源</th>
+      <th field="source" width="180">来源</th>
       <th field="sourceDetails" width="100">来源明细</th>
       <th field="accessNum" width="60">访客数</th>
       <th field="accessChange" width="80">访客数变化</th>
@@ -48,14 +60,14 @@
   <div id="tb" style="padding:3px">
     <span>查询条件:</span>
     <span>Flow</span>
-    <input id="flow" type="radio" name="searchCondition" value="flow" checked>
+    <input id="flow" type="radio" name="condition" value="flow" checked>&nbsp;
     <span>PC</span>
-    <input id="pc" type="radio" name="searchCondition" value="pc">
+    <input id="pc" type="radio" name="condition" value="pc">&nbsp;
     <span>APP</span>
-    <input id="app" type="radio" name="searchCondition" value="app">
+    <input id="app" type="radio" name="condition" value="app">&nbsp;
 
     <span>日期:</span>
-    <input class="easyui-datebox"/>
+    <input class="easyui-datebox" id="datePicker"/>
 
     <span>来源明细:</span>
     <select name="sourceDetails" id="sourceDetails">
@@ -63,7 +75,7 @@
         <option value="${data}">${data}</option>
       </c:forEach>
     </select>
-    <a href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-search'" style="width:80px" onclick="searchCondition()">Search</a>
+    <a href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-search'" style="width:80px" onclick="doSearch()">Search</a>
   </div>
 
 

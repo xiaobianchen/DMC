@@ -2,6 +2,7 @@ package com.dmc.services;
 
 import com.dmc.domain.Flow;
 import com.dmc.domain.ProcessData;
+import com.dmc.domain.SearchCondition;
 import com.dmc.domain.Source;
 import com.dmc.maper.FlowMapper;
 
@@ -20,6 +21,11 @@ public class FlowServiceImpl implements FlowService {
     private FlowMapper flowMapper;
 
     @Override
+    public List<Flow> getDataByCondition(SearchCondition searchCondition) {
+        return flowMapper.getDataByCondition(searchCondition);
+    }
+
+    @Override
     public List<Flow> listAll() {
         return flowMapper.listAll();
     }
@@ -32,5 +38,15 @@ public class FlowServiceImpl implements FlowService {
     @Override
     public List<Source> queryList() {
         return flowMapper.queryAllSourceDetails();
+    }
+
+    @Override
+    public List<Flow> getDataByDate(SearchCondition searchCondition) {
+        return flowMapper.getDataByDate(searchCondition);
+    }
+
+    @Override
+    public List<Flow> getDataBySourceDetails(SearchCondition searchCondition) {
+        return flowMapper.getDataBySourceDetails(searchCondition);
     }
 }

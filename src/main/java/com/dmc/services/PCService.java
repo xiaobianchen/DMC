@@ -1,6 +1,7 @@
 package com.dmc.services;
 
 import com.dmc.domain.PC;
+import com.dmc.domain.SearchCondition;
 
 import java.util.List;
 
@@ -9,4 +10,7 @@ import java.util.List;
  */
 public interface PCService {
     List<PC> listAll();
+    List<PC> getDataByCondition(SearchCondition searchCondition);
+    List<PC> getDataByDate(SearchCondition searchCondition);
+    List<PC> getDataBySourceDetails(SearchCondition searchCondition);
 }
