@@ -5,181 +5,190 @@ package com.dmc.domain;
  */
 public class Flow {
 
-    private String MerchantName;
-    private String Date;
-    private String Source;
-    private String SourceDetails;
-    private int AccessNum;
-    private String AccessChange;
-    private int BuyerNum;
-    private String BuyerChange;
-    private String OrderAmount;
-    private String OrderChange;
-    private String OrderTransferRate;
-    private String OrderTransferChange;
-    private int PayNum;
-    private String PayBuyerNumChange;
-    private Double PayAmount;
-    private String PayAmountChange;
-    private String PayTransferRate;
-    private String PayTransferRateChange;
+    private String merchantName;
+    private String date;
+    private String source;
+    private String sourceDetails;
+    private int accessNum;
+    private String accessChange;
+    private int buyerNum;
+    private String buyerChange;
+    private String orderAmount;
+    private String orderChange;
+    private String orderTransferRate;
+    private String orderTransferChange;
+    private int payNum;
+    private String payBuyerNumChange;
+    private Double payAmount;
+    private String payAmountChange;
+    private String payTransferRate;
+    private String payTransferRateChange;
 
     public String getMerchantName() {
-        return MerchantName;
+        return merchantName;
     }
 
     public void setMerchantName(String merchantName) {
-        MerchantName = merchantName;
+        this.merchantName = merchantName;
     }
 
     public String getDate() {
-        return Date;
+        return date;
     }
 
     public void setDate(String date) {
-        Date = date;
+        this.date = date;
     }
 
     public String getSource() {
-        return Source;
+        return source;
     }
 
     public void setSource(String source) {
-        Source = source;
+        this.source = source;
     }
 
     public String getSourceDetails() {
-        return SourceDetails;
+        return sourceDetails;
     }
 
     public void setSourceDetails(String sourceDetails) {
-        SourceDetails = sourceDetails;
+        this.sourceDetails = sourceDetails;
     }
 
     public int getAccessNum() {
-        return AccessNum;
+        return accessNum;
     }
 
     public void setAccessNum(int accessNum) {
-        AccessNum = accessNum;
+        this.accessNum = accessNum;
     }
 
     public String getAccessChange() {
-        return AccessChange;
+        return accessChange;
     }
 
     public void setAccessChange(String accessChange) {
-        AccessChange = accessChange;
+        this.accessChange = accessChange;
     }
 
     public int getBuyerNum() {
-        return BuyerNum;
+        return buyerNum;
     }
 
     public void setBuyerNum(int buyerNum) {
-        BuyerNum = buyerNum;
+        this.buyerNum = buyerNum;
     }
 
     public String getBuyerChange() {
-        return BuyerChange;
+        return buyerChange;
     }
 
     public void setBuyerChange(String buyerChange) {
-        BuyerChange = buyerChange;
+        this.buyerChange = buyerChange;
     }
 
     public String getOrderAmount() {
-        return OrderAmount;
+        return orderAmount;
     }
 
     public void setOrderAmount(String orderAmount) {
-        OrderAmount = orderAmount;
+        this.orderAmount = orderAmount;
     }
 
     public String getOrderChange() {
-        return OrderChange;
+        return orderChange;
     }
 
     public void setOrderChange(String orderChange) {
-        OrderChange = orderChange;
+        this.orderChange = orderChange;
     }
 
     public String getOrderTransferRate() {
-        return OrderTransferRate;
+        return orderTransferRate;
     }
 
     public void setOrderTransferRate(String orderTransferRate) {
-        OrderTransferRate = orderTransferRate;
+        this.orderTransferRate = orderTransferRate;
     }
 
     public String getOrderTransferChange() {
-        return OrderTransferChange;
+        return orderTransferChange;
     }
 
     public void setOrderTransferChange(String orderTransferChange) {
-        OrderTransferChange = orderTransferChange;
+        this.orderTransferChange = orderTransferChange;
     }
 
     public int getPayNum() {
-        return PayNum;
+        return payNum;
     }
 
     public void setPayNum(int payNum) {
-        PayNum = payNum;
+        this.payNum = payNum;
     }
 
     public String getPayBuyerNumChange() {
-        return PayBuyerNumChange;
+        return payBuyerNumChange;
     }
 
     public void setPayBuyerNumChange(String payBuyerNumChange) {
-        PayBuyerNumChange = payBuyerNumChange;
+        this.payBuyerNumChange = payBuyerNumChange;
     }
 
     public Double getPayAmount() {
-        return PayAmount;
+        return payAmount;
     }
 
     public void setPayAmount(Double payAmount) {
-        PayAmount = payAmount;
+        this.payAmount = payAmount;
     }
 
     public String getPayAmountChange() {
-        return PayAmountChange;
+        return payAmountChange;
     }
 
     public void setPayAmountChange(String payAmountChange) {
-        PayAmountChange = payAmountChange;
+        this.payAmountChange = payAmountChange;
     }
 
     public String getPayTransferRate() {
-        return PayTransferRate;
+        return payTransferRate;
     }
 
     public void setPayTransferRate(String payTransferRate) {
-        PayTransferRate = payTransferRate;
+        this.payTransferRate = payTransferRate;
     }
 
     public String getPayTransferRateChange() {
-        return PayTransferRateChange;
+        return payTransferRateChange;
     }
 
     public void setPayTransferRateChange(String payTransferRateChange) {
-        PayTransferRateChange = payTransferRateChange;
+        this.payTransferRateChange = payTransferRateChange;
     }
 
     @Override
     public String toString() {
-        return "Flow [MerchantName=" + MerchantName + ", Date=" + Date
-                + ", Source=" + Source + ", SourceDetails=" + SourceDetails
-                + ", AccessNum=" + AccessNum + ", AccessChange=" + AccessChange
-                + ", BuyerNum=" + BuyerNum + ", BuyerChange=" + BuyerChange
-                + ", OrderAmount=" + OrderAmount + ", OrderChange="
-                + OrderChange + ", OrderTransferRate=" + OrderTransferRate
-                + ", OrderTransferChange=" + OrderTransferChange + ", PayNum="
-                + PayNum + ", PayBuyerNumChange=" + PayBuyerNumChange
-                + ", PayAmount=" + PayAmount + ", PayAmountChange="
-                + PayAmountChange + ", PayTransferRate=" + PayTransferRate
-                + ", PayTransferRateChange=" + PayTransferRateChange + "]";
+        return "Flow{" +
+                "merchantName='" + merchantName + '\'' +
+                ", date='" + date + '\'' +
+                ", source='" + source + '\'' +
+                ", sourceDetails='" + sourceDetails + '\'' +
+                ", accessNum=" + accessNum +
+                ", accessChange='" + accessChange + '\'' +
+                ", buyerNum=" + buyerNum +
+                ", buyerChange='" + buyerChange + '\'' +
+                ", orderAmount='" + orderAmount + '\'' +
+                ", orderChange='" + orderChange + '\'' +
+                ", orderTransferRate='" + orderTransferRate + '\'' +
+                ", orderTransferChange='" + orderTransferChange + '\'' +
+                ", payNum=" + payNum +
+                ", payBuyerNumChange='" + payBuyerNumChange + '\'' +
+                ", payAmount=" + payAmount +
+                ", payAmountChange='" + payAmountChange + '\'' +
+                ", payTransferRate='" + payTransferRate + '\'' +
+                ", payTransferRateChange='" + payTransferRateChange + '\'' +
+                '}';
     }
 }

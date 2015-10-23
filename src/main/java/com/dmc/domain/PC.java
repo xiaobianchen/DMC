@@ -4,310 +4,310 @@ package com.dmc.domain;
  * Created by xiaobianchen on 15/10/11.
  */
 public class PC {
-    private String MerchantName;
-    private String Date;
-    private String Source;
-    private String SourceDetails;
-    private int AccessNum;
-    private String AccessChange;
-    private int NewAccessNum;
-    private String NewAccessNumChange;
-    private String ReviewNum;
-    private String ReviewNumChange;
-    private String AverageReviewNum;
-    private String AverageReviewNumChange;
-    private String RetainNum;
-    private String RetainNumChange;
-    private String ShoppingCartNum;
-    private String ShoppingCartNumChange;
-    private String MissingRate;
-    private String MissingRateChange;
-    private String OrderAmount;
-    private String OrderChange;
-    private String BuyerNum;
-    private String BuyerChange;
-    private String OrderTransferRate;
-    private String OrderTransferChange;
-    private String PayAmount;
-    private String PayAmountChange;
-    private String PayNum;
-    private String PayBuyerNumChange;
-    private String PayTransferRate;
-    private String PayTransferRateChange;
+    private String merchantName;
+    private String date;
+    private String source;
+    private String sourceDetails;
+    private int accessNum;
+    private String accessChange;
+    private int newAccessNum;
+    private String newAccessNumChange;
+    private String reviewNum;
+    private String reviewNumChange;
+    private String averageReviewNum;
+    private String averageReviewNumChange;
+    private String retainNum;
+    private String retainNumChange;
+    private String shoppingCartNum;
+    private String shoppingCartNumChange;
+    private String missingRate;
+    private String missingRateChange;
+    private String orderAmount;
+    private String orderChange;
+    private String buyerNum;
+    private String buyerChange;
+    private String orderTransferRate;
+    private String orderTransferChange;
+    private String payAmount;
+    private String payAmountChange;
+    private String payNum;
+    private String payBuyerNumChange;
+    private String payTransferRate;
+    private String payTransferRateChange;
 
     public String getMerchantName() {
-        return MerchantName;
+        return merchantName;
     }
 
     public void setMerchantName(String merchantName) {
-        MerchantName = merchantName;
+        this.merchantName = merchantName;
     }
 
     public String getDate() {
-        return Date;
+        return date;
     }
 
     public void setDate(String date) {
-        Date = date;
+        this.date = date;
     }
 
     public String getSource() {
-        return Source;
+        return source;
     }
 
     public void setSource(String source) {
-        Source = source;
+        this.source = source;
     }
 
     public String getSourceDetails() {
-        return SourceDetails;
+        return sourceDetails;
     }
 
     public void setSourceDetails(String sourceDetails) {
-        SourceDetails = sourceDetails;
+        this.sourceDetails = sourceDetails;
     }
 
     public int getAccessNum() {
-        return AccessNum;
+        return accessNum;
     }
 
     public void setAccessNum(int accessNum) {
-        AccessNum = accessNum;
+        this.accessNum = accessNum;
     }
 
     public String getAccessChange() {
-        return AccessChange;
+        return accessChange;
     }
 
     public void setAccessChange(String accessChange) {
-        AccessChange = accessChange;
+        this.accessChange = accessChange;
     }
 
     public int getNewAccessNum() {
-        return NewAccessNum;
+        return newAccessNum;
     }
 
     public void setNewAccessNum(int newAccessNum) {
-        NewAccessNum = newAccessNum;
+        this.newAccessNum = newAccessNum;
     }
 
     public String getNewAccessNumChange() {
-        return NewAccessNumChange;
+        return newAccessNumChange;
     }
 
     public void setNewAccessNumChange(String newAccessNumChange) {
-        NewAccessNumChange = newAccessNumChange;
+        this.newAccessNumChange = newAccessNumChange;
     }
 
     public String getReviewNum() {
-        return ReviewNum;
+        return reviewNum;
     }
 
     public void setReviewNum(String reviewNum) {
-        ReviewNum = reviewNum;
+        this.reviewNum = reviewNum;
     }
 
     public String getReviewNumChange() {
-        return ReviewNumChange;
+        return reviewNumChange;
     }
 
     public void setReviewNumChange(String reviewNumChange) {
-        ReviewNumChange = reviewNumChange;
+        this.reviewNumChange = reviewNumChange;
     }
 
     public String getAverageReviewNum() {
-        return AverageReviewNum;
+        return averageReviewNum;
     }
 
     public void setAverageReviewNum(String averageReviewNum) {
-        AverageReviewNum = averageReviewNum;
+        this.averageReviewNum = averageReviewNum;
     }
 
     public String getAverageReviewNumChange() {
-        return AverageReviewNumChange;
+        return averageReviewNumChange;
     }
 
     public void setAverageReviewNumChange(String averageReviewNumChange) {
-        AverageReviewNumChange = averageReviewNumChange;
+        this.averageReviewNumChange = averageReviewNumChange;
     }
 
     public String getRetainNum() {
-        return RetainNum;
+        return retainNum;
     }
 
     public void setRetainNum(String retainNum) {
-        RetainNum = retainNum;
+        this.retainNum = retainNum;
     }
 
     public String getRetainNumChange() {
-        return RetainNumChange;
+        return retainNumChange;
     }
 
     public void setRetainNumChange(String retainNumChange) {
-        RetainNumChange = retainNumChange;
+        this.retainNumChange = retainNumChange;
     }
 
     public String getShoppingCartNum() {
-        return ShoppingCartNum;
+        return shoppingCartNum;
     }
 
     public void setShoppingCartNum(String shoppingCartNum) {
-        ShoppingCartNum = shoppingCartNum;
+        this.shoppingCartNum = shoppingCartNum;
     }
 
     public String getShoppingCartNumChange() {
-        return ShoppingCartNumChange;
+        return shoppingCartNumChange;
     }
 
     public void setShoppingCartNumChange(String shoppingCartNumChange) {
-        ShoppingCartNumChange = shoppingCartNumChange;
+        this.shoppingCartNumChange = shoppingCartNumChange;
     }
 
     public String getMissingRate() {
-        return MissingRate;
+        return missingRate;
     }
 
     public void setMissingRate(String missingRate) {
-        MissingRate = missingRate;
+        this.missingRate = missingRate;
     }
 
     public String getMissingRateChange() {
-        return MissingRateChange;
+        return missingRateChange;
     }
 
     public void setMissingRateChange(String missingRateChange) {
-        MissingRateChange = missingRateChange;
+        this.missingRateChange = missingRateChange;
     }
 
     public String getOrderAmount() {
-        return OrderAmount;
+        return orderAmount;
     }
 
     public void setOrderAmount(String orderAmount) {
-        OrderAmount = orderAmount;
+        this.orderAmount = orderAmount;
     }
 
     public String getOrderChange() {
-        return OrderChange;
+        return orderChange;
     }
 
     public void setOrderChange(String orderChange) {
-        OrderChange = orderChange;
+        this.orderChange = orderChange;
     }
 
     public String getBuyerNum() {
-        return BuyerNum;
+        return buyerNum;
     }
 
     public void setBuyerNum(String buyerNum) {
-        BuyerNum = buyerNum;
+        this.buyerNum = buyerNum;
     }
 
     public String getBuyerChange() {
-        return BuyerChange;
+        return buyerChange;
     }
 
     public void setBuyerChange(String buyerChange) {
-        BuyerChange = buyerChange;
+        this.buyerChange = buyerChange;
     }
 
     public String getOrderTransferRate() {
-        return OrderTransferRate;
+        return orderTransferRate;
     }
 
     public void setOrderTransferRate(String orderTransferRate) {
-        OrderTransferRate = orderTransferRate;
+        this.orderTransferRate = orderTransferRate;
     }
 
     public String getOrderTransferChange() {
-        return OrderTransferChange;
+        return orderTransferChange;
     }
 
     public void setOrderTransferChange(String orderTransferChange) {
-        OrderTransferChange = orderTransferChange;
+        this.orderTransferChange = orderTransferChange;
     }
 
     public String getPayAmount() {
-        return PayAmount;
+        return payAmount;
     }
 
     public void setPayAmount(String payAmount) {
-        PayAmount = payAmount;
+        this.payAmount = payAmount;
     }
 
     public String getPayAmountChange() {
-        return PayAmountChange;
+        return payAmountChange;
     }
 
     public void setPayAmountChange(String payAmountChange) {
-        PayAmountChange = payAmountChange;
+        this.payAmountChange = payAmountChange;
     }
 
     public String getPayNum() {
-        return PayNum;
+        return payNum;
     }
 
     public void setPayNum(String payNum) {
-        PayNum = payNum;
+        this.payNum = payNum;
     }
 
     public String getPayBuyerNumChange() {
-        return PayBuyerNumChange;
+        return payBuyerNumChange;
     }
 
     public void setPayBuyerNumChange(String payBuyerNumChange) {
-        PayBuyerNumChange = payBuyerNumChange;
+        this.payBuyerNumChange = payBuyerNumChange;
     }
 
     public String getPayTransferRate() {
-        return PayTransferRate;
+        return payTransferRate;
     }
 
     public void setPayTransferRate(String payTransferRate) {
-        PayTransferRate = payTransferRate;
+        this.payTransferRate = payTransferRate;
     }
 
     public String getPayTransferRateChange() {
-        return PayTransferRateChange;
+        return payTransferRateChange;
     }
 
     public void setPayTransferRateChange(String payTransferRateChange) {
-        PayTransferRateChange = payTransferRateChange;
+        this.payTransferRateChange = payTransferRateChange;
     }
 
     @Override
     public String toString() {
         return "PC{" +
-                "MerchantName='" + MerchantName + '\'' +
-                ", Date='" + Date + '\'' +
-                ", Source='" + Source + '\'' +
-                ", SourceDetails='" + SourceDetails + '\'' +
-                ", AccessNum=" + AccessNum +
-                ", AccessChange='" + AccessChange + '\'' +
-                ", NewAccessNum=" + NewAccessNum +
-                ", NewAccessNumChange='" + NewAccessNumChange + '\'' +
-                ", ReviewNum='" + ReviewNum + '\'' +
-                ", ReviewNumChange='" + ReviewNumChange + '\'' +
-                ", AverageReviewNum='" + AverageReviewNum + '\'' +
-                ", AverageReviewNumChange='" + AverageReviewNumChange + '\'' +
-                ", RetainNum='" + RetainNum + '\'' +
-                ", RetainNumChange='" + RetainNumChange + '\'' +
-                ", ShoppingCartNum='" + ShoppingCartNum + '\'' +
-                ", ShoppingCartNumChange='" + ShoppingCartNumChange + '\'' +
-                ", MissingRate='" + MissingRate + '\'' +
-                ", MissingRateChange='" + MissingRateChange + '\'' +
-                ", OrderAmount='" + OrderAmount + '\'' +
-                ", OrderChange='" + OrderChange + '\'' +
-                ", BuyerNum='" + BuyerNum + '\'' +
-                ", BuyerChange='" + BuyerChange + '\'' +
-                ", OrderTransferRate='" + OrderTransferRate + '\'' +
-                ", OrderTransferChange='" + OrderTransferChange + '\'' +
-                ", PayAmount='" + PayAmount + '\'' +
-                ", PayAmountChange='" + PayAmountChange + '\'' +
-                ", PayNum='" + PayNum + '\'' +
-                ", PayBuyerNumChange='" + PayBuyerNumChange + '\'' +
-                ", PayTransferRate='" + PayTransferRate + '\'' +
-                ", PayTransferRateChange='" + PayTransferRateChange + '\'' +
+                "merchantName='" + merchantName + '\'' +
+                ", date='" + date + '\'' +
+                ", source='" + source + '\'' +
+                ", sourceDetails='" + sourceDetails + '\'' +
+                ", accessNum=" + accessNum +
+                ", accessChange='" + accessChange + '\'' +
+                ", newAccessNum=" + newAccessNum +
+                ", newAccessNumChange='" + newAccessNumChange + '\'' +
+                ", reviewNum='" + reviewNum + '\'' +
+                ", reviewNumChange='" + reviewNumChange + '\'' +
+                ", averageReviewNum='" + averageReviewNum + '\'' +
+                ", averageReviewNumChange='" + averageReviewNumChange + '\'' +
+                ", retainNum='" + retainNum + '\'' +
+                ", retainNumChange='" + retainNumChange + '\'' +
+                ", shoppingCartNum='" + shoppingCartNum + '\'' +
+                ", shoppingCartNumChange='" + shoppingCartNumChange + '\'' +
+                ", missingRate='" + missingRate + '\'' +
+                ", missingRateChange='" + missingRateChange + '\'' +
+                ", orderAmount='" + orderAmount + '\'' +
+                ", orderChange='" + orderChange + '\'' +
+                ", buyerNum='" + buyerNum + '\'' +
+                ", buyerChange='" + buyerChange + '\'' +
+                ", orderTransferRate='" + orderTransferRate + '\'' +
+                ", orderTransferChange='" + orderTransferChange + '\'' +
+                ", payAmount='" + payAmount + '\'' +
+                ", payAmountChange='" + payAmountChange + '\'' +
+                ", payNum='" + payNum + '\'' +
+                ", payBuyerNumChange='" + payBuyerNumChange + '\'' +
+                ", payTransferRate='" + payTransferRate + '\'' +
+                ", payTransferRateChange='" + payTransferRateChange + '\'' +
                 '}';
     }
 }
