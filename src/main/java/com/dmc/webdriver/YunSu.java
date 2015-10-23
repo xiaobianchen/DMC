@@ -19,9 +19,9 @@ import javax.imageio.ImageIO;
 public class YunSu {
 	
 	/**
-	 * 字符串MD5加密
-	 * @param s 原始字符串
-	 * @return  加密后字符串
+	 * 脳脰路没麓庐MD5录脫脙脺
+	 * @param s 脭颅脢录脳脰路没麓庐
+	 * @return  录脫脙脺潞贸脳脰路没麓庐
 	 */
 	public final static String MD5(String s) {
 		char hexDigits[] = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
@@ -47,10 +47,10 @@ public class YunSu {
 	}
 	
 	/**
-	 * 通用URL请求方法
-	 * @param url 		请求URL，不带参数 如：http://api.ysdm.net/register.xml
-	 * @param param 	请求参数，如：username=test&password=1
-	 * @return 			平台返回结果XML样式 
+	 * 脥篓脫脙URL脟毛脟贸路陆路篓
+	 * @param url 		脟毛脟贸URL拢卢虏禄麓酶虏脦脢媒 脠莽拢潞http://api.ysdm.net/register.xml
+	 * @param param 	脟毛脟贸虏脦脢媒拢卢脠莽拢潞username=test&password=1
+	 * @return 			脝陆脤篓路碌禄脴陆谩鹿没XML脩霉脢陆 
 	 * @throws IOException
 	 */
 	public static String httpRequestData(String url, String param)
@@ -85,11 +85,11 @@ public class YunSu {
 	}
 
 	/**
-	 * 答题
-	 * @param url 			请求URL，不带参数 如：http://api.ysdm.net/register.xml
-	 * @param param			请求参数，如：username=test&password=1
-	 * @param data			图片二进制流
-	 * @return				平台返回结果XML样式 
+	 * 麓冒脤芒
+	 * @param url 			脟毛脟贸URL拢卢虏禄麓酶虏脦脢媒 脠莽拢潞http://api.ysdm.net/register.xml
+	 * @param param			脟毛脟贸虏脦脢媒拢卢脠莽拢潞username=test&password=1
+	 * @param data			脥录脝卢露镁陆酶脰脝脕梅
+	 * @return				脝陆脤篓路碌禄脴陆谩鹿没XML脩霉脢陆 
 	 * @throws IOException
 	 */
 	public static String httpPostImage(String url, String param,
@@ -106,7 +106,7 @@ public class YunSu {
 		con = (HttpURLConnection) u.openConnection();
 		con.setRequestMethod("POST");
 		//con.setReadTimeout(95000);   
-		con.setConnectTimeout(95000); //此值与timeout参数相关，如果timeout参数是90秒，这里就是95000，建议多5秒
+		con.setConnectTimeout(95000); //麓脣脰碌脫毛timeout虏脦脢媒脧脿鹿脴拢卢脠莽鹿没timeout虏脦脢媒脢脟90脙毛拢卢脮芒脌茂戮脥脢脟95000拢卢陆篓脪茅露脿5脙毛
 		con.setDoOutput(true);
 		con.setDoInput(true);
 		con.setUseCaches(true);
@@ -148,10 +148,10 @@ public class YunSu {
 	}
 
 	/**
-	 * 获取用户信息
-	 * @param username	用户名
-	 * @param password	密码
-	 * @return			平台返回结果XML样式 
+	 * 禄帽脠隆脫脙禄搂脨脜脧垄
+	 * @param username	脫脙禄搂脙没
+	 * @param password	脙脺脗毛
+	 * @return			脝陆脤篓路碌禄脴陆谩鹿没XML脩霉脢陆 
 	 * @throws IOException
 	 */
 	public static String getInfo(String username, String password) {
@@ -161,17 +161,17 @@ public class YunSu {
 			result = YunSu.httpRequestData(
 					"http://api.ysdm.net/info.xml", param);
 		} catch (IOException e) {
-			result = "未知问题";
+			result = "脦麓脰陋脦脢脤芒";
 		}
 		return result;
 	}
 	
 	/**
-	 * 注册用户
-	 * @param username	用户名
-	 * @param password	密码
-	 * @param email		邮箱
-	 * @return			平台返回结果XML样式 
+	 * 脳垄虏谩脫脙禄搂
+	 * @param username	脫脙禄搂脙没
+	 * @param password	脙脺脗毛
+	 * @param email		脫脢脧盲
+	 * @return			脝陆脤篓路碌禄脴陆谩鹿没XML脩霉脢陆 
 	 * @throws IOException
 	 */
 	public static String register(String username, String password, String email) {
@@ -181,17 +181,17 @@ public class YunSu {
 			result = YunSu.httpRequestData(
 					"http://api.ysdm.net/register.xml", param);
 		} catch (IOException e) {
-			result = "未知问题";
+			result = "脦麓脰陋脦脢脤芒";
 		}
 		return result;
 	}
 
 	/**
-	 * 充值
-	 * @param username	用户名
-	 * @param id		卡号
-	 * @param password	密码
-	 * @return			平台返回结果XML样式 
+	 * 鲁盲脰碌
+	 * @param username	脫脙禄搂脙没
+	 * @param id		驴篓潞脜
+	 * @param password	脙脺脗毛
+	 * @return			脝陆脤篓路碌禄脴陆谩鹿没XML脩霉脢陆 
 	 * @throws IOException
 	 */
 	public static String recharge(String username, String id, String password) {
@@ -203,21 +203,21 @@ public class YunSu {
 			result = YunSu.httpRequestData(
 					"http://api.ysdm.net/recharge.xml", param);
 		} catch (IOException e) {
-			result = "未知问题";
+			result = "脦麓脰陋脦脢脤芒";
 		}
 		return result;
 	}
 	
 	/**
-	 * 答题(URL) 
-	 * @param username	用户名
-	 * @param password	用户密码。(支持32位MD5)
-	 * @param typeid	题目类型
-	 * @param timeout	任务超时时间，默认与最小值为60秒。
-	 * @param softid	软件ID，开发者可自行申请。
-	 * @param softkey	软件KEY，开发者可自行申请。
-	 * @param imageurl	远程图片URL
-	 * @return			平台返回结果XML样式 
+	 * 麓冒脤芒(URL) 
+	 * @param username	脫脙禄搂脙没
+	 * @param password	脫脙禄搂脙脺脗毛隆拢(脰搂鲁脰32脦禄MD5)
+	 * @param typeid	脤芒脛驴脌脿脨脥
+	 * @param timeout	脠脦脦帽鲁卢脢卤脢卤录盲拢卢脛卢脠脧脫毛脳卯脨隆脰碌脦陋60脙毛隆拢
+	 * @param softid	脠铆录镁ID拢卢驴陋路垄脮脽驴脡脳脭脨脨脡锚脟毛隆拢
+	 * @param softkey	脠铆录镁KEY拢卢驴陋路垄脮脽驴脡脳脭脨脨脡锚脟毛隆拢
+	 * @param imageurl	脭露鲁脤脥录脝卢URL
+	 * @return			脝陆脤篓路碌禄脴陆谩鹿没XML脩霉脢陆 
 	 * @throws IOException
 	 */
 	public static String createByUrl(String username, String password,
@@ -245,18 +245,18 @@ public class YunSu {
 	
 			
 		} catch(Exception e) {
-			result = "未知问题";
+			result = "脦麓脰陋脦脢脤芒";
 		}
 		return result;
 	}
 	
 	/**
-	 * 上报错题
-	 * @param username	用户名
-	 * @param password	用户密码
-	 * @param softid	软件ID
-	 * @param softkey	软件KEY
-	 * @param id		报错题目的ID
+	 * 脡脧卤篓麓铆脤芒
+	 * @param username	脫脙禄搂脙没
+	 * @param password	脫脙禄搂脙脺脗毛
+	 * @param softid	脠铆录镁ID
+	 * @param softkey	脠铆录镁KEY
+	 * @param id		卤篓麓铆脤芒脛驴碌脛ID
 	 * @return
 	 * @throws IOException
 	 */
@@ -271,21 +271,21 @@ public class YunSu {
 			result = YunSu.httpRequestData("http://api.ysdm.net/reporterror.xml",
 					param);
 		} catch (IOException e) {
-			result = "未知问题";
+			result = "脦麓脰陋脦脢脤芒";
 		}
 		
 		return result;
 	}
 	
 	/**
-	 * 上传题目图片返回结果	
-	 * @param username		用户名
-	 * @param password		密码
-	 * @param typeid		题目类型
-	 * @param timeout		任务超时时间
-	 * @param softid		软件ID
-	 * @param softkey		软件KEY
-	 * @param filePath		题目截图或原始图二进制数据路径
+	 * 脡脧麓芦脤芒脛驴脥录脝卢路碌禄脴陆谩鹿没	
+	 * @param username		脫脙禄搂脙没
+	 * @param password		脙脺脗毛
+	 * @param typeid		脤芒脛驴脌脿脨脥
+	 * @param timeout		脠脦脦帽鲁卢脢卤脢卤录盲
+	 * @param softid		脠铆录镁ID
+	 * @param softkey		脠铆录镁KEY
+	 * @param filePath		脤芒脛驴陆脴脥录禄貌脭颅脢录脥录露镁陆酶脰脝脢媒戮脻脗路戮露
 	 * @return
 	 * @throws IOException
 	 */
@@ -309,7 +309,7 @@ public class YunSu {
 				if (data.length > 0)	result = YunSu.httpPostImage("http://api.ysdm.net/create.xml", param, data);
 			}
 		} catch(Exception e) {
-			result = "未知问题";
+			result = "脦麓脰陋脦脢脤芒";
 		}
 		
 		
@@ -327,7 +327,7 @@ public class YunSu {
 		try {
 			result = YunSu.httpPostImage("http://api.ysdm.net/create.xml", param, byteArr);
 		} catch(Exception e) {
-			result = "未知问题";
+			result = "脦麓脰陋脦脢脤芒";
 		}
 		
 		

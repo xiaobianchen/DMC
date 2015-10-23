@@ -39,6 +39,7 @@ public class CSVDownloader {
 
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.get("http://beta.sycm.taobao.com/login.htm?_target=http%3A%2F%2Fbeta.sycm.taobao.com%2Findex.htm");
+        driver.manage().window().maximize();
         driver.switchTo().frame(0);
 
         WebElement userNameInput = driver.findElement(By.id("TPL_username_1"));
