@@ -72,7 +72,7 @@ public class CSToolsController {
     	List<Flow> flowList = createPaginationData(pageDisplayLength, pageNumber);
     	flowList = getListBasedSearchParameter(searchParameter,flowList);
     	
-    	int size = flowService.listAll().size();
+    	int size = flowService.queryAll().size();
     	TableColumn tableColumn = new TableColumn();
     	tableColumn.setiTotalDisplayRecords(size);
     	tableColumn.setiTotalRecords(size);
@@ -158,7 +158,7 @@ public class CSToolsController {
      * @return
      */
 	public List<Flow> createPaginationData(Integer pageDisplayLength,Integer pageNumber) {
-		List<Flow> flowList = flowService.listAll();
+		List<Flow> flowList = flowService.queryAll();
 		if (pageDisplayLength < flowList.size()) {
 			if(pageNumber==1){
 				flowList = flowList.subList(0, pageNumber*pageDisplayLength);

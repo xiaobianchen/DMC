@@ -66,8 +66,18 @@
     <span>APP</span>
     <input id="app" type="radio" name="condition" value="app">&nbsp;
 
-    <span>日期:</span>
+    <span>起始日期:</span>
     <input class="easyui-datebox" id="datePicker"/>
+
+    <span>截止日期:</span>
+    <input class="easyui-datebox" id="enddatePicker"/>
+
+    <span>来源:</span>
+    <select name="sourceDetails" id="sourceDetails">
+      <c:forEach items="${sourceList}" var="data">
+        <option value="${data}">${data}</option>
+      </c:forEach>
+    </select>
 
     <span>来源明细:</span>
     <select name="sourceDetails" id="sourceDetails">

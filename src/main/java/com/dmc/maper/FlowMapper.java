@@ -13,6 +13,9 @@ public interface FlowMapper {
 
     @Select("SELECT merchantName,date,source,sourceDetails,accessNum,accessChange,buyerNum,buyerChange,orderTransferRate,orderTransferChange,payNum,payBuyerNumChange,payAmount,payAmountChange,payTransferRate,payTransferRateChange from flow")
     List<Flow> listAll();
+
+    @Select("SELECT * from flow")
+    List<Flow> queryAll();
     
     @Select("SELECT * FROM process where Date=(select max(Date) from  process) order by AccessNumChange desc limit 0,3;")
     List<ProcessData> queryProcessData();

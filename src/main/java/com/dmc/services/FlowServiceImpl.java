@@ -49,4 +49,9 @@ public class FlowServiceImpl implements FlowService {
     public List<Flow> getDataBySourceDetails(SearchCondition searchCondition) {
         return flowMapper.getDataBySourceDetails(searchCondition);
     }
+
+    @Override
+    public List<Flow> queryAll() {
+        return flowMapper.queryAll();
+    }
 }

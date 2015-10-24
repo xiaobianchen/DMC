@@ -14,6 +14,8 @@ public interface FlowService {
 
     List<Flow> listAll();
 
+    List<Flow> queryAll();
+
     List<ProcessData> queryProcessData();
 
     List<Source> queryList();
