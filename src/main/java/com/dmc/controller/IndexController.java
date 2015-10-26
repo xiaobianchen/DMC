@@ -3,9 +3,13 @@ package com.dmc.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.HandlerExecutionChain;
+import org.springframework.web.servlet.HandlerMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.dmc.utils.RandomUtils;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * 
@@ -14,7 +18,7 @@ import com.dmc.utils.RandomUtils;
  *
  */
 @Controller
-public class IndexController {
+public class IndexController{
 	
 	/**
 	 * This is index page in DMC
@@ -31,5 +35,12 @@ public class IndexController {
 	public String getIndex(){
 		return "index";
 	}
-	
+
+	@RequestMapping("*")
+	public String handlePageNotFound(){
+		return "404";
+	}
+
+
+
 }
