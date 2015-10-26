@@ -75,14 +75,14 @@
     <span>来源:</span>
     <select name="sourceDetails" id="sourceDetails">
       <c:forEach items="${sourceList}" var="data">
-        <option value="${data}">${data}</option>
+        <option value="${data}" style="color: darkorange">${data}</option>
       </c:forEach>
     </select>
 
     <span>来源明细:</span>
     <select name="sourceDetails" id="sourceDetails">
       <c:forEach items="${sourceList}" var="data">
-        <option value="${data}">${data}</option>
+        <option value="${data}" style="color: darkorange">${data}</option>
       </c:forEach>
     </select>
     <a href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-search'" style="width:80px" onclick="doSearch()">Search</a>
