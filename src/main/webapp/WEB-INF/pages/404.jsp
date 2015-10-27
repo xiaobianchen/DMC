@@ -8,12 +8,32 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title></title>
+    <meta http-equiv= "Refresh" content= "5;url=/DMC">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <title>登录-DMC,就购了</title>
+    <script type="text/javascript">
+        var times=6;
+        clock();
+        function clock()
+        {
+            window.setTimeout('clock()',1000);
+            times=times-1;
+            time.innerHTML =times;
+        }
+    </script>
 </head>
 <body>
 
     <img src="img/404.jpg">
-    <h2 align="center" style="color:dodgerblue">10秒后返回首页</h2>
+    <table align="center" style="color:dodgerblue;">
+        <tr style="font-size: 28px">
+            <td>
+                <div id="time">5</div>
+            </td>
+            <td>秒后返回首页</td>
+        </tr>
+    </table>
+
 
 </body>
 </html>
