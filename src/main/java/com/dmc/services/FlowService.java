@@ -1,9 +1,6 @@
 package com.dmc.services;
 
-import com.dmc.domain.Flow;
-import com.dmc.domain.ProcessData;
-import com.dmc.domain.SearchCondition;
-import com.dmc.domain.Source;
+import com.dmc.domain.*;
 
 import java.util.List;
 
@@ -25,5 +22,7 @@ public interface FlowService {
     List<Flow> getDataByDate(SearchCondition searchCondition);
 
     List<Flow> getDataBySourceDetails(SearchCondition searchCondition);
+
+    List<SourceCondition> getSearchSource();
 
 }

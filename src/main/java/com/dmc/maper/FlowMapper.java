@@ -23,6 +23,9 @@ public interface FlowMapper {
     @Select("SELECT sourceDetails from source")
     List<Source> queryAllSourceDetails();
 
+    @Select("SELECT distinct source from source")
+    List<SourceCondition> getSearchSource();
+
     @Select("SELECT merchantName,date,source,sourceDetails,accessNum,accessChange,buyerNum,buyerChange,orderTransferRate,orderTransferChange,payNum,payBuyerNumChange,payAmount,payAmountChange,payTransferRate,payTransferRateChange from flow WHERE date = #{date} and sourceDetails = #{sourceDetails}")
     List<Flow> getDataByCondition(SearchCondition searchCondition);
 

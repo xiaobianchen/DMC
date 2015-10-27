@@ -1,9 +1,6 @@
 package com.dmc.services;
 
-import com.dmc.domain.Flow;
-import com.dmc.domain.ProcessData;
-import com.dmc.domain.SearchCondition;
-import com.dmc.domain.Source;
+import com.dmc.domain.*;
 import com.dmc.maper.FlowMapper;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,6 +45,11 @@ public class FlowServiceImpl implements FlowService {
     @Override
     public List<Flow> getDataBySourceDetails(SearchCondition searchCondition) {
         return flowMapper.getDataBySourceDetails(searchCondition);
+    }
+
+    @Override
+    public List<SourceCondition> getSearchSource() {
+        return flowMapper.getSearchSource();
     }
 
     @Override

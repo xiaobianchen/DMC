@@ -21,9 +21,12 @@
       /*search data*/
       function doSearch() {
         $('#tt').datagrid('load', {
-          type: $('input:radio[name=condition]:checked').val(),
-          date: $('#datePicker').datebox('getValue'),
-          sourceDetails: $('#sourceDetails option:selected').text(),
+          source:$('#searchCondition option:selected').text(),
+          startDate: $('#datePicker').datebox('getValue'),
+          endDate:$('#endDatePicker').datebox('getValue'),
+          firstBranch: $('#firstBranch option:selected').text(),
+          secondBranch:$('#secondBranch option:selected').text(),
+          thirdBranch:$('#thirdBranch option:selected').text()
         });
       }
   </script>
@@ -59,35 +62,40 @@
 
   <div id="tb" style="padding:3px">
     <span>查询条件:</span>
-    <span>Flow</span>
-    <input id="flow" type="radio" name="condition" value="flow" checked>&nbsp;
-    <span>PC</span>
-    <input id="pc" type="radio" name="condition" value="pc">&nbsp;
-    <span>APP</span>
-    <input id="app" type="radio" name="condition" value="app">&nbsp;
+    <select name="searchCondition" id="searchCondition">
+      <c:forEach items="${dataList}" var="data">
+        <option value="${data}" style="color: deeppink">${data}</option>
+      </c:forEach>
+    </select>
 
     <span>起始日期:</span>
     <input class="easyui-datebox" id="datePicker"/>
 
     <span>截止日期:</span>
-    <input class="easyui-datebox" id="enddatePicker"/>
+    <input class="easyui-datebox" id="endDatePicker"/>
 
-    <span>来源:</span>
-    <select name="sourceDetails" id="sourceDetails">
+    <span>一级分支:</span>
+    <select name="sourceDetails" id="firstBranch" style="width: 200px;">
       <c:forEach items="${sourceList}" var="data">
         <option value="${data}" style="color: darkorange">${data}</option>
       </c:forEach>
     </select>
 
-    <span>来源明细:</span>
-    <select name="sourceDetails" id="sourceDetails">
+    <span>二级分支:</span>
+    <select name="sourceDetails" id="secondBranch" style="width: 200px;">
       <c:forEach items="${sourceList}" var="data">
-        <option value="${data}" style="color: darkorange">${data}</option>
+        <option value="${data}" style="color: #2c8d3a">${data}</option>
       </c:forEach>
     </select>
+
+    <span>三级分支:</span>
+    <select name="sourceDetails" id="thirdBranch" style="width: 200px;">
+      <c:forEach items="${sourceList}" var="data">
+        <option value="${data}" style="color: #0099FF">${data}</option>
+      </c:forEach>
+    </select>
+
     <a href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-search'" style="width:80px" onclick="doSearch()">Search</a>
   </div>
-
-
 </body>
 </html>

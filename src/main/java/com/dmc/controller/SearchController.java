@@ -1,9 +1,6 @@
 package com.dmc.controller;
 
-import com.dmc.domain.Flow;
-import com.dmc.domain.Grid;
-import com.dmc.domain.SearchCondition;
-import com.dmc.domain.Source;
+import com.dmc.domain.*;
 import com.dmc.services.AppService;
 import com.dmc.services.FlowService;
 import com.dmc.services.PCService;
@@ -42,8 +39,10 @@ public class SearchController {
     @RequestMapping(method = RequestMethod.GET)
     public ModelAndView searchDataByConditions() {
         List<Source> sourceList = flowService.queryList();
+        List<SourceCondition> dataList = flowService.getSearchSource();
         ModelAndView model = new ModelAndView();
         model.addObject("sourceList", sourceList);
+        model.addObject("dataList",dataList);
         model.setViewName("search");
         return model;
     }
@@ -58,21 +57,25 @@ public class SearchController {
     public @ResponseBody String getDataByConditions(@ModelAttribute("searchCondition")SearchCondition searchCondition,HttpServletRequest request, HttpServletResponse response) {
         Integer page = Integer.valueOf(request.getParameter("page"));
         Integer rows = Integer.valueOf(request.getParameter("rows"));
+        List<?> dataList = null;
+        String source = searchCondition.getSource();
 
-        String type = searchCondition.getType();
-        String dateTime = searchCondition.getDate();
-        String sourceDetails = searchCondition.getSourceDetails();
+        if(source == null ||source.equals("")){
+            dataList = flowService.listAll();
+        }else{
+            String startTime = searchCondition.getStartDate();
+            String endTime = searchCondition.getEndDate();
 
-        if (dateTime != null && dateTime.length() != 0) {
-            int lastIndex = dateTime.lastIndexOf("/");
-            int firstIndex = dateTime.indexOf("/");
-            String month = dateTime.substring(0, firstIndex);
-            String day = dateTime.substring(firstIndex + 1, lastIndex);
-            String year = dateTime.substring(lastIndex + 1);
-            dateTime = year + "-" + month + "-" + day;
+            if (startTime != null && startTime.length() != 0) {
+                formatTime(startTime);
+            }
+
+            if(endTime != null && endTime.length() !=0){
+                formatTime(endTime);
+            }
+
+            dataList = createSearchData(searchCondition);
         }
-
-        List<?> dataList = createSearchData(type, dateTime, sourceDetails);
 
         Grid grid = new Grid();
         grid.setTotal(dataList.size());
@@ -85,53 +88,45 @@ public class SearchController {
     }
 
     /**
-     * create search data
-     * @param type
-     * @param date
-     * @param sourceDetails
+     * returns search data via search conditions
+     * @param searchCondition
      * @return
      */
-    public List<?> createSearchData(String type,String date,String sourceDetails ) {
-        SearchCondition  searchCondition  = new SearchCondition();
-        searchCondition.setType(type);
-        searchCondition.setDate(date);
-        searchCondition.setSourceDetails(sourceDetails);
+    public List<?> createSearchData(SearchCondition searchCondition) {
+        String source = searchCondition.getSource();
+        String startTime = searchCondition.getStartDate();
+        String endTime = searchCondition.getEndDate();
 
         List<?> dataList = null;
-        /*default query flow data*/
-        if(type==null||type.length()==0){
-            dataList = flowService.listAll();
-        }else if(type.equalsIgnoreCase("pc")) { //condition:pc
-            if (date!= null&&sourceDetails!= null) {
-                dataList = pcService.getDataByCondition(searchCondition);//date and sourceDetails selected
-            }else if(sourceDetails == null || sourceDetails.length()==0) {
-                dataList = pcService.getDataByDate(searchCondition);//date selected
-            } else if (date==null||date.length()==0) {
-                dataList = pcService.getDataBySourceDetails(searchCondition);//sourceDetails selected
-            } else {
-                dataList = pcService.listAll();
-            }
-        } else if (type.equalsIgnoreCase("app")) { //condition:app
-            if(date != null&& date.length()!=0){
-                dataList = appService.getDataByDate(searchCondition);
-            }else if(sourceDetails!=null&&sourceDetails.length()!=0) {
-                dataList = appService.getDataBySourceDetails(searchCondition);
-            }else if (date != null && date.length() != 0 && sourceDetails != null && sourceDetails.length() != 0) {
-                dataList = appService.getDataByCondition(searchCondition);
-            }else{
-                dataList = appService.listAll();
-            }
+        if(source.equalsIgnoreCase("pc")) { //condition:pc
+             if(startTime!=null){
+                 pcService.getDataByStartTime(searchCondition);
+             }else if(endTime !=null){
+                 pcService.getDataByEndTime(searchCondition);
+             }else if(startTime!=null&&endTime!=null){
+                 pcService.getDataByTime(searchCondition);
+             }
+        } else if (source.equalsIgnoreCase("app")) { //condition:app
+
         } else {                                   //condition:flow
-            if(date != null && date.length()!=0){
-                dataList = flowService.getDataByDate(searchCondition);
-            }else if(sourceDetails != null && sourceDetails.length() != 0){
-                dataList = flowService.getDataBySourceDetails(searchCondition);
-            } else if (date != null && date.length() != 0 && sourceDetails != null && sourceDetails.length() != 0) {
-                dataList = flowService.getDataByCondition(searchCondition);
-            }else{
-                dataList = flowService.listAll();
-            }
+
         }
         return dataList;
+    }
+
+    /**
+     * format time
+     * @param dateTime
+     * @return
+     */
+    public static String formatTime(String dateTime){
+        int lastIndex = dateTime.lastIndexOf("/");
+        int firstIndex = dateTime.indexOf("/");
+        String month = dateTime.substring(0, firstIndex);
+        String day = dateTime.substring(firstIndex + 1, lastIndex);
+        String year = dateTime.substring(lastIndex + 1);
+        dateTime = year + "-" + month + "-" + day;
+
+        return dateTime;
     }
 }

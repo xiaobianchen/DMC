@@ -13,6 +13,8 @@ import java.util.List;
  */
 @Service("pcService")
 public class PCServiceImpl implements PCService {
+
+
     @Autowired
     private PCMapper pcMapper;
 
@@ -22,17 +24,17 @@ public class PCServiceImpl implements PCService {
     }
 
     @Override
-    public List<PC> getDataByDate(SearchCondition searchCondition) {
-        return pcMapper.getDataByDate(searchCondition);
+    public List<PC> getDataByStartTime(SearchCondition searchCondition) {
+        return pcMapper.getDataByStartTime(searchCondition);
     }
 
     @Override
-    public List<PC> getDataByCondition(SearchCondition searchCondition) {
-        return pcMapper.getDataByCondition(searchCondition);
+    public List<PC> getDataByEndTime(SearchCondition searchCondition) {
+        return pcMapper.getDataByEndTime(searchCondition);
     }
 
     @Override
-    public List<PC> getDataBySourceDetails(SearchCondition searchCondition) {
-        return pcMapper.getDataBySourceDetails(searchCondition);
+    public List<PC> getDataByTime(SearchCondition searchCondition) {
+        return pcMapper.getDataByTime(searchCondition);
     }
 }

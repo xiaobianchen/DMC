@@ -9,41 +9,60 @@ package com.dmc.domain;
  *
  */
 public class SearchCondition {
+    private String source;
+    private String startDate;
+    private String endDate;
+    private String firstBranch;
+    private String secondBranch;
 
-    private String type;
-    private String date;
-    private String sourceDetails;
-
-    public String getType() {
-        return type;
+    public String getSource() {
+        return source;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setSource(String source) {
+        this.source = source;
     }
 
-    public String getDate() {
-        return date;
+    public String getStartDate() {
+        return startDate;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setStartDate(String startDate) {
+        this.startDate = startDate;
     }
 
-    public String getSourceDetails() {
-        return sourceDetails;
+    public String getEndDate() {
+        return endDate;
     }
 
-    public void setSourceDetails(String sourceDetails) {
-        this.sourceDetails = sourceDetails;
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
+    }
+
+    public String getFirstBranch() {
+        return firstBranch;
+    }
+
+    public void setFirstBranch(String firstBranch) {
+        this.firstBranch = firstBranch;
+    }
+
+    public String getSecondBranch() {
+        return secondBranch;
+    }
+
+    public void setSecondBranch(String secondBranch) {
+        this.secondBranch = secondBranch;
     }
 
     @Override
     public String toString() {
         return "SearchCondition{" +
-                "type='" + type + '\'' +
-                ", date='" + date + '\'' +
-                ", sourceDetails='" + sourceDetails + '\'' +
+                "source='" + source + '\'' +
+                ", startDate='" + startDate + '\'' +
+                ", endDate='" + endDate + '\'' +
+                ", firstBranch='" + firstBranch + '\'' +
+                ", secondBranch='" + secondBranch + '\'' +
                 '}';
     }
 }

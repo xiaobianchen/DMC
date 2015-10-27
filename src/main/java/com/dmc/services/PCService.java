@@ -10,7 +10,7 @@ import java.util.List;
  */
 public interface PCService {
     List<PC> listAll();
-    List<PC> getDataByCondition(SearchCondition searchCondition);
-    List<PC> getDataByDate(SearchCondition searchCondition);
-    List<PC> getDataBySourceDetails(SearchCondition searchCondition);
+    List<PC> getDataByStartTime(SearchCondition searchCondition);
+    List<PC> getDataByEndTime(SearchCondition searchCondition);
+    List<PC> getDataByTime(SearchCondition searchCondition);
 }
