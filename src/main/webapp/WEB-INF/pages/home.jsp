@@ -29,9 +29,8 @@
                     <li class="nav-dropdown ">
                         <a href="javascript:void(0);">产品</a>
                         <ul class="nav-dropdown-list">
-                            <li><a target="_blank" href="/DMC/cstools">数据查询</a></li>
-                            <li><a target="_blank" href="/DMC/admin">用户查询</a></li>
-                            <li><a target="_blank" href="/DMC/feedback">评论查询</a></li>
+                            <li><a target="_blank" href="/DMC/cstools">数据中心</a></li>
+                            <li><a target="_blank" href="/DMC/admin">用户管家</a></li>
                         </ul>
                     </li>
                     <li class=""><a href="#">支持中心</a></li>
