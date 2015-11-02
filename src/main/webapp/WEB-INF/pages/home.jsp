@@ -87,13 +87,13 @@
         </ol>
         <div class="carousel-inner"> 
             <div class="item active">
+                <img src="img/3.jpg">
+            </div>
+            <div class="item">
                 <img src="img/1.jpg">
             </div>
             <div class="item">
                 <img src="img/2.jpg">
-            </div>
-            <div class="item">
-                <img src="img/3.jpg">
             </div>
         </div>
     </div>
