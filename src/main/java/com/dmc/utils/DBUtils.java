@@ -10,7 +10,7 @@ public class DBUtils {
     private static final String DRIVER_NAME = "com.mysql.jdbc.Driver";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "root";
-    private static final String URL = "jdbc:mysql://localhost:3307/dmc?autoReconnect=true";
+    private static final String URL = "jdbc:mysql://localhost:3306/dmc?autoReconnect=true";
     private static Connection connection = null;
     private static CallableStatement cstmt = null;
 

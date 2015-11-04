@@ -36,8 +36,9 @@
         $('#tt').datagrid('load', {
           source:$('#searchCondition option:selected').text(),
           date: $('#datePicker').datebox('getValue'),
-          firstBranch: $('#firstBranch option:selected').text(),
-          secondBranch:$('#secondBranch option:selected').text()
+          searchConditions: $('#search').val()
+//          firstBranch: $('#firstBranch option:selected').text(),
+//          secondBranch:$('#secondBranch option:selected').text()
         });
       }
   </script>
@@ -45,7 +46,7 @@
 </head>
 <body>
   <h1 align="center"><span style="color:dodgerblue">DMC数据查询工具</span></h1>
-  <table id="tt" class="easyui-datagrid" style="width:100%;height:800px"
+  <table id="tt" class="easyui-datagrid" style="width:100%;height:450px"
          url="cstools/list" toolbar="#tb"
          title="DMC数据查询" iconCls="icon-save"
          rownumbers="true" pagination="true">
@@ -80,9 +81,9 @@
     </select>
 
     <span>日期:</span>
-    <input class="easyui-datebox" id="datePicker"/>
+    <input class="easyui-datebox" id="datePicker"/>&nbsp;
 
-    <span>来源:</span>
+    <%--<span>来源:</span>
     <select name="sourceDetails" id="firstBranch" style="width: 200px;">
       <c:forEach items="${sourceList}" var="data">
          <option value="${data}" style="color: darkorange">${data}</option>
@@ -94,9 +95,12 @@
       <c:forEach items="${detailList}" var="data">
         <option value="${data}" style="color: #2c8d3a">${data}</option>
       </c:forEach>
-    </select>
+    </select>--%>
 
+    <span>搜索:</span>
+    <input id="search" style="line-height:23px;border:1px solid #ccc">
     <a href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-search'" style="width:80px" onclick="doSearch()">Search</a>
+
   </div>
 </body>
 </html>

@@ -1,4 +1,3 @@
-/*
 package com.dmc.controller;
 
 import java.util.ArrayList;
@@ -23,169 +22,171 @@ import com.dmc.domain.TableColumn;
 import com.dmc.services.FlowService;
 import com.google.gson.Gson;
 
-*/
 /**
  * Created by xiaobianchen on 15/9/21.
  * This class is used to provide a tools for customer to query data from database
- *//*
+ */
 
 @Controller
 @SessionAttributes("flow")
-@RequestMapping(value="/csTools")
+@RequestMapping(value = "/csTools")
 public class CSToolsController {
 
     @Autowired
     private FlowService flowService;
 
-	@Autowired
-	private AppService  appService;
+    @Autowired
+    private AppService appService;
 
-	@Autowired
-	private PCService   pcService;
+    @Autowired
+    private PCService pcService;
 
-	*/
-/**
-	 * returns csTools page
-	 * @return
-	 *//*
+    /**
+     * returns csTools page
+     *
+     * @return
+     */
 
-    @RequestMapping(method = RequestMethod.GET, produces="application/json;charset=utf-8")
-    public ModelAndView list(){
-        List<String> sourceList = flowService.queryAllSource();
+    @RequestMapping(method = RequestMethod.GET, produces = "application/json;charset=utf-8")
+    public ModelAndView list() {
+        List<String> sourceList = flowService.getSources();
         ModelAndView model = new ModelAndView();
-        model.addObject("sourceList",sourceList);
+        model.addObject("sourceList", sourceList);
         model.setViewName("queryAll");
         return model;
     }
 
-	*/
-/**
-	 * returns the pagination of the specified data from database
-	 * @param request
-	 * @return
-	 * @throws Exception
-	 *//*
 
-    @RequestMapping(value="/pagination", method=RequestMethod.GET, produces="application/json;charset=utf-8")
-    public @ResponseBody String getPaginationDataTable(HttpServletRequest request) throws Exception{
-    	//Fetch the page number from client
-    	Integer pageNumber = 0;
-    	if (null != request.getParameter("iDisplayStart"))
-    		pageNumber = (Integer.valueOf(request.getParameter("iDisplayStart"))/10)+1;	
-    	
-    	String searchParameter = request.getParameter("sSearch");
-    	Integer pageDisplayLength = Integer.valueOf(request.getParameter("iDisplayLength"));
-    	
-    	List<Flow> flowList = createPaginationData(pageDisplayLength, pageNumber);
-    	flowList = getListBasedSearchParameter(searchParameter,flowList);
-    	
-    	int size = flowService.queryAll().size();
-    	TableColumn tableColumn = new TableColumn();
-    	tableColumn.setiTotalDisplayRecords(size);
-    	tableColumn.setiTotalRecords(size);
-    	tableColumn.setAaData(flowList);
-    	
-    	Gson gson = new Gson();
-    	String json = gson.toJson(tableColumn);
-    	return json;
+    /**
+     * returns the pagination of the specified data from database
+     *
+     * @param request
+     * @return
+     * @throws Exception
+     */
+
+    @RequestMapping(value = "/pagination", method = RequestMethod.GET, produces = "application/json;charset=utf-8")
+    public
+    @ResponseBody
+    String getPaginationDataTable(HttpServletRequest request) throws Exception {
+        //Fetch the page number from client
+        Integer pageNumber = 0;
+        if (null != request.getParameter("iDisplayStart"))
+            pageNumber = (Integer.valueOf(request.getParameter("iDisplayStart")) / 10) + 1;
+
+        String searchParameter = request.getParameter("sSearch");
+        Integer pageDisplayLength = Integer.valueOf(request.getParameter("iDisplayLength"));
+
+        List<Flow> flowList = createPaginationData(pageDisplayLength, pageNumber);
+        flowList = getListBasedSearchParameter(searchParameter, flowList);
+
+        int size = flowService.queryAll().size();
+        TableColumn tableColumn = new TableColumn();
+        tableColumn.setiTotalDisplayRecords(size);
+        tableColumn.setiTotalRecords(size);
+        tableColumn.setAaData(flowList);
+
+        Gson gson = new Gson();
+        String json = gson.toJson(tableColumn);
+        return json;
     }
 
-	*/
-/**
-	 * returns the results from the search conditions
-	 * @param request
-	 * @return
-	 * @throws Exception
-	 *//*
+    /**
+     * returns the results from the search conditions
+     *
+     * @param request
+     * @return
+     * @throws Exception
+     */
 
-    @RequestMapping(value="/getCondition", method = RequestMethod.GET, produces="application/json;charset=utf-8")
-	public List<?> getConditionValue(HttpServletRequest request) throws Exception {
-		String selectedValue = request.getParameter("selectedValue");
-		String dateTime = request.getParameter("time");
-		String date = "";
-		if (dateTime != null && dateTime.length() != 0) {
-			int lastIndex = dateTime.lastIndexOf("/");
-			int firstIndex = dateTime.indexOf("/");
-			String month = dateTime.substring(0, firstIndex);
-			String day = dateTime.substring(firstIndex + 1, lastIndex);
-			String year = dateTime.substring(lastIndex + 1);
-			date = year + "-" + month + "-" + day;
-		}
+    @RequestMapping(value = "/getCondition", method = RequestMethod.GET, produces = "application/json;charset=utf-8")
+    public List<?> getConditionValue(HttpServletRequest request) throws Exception {
+        String selectedValue = request.getParameter("selectedValue");
+        String dateTime = request.getParameter("time");
+        String date = "";
+        if (dateTime != null && dateTime.length() != 0) {
+            int lastIndex = dateTime.lastIndexOf("/");
+            int firstIndex = dateTime.indexOf("/");
+            String month = dateTime.substring(0, firstIndex);
+            String day = dateTime.substring(firstIndex + 1, lastIndex);
+            String year = dateTime.substring(lastIndex + 1);
+            date = year + "-" + month + "-" + day;
+        }
 
-		List<?> queryDataList = queryData(selectedValue, date);
-		return queryDataList;
+        List<?> queryDataList = queryData(selectedValue, date);
+        return queryDataList;
 
-	}
+    }
 
-	*/
-/**
-	 * query data by selectedValue and date
-	 * @param selectedValue
-	 * @param date
-	 *//*
+    /**
+     * query data by selectedValue and date
+     *
+     * @param selectedValue
+     * @param date
+     */
 
-	private List<?> queryData(String selectedValue, String date) {
-		@SuppressWarnings("rawtypes")
-		List<?> dataList = new ArrayList();
-		if ("app".equals(selectedValue)) {
-			dataList = appService.listAll();
-		} else if ("flow".equals(selectedValue)) {
-			dataList = flowService.listAll();
-		} else {
+    private List<?> queryData(String selectedValue, String date) {
+        @SuppressWarnings("rawtypes")
+        List<?> dataList = new ArrayList();
+        if ("app".equals(selectedValue)) {
+            dataList = appService.listAll();
+        } else if ("flow".equals(selectedValue)) {
+            dataList = flowService.listAll();
+        } else {
             dataList = pcService.listAll();
-		}
+        }
 
-		return dataList;
-	}
+        return dataList;
+    }
 
-	*/
-/**
-	 * returns the list
-	 * @param searchParameter
-	 * @param flowList
-	 * @return
-	 *//*
+    /**
+     * returns the list
+     *
+     * @param searchParameter
+     * @param flowList
+     * @return
+     */
 
-    public List<Flow> getListBasedSearchParameter(String searchParameter,List<Flow> flowList) {
-    	List<Flow> searchList = new ArrayList<Flow>();
-    	if(null != searchParameter && !searchParameter.equals("")){
-    		searchList = new ArrayList<Flow>();
-			for(Flow flow:flowList){
-				if(flow.getMerchantName().equalsIgnoreCase(searchParameter)||flow.getDate().equalsIgnoreCase(searchParameter)
-						||flow.getSource().equalsIgnoreCase(searchParameter) || flow.getSourceDetails().equalsIgnoreCase(searchParameter) || String.valueOf(flow.getAccessNum()).indexOf(searchParameter)!=-1){
-					
-					searchList.add(flow);
-				}
-			}
-			
-			flowList = searchList;
-			searchList = null;
-    	}
-			
-		return flowList;
-	}
+    public List<Flow> getListBasedSearchParameter(String searchParameter, List<Flow> flowList) {
+        List<Flow> searchList = new ArrayList<Flow>();
+        if (null != searchParameter && !searchParameter.equals("")) {
+            searchList = new ArrayList<Flow>();
+            for (Flow flow : flowList) {
+                if (flow.getMerchantName().equalsIgnoreCase(searchParameter) || flow.getDate().equalsIgnoreCase(searchParameter)
+                        || flow.getSource().equalsIgnoreCase(searchParameter) || flow.getSourceDetails().equalsIgnoreCase(searchParameter) || String.valueOf(flow.getAccessNum()).indexOf(searchParameter) != -1) {
 
-	*/
-/**
+                    searchList.add(flow);
+                }
+            }
+
+            flowList = searchList;
+            searchList = null;
+        }
+
+        return flowList;
+    }
+
+
+    /**
      * create the pagination data
+     *
      * @param pageDisplayLength
      * @return
-     *//*
+     */
 
-	public List<Flow> createPaginationData(Integer pageDisplayLength,Integer pageNumber) {
-		List<Flow> flowList = flowService.queryAll();
-		if (pageDisplayLength < flowList.size()) {
-			if(pageNumber==1){
-				flowList = flowList.subList(0, pageNumber*pageDisplayLength);
-			}else{
-				if(pageNumber*pageDisplayLength <= flowList.size()){
-					flowList = flowList.subList((pageNumber-1)*10, pageNumber*pageDisplayLength);
-				}else{
-					flowList = flowList.subList((pageNumber-1)*10, flowList.size());
-				}
-			}
-		}
-		return flowList;
-	}
+    public List<Flow> createPaginationData(Integer pageDisplayLength, Integer pageNumber) {
+        List<Flow> flowList = flowService.queryAll();
+        if (pageDisplayLength < flowList.size()) {
+            if (pageNumber == 1) {
+                flowList = flowList.subList(0, pageNumber * pageDisplayLength);
+            } else {
+                if (pageNumber * pageDisplayLength <= flowList.size()) {
+                    flowList = flowList.subList((pageNumber - 1) * 10, pageNumber * pageDisplayLength);
+                } else {
+                    flowList = flowList.subList((pageNumber - 1) * 10, flowList.size());
+                }
+            }
+        }
+        return flowList;
+    }
 }
-*/

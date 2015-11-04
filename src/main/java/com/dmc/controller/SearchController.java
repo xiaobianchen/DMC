@@ -60,7 +60,7 @@ public class SearchController {
         String dateTime = searchCondition.getDate();
 
         if(source == null ||source.equals("")){
-            dataList = flowService.listAll();
+            dataList = pcService.listAll();
         }else{
             if (dateTime != null && dateTime.length() != 0) {
                 int lastIndex = dateTime.lastIndexOf("/");
@@ -75,14 +75,38 @@ public class SearchController {
             dataList = createSearchData(searchCondition);
         }
 
+        List<?> processList = createPaginationData(dataList,page,rows);
+
         Grid grid = new Grid();
-        grid.setTotal(dataList.size());
-        grid.setRows(dataList);
+        grid.setTotal(processList.size());
+        grid.setRows(processList);
 
         Gson gson = new Gson();
         String json = gson.toJson(grid);
 
         return json;
+    }
+
+    /**
+     * create pagination data
+     * @param dataList
+     * @param page
+     * @param rows
+     * @return
+     */
+    public List<?>  createPaginationData(List<?> dataList,int page, int rows){
+        if(rows < dataList.size()){
+            if(page == 1){
+                dataList = dataList.subList(0, page*rows);
+            }else{
+                if(page*rows <= dataList.size()){
+                    dataList = dataList.subList((page-1)*10, page*rows);
+                }else{
+                    dataList = dataList.subList((page-1)*10,dataList.size());
+                }
+            }
+        }
+        return dataList;
     }
 
     @RequestMapping(value="/query", method = RequestMethod.GET)
@@ -94,9 +118,9 @@ public class SearchController {
         if ("app".equals(selectedVal)){
              sourceList = appService.getSources();
              detailList = appService.getSourceDetails();
-        }else if("flow".equals(selectedVal)){
-             sourceList = flowService.getSources();
-             detailList = flowService.getSourceDetails();
+        }else if("flow".equals(selectedVal)) {
+            sourceList = flowService.getSources();
+            detailList = flowService.getSourceDetails();
         }else if("pc".equals(selectedVal)){
              sourceList = pcService.getSources();
              detailList = pcService.getSourceDetails();
