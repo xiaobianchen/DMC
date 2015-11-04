@@ -10,8 +10,7 @@ package com.dmc.domain;
  */
 public class SearchCondition {
     private String source;
-    private String startDate;
-    private String endDate;
+    private String date;
     private String firstBranch;
     private String secondBranch;
 
@@ -23,20 +22,12 @@ public class SearchCondition {
         this.source = source;
     }
 
-    public String getStartDate() {
-        return startDate;
+    public String getDate() {
+        return date;
     }
 
-    public void setStartDate(String startDate) {
-        this.startDate = startDate;
-    }
-
-    public String getEndDate() {
-        return endDate;
-    }
-
-    public void setEndDate(String endDate) {
-        this.endDate = endDate;
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public String getFirstBranch() {
@@ -59,8 +50,7 @@ public class SearchCondition {
     public String toString() {
         return "SearchCondition{" +
                 "source='" + source + '\'' +
-                ", startDate='" + startDate + '\'' +
-                ", endDate='" + endDate + '\'' +
+                ", date='" + date + '\'' +
                 ", firstBranch='" + firstBranch + '\'' +
                 ", secondBranch='" + secondBranch + '\'' +
                 '}';

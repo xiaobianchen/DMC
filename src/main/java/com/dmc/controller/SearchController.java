@@ -38,11 +38,9 @@ public class SearchController {
 
     @RequestMapping(method = RequestMethod.GET)
     public ModelAndView searchDataByConditions() {
-        List<Source> sourceList = flowService.queryList();
-        List<SourceCondition> dataList = flowService.getSearchSource();
+        List<String> dataList = flowService.getSearchSource();
         ModelAndView model = new ModelAndView();
-        model.addObject("sourceList", sourceList);
-        model.addObject("dataList",dataList);
+        model.addObject("dataList", dataList);
         model.setViewName("search");
         return model;
     }
@@ -59,19 +57,19 @@ public class SearchController {
         Integer rows = Integer.valueOf(request.getParameter("rows"));
         List<?> dataList = null;
         String source = searchCondition.getSource();
+        String dateTime = searchCondition.getDate();
 
         if(source == null ||source.equals("")){
             dataList = flowService.listAll();
         }else{
-            String startTime = searchCondition.getStartDate();
-            String endTime = searchCondition.getEndDate();
-
-            if (startTime != null && startTime.length() != 0) {
-                formatTime(startTime);
-            }
-
-            if(endTime != null && endTime.length() !=0){
-                formatTime(endTime);
+            if (dateTime != null && dateTime.length() != 0) {
+                int lastIndex = dateTime.lastIndexOf("/");
+                int firstIndex = dateTime.indexOf("/");
+                String month = dateTime.substring(0, firstIndex);
+                String day = dateTime.substring(firstIndex + 1, lastIndex);
+                String year = dateTime.substring(lastIndex + 1);
+                dateTime = year + "-" + month + "-" + day;
+                searchCondition.setDate(dateTime);
             }
 
             dataList = createSearchData(searchCondition);
@@ -87,6 +85,31 @@ public class SearchController {
         return json;
     }
 
+    @RequestMapping(value="/query", method = RequestMethod.GET)
+    public ModelAndView querySelectValue(HttpServletRequest request){
+        String selectedVal  =  request.getParameter("selectValue");
+        List<String> sourceList = new ArrayList<String>();
+        List<String> detailList = new ArrayList<String>();
+
+        if ("app".equals(selectedVal)){
+             sourceList = appService.getSources();
+             detailList = appService.getSourceDetails();
+        }else if("flow".equals(selectedVal)){
+             sourceList = flowService.getSources();
+             detailList = flowService.getSourceDetails();
+        }else if("pc".equals(selectedVal)){
+             sourceList = pcService.getSources();
+             detailList = pcService.getSourceDetails();
+        }
+
+        ModelAndView model = new ModelAndView();
+        model.addObject("selectedVal",selectedVal);
+        model.addObject("sourceList",sourceList);
+        model.addObject("detailList",detailList);
+        model.setViewName("search");
+        return model;
+    }
+
     /**
      * returns search data via search conditions
      * @param searchCondition
@@ -94,22 +117,28 @@ public class SearchController {
      */
     public List<?> createSearchData(SearchCondition searchCondition) {
         String source = searchCondition.getSource();
-        String startTime = searchCondition.getStartDate();
-        String endTime = searchCondition.getEndDate();
+        String dateTime = searchCondition.getDate();
 
         List<?> dataList = null;
-        if(source.equalsIgnoreCase("pc")) { //condition:pc
-             if(startTime!=null){
-                 pcService.getDataByStartTime(searchCondition);
-             }else if(endTime !=null){
-                 pcService.getDataByEndTime(searchCondition);
-             }else if(startTime!=null&&endTime!=null){
-                 pcService.getDataByTime(searchCondition);
-             }
-        } else if (source.equalsIgnoreCase("app")) { //condition:app
+        if("pc".equalsIgnoreCase(source)) { //condition:pc
+            if (dateTime != null && dateTime.length() !=0){
+                dataList = pcService.getDataByDate(searchCondition);
+            }else{
+                dataList = pcService.getDataByCondition(searchCondition);
+            }
 
-        } else {                                   //condition:flow
-
+        } else if ("app".equalsIgnoreCase(source)) { //condition:app
+            if (dateTime != null && dateTime.length() != 0) {
+                dataList = appService.getDataByDate(searchCondition);
+            }else{
+                dataList = appService.getDataByCondition(searchCondition);
+            }
+        } else {                                    //condition:flow
+            if (dateTime != null && dateTime.length() != 0) {
+                dataList = flowService.getDataByDate(searchCondition);
+            }else{
+                dataList = flowService.getDataByCondition(searchCondition);
+            }
         }
         return dataList;
     }

@@ -33,8 +33,13 @@ public class FlowServiceImpl implements FlowService {
 	}
 
     @Override
-    public List<Source> queryList() {
-        return flowMapper.queryAllSourceDetails();
+    public List<String> queryAllSource(Source source) {
+        return flowMapper.queryAllSources(source);
+    }
+
+    @Override
+    public List<String> queryAllSourceDetails(Source source) {
+        return flowMapper.queryAllSourceDetails(source);
     }
 
     @Override
@@ -43,17 +48,22 @@ public class FlowServiceImpl implements FlowService {
     }
 
     @Override
-    public List<Flow> getDataBySourceDetails(SearchCondition searchCondition) {
-        return flowMapper.getDataBySourceDetails(searchCondition);
-    }
-
-    @Override
-    public List<SourceCondition> getSearchSource() {
+    public List<String> getSearchSource() {
         return flowMapper.getSearchSource();
     }
 
     @Override
     public List<Flow> queryAll() {
         return flowMapper.queryAll();
+    }
+
+    @Override
+    public List<String> getSources() {
+        return flowMapper.getSources();
+    }
+
+    @Override
+    public List<String> getSourceDetails() {
+        return flowMapper.getSourceDetails();
     }
 }

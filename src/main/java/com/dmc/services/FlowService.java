@@ -10,19 +10,15 @@ import java.util.List;
 public interface FlowService {
 
     List<Flow> listAll();
-
     List<Flow> queryAll();
-
     List<ProcessData> queryProcessData();
-
-    List<Source> queryList();
-
+    List<String> queryAllSource(Source source);
+    List<String> queryAllSourceDetails(Source source);
     List<Flow> getDataByCondition(SearchCondition searchCondition);
-
     List<Flow> getDataByDate(SearchCondition searchCondition);
+    List<String> getSearchSource();
+    List<String> getSources();
+    List<String> getSourceDetails();
 
-    List<Flow> getDataBySourceDetails(SearchCondition searchCondition);
-
-    List<SourceCondition> getSearchSource();
 
 }

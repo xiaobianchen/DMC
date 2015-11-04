@@ -32,7 +32,12 @@ public class AppServiceImpl implements AppService {
     }
 
     @Override
-    public List<App> getDataBySourceDetails(SearchCondition searchCondition) {
-        return appMapper.getDataBySourceDetails(searchCondition);
+    public List<String> getSources() {
+        return appMapper.getSources();
+    }
+
+    @Override
+    public List<String> getSourceDetails() {
+        return appMapper.getSourceDetails();
     }
 }

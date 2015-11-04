@@ -6,6 +6,8 @@ package com.dmc.domain;
 public class Source {
 
     private String sourceDetails;
+    private String source;
+    private String origin;
 
     public String getSourceDetails() {
         return sourceDetails;
@@ -15,8 +17,24 @@ public class Source {
         this.sourceDetails = sourceDetails;
     }
 
+    public String getSource() {
+        return source;
+    }
+
+    public void setSource(String source) {
+        this.source = source;
+    }
+
+    public String getOrigin() {
+        return origin;
+    }
+
+    public void setOrigin(String origin) {
+        this.origin = origin;
+    }
+
     @Override
     public String toString() {
-        return sourceDetails;
+        return "";
     }
 }

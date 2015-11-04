@@ -18,15 +18,26 @@
   <script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
 
   <script type="text/javascript">
+      /*cstools searchCondition*/
+      $(document).ready(function(){
+          $("#searchCondition").change(function(){
+            $.ajax({
+              type:"GET",
+              url:"/DMC/cstools/query",
+              data:{"selectValue":$("#searchCondition option:selected").val()},
+              success:function(data){
+              }
+            });
+          });
+      });
+
       /*search data*/
       function doSearch() {
         $('#tt').datagrid('load', {
           source:$('#searchCondition option:selected').text(),
-          startDate: $('#datePicker').datebox('getValue'),
-          endDate:$('#endDatePicker').datebox('getValue'),
+          date: $('#datePicker').datebox('getValue'),
           firstBranch: $('#firstBranch option:selected').text(),
-          secondBranch:$('#secondBranch option:selected').text(),
-          thirdBranch:$('#thirdBranch option:selected').text()
+          secondBranch:$('#secondBranch option:selected').text()
         });
       }
   </script>
@@ -68,30 +79,20 @@
       </c:forEach>
     </select>
 
-    <span>起始日期:</span>
+    <span>日期:</span>
     <input class="easyui-datebox" id="datePicker"/>
 
-    <span>截止日期:</span>
-    <input class="easyui-datebox" id="endDatePicker"/>
-
-    <span>一级分支:</span>
+    <span>来源:</span>
     <select name="sourceDetails" id="firstBranch" style="width: 200px;">
       <c:forEach items="${sourceList}" var="data">
-        <option value="${data}" style="color: darkorange">${data}</option>
+         <option value="${data}" style="color: darkorange">${data}</option>
       </c:forEach>
     </select>
 
-    <span>二级分支:</span>
+    <span>来源明细:</span>
     <select name="sourceDetails" id="secondBranch" style="width: 200px;">
-      <c:forEach items="${sourceList}" var="data">
+      <c:forEach items="${detailList}" var="data">
         <option value="${data}" style="color: #2c8d3a">${data}</option>
-      </c:forEach>
-    </select>
-
-    <span>三级分支:</span>
-    <select name="sourceDetails" id="thirdBranch" style="width: 200px;">
-      <c:forEach items="${sourceList}" var="data">
-        <option value="${data}" style="color: #0099FF">${data}</option>
       </c:forEach>
     </select>
 

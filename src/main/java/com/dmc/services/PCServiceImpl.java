@@ -24,17 +24,22 @@ public class PCServiceImpl implements PCService {
     }
 
     @Override
-    public List<PC> getDataByStartTime(SearchCondition searchCondition) {
-        return pcMapper.getDataByStartTime(searchCondition);
+    public List<PC> getDataByDate(SearchCondition searchCondition) {
+        return pcMapper.getDataByDate(searchCondition);
     }
 
     @Override
-    public List<PC> getDataByEndTime(SearchCondition searchCondition) {
-        return pcMapper.getDataByEndTime(searchCondition);
+    public List<PC> getDataByCondition(SearchCondition searchCondition) {
+        return pcMapper.getDataBySearchCondition(searchCondition);
     }
 
     @Override
-    public List<PC> getDataByTime(SearchCondition searchCondition) {
-        return pcMapper.getDataByTime(searchCondition);
+    public List<String> getSources() {
+        return pcMapper.getSources();
+    }
+
+    @Override
+    public List<String> getSourceDetails() {
+        return pcMapper.getSourceDetails();
     }
 }

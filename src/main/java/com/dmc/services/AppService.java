@@ -13,5 +13,6 @@ public interface AppService {
     List<App> listAll();
     List<App> getDataByCondition(SearchCondition searchCondition);
     List<App> getDataByDate(SearchCondition searchCondition);
-    List<App> getDataBySourceDetails(SearchCondition searchCondition);
+    List<String> getSources();
+    List<String> getSourceDetails();
 }

@@ -1,3 +1,4 @@
+/*
 package com.dmc.controller;
 
 import java.util.ArrayList;
@@ -22,10 +23,12 @@ import com.dmc.domain.TableColumn;
 import com.dmc.services.FlowService;
 import com.google.gson.Gson;
 
+*/
 /**
  * Created by xiaobianchen on 15/9/21.
  * This class is used to provide a tools for customer to query data from database
- */
+ *//*
+
 @Controller
 @SessionAttributes("flow")
 @RequestMapping(value="/csTools")
@@ -40,25 +43,29 @@ public class CSToolsController {
 	@Autowired
 	private PCService   pcService;
 
-	/**
+	*/
+/**
 	 * returns csTools page
 	 * @return
-	 */
+	 *//*
+
     @RequestMapping(method = RequestMethod.GET, produces="application/json;charset=utf-8")
     public ModelAndView list(){
-        List<Source> sourceList = flowService.queryList();
+        List<String> sourceList = flowService.queryAllSource();
         ModelAndView model = new ModelAndView();
         model.addObject("sourceList",sourceList);
         model.setViewName("queryAll");
         return model;
     }
 
-	/**
+	*/
+/**
 	 * returns the pagination of the specified data from database
 	 * @param request
 	 * @return
 	 * @throws Exception
-	 */
+	 *//*
+
     @RequestMapping(value="/pagination", method=RequestMethod.GET, produces="application/json;charset=utf-8")
     public @ResponseBody String getPaginationDataTable(HttpServletRequest request) throws Exception{
     	//Fetch the page number from client
@@ -83,12 +90,14 @@ public class CSToolsController {
     	return json;
     }
 
-	/**
+	*/
+/**
 	 * returns the results from the search conditions
 	 * @param request
 	 * @return
 	 * @throws Exception
-	 */
+	 *//*
+
     @RequestMapping(value="/getCondition", method = RequestMethod.GET, produces="application/json;charset=utf-8")
 	public List<?> getConditionValue(HttpServletRequest request) throws Exception {
 		String selectedValue = request.getParameter("selectedValue");
@@ -108,11 +117,13 @@ public class CSToolsController {
 
 	}
 
-	/**
+	*/
+/**
 	 * query data by selectedValue and date
 	 * @param selectedValue
 	 * @param date
-	 */
+	 *//*
+
 	private List<?> queryData(String selectedValue, String date) {
 		@SuppressWarnings("rawtypes")
 		List<?> dataList = new ArrayList();
@@ -127,12 +138,14 @@ public class CSToolsController {
 		return dataList;
 	}
 
-	/**
+	*/
+/**
 	 * returns the list
 	 * @param searchParameter
 	 * @param flowList
 	 * @return
-	 */
+	 *//*
+
     public List<Flow> getListBasedSearchParameter(String searchParameter,List<Flow> flowList) {
     	List<Flow> searchList = new ArrayList<Flow>();
     	if(null != searchParameter && !searchParameter.equals("")){
@@ -152,11 +165,13 @@ public class CSToolsController {
 		return flowList;
 	}
 
-	/**
+	*/
+/**
      * create the pagination data
      * @param pageDisplayLength
      * @return
-     */
+     *//*
+
 	public List<Flow> createPaginationData(Integer pageDisplayLength,Integer pageNumber) {
 		List<Flow> flowList = flowService.queryAll();
 		if (pageDisplayLength < flowList.size()) {
@@ -173,3 +188,4 @@ public class CSToolsController {
 		return flowList;
 	}
 }
+*/
