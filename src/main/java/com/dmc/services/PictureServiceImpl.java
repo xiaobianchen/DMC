@@ -5,7 +5,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.dmc.domain.Picture;
+import com.dmc.domain.entity.Picture;
 import com.dmc.maper.PictureMapper;
 /**
  * 

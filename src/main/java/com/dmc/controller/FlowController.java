@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import com.dmc.domain.ProcessData;
+import com.dmc.domain.entity.ProcessData;
 import com.dmc.services.FlowService;
 import com.dmc.utils.RandomUtils;
 

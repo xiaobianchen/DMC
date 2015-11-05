@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.dmc.domain.Login;
-import com.dmc.domain.ResetPassword;
+import com.dmc.domain.entity.Login;
+import com.dmc.domain.entity.ResetPassword;
 import com.dmc.services.UserService;
 import com.dmc.utils.RandomUtils;
 

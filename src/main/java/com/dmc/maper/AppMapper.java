@@ -1,8 +1,7 @@
 package com.dmc.maper;
 
-import com.dmc.domain.App;
-import com.dmc.domain.PC;
-import com.dmc.domain.SearchCondition;
+import com.dmc.domain.entity.App;
+import com.dmc.domain.entity.SearchCondition;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;

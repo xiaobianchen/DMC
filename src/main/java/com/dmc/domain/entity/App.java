@@ -1,10 +1,10 @@
-package com.dmc.domain;
+package com.dmc.domain.entity;
 
 /**
- * Created by xiaobianchen on 15/9/21.
+ * Created by xiaobianchen on 15/10/11.
+ * This class is an object for the App
  */
-public class Flow {
-
+public class App {
     private String merchantName;
     private String date;
     private String source;
@@ -170,7 +170,7 @@ public class Flow {
 
     @Override
     public String toString() {
-        return "Flow{" +
+        return "App{" +
                 "merchantName='" + merchantName + '\'' +
                 ", date='" + date + '\'' +
                 ", source='" + source + '\'' +

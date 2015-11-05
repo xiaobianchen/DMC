@@ -1,9 +1,8 @@
 package com.dmc.controller;
 
-import com.dmc.domain.Comment;
-import com.dmc.domain.Grid;
-import com.dmc.domain.Result;
-import com.dmc.domain.User;
+import com.dmc.domain.entity.Grid;
+import com.dmc.domain.entity.Result;
+import com.dmc.domain.entity.User;
 import com.dmc.services.UserService;
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;

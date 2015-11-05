@@ -1,7 +1,7 @@
 package com.dmc.services;
 
 import java.util.List;
-import com.dmc.domain.Comment;
+import com.dmc.domain.entity.Comment;
 
 /**
  * 

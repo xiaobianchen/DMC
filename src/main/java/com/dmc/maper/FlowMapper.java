@@ -1,7 +1,9 @@
 package com.dmc.maper;
 
-import com.dmc.domain.*;
-
+import com.dmc.domain.entity.Flow;
+import com.dmc.domain.entity.ProcessData;
+import com.dmc.domain.entity.SearchCondition;
+import com.dmc.domain.entity.Source;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;

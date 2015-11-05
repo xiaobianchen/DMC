@@ -1,4 +1,4 @@
-package com.dmc.domain;
+package com.dmc.domain.entity;
 
 /**
  * Created by xiaobianchen on 15/10/11.

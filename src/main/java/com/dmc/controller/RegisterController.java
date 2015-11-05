@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.dmc.domain.User;
+import com.dmc.domain.entity.User;
 import com.dmc.services.UserService;
 import com.dmc.utils.RandomUtils;
 
