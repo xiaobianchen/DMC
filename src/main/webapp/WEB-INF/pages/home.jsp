@@ -17,6 +17,13 @@
     <link rel="stylesheet" type="text/css" href="css/page_contact.css">
     <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.carousel').carousel({
+                interval: 10000
+            })
+        });
+    </script>
 </head>
 
 <body>
