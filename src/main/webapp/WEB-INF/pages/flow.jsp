@@ -7,6 +7,7 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 		<title></title>
 	</head>
 	<body>
@@ -57,7 +58,8 @@
 						</c:choose>
 							<%-- <img src="img/img01.png"  id="imgsel${loop.index }"/> --%>
 							<p class="title">${processData.sourceDetail }</p>
-							<i class="icon icon-btn-download" style="background-image: url(img/icon-btn-download.png);"></i>
+							<%--<i class="icon icon-btn-download" style="background-image: url(img/icon-btn-download.png);"></i>--%>
+							<button type="button" class="btn btn-primary" onclick="location.href='/DMC/report'">查询</button>
 							<!-- popup -->
 							<div class ="popup", id="popup${loop.index }" style="display:none;">
 								<div class="inner">
