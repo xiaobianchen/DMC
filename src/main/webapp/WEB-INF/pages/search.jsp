@@ -6,14 +6,16 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+ <jsp:include page="authorized.jsp"/>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
   <title>登录-DMC,就购了</title>
+  <link rel="shortcut icon" href="img/favicon.ico">
   <link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css">
   <link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
   <link rel="stylesheet" type="text/css" href="easyui/demo.css">
-  <link rel="shortcut icon" href="img/favicon.ico">
+
   <script type="text/javascript" src="easyui/jquery.min.js"></script>
   <script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
 

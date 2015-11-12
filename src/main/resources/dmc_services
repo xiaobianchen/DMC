@@ -1,0 +1,10 @@
+service                  url
+home                     http://localhost:8080/DMC/
+admin                    http://localhost:8080/DMC/admin
+flow                     http://localhost:8080/DMC/flow
+login                    http://localhost:8080/DMC/login
+register                 http://localhost:8080/DMC/register
+reset password           http://localhost:8080/DMC/reset
+list comments            http://localhost:8080/DMC/list
+report                   http://localhost:8080/DMC/report
+cstools                  http://localhost:8080/DMC/cstools

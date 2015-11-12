@@ -9,6 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <jsp:include page="main.jsp"/>
+<jsp:include page="authorized.jsp"/>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
