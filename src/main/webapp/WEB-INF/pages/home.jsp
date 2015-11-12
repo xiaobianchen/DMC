@@ -37,7 +37,7 @@
                         <a href="javascript:void(0);">产品</a>
                         <ul class="nav-dropdown-list">
                             <li><a target="_blank" href="/DMC/cstools">数据中心</a></li>
-                            <li><a target="_blank" href="/DMC/admin">报表服务</a></li>
+                            <li><a target="_blank" href="/DMC/report">报表服务</a></li>
                             <li><a target="_blank" href="/DMC/admin">用户管家</a></li>
                         </ul>
                     </li>
