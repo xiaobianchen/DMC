@@ -30,7 +30,7 @@ public class ProductCrawler {
 		try{
 			jdbcTemplate = JDBCHelper.createMysqlTemplate("mysql1",
                     "jdbc:mysql://localhost/dmc?useUnicode=true&characterEncoding=utf8",
-                    "root", "", 5, 30);
+                    "root", "root", 5, 30);
 
             jdbcTemplate.execute("CREATE TABLE IF NOT EXISTS `product` (\n" +
                     "            `productId` varchar(255) DEFAULT NULL,\n" +
@@ -121,5 +121,6 @@ public class ProductCrawler {
     }
 
     public static void main(String[] args) {
-        new ProductCrawler().crawlProductPage("https://detail.tmall.com/item.htm?spm=a21ag.7634349.0.0.T0HpfS&id=521187274952&sku_properties=-1:-1");}
+        new ProductCrawler().crawlProductPage("https://detail.tmall.com/item.htm?spm=a21ag.7634349.0.0.T0HpfS&id=521187274952&sku_properties=-1:-1");
+    }
 }

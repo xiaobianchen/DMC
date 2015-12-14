@@ -5,6 +5,8 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 <jsp:include page="authorized.jsp"/>
+<jsp:include page="header.jsp"/>
+<jsp:include page="footer.jsp"/>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -135,7 +137,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div class="demo-tip icon-tip">&nbsp;</div>
 	</div>
 	
-	<table id="dg" title="用户管理" class="easyui-datagrid" style="width:100%;height:400px"
+	<table id="dg" title="用户管理" class="easyui-datagrid" style="width:100%;height:400px;"
 			url="admin/listUsers"
 			toolbar="#toolbar" pagination="true"
 			rownumbers="true" fitColumns="true" singleSelect="true">

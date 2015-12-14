@@ -7,6 +7,8 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:include page="authorized.jsp"/>
+<jsp:include page="header.jsp"/>
+<jsp:include page="footer.jsp"/>
 <html>
 <head>
   <title>登录-DMC,就购了</title>

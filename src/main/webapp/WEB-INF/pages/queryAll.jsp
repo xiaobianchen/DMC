@@ -10,6 +10,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <jsp:include page="main.jsp"/>
 <jsp:include page="authorized.jsp"/>
+<jsp:include page="header.jsp"/>
+<jsp:include page="footer.jsp"/>
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -18,8 +21,6 @@
 <link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css">
 <link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
 <script type="text/javascript" src="js/bootstrap.js"></script>
-
-
 </head>
 <body>
 	<h1 align="center"><span style="color:dodgerblue">DMC数据查询工具</span></h1>

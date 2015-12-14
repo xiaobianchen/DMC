@@ -13,6 +13,6 @@ public class WelcomeController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String welcome(){
-        return "welcome";
+        return "header";
     }
 }
