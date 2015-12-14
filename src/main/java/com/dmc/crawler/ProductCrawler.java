@@ -49,6 +49,7 @@ public class ProductCrawler {
         System.out.println("数据库连接成功");
 	}
 
+    @SuppressWarnings("unchecked")
     public void crawlProductPage(String url) {
         try {
             Document doc = Jsoup.connect(url).get();
@@ -63,15 +64,14 @@ public class ProductCrawler {
             shopInfo = m.group();
             shopInfo = shopInfo.substring(shopInfo.indexOf("TShop.Setup") + "TShop.Setup".length(), shopInfo.indexOf("})();"));
             shopInfo = shopInfo.substring(1, shopInfo.length() - 4);
-            System.out.println(shopInfo);
+            //System.out.println(shopInfo);
 
-            Map<String, Object> detailMap = JsonToMap.toMap(shopInfo);
-            Map<String, Object> productInfo = JsonToMap.toMap(detailMap.get("itemDO").toString());
+            Map<String, Object> productInfo = (Map<String, Object>)(JsonToMap.toMap(shopInfo).get("itemDO"));
 
             Product product = new Product();
-            product.setBrandId(productInfo.get("brandId").toString());
+            product.setBrandId(productInfo.get("brandId").toString().replace("\"", ""));
             product.setItemId(productInfo.get("itemId").toString());
-            product.setTitle(productInfo.get("title").toString());
+            product.setTitle(productInfo.get("title").toString().replace("\"", ""));
 
             String criticalInfo = ((List<Object>) (productInfo.get("newProGroup"))).get(1).toString();
             Map<String, Object> criticalInfoMap = JsonToMap.toMap(criticalInfo);
@@ -117,6 +117,13 @@ public class ProductCrawler {
             }
         } catch (IOException e) {
             throw new RuntimeException(e.getMessage());
+        }
+    }
+
+    public void crawlUrlInDB() {
+        List<String> urlList = jdbcTemplate.queryForList("SELECT itemLink FROM sale LIMIT 10;", String.class);
+        for(String url : urlList) {
+            crawlProductPage(url);
         }
     }
 
