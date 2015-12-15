@@ -14,16 +14,17 @@ a:hover{text-decoration: underline;}
 .min-window i{ margin: 0 3px;}
 
 /*登陆窗口*/
+.login-banner{position: absolute;left: 0;top: 0; width: 100%;height: 475px;background: #e93854;}
 .login-module{ position: absolute; width: 100%; height: 100%;}
 .login-module .inner{ position: relative; width: 100%; height: 100%;}
-.login-bg{ position: absolute; width: 100%; height: 100%; background-color: rgba(17,106,196,.8); z-index: 1;}
+.login-bg{ position: absolute; width: 100%; height: 100%; background-color:#F9F9F9; z-index: 1;}
 .blur { -webkit-filter: blur(100px); -moz-filter: blur(100px); -ms-filter: blur(100px); filter: blur(100px);}
-.login-form{ position: absolute; top: 50%; left: 50%; width: 300px; height: 280px; margin-top: -150px; margin-left: -150px; font-size: 12px; font-weight: bold; box-shadow: 0px 0px 26px #666; color:#606060; background: #fff; z-index: 2;}
+.login-form{ position: absolute; top: 50%; left: 50%; width: 360px; height: 330px; margin-top: -200px; margin-left: -150px; font-size: 12px; font-weight: bold; box-shadow: 0px 0px 26px #666; color:#606060; background: #fff; z-index: 2;}
 .login-form form{ padding: 30px 40px 0; position: relative;}
 .login-form .icon-close{ position: absolute; top: 5px; right: 5px; background-image: url(img/icon-login-close.png); width: 11px; height: 11px;}
 
 /*注册窗口*/
-.register-form{ position: absolute; top: 50%; left: 50%; width: 300px; height: 350px; margin-top: -150px; margin-left: -150px; font-size: 12px; font-weight: bold; box-shadow: 0px 0px 26px #666; color:#606060; background: #fff; z-index: 2;}
+.register-form{ position: absolute; top: 50%; left: 50%; width: 350px; height: 380px; margin-top: -200px; margin-left: -150px; font-size: 12px; font-weight: bold; box-shadow: 0px 0px 26px #666; color:#606060; background: #fff; z-index: 2;}
 .register-form form{ padding: 30px 40px 0; position: relative;}
 .btnReset{background:#69b3f2;width:100%;}
 
@@ -33,12 +34,12 @@ a:hover{text-decoration: underline;}
 .btnComment{width:100%;height:30px;background:#fff;}
 
 /*重置密码*/
-.reset-form{position: absolute; top: 50%; left: 50%; width: 260px; height: 360px; margin-top: -150px; margin-left: -150px; font-size: 12px; font-weight: bold; box-shadow: 0px 0px 26px #666; color:#606060; background: #fff; z-index: 2;}
+.reset-form{position: absolute; top: 50%; left: 50%; width: 340px; height: 390px; margin-top: -200px; margin-left: -150px; font-size: 12px; font-weight: bold; box-shadow: 0px 0px 26px #666; color:#606060; background: #fff; z-index: 2;}
 .reset-form form{ padding: 30px 40px 0; position: relative;}
 
 /*input*/
 .input-box{ margin-bottom: 10px;}
-.input-box input{ display: block; width: 100%; padding: 0 5px; height: 30px; line-height: 30px; border:1px solid #bfbfbf; margin-top: 5px; box-sizing: border-box; font-family: "ËÎÌå";}
+.input-box input{ display: block; width: 260px; padding: 0 5px; height: 30px; line-height: 30px; border:1px solid #bfbfbf; margin-top: 5px; box-sizing: border-box; font-family: "ËÎÌå";}
 .check-box{ font-weight: normal;}
 .check-box input{ vertical-align: middle;}
 .btn-box{ margin-top: 25px;}

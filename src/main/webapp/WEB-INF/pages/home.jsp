@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=utf8"
     pageEncoding="utf8"%>
 <!DOCTYPE html>
+<jsp:include page="main.jsp"/>
+<jsp:include page="footer.jsp"/>
 <html lang="zh-cn" data-lang="zh-cn" data-template="simple" class="lang-zh-cn">
 <head>
     <meta charset="utf-8"/>
@@ -175,9 +177,7 @@
                 </div>
             </div>
         </div>
-        <div class="copyright">Copyright © 2015-2115 XLTech Corporation All Rights Reserved. <a href="#" target="_blank">鄂ICP证000008-168</a></div>
     </div>
-</div>
 </div>
 </body>
 </html>
