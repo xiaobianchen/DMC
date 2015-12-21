@@ -48,7 +48,7 @@
 </head>
 <body>
   <h1 align="center"><span style="color:dodgerblue">DMC数据查询工具</span></h1>
-  <table id="tt" class="easyui-datagrid" style="width:100%;height:450px"
+  <table id="tt" class="easyui-datagrid" style="width:100%;height:1200px"
          url="cstools/list" toolbar="#tb"
          title="DMC数据查询" iconCls="icon-save"
          rownumbers="true" pagination="true">

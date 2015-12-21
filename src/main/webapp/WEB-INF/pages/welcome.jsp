@@ -18,7 +18,6 @@
     .myns > div {
       box-shadow: 0 0 6px black, inset 0 0 6px black;
     }
-
   </style>
 </head>
 <body>

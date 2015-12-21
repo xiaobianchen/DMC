@@ -17,10 +17,12 @@
         line-height: 50px;
         margin: 0 auto;
         text-align: center;
-        color: #337ab7;
-        border-top: 1px dashed #337ab7;
         font-size: 12px;
         font-family: "hiragino sans gb","microsoft yahei";
+      }
+
+      .links {
+        text-align: center;
       }
     </style>
 
@@ -29,11 +31,39 @@
 
   <footer class="footer navbar-fixed-bottom ">
     <div class="container">
-      <div class="copyright">Copyright © 2015-2115 XLTech Corporation All Rights Reserved.
+      <div class="links">
+        <a rel="nofollow" target="_blank" href="#" style="outline: rgb(109, 109, 109) none 0px;">
+          关于我们
+        </a>
+        |
+        <a rel="nofollow" target="_blank" href="#">
+          联系我们
+        </a>
+        |
+        <a rel="nofollow" target="_blank" href="#">
+          人才招聘
+        </a>
+        |
+        <a rel="nofollow" target="_blank" href="#">
+          商家入驻
+        </a>
+        |
+        <a rel="nofollow" target="_blank" href="#">
+          广告服务
+        </a>
+        |
+        <a target="_blank" href="#">
+          销售联盟
+        </a>
+        |
+        <a href="#" target="_blank">
+          社区
+        </a>
+      </div>
+      <div class="copyright">Copyright © 2014-2015 XLTech Corporation All Rights Reserved.
         <a href="#" target="_blank">鄂ICP证000008-168</a>
       </div>
     </div>
   </footer>
-
 </body>
 </html>
