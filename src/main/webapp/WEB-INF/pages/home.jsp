@@ -41,9 +41,14 @@
                             <li><a target="_blank" href="/DMC/cstools">数据中心</a></li>
                             <li><a target="_blank" href="/DMC/report">报表服务</a></li>
                             <li><a target="_blank" href="/DMC/admin">用户管家</a></li>
+                            <li><a target="_blank" href="/DMC/flow">流量通道</a></li>
                         </ul>
                     </li>
-                    <li class=""><a href="#">支持中心</a></li>
+                    <li class=""><a href="#">支持中心</a>
+                        <ul class="nav-dropdown-list">
+                            <li><a target="_blank" href="/DMC/support">校验码</a></li>
+                        </ul>
+                    </li>
                     <li class=""><a href="#">成功案例</a></li>
                     <li class=""><a href="#">关于我们</a></li>
                     <li><a href="#" target="_blank">社区</a></li>
