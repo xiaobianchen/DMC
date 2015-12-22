@@ -1,4 +1,4 @@
-package com.dmc.domain;
+package com.dmc.domain.entity;
 
 import java.util.List;
 

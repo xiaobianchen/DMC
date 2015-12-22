@@ -1,7 +1,7 @@
 package com.dmc.services;
 
-import com.dmc.domain.PC;
-import com.dmc.domain.SearchCondition;
+import com.dmc.domain.entity.PC;
+import com.dmc.domain.entity.SearchCondition;
 import com.dmc.maper.PCMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

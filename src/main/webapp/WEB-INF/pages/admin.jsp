@@ -4,16 +4,19 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
+<jsp:include page="authorized.jsp"/>
+<jsp:include page="header.jsp"/>
+<jsp:include page="footer.jsp"/>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<base href="<%=basePath%>">
 	<title>登录-DMC,就购了</title>
+	<link rel="shortcut icon" href="img/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css">
 	<link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
 	<link rel="stylesheet" type="text/css" href="easyui/demo.css">
-	<link rel="shortcut icon" href="img/favicon.ico">
 	<script type="text/javascript" src="easyui/jquery.min.js"></script>
 	<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
 	<style type="text/css">
@@ -134,7 +137,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div class="demo-tip icon-tip">&nbsp;</div>
 	</div>
 	
-	<table id="dg" title="用户管理" class="easyui-datagrid" style="width:100%;height:400px"
+	<table id="dg" title="用户管理" class="easyui-datagrid" style="width:100%;height:400px;"
 			url="admin/listUsers"
 			toolbar="#toolbar" pagination="true"
 			rownumbers="true" fitColumns="true" singleSelect="true">

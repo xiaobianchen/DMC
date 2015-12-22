@@ -3,8 +3,8 @@ package com.dmc.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.dmc.domain.ResetPassword;
-import com.dmc.domain.User;
+import com.dmc.domain.entity.ResetPassword;
+import com.dmc.domain.entity.User;
 import com.dmc.maper.UserMapper;
 
 import java.util.List;

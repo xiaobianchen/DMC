@@ -5,7 +5,6 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
-import com.dmc.domain.Source;
 import com.dmc.services.AppService;
 import com.dmc.services.PCService;
 
@@ -17,8 +16,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.dmc.domain.Flow;
-import com.dmc.domain.TableColumn;
+import com.dmc.domain.entity.Flow;
+import com.dmc.domain.entity.TableColumn;
 import com.dmc.services.FlowService;
 import com.google.gson.Gson;
 

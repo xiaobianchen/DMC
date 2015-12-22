@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=utf8"
     pageEncoding="utf8"%>
 <!DOCTYPE html>
+<jsp:include page="main.jsp"/>
+<jsp:include page="footer.jsp"/>
 <html lang="zh-cn" data-lang="zh-cn" data-template="simple" class="lang-zh-cn">
 <head>
     <meta charset="utf-8"/>
@@ -17,6 +19,13 @@
     <link rel="stylesheet" type="text/css" href="css/page_contact.css">
     <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.carousel').carousel({
+                interval: 5000
+            })
+        });
+    </script>
 </head>
 
 <body>
@@ -30,11 +39,16 @@
                         <a href="javascript:void(0);">产品</a>
                         <ul class="nav-dropdown-list">
                             <li><a target="_blank" href="/DMC/cstools">数据中心</a></li>
-                            <li><a target="_blank" href="/DMC/admin">报表服务</a></li>
+                            <li><a target="_blank" href="/DMC/report">报表服务</a></li>
                             <li><a target="_blank" href="/DMC/admin">用户管家</a></li>
+                            <li><a target="_blank" href="/DMC/flow">流量通道</a></li>
                         </ul>
                     </li>
-                    <li class=""><a href="#">支持中心</a></li>
+                    <li class=""><a href="#">支持中心</a>
+                        <ul class="nav-dropdown-list">
+                            <li><a target="_blank" href="/DMC/support">校验码</a></li>
+                        </ul>
+                    </li>
                     <li class=""><a href="#">成功案例</a></li>
                     <li class=""><a href="#">关于我们</a></li>
                     <li><a href="#" target="_blank">社区</a></li>
@@ -85,16 +99,20 @@
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
         </ol>
         <div class="carousel-inner"> 
             <div class="item active">
-                <img src="img/3.jpg">
+                <img src="img/5.jpg">
             </div>
             <div class="item">
-                <img src="img/1.jpg">
+                <img src="img/4.jpg">
             </div>
             <div class="item">
                 <img src="img/2.jpg">
+            </div>
+            <div class="item">
+                <img src="img/3.jpg">
             </div>
         </div>
     </div>
@@ -168,9 +186,7 @@
                 </div>
             </div>
         </div>
-        <div class="copyright">Copyright © 2015-2115 XLTech Corporation All Rights Reserved. <a href="#" target="_blank">鄂ICP证000008-168</a></div>
     </div>
-</div>
 </div>
 </body>
 </html>

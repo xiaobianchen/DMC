@@ -6,14 +6,16 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+ <jsp:include page="authorized.jsp"/>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
   <title>登录-DMC,就购了</title>
+  <link rel="shortcut icon" href="img/favicon.ico">
   <link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css">
   <link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
   <link rel="stylesheet" type="text/css" href="easyui/demo.css">
-  <link rel="shortcut icon" href="img/favicon.ico">
+
   <script type="text/javascript" src="easyui/jquery.min.js"></script>
   <script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
 
@@ -46,7 +48,7 @@
 </head>
 <body>
   <h1 align="center"><span style="color:dodgerblue">DMC数据查询工具</span></h1>
-  <table id="tt" class="easyui-datagrid" style="width:100%;height:450px"
+  <table id="tt" class="easyui-datagrid" style="width:100%;height:1200px"
          url="cstools/list" toolbar="#tb"
          title="DMC数据查询" iconCls="icon-save"
          rownumbers="true" pagination="true">

@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.dmc.domain.Comment;
-import com.dmc.domain.TableColumn;
+import com.dmc.domain.entity.Comment;
+import com.dmc.domain.entity.TableColumn;
 import com.dmc.services.CommentService;
 import com.dmc.utils.RandomUtils;
 import com.google.gson.Gson;

@@ -3,7 +3,7 @@ package com.dmc.services;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.dmc.domain.Comment;
+import com.dmc.domain.entity.Comment;
 import com.dmc.maper.CommentMapper;
 /**
  * 

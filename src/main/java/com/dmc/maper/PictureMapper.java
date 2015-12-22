@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Select;
 
-import com.dmc.domain.Picture;
+import com.dmc.domain.entity.Picture;
 
 /**
  * 

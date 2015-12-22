@@ -1,4 +1,4 @@
-package com.dmc.domain;
+package com.dmc.domain.entity;
 
 import com.google.gson.Gson;
 import javax.servlet.http.HttpServletResponse;

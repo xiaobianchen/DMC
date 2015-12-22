@@ -5,8 +5,8 @@ import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
-import com.dmc.domain.ResetPassword;
-import com.dmc.domain.User;
+import com.dmc.domain.entity.ResetPassword;
+import com.dmc.domain.entity.User;
 
 import java.util.List;
 

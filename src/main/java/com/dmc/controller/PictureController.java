@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.dmc.domain.Picture;
+import com.dmc.domain.entity.Picture;
 import com.dmc.services.PictureService;
 
 /**

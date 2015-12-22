@@ -1,16 +1,29 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <jsp:include page="main.jsp"/>
+<jsp:include page="footer.jsp"/>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title></title>
+<title>重置密码</title>
+<style type="text/css">
+	.header{
+		width: 990px;
+		margin: 0 auto;
+	}
+</style>
 </head>
-<body>
-   <div class="login-module">
+<body style="position: fixed;width: 100%; height: 100%">
+
+	<div class="header">
+		<div id="logo">
+			<h1><font color="black">DMC 欢迎您</font></h1>
+		</div>
+	</div>
+    <div class="login-module">
+		<div class="login-banner" style="background-color: #ff283c">
 			<div class="inner">
-				<div class="login-bg blur"></div>
 				<div class="reset-form">
 					<form method="post">
 					    <div class="input-box">
