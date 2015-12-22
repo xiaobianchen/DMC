@@ -16,7 +16,7 @@ public class CSVDownloader {
     public static void download() throws Exception {
         FirefoxProfile profile = new FirefoxProfile();
 
-        String path = "C:\\Test\\";
+        String path = System.getProperty("user.dir") + "\\csv";
         profile.setPreference("browser.download.folderList", 2);
         profile.setPreference("browser.download.dir", path);
         profile.setPreference("browser.download.manager.alertOnEXEOpen", false);
@@ -57,17 +57,18 @@ public class CSVDownloader {
 //        System.out.print(code);
 //        code = code.substring(code.indexOf("<Result>")+8, code.indexOf("<Result>") + 12);
 //        System.out.print(code);
-        captureScreen(driver, "D:\\", "test", ".png");
-        String name = "D:\\test.png";
+        captureScreen(driver, path, "src", ".png");
+        String srcname = path + "\\src.png";
+        String subname = path + "\\sub.png";
         OperateImage o = new OperateImage(1238, 278, 150, 46);
-        o.setSrcpath(name);
-        o.setSubpath("D:\\testtest.png");
+        o.setSrcpath(srcname);
+        o.setSubpath(subname);
         o.cut();
         
-		  String code = YunSu.createByPost("xiongjiaji", "1234QWER", "3040", "60", "33483", "11ed548479f04bbdb2b1a377203d9f3c", "D:\\testtest.png");
-		  System.out.print(code);
-		  code = code.substring(code.indexOf("<Result>")+8, code.indexOf("<Result>") + 12);
-		  System.out.print(code);
+        String code = YunSu.createByPost("xiongjiaji", "1234QWER", "3040", "60", "33483", "11ed548479f04bbdb2b1a377203d9f3c", subname);
+        System.out.print(code);
+        code = code.substring(code.indexOf("<Result>")+8, code.indexOf("<Result>") + 12);
+        System.out.print(code);
 
         driver.findElement(By.id("J_CodeInput_i")).sendKeys(code);
 
