@@ -78,7 +78,7 @@
     <span>查询条件:</span>
     <select name="searchCondition" id="searchCondition">
       <c:forEach items="${dataList}" var="data">
-        <option value="${data}" style="color: deeppink">${data}</option>
+        <option value="${data}" style="color: #0099FF;">${data}</option>
       </c:forEach>
     </select>
 

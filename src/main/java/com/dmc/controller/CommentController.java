@@ -1,34 +1,34 @@
 package com.dmc.controller;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
-import javax.servlet.http.HttpServletRequest;
+import com.dmc.domain.entity.Comment;
+import com.dmc.domain.entity.TableColumn;
+import com.dmc.services.CommentService;
+import com.dmc.utils.RandomUtils;
+import com.google.gson.Gson;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.dmc.domain.entity.Comment;
-import com.dmc.domain.entity.TableColumn;
-import com.dmc.services.CommentService;
-import com.dmc.utils.RandomUtils;
-import com.google.gson.Gson;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 /**
  * 
  * Created by Xiaobian Chen on 2015年6月23日
  * This class is used to handle feedback from customer and list comments
  */
 @Controller
-public class CommentController {
+public class CommentController extends BaseController{
 	
 	@Autowired
 	private CommentService commentService;
@@ -58,10 +58,10 @@ public class CommentController {
 	
 	/**
 	 * submit feedback
-	 * @param comment
 	 * @return
 	 * @throws IOException 
 	 */
+	@SuppressWarnings("unchecked")
 	@RequestMapping(value="/feedback", method=RequestMethod.POST, produces="application/json;charset=utf-8")
 	public String getFeedBack(HttpServletRequest request) throws IOException{
 		Comment comment = new Comment();
@@ -83,24 +83,6 @@ public class CommentController {
 	}
 	
 	/**
-	 * file upload
-	 * @param comment
-	 * @param file
-	 * @return
-	 * @throws IOException
-	 */
-	@RequestMapping(value="/upload", method=RequestMethod.POST, produces="application/json;charset=utf-8")
-	public @ResponseBody String fileUpload(@ModelAttribute("comment") Comment comment) throws IOException{
-		//reportTime
-		SimpleDateFormat  sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-		String reportTime = sdf.format(new Date());
-		comment.setReportTime(reportTime);
-	
-		commentService.insert(comment);
-		return "success";
-	}
-	
-	/**
 	 * list all comments
 	 * passed list to jsp page:
 	 * 1.invoke addObject() to add list to the ModelAndView
@@ -113,13 +95,14 @@ public class CommentController {
 		redirectAttributes.addAttribute("unitname", "comments");
 		return "redirect:/listPage";
 	}
-	
+
 	/**
 	 * list comments
 	 * @return
 	 */
 	@RequestMapping(value="/listPage",method=RequestMethod.GET, produces="application/json;charset=utf-8")
 	public ModelAndView getList(){
+		@SuppressWarnings("unchecked")
 		List<Comment> commentList = commentService.list();
 		ModelAndView model = new ModelAndView();
 		model.addObject(commentList);
@@ -132,6 +115,7 @@ public class CommentController {
 	 * @param request
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	@RequestMapping(value="/pagination", method=RequestMethod.GET, produces="application/json;charset=utf-8")
 	public @ResponseBody String getPaginationDataTable(HttpServletRequest request){
 		//fetch the page number from client
@@ -162,14 +146,22 @@ public class CommentController {
 		return json;
 	}
 
+	@Override
+	public String list(HttpServletRequest request, HttpServletResponse response) {
+		return null;
+	}
+
+
 	/**
 	 * This method is used to display records
-	 * @param pageDisplayLength
+	 * @param pageNumber
 	 * @return
 	 */
-	public List<Comment> createPaginationData(Integer pageDisplayLength,Integer pageNumber) {
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	@Override
+	public List createPaginationData(int pageDisplayLength, int pageNumber) {
 		List<Comment> commentList = commentService.list();
-		
+
 		if(pageDisplayLength < commentList.size()){
 			if(pageNumber == 1){
 				commentList = commentList.subList(0, pageNumber*pageDisplayLength);
@@ -187,11 +179,15 @@ public class CommentController {
 	/**
 	 * search by keywords
 	 * @param searchParameter
-	 * @param commentList
+	 * @param list
 	 * @return
 	 */
-	public List<Comment> getListBasedSearchParameter(String searchParameter,List<Comment> commentList) {
+	@SuppressWarnings("rawtypes")
+	@Override
+	public List getListBasedSearchParameter(String searchParameter, List list) {
 		List<Comment> searchList = new ArrayList<Comment>();
+		@SuppressWarnings("unchecked")
+		List<Comment> commentList = list;
 		if(null != searchParameter && !searchParameter.equals("")){
 			searchList = new ArrayList<Comment>();
 			searchParameter = searchParameter.toUpperCase();
@@ -201,11 +197,11 @@ public class CommentController {
 					searchList.add(comment);
 				}
 			}
-			
+
 			commentList = searchList;
 			searchList = null;
 		}
-		
+
 		return commentList;
 	}
 }

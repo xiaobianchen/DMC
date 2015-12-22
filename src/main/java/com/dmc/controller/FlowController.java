@@ -1,15 +1,15 @@
 package com.dmc.controller;
-import java.util.List;
-
+import com.dmc.domain.entity.ProcessData;
+import com.dmc.services.FlowService;
+import com.dmc.utils.RandomUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import com.dmc.domain.entity.ProcessData;
-import com.dmc.services.FlowService;
-import com.dmc.utils.RandomUtils;
+
+import java.util.List;
 
 /**
  * 
@@ -34,7 +34,11 @@ public class FlowController {
 		redirectAttributes.addAttribute("unitname", "flow");
 		return "redirect:/flowPage";
 	}
-	
+
+	/**
+	 * get process data
+	 * @return
+	 */
 	@RequestMapping(value="/flowPage", method=RequestMethod.GET)
 	public ModelAndView getProcessData(){
 		List<ProcessData> dataList = flowService.queryProcessData();

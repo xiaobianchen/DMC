@@ -2,6 +2,7 @@ package com.dmc.domain.entity;
 
 /**
  * Created by xiaobianchen on 15/10/11.
+ * PC data
  */
 public class PC {
     private String merchantName;

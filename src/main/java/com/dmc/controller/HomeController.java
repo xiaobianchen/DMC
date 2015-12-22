@@ -20,6 +20,9 @@ import com.dmc.utils.RandomUtils;
 @RequestMapping("/home")
 public class HomeController {
 
+	/**
+	 * spring quartz to trigger task
+	 */
 	static{
 		new ClassPathXmlApplicationContext("spring_quartz.xml");
 	}

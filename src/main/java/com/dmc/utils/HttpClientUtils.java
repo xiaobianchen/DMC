@@ -21,10 +21,7 @@ import org.jsoup.select.Elements;
 
 
 /**
- * 
  * Created by Xiaobian Chen on 2015年9月7日
- *
- *
  */
 public class HttpClientUtils {
     

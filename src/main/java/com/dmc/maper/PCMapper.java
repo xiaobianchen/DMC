@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by xiaobianchen on 15/10/12.
  */
-public interface PCMapper {
+public interface PCMapper extends BaseMapper{
     @Select("SELECT merchantName,date,source,sourceDetails,accessNum,accessChange,buyerNum,buyerChange,orderTransferRate,orderTransferChange,payNum,payBuyerNumChange,payAmount,payAmountChange,payTransferRate,payTransferRateChange from pc")
     List<PC> listAll();
 

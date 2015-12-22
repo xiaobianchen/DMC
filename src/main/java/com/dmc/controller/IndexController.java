@@ -1,16 +1,11 @@
 package com.dmc.controller;
 
+import com.dmc.utils.RandomUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
-import org.springframework.web.servlet.HandlerExecutionChain;
-import org.springframework.web.servlet.HandlerMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
-import com.dmc.utils.RandomUtils;
-
-import javax.servlet.http.HttpServletRequest;
 
 /**
  * 
@@ -33,16 +28,17 @@ public class IndexController{
 		return "redirect:/indexPage";
 	}
 	
-	@RequestMapping(value="/indexPage", method=RequestMethod.GET)
+	@RequestMapping(value="/indexPage", method= RequestMethod.GET)
 	public String getIndex(){
 		return "index";
 	}
 
+	/**
+	 * This method is to handle Page Not Found Exception
+	 * @return
+	 */
 	@RequestMapping("*")
 	public String handlePageNotFound(){
 		return "404";
 	}
-
-
-
 }

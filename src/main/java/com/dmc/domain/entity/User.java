@@ -6,7 +6,7 @@ package com.dmc.domain.entity;
  * User Information
  *
  */
-public class User {
+public class User extends Object {
 	private String username;
 	private String password;
 	private String email;

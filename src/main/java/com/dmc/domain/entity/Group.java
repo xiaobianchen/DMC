@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 
+ *
  *  Created by Xiaobian Chen on 2015年7月11日
  */
 public class Group {

@@ -3,7 +3,6 @@ package com.dmc.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * @author xiaobian.chen
@@ -14,6 +13,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping(value="/report")
 public class ReportController {
 
+    /**
+     * report for the flow data
+     * @return
+     */
     @RequestMapping(method = RequestMethod.GET)
     public String report(){
        return "report";

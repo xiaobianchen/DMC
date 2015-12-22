@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * Created by xiaobianchen on 2015/11/26.
+ *
+ * This page is used for testing
  */
 @Controller
 @RequestMapping(value="/welcome")

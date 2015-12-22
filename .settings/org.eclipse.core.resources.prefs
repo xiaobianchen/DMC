@@ -3,11 +3,8 @@
 >>>>>>>=8670870b25acb85f942d4834ffd5877274ff3095
 eclipse.preferences.version=1
 encoding//src/main/java=UTF-8
-encoding//src/main/java/com/dmc/controller/PictureController.java=UTF-8
 encoding//src/main/java/com/dmc/controller/RegisterController.java=gbk
 encoding//src/main/java/com/dmc/services/CommentServiceImpl.java=UTF-8
-encoding//src/main/java/com/dmc/services/PictureService.java=UTF-8
-encoding//src/main/java/com/dmc/services/PictureServiceImpl.java=UTF-8
 encoding//src/main/resources=UTF-8
 encoding//src/main/resources/db.sql=UTF-8
 encoding//src/main/webapp/WEB-INF/pages=UTF-8
