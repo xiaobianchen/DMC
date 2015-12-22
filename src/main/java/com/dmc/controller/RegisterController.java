@@ -34,7 +34,7 @@ public class RegisterController {
 	private UserService userService;
 	
 	/**
-	 * get register 
+	 * get register page
 	 * @param model
 	 * @return
 	 */
@@ -57,16 +57,19 @@ public class RegisterController {
 	 * @param user
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	@RequestMapping(value="/register", method=RequestMethod.POST)
 	public @ResponseBody  String signup(HttpServletRequest request){
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		String email = request.getParameter("email");
 		String phone = request.getParameter("phone");
+
 		boolean isUser = userService.getUserByUserName(username);
 		boolean isEmail = userService.getUserByEmail(email);
 		boolean isPhone = userService.getUserByPhone(phone);
 		boolean isFlag = isUser||isEmail||isPhone;
+
 		User user = new User();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 		String registerTime = sdf.format(new Date());

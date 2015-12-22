@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by xiaobianchen on 15/10/11.
  */
-public interface AppMapper {
+public interface AppMapper extends BaseMapper{
     @Select("SELECT merchantName,date,source,sourceDetails,accessNum,accessChange,buyerNum,buyerChange,orderTransferRate,orderTransferChange,payNum,payBuyerNumChange,payAmount,payAmountChange,payTransferRate,payTransferRateChange from app")
     List<App> listAll();
 

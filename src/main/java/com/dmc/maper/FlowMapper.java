@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * Created by xiaobianchen on 15/9/21.
  */
-public interface FlowMapper {
+public interface FlowMapper extends BaseMapper{
 
     @Select("SELECT merchantName,date,source,sourceDetails,accessNum,accessChange,buyerNum,buyerChange,orderTransferRate,orderTransferChange,payNum,payBuyerNumChange,payAmount,payAmountChange,payTransferRate,payTransferRateChange from flow")
     List<Flow> listAll();
@@ -45,6 +45,5 @@ public interface FlowMapper {
 
     @Select("SELECT DISTINCT sourceDetails from flow")
     List<String> getSourceDetails();
-
 
 }

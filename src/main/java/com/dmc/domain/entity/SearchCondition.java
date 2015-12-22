@@ -5,8 +5,6 @@ package com.dmc.domain.entity;
  * @version 1.0 2015/10/23
  *
  * This class is used to encapsulate the searchCondition
- *
- *
  */
 public class SearchCondition {
     private String source;

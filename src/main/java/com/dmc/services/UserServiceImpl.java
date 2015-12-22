@@ -14,13 +14,37 @@ import java.util.List;
  *  Created by Xiaobian Chen on 2015年6月17日
  */
 @Service("userService")
+@SuppressWarnings("rawtypes")
 public class UserServiceImpl implements UserService {
 	
 	@Autowired
 	private UserMapper userMapper;
-	
-	public void insert(User user) {
+
+	@Override
+	public void insert(Object o) {
+		User user = convert((User) o);
 		userMapper.insertUser(user);
+	}
+
+	private User convert(User o) {
+		return o;
+	}
+
+	@Override
+	public void update(Object o) {
+		User user = convert((User) o);
+		userMapper.updateUsers(user);
+	}
+
+	@Override
+	public void delete(String name) {
+		userMapper.deleteUser(name);
+	}
+
+	
+	@Override
+	public List list() {
+		return userMapper.listUsers();
 	}
 
 	/**
@@ -87,20 +111,5 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public void updateUser(ResetPassword reset) {
 		userMapper.updateUser(reset);
-	}
-
-	@Override
-	public void deleteUser(String username) {
-         userMapper.deleteUser(username);
-	}
-
-	@Override
-	public List<User> listUsers() {
-		return userMapper.listUsers();
-	}
-
-	@Override
-	public void updateUsers(User user) {
-        userMapper.updateUsers(user);
 	}
 }

@@ -2,6 +2,7 @@ package com.dmc.domain.entity;
 
 /**
  * Created by kyxiong on 11/2/2015.
+ * This class is used to handle product data
  */
 public class Product {
 

@@ -5,6 +5,7 @@ import com.dmc.domain.entity.Result;
 import com.dmc.domain.entity.User;
 import com.dmc.services.UserService;
 import com.google.gson.Gson;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -21,10 +23,12 @@ import java.util.List;
 /**
  * @author xiaobian.chen
  * @version 1.0 2015/10/21
+ *
+ * This class is used to handle user authorization(add/delete/update user)
  */
 @Controller
 @RequestMapping(value="/admin")
-public class AdminController {
+public class AdminController extends BaseController{
 
     @Autowired
     private UserService userService;
@@ -39,11 +43,13 @@ public class AdminController {
      * @return
      */
     @RequestMapping(value="/listUsers",produces = "application/json;charset=utf-8")
-    public @ResponseBody String listUser(HttpServletRequest request,HttpServletResponse response) {
+    @Override
+    public @ResponseBody String list(HttpServletRequest request, HttpServletResponse response) {
         Integer page = Integer.valueOf(request.getParameter("page"));
         Integer rows = Integer.valueOf(request.getParameter("rows"));
         String  searchParameter = request.getParameter("searchConditions");
-        List<User> userList = createPaginationData(page, rows);
+        @SuppressWarnings("unchecked")
+		List<User> userList = createPaginationData(page, rows);
         userList = getListBasedSearchParameter(searchParameter,userList);
 
         Grid grid = new Grid();
@@ -60,7 +66,8 @@ public class AdminController {
      * @param user
      * @return
      */
-    @RequestMapping(value="/addUser",produces = "application/json;charset=utf-8")
+    @SuppressWarnings("unchecked")
+	@RequestMapping(value="/addUser",produces = "application/json;charset=utf-8")
     public void addUser(User user,HttpServletResponse response) {
         boolean success = userService.getUserByUserName(user.getUsername());
         Result result = new Result();
@@ -92,7 +99,7 @@ public class AdminController {
         Result result = new Result();
         String username = request.getParameter("id");
         try {
-            userService.deleteUser(username);
+            userService.delete(username);
             result.setMessage("delete user successfully!");
             result.setSuccess(true);
             result.writeJson(result,response);
@@ -107,14 +114,16 @@ public class AdminController {
      * @param user
      * @param response
      */
-    @RequestMapping(value="/updateUser")
+    @SuppressWarnings("unchecked")
+	@RequestMapping(value="/updateUser",produces = "application/json;charset=utf-8")
     public void updateUser(User user,HttpServletResponse response) {
         Result result = new Result();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         String registerTime = sdf.format(new Date());
         try {
         	user.setRegisterDate(registerTime);
-            userService.updateUsers(user);
+            userService.update(user);
+
             result.setMessage("update user successfully!");
             result.setSuccess(true);
             result.writeJson(result,response);
@@ -130,8 +139,10 @@ public class AdminController {
      * @param rows
      * @return
      */
-    public List<User> createPaginationData(int pageNumber,int rows){
-        List<User> userList = userService.listUsers();
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+	@Override
+    public List createPaginationData(int pageNumber, int rows) {
+		List<User> userList = userService.list();
 
         if(rows < userList.size()){
             if(pageNumber == 1){
@@ -147,15 +158,17 @@ public class AdminController {
         return userList;
     }
 
-
     /**
      * get search data
      * @param searchParameter
-     * @param userList
+     * @param list
      * @return
      */
-    public List<User> getListBasedSearchParameter(String searchParameter,List<User> userList) {
+    @Override
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+    public List<User> getListBasedSearchParameter(String searchParameter, List list) {
         List<User> searchList = new ArrayList<User>();
+		List<User> userList = list;
         if(null != searchParameter && !searchParameter.equals("")){
             searchList = new ArrayList<User>();
             searchParameter = searchParameter.toUpperCase();
@@ -172,7 +185,6 @@ public class AdminController {
             userList = searchList;
             searchList = null;
         }
-
         return userList;
     }
 }
