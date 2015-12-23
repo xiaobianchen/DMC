@@ -10,7 +10,9 @@ import java.util.List;
  */
 @SuppressWarnings("rawtypes")
 public interface GenericController {
-    public String list(HttpServletRequest request,HttpServletResponse response);
-	public List createPaginationData(int pageNumber,int rows);
-    public List getListBasedSearchParameter(String searchParameter,List tList);
+    public String list(HttpServletRequest request, HttpServletResponse response);
+
+    public List createPaginationData(int pageNumber, int rows);
+
+    public List getListBasedSearchParameter(String searchParameter, List tList);
 }

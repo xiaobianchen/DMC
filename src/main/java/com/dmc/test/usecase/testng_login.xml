@@ -14,7 +14,7 @@
 	  	</run>
 	  </groups>
 	  <classes>
-			<class name="com.dmc.test.LoginTestPlan" />
+			<class name="com.dmc.test.usecase.LoginTestPlan" />
      </classes>
   </test>
     

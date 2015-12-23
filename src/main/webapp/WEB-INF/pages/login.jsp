@@ -7,23 +7,18 @@
 <html>
 <head>
 	<title>登录</title>
-	<style type="text/css">
-		.header{
-			width: 990px;
-			margin: 0 auto;
-		}
-	</style>
 </head>
-<body style="position: fixed;width: 100%; height: 100%">
+<body class="clsbody">
 <div class="header">
-	<div id="logo">
+	<img src="img/dmc.ico" alt="DMC" class="clslogo">
+	<div class="logo">
 		<h1><font color="black">DMC 欢迎登录</font></h1>
 	</div>
 </div>
 
 <!-- 登陆窗口 begin -->
 <div class="login-module">
-	<div class="login-banner" style="background-color: #ff283c">
+	<div class="login-banner">
 	   <div class="inner">
 			<div class="login-form">
 				<form method="post" id="form">

@@ -4,17 +4,23 @@ body {font-family: "Trebuchet MS", "Helvetica", "Arial",  "Verdana", "sans-serif
 a{text-decoration:none;}
 a:hover{text-decoration: underline;}
 
+.clsbody{ position: relative;width: 100%;height: 100%; background-color:#f2f2f2;}
+.header{width: 990px; height:70px; margin: 0 auto;}
+/*logo*/
+.logo{margin-left: 500px;}
+.clslogo{margin-top:20px;margin-left: -5px;}
+
 /*pop-box*/
 .pop-box {display: none; position: absolute; top:30%; left: 50%; padding: 10px; margin-left: -150px; z-index: 100; width: 300px; background-color: #fff; border: 1px solid #bbb; box-shadow: 0 0 5px #666;}
 .pop-box textarea{ width: 100%; margin: 0; box-sizing: border-box; resize: none;}
 .pop-box button{ margin-right: 5px; margin-top: 10px;}
 
 /*min-window*/
-.min-window{ display: none; position: absolute; bottom: 0; right: 0; padding: 5px 15px; background-color: rgba(17,106,196,.8);;}
+.min-window{ display: none; position: absolute; bottom: 0; right: 0; padding: 5px 15px; background-color: rgba(17,106,196,.8);}
 .min-window i{ margin: 0 3px;}
 
 /*登陆窗口*/
-.login-banner{position: absolute;left: 0;top: 0; width: 100%;height: 475px;background: #e93854;}
+.login-banner{position: absolute;left: 0;top: 0; width: 100%;height: 475px;background-color: rgba(255, 255, 255, 0.9);}
 .login-module{ position: absolute; width: 100%; height: 100%;}
 .login-module .inner{ position: relative; width: 100%; height: 100%;}
 .login-bg{ position: absolute; width: 100%; height: 100%; background-color:#F9F9F9; z-index: 1;}
@@ -172,6 +178,8 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ed1c24', endC
 #progressbar {margin-top: 20px;}
 .progress-label{ font-weight: bold; text-shadow: 1px 1px 0 #fff;}
 .ui-dialog-titlebar-close {display: none;  }
+
+
  
 
   
