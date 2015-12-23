@@ -1,15 +1,5 @@
 package com.dmc.utils;
 
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.InputStreamReader;
-import java.net.URL;
-import java.net.URLEncoder;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.net.ssl.HttpsURLConnection;
-
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
@@ -19,39 +9,26 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import javax.net.ssl.HttpsURLConnection;
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  * Created by Xiaobian Chen on 2015年9月7日
+ * This class is some exmaple for the  HttpClient
  */
 public class HttpClientUtils {
     
 	private List<String> cookies;
 	private HttpsURLConnection conn; 
 	private final String USER_AGENT = "Mozilla/5.0";
-	
-//	public static void main(String[] args) throws Exception {
-//		
-//		String url = "https://accounts.google.com/ServiceLoginAuth";
-//		String gmail = "https://mail.google.com/mail/";
-//
-//		HttpClientUtils http = new HttpClientUtils();
-//		
-//		// make sure cookies is turn on
-//		CookieHandler.setDefault(new CookieManager());
-//		
-//		//1.sent a get request
-//		String page = http.getPageContent(url);
-//		String postParms = http.getFormParms(page,"chenxiaobian89@163.com","ch4890467");
-//		
-//		//2.construct post's content and sent a post request
-//		http.sentPost(url,postParms);
-//		
-//		//3.success go to gmail
-//		String result = http.getPageContent(gmail);
-//		System.out.println(result);
-//	}
 
-	
 	public String getPageContent(String url) throws Exception {
 		URL obj = new URL(url);
 		conn = (HttpsURLConnection) obj.openConnection();

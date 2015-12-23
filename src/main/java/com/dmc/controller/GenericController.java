@@ -1,8 +1,5 @@
 package com.dmc.controller;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import java.util.List;
 
 /**
@@ -10,7 +7,6 @@ import java.util.List;
  */
 @SuppressWarnings("rawtypes")
 public interface GenericController {
-    public String list(HttpServletRequest request, HttpServletResponse response);
 
     public List createPaginationData(int pageNumber, int rows);
 

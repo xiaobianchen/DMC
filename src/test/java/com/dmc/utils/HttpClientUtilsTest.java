@@ -7,10 +7,9 @@
 //
 //	@Test
 //	public void testGetRequest() throws Exception {
-//		String url = "http://www.google.com/search?q=httpClient";
+//		String url = "http://www.baidu.com/s?wd=iphone6s";
 //		String content = HttpClientUtils.getRequest(url);
 //		System.out.println(content);
-//		
 //	}
 //
 //}

@@ -5,20 +5,19 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 <jsp:include page="authorized.jsp"/>
-<jsp:include page="header.jsp"/>
 <jsp:include page="footer.jsp"/>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<base href="<%=basePath%>">
+    <link rel="shortcut icon" href="img/favicon.ico">
 	<title>登录-DMC,就购了</title>
-	<link rel="shortcut icon" href="img/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css">
 	<link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
 	<link rel="stylesheet" type="text/css" href="easyui/demo.css">
 	<script type="text/javascript" src="easyui/jquery.min.js"></script>
 	<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
+
 	<style type="text/css">
 		#fm{
 			margin:0;
@@ -132,63 +131,62 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</script>
 </head>
 <body>
-	<h2 align="center"><span style="color:dodgerblue">DMC用户管理</span></h2>
-	<div class="demo-info" style="margin-bottom:10px">
-		<div class="demo-tip icon-tip">&nbsp;</div>
-	</div>
+        <h2 align="center"><span style="color:dodgerblue">DMC用户管理</span></h2>
+        <div class="demo-info" style="margin-bottom:10px">
+            <div class="demo-tip icon-tip">&nbsp;</div>
+        </div>
 	
-	<table id="dg" title="用户管理" class="easyui-datagrid" style="width:100%;height:400px;"
-			url="admin/listUsers"
-			toolbar="#toolbar" pagination="true"
-			rownumbers="true" fitColumns="true" singleSelect="true">
-		<thead>
-			<tr>
-				<th field="username" width="20">用户名</th>
-				<th field="password" width="30">密码</th>
-				<th field="email" width="30">邮箱</th>
-				<th field="phone" width="30">电话</th>
-			</tr>
-		</thead>
-	</table>
+        <table id="dg" title="用户管理" class="easyui-datagrid" style="width:100%;height:300px;"
+                url="admin/listUsers"
+                toolbar="#toolbar" pagination="true"
+                rownumbers="true" fitColumns="true" singleSelect="true">
+            <thead>
+                <tr>
+                    <th field="username" width="20">用户名</th>
+                    <th field="password" width="30">密码</th>
+                    <th field="email" width="30">邮箱</th>
+                    <th field="phone" width="30">电话</th>
+                </tr>
+            </thead>
+        </table>
 
-	<div id="toolbar">
-		<a href="javascript:void(0);" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newUser()">新建用户</a>
-		<a href="javascript:void(0);" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editUser()">编辑用户</a>
-		<a href="javascript:void(0);" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="removeUser()">删除用户</a>
-		<div>
-			<span>搜索:</span>
-			<input id="search" style="line-height:26px;border:1px solid #ccc">
-			<a href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-search'" style="width:80px" onclick="doSearch()">Search</a>
-		</div>
-	</div>
+        <div id="toolbar">
+            <a href="javascript:void(0);" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newUser()">新建用户</a>
+            <a href="javascript:void(0);" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editUser()">编辑用户</a>
+            <a href="javascript:void(0);" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="removeUser()">删除用户</a>
+            <div>
+                <span>搜索:</span>
+                <input id="search" style="line-height:26px;border:1px solid #ccc">
+                <a href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-search'" style="width:80px" onclick="doSearch()">Search</a>
+            </div>
+        </div>
 	
-	<div id="dlg" class="easyui-dialog" style="width:400px;height:280px;padding:10px 20px"
-			closed="true" buttons="#dlg-buttons">
-		<div class="ftitle">用户信息</div>
-		<form id="fm" method="post" novalidate>
-			<div class="fitem">
-				<label>用户名:</label>
-				<input name="username" class="easyui-validatebox" required="true">
-			</div>
-			<div class="fitem">
-				<label>密码:</label>
-				<input name="password" class="easyui-validatebox" required="true">
-			</div>
-			<div class="fitem">
-				<label>邮箱:</label>
-				<input name="email">
-			</div>
-			<div class="fitem">
-				<label>电话:</label>
-				<input name="phone">
-			</div>
-		</form>
-	</div>
+        <div id="dlg" class="easyui-dialog" style="width:400px;height:280px;padding:10px 20px"
+                closed="true" buttons="#dlg-buttons">
+            <div class="ftitle">用户信息</div>
+            <form id="fm" method="post" novalidate>
+                <div class="fitem">
+                    <label>用户名:</label>
+                    <input name="username" class="easyui-validatebox" required="true">
+                </div>
+                <div class="fitem">
+                    <label>密码:</label>
+                    <input name="password" class="easyui-validatebox" required="true">
+                </div>
+                <div class="fitem">
+                    <label>邮箱:</label>
+                    <input name="email">
+                </div>
+                <div class="fitem">
+                    <label>电话:</label>
+                    <input name="phone">
+                </div>
+            </form>
+        </div>
 
-	<div id="dlg-buttons">
-		<a href="javascript:void(0);" class="easyui-linkbutton" iconCls="icon-ok" onclick="saveUser()">保存</a>
-		<a href="javascript:void(0);" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlg').dialog('close')">取消</a>
-	</div>
-
+        <div id="dlg-buttons">
+            <a href="javascript:void(0);" class="easyui-linkbutton" iconCls="icon-ok" onclick="saveUser()">保存</a>
+            <a href="javascript:void(0);" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlg').dialog('close')">取消</a>
+        </div>
 </body>
 </html>
