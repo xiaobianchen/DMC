@@ -15,15 +15,16 @@
 	</style>
 </head>
 
-<body style="position: fixed;width: 100%; height: 100%">
+<body class="clsbody">
     <div class="header">
-		<div id="logo">
+		<img src="img/dmc.ico" alt="DMC" class="clslogo">
+		<div class="logo">
 			<h1><font color="black">DMC 欢迎您</font></h1>
 		</div>
     </div>
 
 	<div class="login-module">
-		<div class="login-banner" style="background-color: #ff283c">
+		<div class="login-banner">
 			<div class="inner">
 				<div class="register-form">
 						<form method="post">

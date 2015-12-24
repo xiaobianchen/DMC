@@ -1,14 +1,14 @@
 package com.dmc.webdriver;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 
 import java.io.*;
-import java.util.concurrent.TimeUnit;
 import java.net.URL;
 import java.net.URLConnection;
-import org.apache.commons.io.FileUtils;
+import java.util.concurrent.TimeUnit;
 /**
  * Created by kyxiong on 10/19/2015.
  */

@@ -1,24 +1,15 @@
 package com.dmc.utils;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.HttpClient;
+
+import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import org.apache.commons.httpclient.HttpClient;
-import org.apache.commons.httpclient.HttpException;
-import org.apache.commons.httpclient.NameValuePair;
-import org.apache.commons.httpclient.methods.PostMethod;
-
 /**
  * 
  * Created by Xiaobian Chen on 2015年6月16日
@@ -191,27 +182,27 @@ public class GetUrlContentUtils {
 		return cssList;
 	}
 	
-	public static void signIn() throws IOException, HttpException,
+	/*public static void signIn() throws IOException, HttpException,
 			UnsupportedEncodingException {
-		/**
+		*//**
 		 * step 1. get data from url by log in username and password
-		 */
-	    HttpClient client = new HttpClient(); 
+		 *//*
+	    HttpClient client = new HttpClient();
 	    PostMethod post = new PostMethod("http://localhost:8080/DMC/");         
 	    NameValuePair username = new NameValuePair("username", "奥派阿西官方旗舰店:数据");     
 	    NameValuePair password = new NameValuePair("password", "hua18826824918");     
-	    post.setRequestBody(new NameValuePair[] { username, password });     
+	    post.setRequestBody(new NameValuePair[] { username, password });
 	    client.executeMethod(post);     
 	    
 	    String responseString = new String(post.getResponseBodyAsString().getBytes("gbk"));        
 	    System.out.println("=========================log in successfully===========================");          
 	    System.out.println(responseString);  
 	    
-	    /**
+	    *//**
 	     * step2. you can invoke specify method by passed url
 	     * for example:get link information from the url 
 	     * System.out.println(getLink(responseString));
 	     * 
-	     */
-	}
+	     *//*
+	}*/
 }

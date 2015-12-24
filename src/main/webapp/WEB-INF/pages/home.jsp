@@ -46,7 +46,7 @@
                     </li>
                     <li class=""><a href="#">支持中心</a>
                         <ul class="nav-dropdown-list">
-                            <li><a target="_blank" href="/DMC/support">校验码</a></li>
+                            <li><a target="_blank" href="/DMC/support">后台管理</a></li>
                         </ul>
                     </li>
                     <li class=""><a href="#">成功案例</a></li>

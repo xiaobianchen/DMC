@@ -65,17 +65,18 @@ public class RegisterController {
 		String email = request.getParameter("email");
 		String phone = request.getParameter("phone");
 
-		boolean isUser = userService.getUserByUserName(username);
-		boolean isEmail = userService.getUserByEmail(email);
-		boolean isPhone = userService.getUserByPhone(phone);
-		boolean isFlag = isUser||isEmail||isPhone;
+		boolean isExist = userService.getUserByUserName(username);
+//		boolean isPhone = userService.getUserByPhone(phone);
+//		boolean isEmail = userService.getUserByEmail(email);
+//		boolean isFlag = isUser||isEmail||isPhone;
 
 		User user = new User();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 		String registerTime = sdf.format(new Date());
 		user.setRegisterDate(registerTime);
-		
-		if(isFlag){
+
+		//if true return user is exist, else return insert new user
+		if(isExist){
 			return "error";
 		}else{
 			user.setUsername(username);
