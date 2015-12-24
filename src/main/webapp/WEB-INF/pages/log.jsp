@@ -5,13 +5,18 @@
   Time: 11:54
   To change this template use File | Settings | File Templates.
 --%>
-<jsp:include page="main.jsp"/>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>DMC日志管理中心</title>
+  <link rel="shortcut icon" href="img/favicon.ico">
 </head>
 <body>
-
+   <h1>日志管理中心</h1>
 </body>
 </html>

@@ -8,7 +8,7 @@ a:hover{text-decoration: underline;}
 .header{width: 990px; height:70px; margin: 0 auto;}
 /*logo*/
 .logo{margin-left: 500px;}
-.clslogo{margin-top:20px;margin-left: -5px;}
+.clslogo{margin-top:20px;margin-left: -5px;position: fixed;}
 
 /*pop-box*/
 .pop-box {display: none; position: absolute; top:30%; left: 50%; padding: 10px; margin-left: -150px; z-index: 100; width: 300px; background-color: #fff; border: 1px solid #bbb; box-shadow: 0 0 5px #666;}

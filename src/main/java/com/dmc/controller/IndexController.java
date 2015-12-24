@@ -30,7 +30,7 @@ public class IndexController{
 	
 	@RequestMapping(value="/indexPage", method= RequestMethod.GET)
 	public String getIndex(){
-		return "index";
+		return "home";
 	}
 
 	/**

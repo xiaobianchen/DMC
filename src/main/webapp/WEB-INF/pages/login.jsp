@@ -7,7 +7,6 @@
 <html>
 <head>
 	<title>登录</title>
-	<script type="text/javascript" src="js/jquery.blockUI.js"></script>
 </head>
 <body class="clsbody">
 <div class="header">

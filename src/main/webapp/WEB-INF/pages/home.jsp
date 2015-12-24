@@ -1,8 +1,14 @@
+<%@ page import="com.dmc.domain.entity.Login" %>
 <%@ page language="java" contentType="text/html; charset=utf8"
     pageEncoding="utf8"%>
 <!DOCTYPE html>
 <jsp:include page="main.jsp"/>
 <jsp:include page="footer.jsp"/>
+<%@ page import="com.dmc.domain.entity.Login" %>
+<%
+   Login user = (Login)request.getSession().getAttribute("login");
+%>
+
 <html lang="zh-cn" data-lang="zh-cn" data-template="simple" class="lang-zh-cn">
 <head>
     <meta charset="utf-8"/>
@@ -55,11 +61,28 @@
                     <li><a href="#" target="_blank">社区</a></li>
                 </ul>
             </div>
-            <div class="account-dropbox">
-                <a class="login-a ml10" href="/DMC/login">登录</a>
-                &nbsp;<span class="divider">|</span>&nbsp;
-                <a href="/DMC/register">注册</a>
-            </div>
+
+            <%
+              if(user !=null){
+                  %>
+                  <div class="account-dropbox">
+                      欢迎您,
+                  <a class="login-a ml10" href="/DMC/login"><%= user.getUsername()%></a>
+                          &nbsp;<span class="divider">|</span>&nbsp;
+                  <a href="/DMC/login">退出</a>
+                  </div>
+            <% }
+             else{
+                  %>
+                  <div class="account-dropbox">
+                  <a class="login-a ml10" href="/DMC/login">登录</a>
+                          &nbsp;<span class="divider">|</span>&nbsp;
+                  <a href="/DMC/register">注册</a>
+                  </div>
+            <% }
+           %>
+
+
         </div>
     </div>
 

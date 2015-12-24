@@ -49,9 +49,10 @@ function validate_user(username,password){
 	    			if(data=='success'){
 	    				location.href="/DMC/index";
 	    			}else{
-	    				$("#existPwd").css('display','block');
+						$("#existPwd").css('display','block');
 	    				$("#password").focus();
-	    				return false;
+						$.unblockUI();
+						return false;
 	    			}
 	    		}
 	    	});
