@@ -21,6 +21,7 @@
 <script type="text/javascript" src="js/jquery.msgBox.js"></script>
 <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="js/jquery.blockUI.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 
 </head>

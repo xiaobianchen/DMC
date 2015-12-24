@@ -1,10 +1,24 @@
+/*登陆遮罩效果*/
+function checkForm(){
+	$.blockUI({
+		message : '<h1>正在登陆中，请稍候……</h1>',
+		css : {
+		border : '1px solid khaki'
+		}
+	});
+
+	setTimeout('validate_loginForm()',1000);
+}
+
+
 /*validate login form*/
 function validate_loginForm(){
   	var username = $("input[name='username']").val();
   	var password = $("input[name='password']").val();
+
   	validate_user(username,password);
-  	
-  	/*remember password*/
+
+	/*remember password*/
   	if($("#ck_rmbUser").is(":checked")){
   		$.cookie("rmbUser", "true", { expires: 7 }); //store 7 days cookies
         $.cookie("username", username, { expires: 7 });  
@@ -76,7 +90,19 @@ $(document).ready(function(){
 		  $("#checkoldPassword").css('display','none');
 	});
 });
- 
+
+/*注册遮罩效果*/
+function checkRegisterForm(){
+	$.blockUI({
+		message : '<h1>用户注册中,请稍候……</h1>',
+		css : {
+			border : '1px solid khaki'
+		}
+	});
+    setTimeout('validate_regForm()',2000);
+}
+
+
 /*validate register form*/
 function validate_regForm(){
      var username = $("input[name='username']").val();
@@ -105,9 +131,13 @@ function validate_regForm(){
     		 type:"POST",
     		 url:"/DMC/register",
     		 data:"username=" + username + "&password=" + password  + "&email=" + email + "&phone=" + phone,
-    		 success:function(data){
+			 complete : function() {
+				 // 数据加载完毕，取消等待画面的遮罩效果
+				 $.unblockUI();
+			 },
+			 success:function(data){
     			if(data == 'success'){
-    				alert("用户注册成功!");
+    				//alert("用户注册成功!");
     				location.href='/DMC/login';
     			}else if(data == 'error'){
     				alert("该用户已经存在,请确认!");
