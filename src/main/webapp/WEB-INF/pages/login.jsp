@@ -7,6 +7,7 @@
 <html>
 <head>
 	<title>登录</title>
+	<script type="text/javascript" src="js/jquery.blockUI.js"></script>
 </head>
 <body class="clsbody">
 <div class="header">
@@ -45,7 +46,7 @@
 						</label>
 					</div>
 					<div class="btn-box">
-						<img src="img/btn-login.png" style="width: 100%;" onclick="return validate_loginForm();"/>
+						<img src="img/btn-login.png" style="width: 100%;" onclick="return checkForm();"/>
 						<label>
 							<a id="register" href="/DMC/register" style="float:right;margin-top:5px;">免费注册</a>
 						</label>

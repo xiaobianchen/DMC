@@ -17,5 +17,10 @@ public class SupportController {
         return "support";
     }
 
+    @RequestMapping(value="/log",method = RequestMethod.GET)
+    public String log(){
+        return "log";
+    }
+
 
 }

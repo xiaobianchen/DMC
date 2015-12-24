@@ -61,7 +61,7 @@
 									</label>
 								</div>
 								<div class="btn-box">
-									<img src="img/register.png" style="width: 50%;" onclick="return validate_regForm();"/>
+									<img src="img/register.png" style="width: 50%;" onclick="return checkRegisterForm();"/>
 								</div>
 						</form>
 				</div> 

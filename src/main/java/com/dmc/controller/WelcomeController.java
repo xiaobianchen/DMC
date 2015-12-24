@@ -15,6 +15,6 @@ public class WelcomeController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String welcome(){
-        return "navication";
+        return "welcome";
     }
 }

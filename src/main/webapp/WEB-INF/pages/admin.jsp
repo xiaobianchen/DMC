@@ -136,7 +136,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <div class="demo-tip icon-tip">&nbsp;</div>
         </div>
 	
-        <table id="dg" title="用户管理" class="easyui-datagrid" style="width:100%;height:300px;"
+        <table id="dg" title="用户管理" class="easyui-datagrid" style="width:100%;height:800px;"
                 url="admin/listUsers"
                 toolbar="#toolbar" pagination="true"
                 rownumbers="true" fitColumns="true" singleSelect="true">
