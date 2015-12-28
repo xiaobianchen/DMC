@@ -1,20 +1,21 @@
 package com.dmc.utils.spider;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
- * 
- * Created by Xiaobian Chen on 2015年7月21日
- *
+ * @author xiaobianchen
+ * @version 1.0 2015/7/21
+ * @link https://github.com/xiaobianchen/DMC
  * This class is used to query data
+ *
  */
 public class ExtractService {
 	

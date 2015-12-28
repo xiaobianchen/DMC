@@ -7,10 +7,11 @@ import org.quartz.JobExecutionException;
 import org.springframework.scheduling.quartz.QuartzJobBean;
 
 /**
- * @author xiaobian.chen
+ * @author xiaobianchen
  * @version 1.0 2015/10/19
- *
+ * @link https://github.com/xiaobianchen/DMC
  * CallProcedure Job
+ *
  */
 public class CallProcedureJob extends QuartzJobBean {
 

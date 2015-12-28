@@ -10,9 +10,11 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.dmc.utils.RandomUtils;
 
 /**
- * Created by Xiaobian Chen on 2015年6月11日
- * Home Page
+ * @author xiaobianchen
+ * @version 1.0 2015/6/11
+ * @link https://github.com/xiaobianchen/DMC
  * This class is used to handle home page
+ *
  */
 @Controller
 @RequestMapping("/home")
@@ -27,9 +29,8 @@ public class HomeController {
 
     /**
      * Home Page to DMC
-     *
      * @param model
-     * @return
+     * @return home page
      */
     @RequestMapping(method = RequestMethod.GET)
     public String home(ModelMap model, RedirectAttributes redirectAttributes) {

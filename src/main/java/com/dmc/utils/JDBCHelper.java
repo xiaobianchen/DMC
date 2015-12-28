@@ -1,13 +1,15 @@
 package com.dmc.utils;
 
-import java.util.HashMap;
-
 import org.apache.commons.dbcp.BasicDataSource;
-
 import org.springframework.jdbc.core.JdbcTemplate;
 
+import java.util.HashMap;
+
+
 /**
- * Created by Xiaobian Chen on 2015年7月30日
+ * @author xiaobianchen
+ * @version 1.0 2015/7/30
+ * @link https://github.com/xiaobianchen/DMC
  * JDBC Utils
  */
 public class JDBCHelper {

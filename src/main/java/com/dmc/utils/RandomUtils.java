@@ -4,8 +4,9 @@ import java.util.Random;
 
 
 /**
- * 
- * Created by Xiaobian Chen on 2015年10月13日
+ * @author xiaobianchen
+ * @version 1.0 2015/10/13
+ * @link https://github.com/xiaobianchen/DMC
  * This class is used to provide to generate number randomly
  *
  */

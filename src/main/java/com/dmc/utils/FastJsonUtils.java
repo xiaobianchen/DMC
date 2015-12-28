@@ -1,16 +1,18 @@
 package com.dmc.utils;
 
-import java.io.IOException;
-
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.dmc.domain.entity.Group;
 import com.dmc.domain.entity.User;
 
+import java.io.IOException;
+
 /**
- * 
- *  Created by Xiaobian Chen on 2015年7月11日
- *  Simple Example for FastJson
+ * @author xiaobianchen
+ * @version 1.0 2015/7/11
+ * @link https://github.com/xiaobianchen/DMC
+ * Simple Example for FastJson
+ *
  */
 public class FastJsonUtils {
 	

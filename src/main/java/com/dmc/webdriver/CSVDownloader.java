@@ -10,7 +10,10 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.concurrent.TimeUnit;
 /**
- * Created by kyxiong on 10/19/2015.
+ * @author kyxiong
+ * @version 1.0 2015/10/19
+ * @link https://github.com/xiaobianchen/DMC
+ *
  */
 public class CSVDownloader {
     public static void download() throws Exception {

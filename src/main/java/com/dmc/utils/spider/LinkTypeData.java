@@ -1,8 +1,9 @@
 package com.dmc.utils.spider;
+
 /**
- * 
- * Created by Xiaobian Chen on 2015年7月21日
- *
+ * @author xiaobianchen
+ * @version 1.0 2015/7/21
+ * @link https://github.com/xiaobianchen/DMC
  * This class defines Data for the Link
  *
  */

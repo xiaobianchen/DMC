@@ -3,6 +3,7 @@ package com.dmc.domain.entity.exception;
 /**
  * @author xiaobian.chen
  * @version 1.0 2015/11/5
+ * @link https://github.com/xiaobianchen/DMC
  * This exception class is for DMC parent exception
  */
 public class CommonException extends RuntimeException{

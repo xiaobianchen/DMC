@@ -11,8 +11,9 @@ import com.dmc.domain.entity.User;
 import java.util.List;
 
 /**
- * 
- * Created by Xiaobian Chen on 2015年6月16日
+ * @author xiaobianchen
+ * @version 1.0 2015/6/16
+ * @link https://github.com/xiaobianchen/DMC
  * User Mapper: SQL with User
  *
  */

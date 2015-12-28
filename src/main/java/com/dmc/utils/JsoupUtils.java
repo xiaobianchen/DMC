@@ -1,8 +1,5 @@
 package com.dmc.utils;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.apache.log4j.Logger;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -10,10 +7,14 @@ import org.jsoup.nodes.Element;
 import org.jsoup.nodes.Node;
 import org.jsoup.select.Elements;
 import org.jsoup.select.NodeVisitor;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
- * 
- * Created by Xiaobian Chen on 2015年7月30日
- *
+ * @author xiaobianchen
+ * @version 1.0 2015/7/30
+ * @link https://github.com/xiaobianchen/DMC
  *
  */
 public class JsoupUtils {

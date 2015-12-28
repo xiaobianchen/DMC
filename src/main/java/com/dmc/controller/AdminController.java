@@ -19,10 +19,11 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * @author xiaobian.chen
+ *
+ * @author xiaobianchen
  * @version 1.0 2015/10/21
- *          <p/>
- *          This class is used to handle user authorization(add/delete/update user)
+ * @link https://github.com/xiaobianchen/DMC
+ * This class is used to handle user authorization(add/delete/update user)
  */
 @Controller
 @RequestMapping(value = "/admin")
@@ -38,8 +39,7 @@ public class AdminController extends BaseController implements GenericController
 
     /**
      * returns list for users
-     *
-     * @return
+     * @return  read the userlist from database
      */
     @RequestMapping(value = "/listUsers", produces = "application/json;charset=utf-8")
     @Override
@@ -47,6 +47,7 @@ public class AdminController extends BaseController implements GenericController
         Integer page = Integer.valueOf(request.getParameter("page"));
         Integer rows = Integer.valueOf(request.getParameter("rows"));
         String searchParameter = request.getParameter("searchConditions");
+
         @SuppressWarnings("unchecked")
         List<User> userList = createPaginationData(page, rows);
         userList = getListBasedSearchParameter(searchParameter, userList);
@@ -62,9 +63,8 @@ public class AdminController extends BaseController implements GenericController
 
     /**
      * add user
-     *
      * @param user
-     * @return
+     * @return  add user operation
      */
     @SuppressWarnings("unchecked")
     @RequestMapping(value = "/addUser", produces = "application/json;charset=utf-8")
@@ -91,9 +91,9 @@ public class AdminController extends BaseController implements GenericController
 
     /**
      * remove user
-     *
      * @param request
      * @param response
+     * @return remove user operation
      */
     @RequestMapping(value = "/removeUser", produces = "application/json;charset=utf-8")
     public void removeUser(HttpServletRequest request, HttpServletResponse response) {
@@ -112,9 +112,9 @@ public class AdminController extends BaseController implements GenericController
 
     /**
      * update user
-     *
      * @param user
      * @param response
+     * @return update user
      */
     @SuppressWarnings("unchecked")
     @RequestMapping(value = "/updateUser", produces = "application/json;charset=utf-8")
@@ -137,10 +137,9 @@ public class AdminController extends BaseController implements GenericController
 
     /**
      * create pagination data
-     *
      * @param pageNumber
      * @param rows
-     * @return
+     * @return create Pagination data
      */
     @SuppressWarnings({"unchecked", "rawtypes"})
     @Override
@@ -163,10 +162,9 @@ public class AdminController extends BaseController implements GenericController
 
     /**
      * get search data
-     *
      * @param searchParameter
      * @param list
-     * @return
+     * @return  get search data
      */
     @Override
     @SuppressWarnings({"unchecked", "rawtypes"})

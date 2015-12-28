@@ -5,7 +5,10 @@ import com.dmc.domain.entity.ProcessData;
 import java.util.List;
 
 /**
- * Created by xiaobianchen on 15/9/21.
+ * @author xiaobianchen
+ * @version 1.0 2015/9/21
+ * @link https://github.com/xiaobianchen/DMC
+ *
  */
 @SuppressWarnings("rawtypes")
 public interface FlowService extends GenericService{

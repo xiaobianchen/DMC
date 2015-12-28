@@ -18,10 +18,12 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
-
 /**
- * Created by Xiaobian Chen on 2015年9月7日
+ * @author xiaobianchen
+ * @version 1.0 2015/9/7
+ * @link https://github.com/xiaobianchen/DMC
  * This class is some exmaple for the  HttpClient
+ *
  */
 public class HttpClientUtils {
     

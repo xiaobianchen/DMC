@@ -1,9 +1,9 @@
 package com.dmc.domain.entity;
 
 /**
- * 
- * Created by Xiaobian Chen on 2015年6月23日
- *
+ * @author xiaobianchen
+ * @version 1.0 2015/6/23
+ * @link https://github.com/xiaobianchen/DMC
  *
  */
 public class Comment {

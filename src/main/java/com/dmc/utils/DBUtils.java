@@ -1,18 +1,21 @@
 package com.dmc.utils;
 
 import java.sql.*;
+
 /**
- * @author xiaobian.chen
+ * @author xiaobianchen
  * @version 1.0 2015/9/10
+ * @link https://github.com/xiaobianchen/DMC
  *
  * DB Utils
+ *
  */
 public class DBUtils {
 
     private static final String DRIVER_NAME = "com.mysql.jdbc.Driver";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "root";
-    private static final String URL = "jdbc:mysql://localhost:3307/dmc?autoReconnect=true";
+    private static final String URL = "jdbc:mysql://localhost:3306/dmc?autoReconnect=true";
     private static Connection connection = null;
     private static CallableStatement cstmt = null;
 

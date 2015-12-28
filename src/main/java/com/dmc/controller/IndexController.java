@@ -8,10 +8,9 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 /**
- * 
- * Created by Xiaobian Chen on 2015年6月11日
- * Index Page
- *
+ * @author xiaobianchen
+ * @version 1.0 2015/6/11
+ * @link https://github.com/xiaobianchen/DMC
  */
 @Controller
 @SessionAttributes("login")

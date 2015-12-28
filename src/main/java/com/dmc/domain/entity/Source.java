@@ -1,7 +1,9 @@
 package com.dmc.domain.entity;
 
 /**
- * Created by xiaobianchen on 15/10/20.
+ * @author xiaobianchen
+ * @version 1.0 2015/10/20
+ * @link https://github.com/xiaobianchen/DMC
  */
 public class Source {
 

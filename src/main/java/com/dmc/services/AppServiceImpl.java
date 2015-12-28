@@ -9,7 +9,9 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * Created by xiaobianchen on 15/10/11.
+ * @author xiaobianchen
+ * @version 1.0 2015/10/11
+ * @link https://github.com/xiaobianchen/DMC
  */
 @Service("appService")
 @SuppressWarnings("rawtypes")

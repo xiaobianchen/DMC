@@ -20,9 +20,9 @@ import com.dmc.services.UserService;
 import com.dmc.utils.RandomUtils;
 
 /**
- * 
- * Created by Xiaobian Chen on 2015/06/11
- * Register Page
+ * @author xiaobianchen
+ * @version 1.0 2015/6/11
+ * @link https://github.com/xiaobianchen/DMC
  * This class is used to handle register operations
  *
  */

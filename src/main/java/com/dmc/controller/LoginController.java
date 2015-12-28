@@ -17,11 +17,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 /**
- * 
- * Created by Xiaobian Chen on 2015年6月11日
- * Login Page
- *
+ * @author xiaobianchen
+ * @version 1.0 2015/6/11
+ * @link https://github.com/xiaobianchen/DMC
+ * This class is used to handle login operations
  */
+
 @Controller
 public class LoginController {
 
@@ -99,6 +100,4 @@ public class LoginController {
 			return "error";
 		}
 	}
-
-
 }

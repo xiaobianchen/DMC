@@ -4,7 +4,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Created by xiaobianchen on 2015/12/22.
+ * @author xiaobianchen
+ * @version 1.0 2015/12/22
+ * @link https://github.com/xiaobianchen/DMC
  */
 public abstract class BaseController{
 

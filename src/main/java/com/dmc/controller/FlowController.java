@@ -12,9 +12,9 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import java.util.List;
 
 /**
- * 
- * Created by Xiaobian Chen on 2015年6月15日
- * Flow Page
+ * @author xiaobianchen
+ * @version 1.0 2015/6/15
+ * @link https://github.com/xiaobianchen/DMC
  * This class is used to handle flow data
  */
 @Controller

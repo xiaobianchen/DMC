@@ -7,10 +7,11 @@ import java.io.PrintWriter;
 import java.io.Serializable;
 
 /**
- * @author xiaobian.chen
+ * @author xiaobianchen
  * @version 1.0 2015/10/21
- *
+ * @link https://github.com/xiaobianchen/DMC
  * returns result for the response
+ *
  */
 public class Result implements Serializable {
 	private static final long serialVersionUID = 1L;

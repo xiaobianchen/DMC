@@ -1,28 +1,22 @@
 package com.dmc.webdriver;
 
+import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
-import java.io.BufferedReader;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.security.MessageDigest;
 import java.util.Date;
 
-import javax.imageio.ImageIO;
-
+/**
+ * @author kyxiong
+ * @version 1.0 2015/10/19
+ * @link https://github.com/xiaobianchen/DMC
+ *
+ */
 public class YunSu {
 	
-	/**
-	 * ×Ö·û´®MD5¼ÓÃÜ
-	 * @param s Ô­Ê¼×Ö·û´®
-	 * @return  ¼ÓÃÜºó×Ö·û´®
-	 */
+
 	public final static String MD5(String s) {
 		char hexDigits[] = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
 				'A', 'B', 'C', 'D', 'E', 'F' };
@@ -46,13 +40,7 @@ public class YunSu {
 		}
 	}
 	
-	/**
-	 * Í¨ÓÃURLÇëÇó·½·¨
-	 * @param url 		ÇëÇóURL£¬²»´ø²ÎÊý Èç£ºhttp://api.ysdm.net/register.xml
-	 * @param param 	ÇëÇó²ÎÊý£¬Èç£ºusername=test&password=1
-	 * @return 			Æ½Ì¨·µ»Ø½á¹ûXMLÑùÊ½ 
-	 * @throws IOException
-	 */
+
 	public static String httpRequestData(String url, String param)
 			throws IOException {
 		URL u;
@@ -84,14 +72,7 @@ public class YunSu {
 		return buffer.toString();
 	}
 
-	/**
-	 * ´ðÌâ
-	 * @param url 			ÇëÇóURL£¬²»´ø²ÎÊý Èç£ºhttp://api.ysdm.net/register.xml
-	 * @param param			ÇëÇó²ÎÊý£¬Èç£ºusername=test&password=1
-	 * @param data			Í¼Æ¬¶þ½øÖÆÁ÷
-	 * @return				Æ½Ì¨·µ»Ø½á¹ûXMLÑùÊ½ 
-	 * @throws IOException
-	 */
+
 	public static String httpPostImage(String url, String param,
 			byte[] data) throws IOException {
 		long time = (new Date()).getTime();
@@ -147,13 +128,7 @@ public class YunSu {
 		return buffer.toString();
 	}
 
-	/**
-	 * »ñÈ¡ÓÃ»§ÐÅÏ¢
-	 * @param username	ÓÃ»§Ãû
-	 * @param password	ÃÜÂë
-	 * @return			Æ½Ì¨·µ»Ø½á¹ûXMLÑùÊ½ 
-	 * @throws IOException
-	 */
+
 	public static String getInfo(String username, String password) {
 		String param = String.format("username=%s&password=%s", username, password);
 		String result;
@@ -166,14 +141,7 @@ public class YunSu {
 		return result;
 	}
 	
-	/**
-	 * ×¢²áÓÃ»§
-	 * @param username	ÓÃ»§Ãû
-	 * @param password	ÃÜÂë
-	 * @param email		ÓÊÏä
-	 * @return			Æ½Ì¨·µ»Ø½á¹ûXMLÑùÊ½ 
-	 * @throws IOException
-	 */
+
 	public static String register(String username, String password, String email) {
 		String param = String.format("username=%s&password=%s&email=%s", username, password, email);
 		String result;
@@ -186,14 +154,7 @@ public class YunSu {
 		return result;
 	}
 
-	/**
-	 * ³äÖµ
-	 * @param username	ÓÃ»§Ãû
-	 * @param id		¿¨ºÅ
-	 * @param password	ÃÜÂë
-	 * @return			Æ½Ì¨·µ»Ø½á¹ûXMLÑùÊ½ 
-	 * @throws IOException
-	 */
+
 	public static String recharge(String username, String id, String password) {
 
 		String param = String.format("username=%s&password=%s&id=%s", username,
@@ -208,18 +169,7 @@ public class YunSu {
 		return result;
 	}
 	
-	/**
-	 * ´ðÌâ(URL) 
-	 * @param username	ÓÃ»§Ãû
-	 * @param password	ÓÃ»§ÃÜÂë¡£(Ö§³Ö32Î»MD5)
-	 * @param typeid	ÌâÄ¿ÀàÐÍ
-	 * @param timeout	ÈÎÎñ³¬Ê±Ê±¼ä£¬Ä¬ÈÏÓë×îÐ¡ÖµÎª60Ãë¡£
-	 * @param softid	Èí¼þID£¬¿ª·¢Õß¿É×ÔÐÐÉêÇë¡£
-	 * @param softkey	Èí¼þKEY£¬¿ª·¢Õß¿É×ÔÐÐÉêÇë¡£
-	 * @param imageurl	Ô¶³ÌÍ¼Æ¬URL
-	 * @return			Æ½Ì¨·µ»Ø½á¹ûXMLÑùÊ½ 
-	 * @throws IOException
-	 */
+
 	public static String createByUrl(String username, String password,
 			String typeid, String timeout, String softid, String softkey,
 			String imageurl) {
@@ -250,16 +200,7 @@ public class YunSu {
 		return result;
 	}
 	
-	/**
-	 * ÉÏ±¨´íÌâ
-	 * @param username	ÓÃ»§Ãû
-	 * @param password	ÓÃ»§ÃÜÂë
-	 * @param softid	Èí¼þID
-	 * @param softkey	Èí¼þKEY
-	 * @param id		±¨´íÌâÄ¿µÄID
-	 * @return
-	 * @throws IOException
-	 */
+
 	public static String report(String username, String password, String softid, String softkey, String id) {
 		
 		String param = String
@@ -277,18 +218,7 @@ public class YunSu {
 		return result;
 	}
 	
-	/**
-	 * ÉÏ´«ÌâÄ¿Í¼Æ¬·µ»Ø½á¹û	
-	 * @param username		ÓÃ»§Ãû
-	 * @param password		ÃÜÂë
-	 * @param typeid		ÌâÄ¿ÀàÐÍ
-	 * @param timeout		ÈÎÎñ³¬Ê±Ê±¼ä
-	 * @param softid		Èí¼þID
-	 * @param softkey		Èí¼þKEY
-	 * @param filePath		ÌâÄ¿½ØÍ¼»òÔ­Ê¼Í¼¶þ½øÖÆÊý¾ÝÂ·¾¶
-	 * @return
-	 * @throws IOException
-	 */
+
 	public static String createByPost(String username, String password,
 			String typeid, String timeout, String softid, String softkey,
 			String filePath) {

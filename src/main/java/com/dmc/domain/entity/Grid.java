@@ -3,10 +3,11 @@ package com.dmc.domain.entity;
 import java.util.List;
 
 /**
- * @author xiaobian.chen
+ * @author xiaobianchen
  * @version 1.0 2015/10/21
- *
+ * @link https://github.com/xiaobianchen/DMC
  * This class is the response for the easyUI Grid
+ *
  */
 public class Grid {
     private int total;

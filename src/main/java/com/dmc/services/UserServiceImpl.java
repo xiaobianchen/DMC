@@ -10,8 +10,10 @@ import com.dmc.maper.UserMapper;
 import java.util.List;
 
 /**
- * 
- *  Created by Xiaobian Chen on 2015年6月17日
+ * @author xiaobianchen
+ * @version 1.0 2015/6/17
+ * @link https://github.com/xiaobianchen/DMC
+ *
  */
 @Service("userService")
 @SuppressWarnings("rawtypes")

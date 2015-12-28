@@ -7,7 +7,10 @@ import org.apache.ibatis.annotations.Select;
 import java.util.List;
 
 /**
- * Created by xiaobianchen on 15/10/11.
+ * @author xiaobianchen
+ * @version 1.0 2015/10/11
+ * @link https://github.com/xiaobianchen/DMC
+ *
  */
 public interface AppMapper extends BaseMapper{
     @Select("SELECT merchantName,date,source,sourceDetails,accessNum,accessChange,buyerNum,buyerChange,orderTransferRate,orderTransferChange,payNum,payBuyerNumChange,payAmount,payAmountChange,payTransferRate,payTransferRateChange from app")

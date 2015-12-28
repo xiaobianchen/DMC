@@ -6,13 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 /**
- * 
- * Created by Xiaobian Chen on 2015年6月26日
- *
+ * @author xiaobianchen
+ * @version 1.0 2015/6/26
+ * @link https://github.com/xiaobianchen/DMC
  *
  */
-
 @Service("commentService")
 public class CommentServiceImpl implements CommentService {
 	

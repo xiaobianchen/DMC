@@ -5,10 +5,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
- * Created by xiaobianchen on 2015/11/26.
- *
- * This page is used for testing
- */
+ * @author xiaobianchen
+ * @version 1.0 2015/11/26
+        * @link https://github.com/xiaobianchen/DMC
+        * This page is used for testing
+        */
 @Controller
 @RequestMapping(value="/welcome")
 public class WelcomeController {

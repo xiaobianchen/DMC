@@ -1,12 +1,12 @@
 package com.dmc.domain.entity;
 
 /**
- * 
- * Created by Xiaobian Chen on 2015年6月11日
- * User Information
+ * @author xiaobianchen
+ * @version 1.0 2015/6/11
+ * @link https://github.com/xiaobianchen/DMC
  *
  */
-public class User extends Object {
+public class User{
 	private String username;
 	private String password;
 	private String email;

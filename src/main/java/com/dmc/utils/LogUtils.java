@@ -1,10 +1,12 @@
 package com.dmc.utils;
+
 /**
- * 
- * Created by Xiaobian Chen on 2015年10月19日
- *  
+ * @author xiaobianchen
+ * @version 1.0 2015/10/19
+ * @link https://github.com/xiaobianchen/DMC
+ *
  * LogUtils is a tools provide log utils
- * 
+ *
  */
 public class LogUtils {
 

@@ -1,9 +1,9 @@
 package com.dmc.domain.entity;
 
 /**
- * @author xiaobian.chen
+ * @author xiaobianchen
  * @version 1.0 2015/10/23
- *
+ * @link https://github.com/xiaobianchen/DMC
  * This class is used to encapsulate the searchCondition
  */
 public class SearchCondition {

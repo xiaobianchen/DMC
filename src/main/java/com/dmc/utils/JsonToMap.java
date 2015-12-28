@@ -1,21 +1,17 @@
 package com.dmc.utils;
 
 /**
- * Created by kyxiong on 11/2/2015.
+ * @author kyxiong
+ * @version 1.0 2015/11/2
+ * @link https://github.com/xiaobianchen/DMC
  */
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+
+import java.util.*;
+import java.util.Map.Entry;
 
 public class JsonToMap {
 

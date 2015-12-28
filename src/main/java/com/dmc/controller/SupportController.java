@@ -5,7 +5,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
- * Created by xiaobianchen on 2015/12/23.
+ * @author xiaobianchen
+ * @version 1.0 2015/12/23
+ * @link https://github.com/xiaobianchen/DMC
  * This class is used to handle backend management
  */
 @Controller
@@ -21,6 +23,4 @@ public class SupportController {
     public String log(){
         return "log";
     }
-
-
 }

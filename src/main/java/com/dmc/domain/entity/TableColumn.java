@@ -3,8 +3,9 @@ package com.dmc.domain.entity;
 import java.util.List;
 
 /**
- * 
- * Created by Xiaobian Chen on 2015年8月20日
+ * @author xiaobianchen
+ * @version 1.0 2015/8/20
+ * @link https://github.com/xiaobianchen/DMC
  * This class is used to stored tabletable response
  *
  */

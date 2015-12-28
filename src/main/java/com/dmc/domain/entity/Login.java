@@ -1,8 +1,9 @@
 package com.dmc.domain.entity;
+
 /**
- * 
- * Created by Xiaobian Chen on 2015年6月18日
- * Login Page
+ * @author xiaobianchen
+ * @version 1.0 2015/6/18
+ * @link https://github.com/xiaobianchen/DMC
  *
  */
 public class Login {

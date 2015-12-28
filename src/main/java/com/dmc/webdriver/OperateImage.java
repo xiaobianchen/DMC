@@ -3,17 +3,24 @@ package com.dmc.webdriver;
 /**
  * Created by kyxiong on 10/22/2015.
  */
-import java.awt.Rectangle;
-        import java.awt.image.BufferedImage;
-        import java.io.File;
-        import java.io.FileInputStream;
-        import java.io.IOException;
-        import java.util.Iterator;
 
-        import javax.imageio.ImageIO;
-        import javax.imageio.ImageReadParam;
-        import javax.imageio.ImageReader;
-        import javax.imageio.stream.ImageInputStream;
+
+/**
+ * @author kyxiong
+ * @version 1.0 2015/10/22
+ * @link https://github.com/xiaobianchen/DMC
+ *
+ */
+import javax.imageio.ImageIO;
+import javax.imageio.ImageReadParam;
+import javax.imageio.ImageReader;
+import javax.imageio.stream.ImageInputStream;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Iterator;
 
 public class OperateImage {
 

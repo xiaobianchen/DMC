@@ -17,6 +17,7 @@ import java.util.regex.Pattern;
 /**
  * @author Kyle
  * @version 1.0 2015/12/06
+ * @link https://github.com/xiaobianchen/DMC
  */
 public class ProductCrawler {
     JdbcTemplate jdbcTemplate = null;

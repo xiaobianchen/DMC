@@ -22,7 +22,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by xiaobianchen on 2015/10/22.
+ * @author xiaobianchen
+ * @version 1.0 2015/10/22
+ * @link https://github.com/xiaobianchen/DMC
  * This class is used to handle cstools
  */
 @Controller
@@ -112,6 +114,11 @@ public class CSToolsController{
         return dataList;
     }
 
+    /**
+     * query data by specified conditions
+     * @param request
+     * @return
+     */
     @SuppressWarnings("unchecked")
 	@RequestMapping(value="/query", method = RequestMethod.GET)
     public ModelAndView querySelectValue(HttpServletRequest request){

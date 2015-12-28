@@ -1,8 +1,12 @@
 package com.dmc.domain.entity;
 
 /**
- * Created by kyxiong on 11/2/2015.
+ * @author xiaobianchen
+ * @version 1.0 2015/11/2
+ * @link https://github.com/xiaobianchen/DMC
+ *
  * This class is used to handle product data
+ *
  */
 public class Product {
 

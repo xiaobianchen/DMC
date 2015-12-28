@@ -4,8 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * @author xiaobianchen
+ * @version 1.0 2015/7/11
+ * @link https://github.com/xiaobianchen/DMC
+ * This class is used for testing in faston useage
  *
- *  Created by Xiaobian Chen on 2015年7月11日
  */
 public class Group {
 	

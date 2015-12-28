@@ -1,8 +1,10 @@
 package com.dmc.domain.entity;
 /**
- * 
- *  Created by Xiaobian Chen on 2015年6月27日
- *  Reset Password Page
+ * @author xiaobianchen
+ * @version 1.0 2015/6/27
+ * @link https://github.com/xiaobianchen/DMC
+ * Reset Password
+ *
  */
 public class ResetPassword {
 	

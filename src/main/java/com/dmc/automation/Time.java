@@ -1,7 +1,11 @@
 package com.dmc.automation;
 
+
 /**
- * Created by xiaobianchen on 2015/12/23.
+ * @author xiaobianchen
+ * @version 1.0 2015/12/23
+ * @link https://github.com/xiaobianchen/DMC
+ * This class is used to handle Time operation
  */
 public class Time {
 

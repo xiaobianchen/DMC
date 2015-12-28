@@ -10,9 +10,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 /**
- * 
- * Created by Xiaobian Chen on 2015年6月16日
+ * @author xiaobianchen
+ * @version 1.0 2015/6/16
+ * @link https://github.com/xiaobianchen/DMC
  * This class is used to read site data from the specify url
  *
  */
