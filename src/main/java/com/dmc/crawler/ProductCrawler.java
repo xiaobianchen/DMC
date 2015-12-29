@@ -21,7 +21,6 @@ import java.util.regex.Pattern;
  */
 public class ProductCrawler {
     JdbcTemplate jdbcTemplate = null;
-    //public static String productDetailCSSSelector = "#J_ParamsWrap div div:nth-child(2) ul";
 
     public ProductCrawler() {
         init();
@@ -122,13 +121,17 @@ public class ProductCrawler {
     }
 
     public void crawlUrlInDB() {
-        List<String> urlList = jdbcTemplate.queryForList("SELECT itemLink FROM sale LIMIT 10;", String.class);
+        long startTime = System.currentTimeMillis();
+        System.out.println("开始爬取数据....." + System.currentTimeMillis());
+        List<String> urlList = jdbcTemplate.queryForList("SELECT itemLink FROM sale", String.class);
         for(String url : urlList) {
             crawlProductPage(url);
         }
+        long endTime = System.currentTimeMillis();
+        System.out.println("爬取后台产品数据共耗时..." + (startTime - endTime));
     }
 
     public static void main(String[] args) {
-        new ProductCrawler().crawlProductPage("https://detail.tmall.com/item.htm?spm=a21ag.7634349.0.0.T0HpfS&id=521187274952&sku_properties=-1:-1");
+        new ProductCrawler().crawlUrlInDB();
     }
 }
