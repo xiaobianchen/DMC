@@ -3,6 +3,7 @@ package com.dmc.services;
 import com.dmc.domain.entity.Comment;
 import com.dmc.maper.CommentMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,6 +19,9 @@ public class CommentServiceImpl implements CommentService {
 	
 	@Autowired
 	private CommentMapper commentMapper;
+
+    @Autowired
+	private MongoTemplate mongoTemplate;
 
 	/**
 	 * insert comment
@@ -39,5 +43,10 @@ public class CommentServiceImpl implements CommentService {
 	@Override
 	public List<Comment> list() {
 		return commentMapper.list();
+	}
+
+	@Override
+	public void save(Comment comment) {
+        mongoTemplate.save(comment,"comment");
 	}
 }

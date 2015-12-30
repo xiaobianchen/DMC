@@ -77,6 +77,8 @@ public class CommentController extends BaseController implements GenericControll
 		comment.setReportTime(reportTime);
 		
 		commentService.insert(comment);
+		//save comments into mongodb
+//		commentService.save(comment);
 		return "redirect:/indexPage";
 	}
 	

@@ -34,6 +34,9 @@
         
 	    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">  
 	        <property name="basePackage" value="com.dmc.maper" />  
-        </bean> 
+        </bean>
+
+        <!--config mongo db -->
+        <import resource="mongo-config.xml"/>
 	    
 </beans>

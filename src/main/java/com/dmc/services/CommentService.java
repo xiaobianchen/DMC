@@ -1,6 +1,8 @@
 package com.dmc.services;
 
 
+import com.dmc.domain.entity.Comment;
+
 /**
  * @author xiaobianchen
  * @version 1.0 2015/6/23
@@ -9,4 +11,6 @@ package com.dmc.services;
  */
 @SuppressWarnings("rawtypes")
 public interface CommentService extends BaseService{
+
+    void save(Comment comment);
 }
