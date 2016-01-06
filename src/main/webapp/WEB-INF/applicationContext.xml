@@ -22,7 +22,7 @@
         </bean> 
         
         <!-- transaction manager -->
-        <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">  
+        <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
             <property name="dataSource" ref="dataSource"/>  
         </bean> 
         
@@ -38,5 +38,5 @@
 
         <!--config mongo db -->
         <import resource="mongo-config.xml"/>
-	    
+
 </beans>
