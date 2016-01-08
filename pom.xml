@@ -225,6 +225,10 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
             <version>5.7.0</version>
         </dependency>
 
+        <!--memcached-->
+
+
+
 
     </dependencies>
 
