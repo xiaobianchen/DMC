@@ -1,0 +1,207 @@
+body,div,p{ margin: 0; padding: 0;}
+ul{list-style: none; margin: 0; padding: 0;}
+body {font-family: "Trebuchet MS", "Helvetica", "Arial",  "Verdana", "sans-serif";font-size: 62.5%;}
+a{text-decoration:none;}
+a:hover{text-decoration: underline;}
+
+.clsbody{ position: relative;width: 100%;height: 100%; background-color:#f2f2f2;}
+.header{width: 990px; height:70px; margin: 0 auto;}
+/*logo*/
+.logo{margin-left: 500px;}
+.clslogo{margin-top:20px;margin-left: -5px;position: fixed;}
+
+/*pop-box*/
+.pop-box {display: none; position: absolute; top:30%; left: 50%; padding: 10px; margin-left: -150px; z-index: 100; width: 300px; background-color: #fff; border: 1px solid #bbb; box-shadow: 0 0 5px #666;}
+.pop-box textarea{ width: 100%; margin: 0; box-sizing: border-box; resize: none;}
+.pop-box button{ margin-right: 5px; margin-top: 10px;}
+
+/*min-window*/
+.min-window{ display: none; position: absolute; bottom: 0; right: 0; padding: 5px 15px; background-color: rgba(17,106,196,.8);}
+.min-window i{ margin: 0 3px;}
+
+/*登陆窗口*/
+.login-banner{position: absolute;left: 0;top: 0; width: 100%;height: 475px;background-color: rgba(255, 255, 255, 0.9);}
+.login-module{ position: absolute; width: 100%; height: 100%;}
+.login-module .inner{ position: relative; width: 100%; height: 100%;}
+.login-bg{ position: absolute; width: 100%; height: 100%; background-color:#F9F9F9; z-index: 1;}
+.blur { -webkit-filter: blur(100px); -moz-filter: blur(100px); -ms-filter: blur(100px); filter: blur(100px);}
+.login-form{ position: absolute; top: 50%; left: 50%; width: 360px; height: 330px; margin-top: -200px; margin-left: -150px; font-size: 12px; font-weight: bold; box-shadow: 0px 0px 26px #666; color:#606060; background: #fff; z-index: 2;}
+.login-form form{ padding: 30px 40px 0; position: relative;}
+.login-form .icon-close{ position: absolute; top: 5px; right: 5px; background-image: url(img/icon-login-close.png); width: 11px; height: 11px;}
+
+/*注册窗口*/
+.register-form{ position: absolute; top: 50%; left: 50%; width: 350px; height: 380px; margin-top: -200px; margin-left: -150px; font-size: 12px; font-weight: bold; box-shadow: 0px 0px 26px #666; color:#606060; background: #fff; z-index: 2;}
+.register-form form{ padding: 30px 40px 0; position: relative;}
+.btnReset{background:#69b3f2;width:100%;}
+
+/*评论窗口*/
+.comment-form{ position: absolute; top: 50%; left: 50%; width: 350px; height: 400px; margin-top: -150px; margin-left: -150px; font-size: 12px; font-weight: bold; box-shadow: 0px 0px 26px #666; color:#606060; background: #fff; z-index: 2;}
+.comment-form form{ padding: 30px 40px 0; position: relative;}
+.btnComment{width:100%;height:30px;background:#fff;}
+
+/*重置密码*/
+.reset-form{position: absolute; top: 50%; left: 50%; width: 340px; height: 390px; margin-top: -200px; margin-left: -150px; font-size: 12px; font-weight: bold; box-shadow: 0px 0px 26px #666; color:#606060; background: #fff; z-index: 2;}
+.reset-form form{ padding: 30px 40px 0; position: relative;}
+
+/*input*/
+.input-box{ margin-bottom: 10px;}
+.input-box input{ display: block; width: 260px; padding: 0 5px; height: 30px; line-height: 30px; border:1px solid #bfbfbf; margin-top: 5px; box-sizing: border-box; font-family: "ËÎÌå";}
+.check-box{ font-weight: normal;}
+.check-box input{ vertical-align: middle;}
+.btn-box{ margin-top: 25px;}
+.clearfix:after {content: " ";display: block;clear: both;height: 0;}
+.clearfix {zoom: 1;}
+.floatR{ float:right;}
+.floatL{margin-left:20px;float:right;}
+
+/*icon*/
+.icon{ display: inline-block; vertical-align: middle; background-repeat: no-repeat; background-position: center center;}
+.icon-skin{width: 11px; height: 10px;}
+.icon-message{width: 13px; height: 11px;}
+.icon-down{width: 11px; height: 10px;}
+.icon-minus{width: 11px; height: 12px;}
+.icon-close{width: 11px; height: 11px;}
+.icon-btn{ background-image: url(img/btn-ljfx.png); width: 284px; height: 94px;}
+.icon-btn-down{width: 224px; height: 86px;}
+.icon-ll{width: 126px; height: 126px;}
+.icon-zhl{width: 126px; height: 126px;}
+.icon-kdj{width: 126px; height: 126px;}
+.icon-btyh{width: 37px; height: 36px;}
+.icon-files{width: 36px; height: 37px;}
+.icon-location{width: 36px; height: 37px;}
+.icon-share{width: 37px; height: 35px;}
+.icon-user{width: 40px; height: 40px;}
+.icon-info-red{width: 14px; height: 14px;}
+.icon-btn-download{width: 40px; height: 20px;}
+.icon-back{width: 37px; height: 18px;}
+.icon-arrow-left{width: 6px; height: 15px;}
+
+/*module*/
+.module{ width: 100%; margin: 0 auto; } 
+.module-bg{ position: absolute; width:100%; height: 460px; top: -1;}
+
+/*logo*/
+.content{ position: relative; width:900px; height: 440px; left: 50%; margin-left: -450px; font-family: "微软雅黑"; color: #fff;} 
+.logo{ position: absolute; top: 10px; left: 10px;}
+.logo img{ display: inline-block; width: 60px; height: 60px; vertical-align: middle; margin-left: 10px;}
+
+/*operate*/
+.operate{ position: absolute; top: 10px; right:10px; text-align: right;}
+.operate .icon{ margin-left: 10px; vertical-align: middle;}
+
+/*focus-title*/
+.focus-title{ padding-top: 150px; width: 670px; margin: 0 auto;}
+.focus-title h2{ font-size: 38px; margin-bottom: 5px;}
+
+/*account*/
+.account{ margin-top: 10px; font-family: "宋体"; font-size: 12px;} 
+.account .icon{ margin-left: 5px;}
+
+/*foot*/
+.tijian-box{ display: inline-block; float: left; width: 160px; height:160px; line-height: 160px; text-align: center; font-size: 60px; margin-right: 15px;}
+.text-dw{ font-size: 14px;}
+.btn{ text-align: center; margin-top: 1px;}
+.font12{ font-family: "宋体"; font-size: 12px;}
+.foot{ padding-bottom: 20px; width:900px; margin: 0 auto;}
+.foot ul,
+.foot li{ margin: 0; padding: 0; list-style: none; font-size: 12px;}
+.foot li .icon{ display: block;}
+.foot li{ text-align: center; display: inline-block;}
+.foot .operate-left{ float: left; padding-top: 20px; padding-left: 20px;}
+.foot .operate-right{ float: right; padding-top: 96px; padding-right: 20px;}
+.foot .operate-right li{ padding: 0 5px;}
+.foot .operate-right .icon{ margin-bottom: 10px;}
+
+/*module-content*/
+.module-content .module-bg{ height: 280px;}
+.module-content .content{ height: 280px;}
+.module-content .focus-title{ padding-top: 70px;}
+.module-content .focus-title h2{ margin-top: 15px;}
+.module-content .icon-info-red{ margin-right: 5px;}
+.module-content .icon-back{ margin-top: -4px;}
+.border-colorful{ width: 100%; height: 8px; background-image: url(img/border-color.png); background-repeat: no-repeat; background-size: 100%;}
+
+/*analysis result*/
+.analysis-result{ height: 39px; background: url(img/analysis-bg.png) repeat-x; border-bottom: 1px solid #e6e6e6;}
+.analysis-result .inner{ width: 900px; margin: 0 auto; font-size: 12px;}
+.analysis-result .split{ display: inline-block; vertical-align: middle; margin: 0 5px;}
+.analysis-result .strong{ display: inline-block; vertical-align: middle; margin: -3px 2px 0 2px;}
+.analysis-result ul{ padding-top: 14px;}
+.analysis-result li{ float: left; line-height: 14px; padding: 0 30px; border-right: 1px solid #e6e6e6;}
+.analysis-result li a{ text-decoration: none; cursor: pointer;}
+.analysis-result li.last{ border-right: 0;}
+
+.strong{ font-weight: bold; font-size:12px;}
+.text-red{ color: #bf1313;}
+.text-green{ color: #13bf69;}
+.text-yellow{ color: #ffc619;}
+
+/*application-list*/
+.application-list{ width: 900px; margin: 0 auto;}
+.application-list ul{ font-size: 12px; padding: 20px 0;}
+.application-list li{ float: left; width: 125px; text-align: center; position: relative;} 
+.application-list li .popup{ top: 0; right: -100px; z-index: 1;}
+.application-list .title{ margin: 5px 0;}
+
+/*弹出层*/
+.popup{ position: absolute; width: 105px; border: 1px solid #e6e6e6; background-color: #fff; border-top: 2px solid #13bf69;}
+.popup .inner{ padding: 10px; position: relative;}
+.popup .icon-arrow-left{ position: absolute; top: 30px; left: -6px;}
+.popup .text-box span{ display: block;}
+.popup .text-box .strong{ display: inline;}
+
+/*button*/
+.button {display: inline-block;zoom: 1;*display: inline;vertical-align: baseline;margin: 0 2px;outline: none;cursor: pointer;text-align: center;text-decoration: none;font: 18px/100% Arial, Helvetica, sans-serif;padding: .5em 2em .55em; text-shadow: 0 1px 1px rgba(0,0,0,.3);        
+-webkit-border-radius: .5em; -moz-border-radius: .5em;border-radius: .5em;-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2); -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);box-shadow: 0 1px 2px rgba(0,0,0,.2);}   
+
+.button:hover {text-decoration: none;} 
+.button:active { position: relative; top: 1px; } 
+
+/*red*/
+.red {color: #faddde;border: solid 1px #980c10; background: #d81b21; background: -webkit-gradient(linear, left top, left bottom, from(#ed1c24), to(#aa1317));background: -moz-linear-gradient(top, #ed1c24, #aa1317);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ed1c24', endColorstr='#aa1317');}      
+
+.red:hover {background: #b61318;background: -webkit-gradient(linear, left top, left bottom, from(#c9151b), to(#a11115));background: -moz-linear-gradient(top, #c9151b, #a11115);filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c9151b', endColorstr='#a11115');}      
+
+.red:active { color: #de898c; background: -webkit-gradient(linear, left top, left bottom, from(#aa1317), to(#ed1c24));background: -moz-linear-gradient(top, #aa1317, #ed1c24);filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#aa1317', endColorstr='#ed1c24');}   
+
+/*提示*/
+#checkUser,#existUser,#checkPwd,#checkEmail,#existEmail,
+#checkConfirmPwd,#checkPwdAndConfirmPwd,#checkPhone,#existPhone,
+#existPwd,#comment,#contacts,#info,#details,#checkoldPwd,
+#checknewPwd,#checkNewConfirmPwd,#checkconfirmNewPwd,#checkUserName,#checkoldPassword{display:none;color:#dd6f75;margin_bottom:5px;}
+
+/*cstools*/    
+.blue {border: solid 1px #980c10; background: #2290da};  
+
+/*下载*/
+#progressbar {margin-top: 20px;}
+.progress-label{ font-weight: bold; text-shadow: 1px 1px 0 #fff;}
+.ui-dialog-titlebar-close {display: none;  }
+
+
+ 
+
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   
+   
+   
+    
+    
+    
+    
+    
+    
+   
+    
+    
+    

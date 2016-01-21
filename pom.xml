@@ -1,187 +1,89 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.dmc</groupId>
-	<artifactId>DMC</artifactId>
-	<packaging>war</packaging>
-	<version>1.0-SNAPSHOT</version>
-	<name>DMC</name>
-	<url>http://maven.apache.org</url>
-	
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.2.3.RELEASE</version>
-	</parent>
-	
-	<properties>
-		<spring.version>4.0.3.RELEASE</spring.version>
-	</properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<dependencies>
-	   	<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-core</artifactId>
-		</dependency>
-	
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-web</artifactId>
-		</dependency>
-		
-        <dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context-support</artifactId>
-		</dependency>
+    <groupId>com.dmc</groupId>
+    <artifactId>DMC</artifactId>
+    <version>1.0.2-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-tx</artifactId>
-		</dependency>
+    <modules>
+        <module>platform</module>
+        <module>util</module>
+        <module>common</module>
+    </modules>
 
-		<!-- spring quartz-->
-		<dependency>
-			<groupId>org.quartz-scheduler</groupId>
-			<artifactId>quartz</artifactId>
-			<version>1.8.6</version>
-		</dependency>
+    <name>DMC</name>
+    <url>http://maven.apache.org</url>
 
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		
-		<!-- inject -->
-		<dependency>
-			<groupId>javax.inject</groupId>
-			<artifactId>javax.inject</artifactId>
-			<version>1</version>
-        </dependency>
-        
-        <!-- mybatis -->
-        <dependency> 
-            <groupId>org.mybatis</groupId> 
-            <artifactId>mybatis-spring</artifactId> 
-            <version>1.1.1</version> 
-        </dependency> 
-        
-        <dependency> 
-            <groupId>org.mybatis</groupId> 
-            <artifactId>mybatis</artifactId> 
-            <version>3.1.1</version> 
-        </dependency>
-        
-        <!-- jstl(Jsp Standard Tag Library) -->
-        <dependency> 
-            <groupId>javax.servlet</groupId> 
-            <artifactId>jstl</artifactId> 
-        </dependency>
-        
-        <dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<scope>provided</scope>
-	    </dependency>
-        
-        
-        <!-- mysql -->
-        <dependency> 
-            <groupId>mysql</groupId> 
-            <artifactId>mysql-connector-java</artifactId> 
-        </dependency> 
-        
-         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-jdbc</artifactId>
-        </dependency>
+    <!--Source Control Management-->
+    <scm>
+        <connection>scm:git:git@github.com:xiaobianchen/DMC_Prod.git</connection>
+        <developerConnection>scm:git:git@github.com:xiaobianchen/DMC_Prod.git</developerConnection>
+        <url>https://github.com/xiaobianchen/DMC_Prod.git</url>
+        <tag>HEAD</tag>
+    </scm>
 
-        <dependency>
-            <groupId>commons-dbcp</groupId>
-            <artifactId>commons-dbcp</artifactId>
-        </dependency>
-        
-        <!-- httpclient -->
-        <dependency>
-			<groupId>commons-httpclient</groupId>
-			<artifactId>commons-httpclient</artifactId>
-			<version>3.1</version>
-	    </dependency> 
-	    
-	    <!-- jsoup HTML Parser -->
-	    <dependency>
-			<groupId>org.jsoup</groupId>
-			<artifactId>jsoup</artifactId>
-			<version>1.8.2</version>
-        </dependency>
-        
-        <!-- upload file -->
-        <dependency>
-			<groupId>commons-fileupload</groupId>
-			<artifactId>commons-fileupload</artifactId>
-			<version>1.3.1</version>
-        </dependency>
-        
-        <!-- gson -->
-        <dependency>
-			<groupId>com.google.code.gson</groupId>
-			<artifactId>gson</artifactId>
-		</dependency>
+    <developers>
+        <developer>
+            <id>xiaobian chen</id>
+            <name>xiaobian chen</name>
+            <email>chenxiaobian89@163.com</email>
+        </developer>
+    </developers>
 
-        <dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>2.4</version>
-        </dependency>
-        
-        <!-- alibaba fastjson -->
-        <dependency>
-		    <groupId>com.alibaba</groupId>
-		    <artifactId>fastjson</artifactId>
-		    <version>1.1.41</version>
-       </dependency>
-       
-	   <dependency>
-	        <groupId>cn.edu.hfut.dmic.webcollector</groupId>
-	        <artifactId>WebCollector</artifactId>
-	        <version>2.09</version>
-       </dependency>
-		 
-		<!-- mongodb -->
-        <dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-mongodb</artifactId>
-		</dependency>
-		
-		 <!-- Selenium -->
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-		    <artifactId>selenium-java</artifactId>
-		    <version>2.47.1</version>
-        </dependency>
-        <dependency>
-        	<groupId>org.springframework.boot</groupId>
-        	<artifactId>spring-boot-starter-batch</artifactId>
-        </dependency>
-        
-	</dependencies>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.jdk.version>1.7</java.jdk.version>
+        <java.servlet.version>3.1.0</java.servlet.version>
+    </properties>
 
-	<build>
-		<finalName>DMC</finalName>
-		<plugins>
-			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+    <dependencies>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${java.servlet.version}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
 
+
+    <build>
+        <plugins>
+            <!--compile插件-->
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>${java.jdk.version}</source>
+                    <target>${java.jdk.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+
+            <!--resources 插件-->
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+
+            <!-- dependency插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.5.1</version>
+            </plugin>
+
+            <!-- install插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>2.4</version>
+            </plugin>
+        </plugins>
+
+    </build>
 </project>
