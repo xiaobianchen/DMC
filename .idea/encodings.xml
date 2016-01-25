@@ -77,6 +77,8 @@
     <file url="file://$PROJECT_DIR$/platform/src/main/webapp/WEB-INF/resources/img" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/platform/src/main/webapp/WEB-INF/resources/js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/platform/src/main/webapp/WEB-INF/resources/upload" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/platformCache" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/platformCache" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/util" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/util/src/main/java/com/dmc/DBUtils.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/util/src/main/java/com/dmc/LogUtils.java" charset="GBK" />
