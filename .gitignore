@@ -1,0 +1,14 @@
+*.iml
+target/
+*.project
+*.classpath
+.settings/
+.project
+.classpath
+test-output/
+velocity.log
+*/velocity.log
+.idea/
+.sonar/
+*/.checkstyle
+sonar-project.properties

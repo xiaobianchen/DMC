@@ -16,6 +16,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.build.gson>2.5</project.build.gson>
+        <xmemcache.version>2.0.0</xmemcache.version>
     </properties>
 
     <dependencies>
@@ -24,6 +25,12 @@
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>${project.build.gson}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.googlecode.xmemcached</groupId>
+            <artifactId>xmemcached</artifactId>
+            <version>${xmemcache.version}</version>
         </dependency>
     </dependencies>
 </project>
