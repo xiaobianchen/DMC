@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <artifactId>DMC</artifactId>
+        <groupId>com.dmc</groupId>
+        <version>1.0.2-SNAPSHOT</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>war</packaging>
+
+    <name>platform</name>
+    <artifactId>platform</artifactId>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring.version>4.0.3.RELEASE</spring.version>
+        <spring.batch>3.0.6.RELEASE</spring.batch>
+        <spring.redis>1.2.1.RELEASE</spring.redis>
+        <spring.quartz>1.8.6</spring.quartz>
+        <mybatis.version>3.2.3</mybatis.version>
+        <mybatis-spring.version>1.2.1</mybatis-spring.version>
+        <spring.mongodb>1.8.2.RELEASE</spring.mongodb>
+        <mysql.driver.version>5.1.13</mysql.driver.version>
+        <project.build.httpclient>4.3.4</project.build.httpclient>
+        <project.build.jsoup>1.8.2</project.build.jsoup>
+        <project.build.fileupload>1.3.1</project.build.fileupload>
+        <project.build.testng>6.3</project.build.testng>
+        <project.build.fastjson>1.1.41</project.build.fastjson>
+        <project.build.selenium>2.47.1</project.build.selenium>
+        <project.build.jackson>1.9.13</project.build.jackson>
+        <project.build.activemq>5.7.0</project.build.activemq>
+        <project.build.gson>2.5</project.build.gson>
+        <common-io.version>2.4</common-io.version>
+        <common-dbcp.version>1.4</common-dbcp.version>
+        <jstl.version>1.2</jstl.version>
+        <dmc.version>1.0.2-SNAPSHOT</dmc.version>
+    </properties>
+
+    <dependencies>
+        <!--spring core-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!--webmvc-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <!--spring web-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <!--spring context support-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <!--spring transaction-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>${common-dbcp.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${common-io.version}</version>
+        </dependency>
+
+        <!--spring batch-->
+        <dependency>
+            <groupId>org.springframework.batch</groupId>
+            <artifactId>spring-batch-core</artifactId>
+            <version>${spring.batch}</version>
+        </dependency>
+
+        <!--spring redis-->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+            <version>${spring.redis}</version>
+        </dependency>
+
+        <!-- spring quartz-->
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+            <version>${spring.quartz}</version>
+        </dependency>
+
+        <!-- myibatis -->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>${mybatis.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+            <version>${mybatis-spring.version}</version>
+        </dependency>
+
+        <!-- mysql -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.driver.version}</version>
+        </dependency>
+
+        <!--spring jdbc-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <!-- httpclient -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>${project.build.httpclient}</version>
+        </dependency>
+
+        <!-- jsoup HTML Parser -->
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>${project.build.jsoup}</version>
+        </dependency>
+
+        <!-- upload file -->
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>${project.build.fileupload}</version>
+        </dependency>
+
+        <!-- gson -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${project.build.gson}</version>
+        </dependency>
+
+        <!-- alibaba fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${project.build.fastjson}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-mongodb</artifactId>
+            <version>${spring.mongodb}</version>
+        </dependency>
+
+
+        <!-- Selenium -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${project.build.selenium}</version>
+        </dependency>
+
+        <!--testng -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${project.build.testng}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>${project.build.jackson}</version>
+        </dependency>
+
+        <!--activeMQ-->
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-core</artifactId>
+            <version>${project.build.activemq}</version>
+        </dependency>
+
+        <!--jstl-->
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>${jstl.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.dmc</groupId>
+            <artifactId>common</artifactId>
+            <version>${dmc.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.dmc</groupId>
+            <artifactId>util</artifactId>
+            <version>${dmc.version}</version>
+        </dependency>
+
+    </dependencies>
+
+</project>

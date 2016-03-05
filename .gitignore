@@ -10,5 +10,5 @@ velocity.log
 */velocity.log
 .idea/
 .sonar/
+*/.checkstyle
 sonar-project.properties
-crawl/
