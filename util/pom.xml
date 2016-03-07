@@ -20,6 +20,10 @@
         <spring.mongodb>1.8.2.RELEASE</spring.mongodb>
         <spring.version>3.2.5.RELEASE</spring.version>
         <junit.version>3.8.1</junit.version>
+        <commons-lang.version>3.3.2</commons-lang.version>
+        <commons-collection.version>4.0</commons-collection.version>
+        <commons-dbutils.verison>1.6</commons-dbutils.verison>
+        <jackson.version>2.4.4</jackson.version>
     </properties>
 
     <dependencies>
@@ -53,6 +57,34 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
             <version>${spring.version}</version>
+        </dependency>
+
+        <!--apache commons lang-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang.version}</version>
+        </dependency>
+
+        <!--apache commons collections-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>${commons-collection.version}</version>
+        </dependency>
+
+        <!--dbutils-->
+        <dependency>
+            <groupId>commons-dbutils</groupId>
+            <artifactId>commons-dbutils</artifactId>
+            <version>${commons-dbutils.verison}</version>
+        </dependency>
+
+        <!--jackson-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
         </dependency>
 
     </dependencies>

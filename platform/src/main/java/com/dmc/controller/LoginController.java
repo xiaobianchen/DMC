@@ -30,9 +30,7 @@ public class LoginController {
 	private UserService userService;
 	
 	/**
-	 * get login page
-	 * @param model
-	 * @return
+	 * 进入登录页面
 	 */
 	@RequestMapping(value="/login",method=RequestMethod.GET)
 	public String login(Model model,RedirectAttributes redirectAttributes,HttpServletRequest request){
@@ -49,8 +47,7 @@ public class LoginController {
 	}
 	
 	/**
-	 * redirect to login page
-	 * @return
+	 * 重定向到登录页面
 	 */
 	@RequestMapping(value="/loginPage", method=RequestMethod.GET)
 	public String signIn(){
@@ -58,9 +55,7 @@ public class LoginController {
 	}
 	
 	/**
-	 * Verify UserName And Password
-	 * @param login
-	 * @return
+	 * 校验用户名和密码
 	 */
 	@RequestMapping(value="/login",method=RequestMethod.POST)
 	public @ResponseBody String login(@ModelAttribute("login") Login login,HttpSession session){
@@ -74,8 +69,7 @@ public class LoginController {
 	}
 	
 	/**
-	 * reset password
-	 * @return
+	 * 重置密码
 	 */
 	@RequestMapping(value="/resetPwd", method=RequestMethod.GET)
 	public String resetPwd(Model model){
@@ -84,11 +78,7 @@ public class LoginController {
 		return "reset";
 	}
 	
-	/**
-	 * modify password
-	 * @param reset
-	 * @return
-	 */
+
 	@RequestMapping(value="/resetPwd", method=RequestMethod.POST)
 	public @ResponseBody String getUserByPassword(@ModelAttribute("resetpwd") ResetPassword reset){
 		boolean isFound = userService.getUserByLogin(reset.getUsername(), reset.getOldPassword());

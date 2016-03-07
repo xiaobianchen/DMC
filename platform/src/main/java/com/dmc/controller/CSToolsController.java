@@ -51,9 +51,6 @@ public class CSToolsController{
 
     /**
      * load data default loading flow data from database
-     * @param request
-     * @param response
-     * @return
      */
     @RequestMapping(value="/list",produces = "application/json;charset=utf-8")
     public @ResponseBody
@@ -94,10 +91,6 @@ public class CSToolsController{
 
     /**
      * create pagination data
-     * @param dataList
-     * @param page
-     * @param rows
-     * @return
      */
     public List<?>  createPaginationData(List<?> dataList,int page, int rows){
         if(rows < dataList.size()){
@@ -116,8 +109,6 @@ public class CSToolsController{
 
     /**
      * query data by specified conditions
-     * @param request
-     * @return
      */
     @SuppressWarnings("unchecked")
 	@RequestMapping(value="/query", method = RequestMethod.GET)
@@ -147,8 +138,6 @@ public class CSToolsController{
 
     /**
      * returns search data via search conditions
-     * @param searchCondition
-     * @return
      */
     public List<?> createSearchData(SearchCondition searchCondition) {
         String source = searchCondition.getSource();
@@ -179,9 +168,7 @@ public class CSToolsController{
     }
 
     /**
-     * format time
-     * @param dateTime
-     * @return
+     * 格式化日期
      */
     public static String formatTime(String dateTime){
         int lastIndex = dateTime.lastIndexOf("/");

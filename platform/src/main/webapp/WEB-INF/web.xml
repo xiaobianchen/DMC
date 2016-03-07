@@ -5,6 +5,7 @@
 
 	<display-name>Data Management Center Application</display-name>
 
+	<!--字符集过滤器-->
 	<filter> 
         <filter-name>encodingFilter</filter-name> 
         <filter-class> 
@@ -31,30 +32,31 @@
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 
+	<!--所有的请求都会被处理-->
 	<servlet-mapping>
 		<servlet-name>mvc-dispatcher</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 
-	<!-- config applicationContext.xml -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>/WEB-INF/applicationContext.xml</param-value>
 	</context-param>
 
-	<!-- config ContextLoaderListener -->
+	<!-- 配置 ContextLoaderListener -->
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 
-	<!-- config home page -->
+	<!-- 配置主页 -->
 	<welcome-file-list>
 		<welcome-file>/WEB-INF/pages/home.jsp</welcome-file>
 	</welcome-file-list>
 
-	<!--<error-page>-->
-		<!--<error-code>404</error-code>-->
-		<!--<location>/WEB-INF/pages/404.jsp</location>-->
-	<!--</error-page>-->
+	<!--配置404页面-->
+	<error-page>
+		<error-code>404</error-code>
+		<location>/WEB-INF/pages/404.jsp</location>
+	</error-page>
 
 </web-app>

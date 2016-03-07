@@ -4,6 +4,7 @@ package com.dmc.exception;
  * @author xiaobianchen
  * @version 1.0 2016/1/11
  * @link https://github.com/xiaobianchen/DMC
+ * DMC异常处理类
  */
 public class DMCException extends CommonException {
 

@@ -5,7 +5,7 @@ package com.dmc.exception;
  * @version 1.0 2015/12/22
  * @link https://github.com/xiaobianchen/DMC
  *
- * This class is used to handle Page Not Found Exception
+ * 处理页面找不到异常
  *
  */
 public class PageNotFoundException extends CommonException {

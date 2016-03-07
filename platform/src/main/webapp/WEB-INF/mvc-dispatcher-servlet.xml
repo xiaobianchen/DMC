@@ -1,7 +1,8 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:mvn="http://www.springframework.org/schema/mvc"
+	   xsi:schemaLocation="
         http://www.springframework.org/schema/beans     
         http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
         http://www.springframework.org/schema/context 
@@ -16,24 +17,34 @@
 	<mvc:default-servlet-handler/>
 
     <!-- View Resolver -->
-	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix">
-			<value>/WEB-INF/pages/</value>
-		</property>
-		<property name="suffix">
-			<value>.jsp</value>
-		</property>
+	<bean  id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/pages/"/>
+		<property name="suffix" value=".jsp"/>
 	</bean>
 	
-	<!-- upload file -->
+	<!-- 文件上传 -->
 	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">  
          <property name="maxUploadSize" value="5400000" />  
          <property name="defaultEncoding" value="UTF-8"/>
+		 <property name="maxInMemorySize" value="40960"/>
     </bean>
 
     <!--json converter-->
 	<bean id="jsonConverter" class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
 	     <property name="supportedMediaTypes" value="application/json" />
+	</bean>
+
+	<!--配置国际化-->
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+		 <property name="basename" value="messages"/>
+		<property name="useCodeAsDefaultMessage" value="true"/>
+	</bean>
+
+	<!-- 基于Cookie的本地化解析器 -->
+	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
+		<property name="cookieMaxAge" value="604800"/>
+		<property name="defaultLocale" value="zh_CN"/>
+		<property name="cookieName" value="Language"/>
 	</bean>
 
 	<!-- 配置静态资源 -->
@@ -43,6 +54,17 @@
 	<mvc:resources location="/WEB-INF/resources/img/" mapping="/img/**"/>
 	<mvc:resources location="/WEB-INF/resources/assets/" mapping="/assets/**"/>
 	<mvc:resources location="/WEB-INF/resources/easyui/" mapping="/easyui/**"/>
+
+    <mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/"/>
+			<mvc:mapping path="/user/**"/>
+			<bean class="com.dmc.interceptor.DMCInterceptor"/>
+
+		</mvc:interceptor>
+	</mvc:interceptors>
+
+
 
 </beans>
 

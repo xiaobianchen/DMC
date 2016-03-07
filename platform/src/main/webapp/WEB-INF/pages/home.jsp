@@ -44,7 +44,6 @@
                         <a href="javascript:void(0);">产品</a>
                         <ul class="nav-dropdown-list">
                             <li><a target="_blank" href="/platform/cstools">数据中心</a></li>
-                            <li><a target="_blank" href="/platform/report">报表服务</a></li>
                             <li><a target="_blank" href="/platform/admin">用户管家</a></li>
                             <li><a target="_blank" href="/platform/flow">流量通道</a></li>
                         </ul>
@@ -52,7 +51,6 @@
                     <li class=""><a href="#">支持中心</a>
                         <ul class="nav-dropdown-list">
                             <li><a target="_blank" href="/platform/support">后台管理</a></li>
-                            <li><a target="_blank" href="/platform/support/log">日志管理</a></li>
                         </ul>
                     </li>
                     <li class=""><a href="#">成功案例</a></li>
