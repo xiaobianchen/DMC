@@ -4,7 +4,7 @@
 
     <groupId>com.dmc</groupId>
     <artifactId>DMC</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.2</version>
     <packaging>pom</packaging>
 
     <modules>
@@ -16,14 +16,15 @@
     <name>DMC</name>
     <url>http://maven.apache.org</url>
 
-    <!--Source Control Management-->
+    <!--版本控制管理 SCM(Source Control Management)-->
     <scm>
-        <connection>scm:git:git@github.com:xiaobianchen/DMC_Prod.git</connection>
-        <developerConnection>scm:git:git@github.com:xiaobianchen/DMC_Prod.git</developerConnection>
-        <url>https://github.com/xiaobianchen/DMC_Prod.git</url>
+        <connection>scm:git:git@github.com:xiaobianchen/DMC.git</connection>
+        <developerConnection>scm:git:git@github.com:xiaobianchen/DMC.git</developerConnection>
+        <url>https://github.com/xiaobianchen/DMC.git</url>
         <tag>HEAD</tag>
     </scm>
 
+    <!--开发者信息-->
     <developers>
         <developer>
             <id>xiaobian chen</id>
@@ -46,7 +47,6 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-
 
     <build>
         <plugins>

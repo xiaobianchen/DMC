@@ -3,7 +3,7 @@
     <parent>
         <artifactId>DMC</artifactId>
         <groupId>com.dmc</groupId>
-        <version>1.0.2-SNAPSHOT</version>
+        <version>1.0.2</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -24,6 +24,7 @@
         <commons-collection.version>4.0</commons-collection.version>
         <commons-dbutils.verison>1.6</commons-dbutils.verison>
         <jackson.version>2.4.4</jackson.version>
+        <dmc.version>1.0.2</dmc.version>
     </properties>
 
     <dependencies>
@@ -86,6 +87,18 @@
             <artifactId>jackson-databind</artifactId>
             <version>${jackson.version}</version>
         </dependency>
+
+        <!--<dependency>-->
+            <!--<groupId>com.dmc</groupId>-->
+            <!--<artifactId>common</artifactId>-->
+            <!--<version>${dmc.version}</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>com.dmc</groupId>-->
+            <!--<artifactId>platform</artifactId>-->
+            <!--<version>${dmc.version}</version>-->
+        <!--</dependency>-->
 
     </dependencies>
 </project>

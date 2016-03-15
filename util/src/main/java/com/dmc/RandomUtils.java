@@ -17,11 +17,6 @@ public class RandomUtils {
 	public static final String stoken = "httpwww.dmc.com";
 	
 	
-	/**
-	 * returns a string include character and number
-	 * @param length
-	 * @return
-	 */
 	public static String generateString(int length){
 		StringBuffer sb = new StringBuffer();
 		Random random = new Random();
@@ -32,11 +27,7 @@ public class RandomUtils {
 		return sb.toString();
 	}
 	
-	/**
-	 * returns a string only include character
-	 * @param length
-	 * @return
-	 */
+
 	public static String generateMixString(int length){
 		StringBuffer sb = new StringBuffer();
 		Random random = new Random();
@@ -47,30 +38,17 @@ public class RandomUtils {
 		return sb.toString();
 	}
 	
-	/**
-	 * returns characters are lowercase
-	 * @param length
-	 * @return
-	 */
+
 	public static String generateLowerString(int length){
 		return generateMixString(length).toLowerCase();
 	}
 	
-	/**
-	 * returns character are uppercase
-	 * @param length
-	 * @return
-	 */
+
 	public static String generateUpperString(int length){
 		return generateMixString(length).toUpperCase();
 	}
 	
-	/**
-	 * http%3A%2F%2Fwww.dmc.com%2F
-	 * @param token
-	 * @param length
-	 * @return
-	 */
+
 	public static String generateString(String stoken,int length){
 		StringBuffer sb = new StringBuffer();
 		int index = stoken.indexOf("p");
