@@ -4,7 +4,7 @@ package com.dmc.demo;
  * @author xiaobianchen
  * @version 1.0 2016/3/8
  */
-public class Singleton {
+public class Singleton{
 
     private static Singleton singleton;
 

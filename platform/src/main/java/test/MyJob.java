@@ -4,8 +4,8 @@ package test;
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
 
-import java.util.*;
 import java.util.Calendar;
+import java.util.Date;
 
 /**
  * @author xiaobianchen
